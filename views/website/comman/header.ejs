@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Healin</title>
+
+
+
+<!-- font-awesome-link -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
+
+
+
+<!-- bootstrap-5.0.2-link -->
+
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+
+
+
+<!-- AOS-2.3.4-link -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+
+
+
+<!-- owl-carousel2.3.4-link -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css" />
+
+
+
+<!-- fancy-box-css -->
+
+    <link rel="stylesheet" type="text/css"
+
+        href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css">
+
+
+
+<!--slick.css-link-->
+    <!-- <link href="https://assets-global.website-files.com/5c1181093d8f969da005c4a6/css/b2b-page.09397fc21.min.css" rel="stylesheet" type="text/css"/> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css" integrity="sha256-4hqlsNP9KM6+2eA8VUT0kk4RsMRTeS7QGHIM+MZ5sLY=" crossorigin="anonymous" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" integrity="sha256-UK1EiopXIL+KVhfbFa8xrmAWPeBjMVdvYMYkTAEv/HI=" crossorigin="anonymous" />
+<!--style.css-link-->
+
+    <link rel="stylesheet" href="assets/css/style.css">
+
+
+<!--multistep-style.css-link-->
+
+    <link rel="stylesheet" href="assets/css/multistep-style.css">
+
+
+
+
+
+<!-- reponsive.css-link -->
+
+    <link rel="stylesheet" type="text/css" href="assets/css/responsive.css">
+
+
+
+<!-- favicon-link -->
+
+    <link rel="icon" type="image/x-icon" href="">
+
+    <!-- JQuery lib  -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- JQuery validation lib -->
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+
+</head>
+
+<style type="text/css">
+.navbar .megamenu{ padding: 1rem; }
+/* ============ desktop view ============ */
+@media all and (min-width: 992px) {
+    
+    .navbar .has-megamenu{position:static!important;}
+    .navbar .megamenu{
+        left:0; 
+        right:0;
+         width:100%; 
+         width: 50%;
+        margin: 0 auto;
+         margin-top:0; 
+          }
+    
+}   
+/* ============ desktop view .end// ============ */
+
+
+/* ============ mobile view ============ */
+@media(max-width: 991px){
+    .navbar.fixed-top .navbar-collapse, .navbar.sticky-top .navbar-collapse{
+        overflow-y: auto;
+        max-height: 90vh;
+        margin-top:10px;
+    }
+}
+/* ============ mobile view .end// ============ */
+</style>
+
+
+
+<body >
+
+<!--header-start-->
+
+    <header>
+
+        <div class="container-fluid">
+
+            <div class="row">                
+
+                    <nav class="navbar navbar-expand-lg">
+
+                    <a class="navbar-brand" href="/">
+
+                        <img src="assets/image/healin-logo.svg" class="img-fluid"/>
+
+                    </a>
+
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+
+                      <span class="navbar-toggler-icon"></span>
+
+                      <span class="navbar-toggler-icon"></span>
+
+                      <span class="navbar-toggler-icon"></span>
+
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+
+                      <ul class="navbar-nav">
+
+                        <li class="nav-item dropdown">
+
+                          <a class="nav-link dropdown-toggle" href="about.php" role="button" data-bs-toggle="dropdown">About Us</a>
+
+                          <ul class="dropdown-menu">
+
+                            <li><a class="dropdown-item" href="/the-method">The Method</a></li>
+
+                            <li><a class="dropdown-item" href="/who-we-are">Who We Are</a></li>
+
+                            <li><a class="dropdown-item" href="/reviews">reviews</a></li>
+
+                            <li><a class="dropdown-item" href="/faq">FAQ</a></li>
+
+                            <li><a class="dropdown-item" href="/blog">Blog</a></li>
+
+                            <li><a class="dropdown-item" href="/contact">Contacts</a></li>
+
+                          </ul>
+
+                        </li>
+
+                        <li class="nav-item dropdown has-megamenu">
+
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"> Services </a>
+
+                           
+                            <div class="dropdown-menu megamenu" role="menu">
+                                <div class="inner-menu-block">
+                                    <div class="row g-3">
+                                        <div class="col-lg-4 col-6">
+                                            <div class="col-megamenu">
+                                                <h6 class="title">Therapy</h6>
+                                                <ul class="list-unstyled">
+                                                    <li><a class="dropdown-item" href="/individual-therapy">Individual therapy</a></li>
+                                                    <li><a class="dropdown-item" href="/couples-therapy">Couples therapy</a></li>
+                                                    <li><a class="dropdown-item" href="/teens-therapy">Teen therapy</a></li>
+                                                    <li><a class="dropdown-item" href="/other-areas">All other areas</a></li>
+                                                </ul>
+                                            </div>  
+                                        </div>
+                                        <div class="col-lg-4 col-6">
+                                            <div class="col-megamenu">
+                                                <h6 class="title">Medications</h6>
+                                                <ul class="list-unstyled">
+                                                    <li><a class="dropdown-item" href="#">Psychiatry and <br>medication management</a></li>
+                                                </ul>
+                                            </div>  
+                                        </div>
+
+                                        <div class="col-lg-4 col-6">
+                                            <div class="col-megamenu">
+                                                <h6 class="title">Get treatment for:</h6>
+                                                <ul class="list-unstyled">
+                                                    <li><a class="dropdown-item" href="/depression">Depression</a></li>
+                                                    <li><a class="dropdown-item" href="/anxiety">Anxiety</a></li>
+                                                    <li><a class="dropdown-item" href="/bipolar-disorder">Bipolar disorder</a></li>
+                                                    <li><a class="dropdown-item" href="/ocd">OCD</a></li>
+                                                    <li><a class="dropdown-item" href="/post-traumatic-stress-disorder">PTSD</a></li>
+                                                    <li><a class="dropdown-item" href="/post-partum-depression">Post-partum depression</a></li>
+                                                    <li><a class="dropdown-item" href="/panic">Panic disorder</a></li>
+                                                    <li><a class="dropdown-item" href="/addiction">Addiction</a></li>
+                                                </ul>
+                                            </div> 
+                                        </div>    
+                                        
+                                    </div>
+                                    <!-- <figure class="icon-img"><img src="assets/image/fo8.png" class="img-fluid"></figure> -->
+                                </div>
+                            </div>
+                           
+                        </li>
+
+                        <li class="nav-item dropdown">
+
+                          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">For Therapists</a>
+
+                          <ul class="dropdown-menu">
+
+                            <li><a class="dropdown-item" href="/our-therapists">Our therapists</a></li>
+
+                            <li><a class="dropdown-item" href="/Work-with-us">Work with us</a></li>
+
+                          </ul>
+
+                        </li>
+
+                        <li class="nav-item">
+
+                          <a class="nav-link" href="/for-business" >For Business</a>
+
+                        </li>
+
+
+                        <li class="nav-item">                        
+
+                        <div class="btn-area d-hide">
+
+                        <a class="login-btn" href="/login"><span>Log in</span></a>
+
+                          <a href="/get-start " class="btn-all"><span>get started</span></a>
+
+                      </div>
+
+                      </li>  
+
+                      </ul>
+
+                    </div>
+
+                    
+
+                        <div class="btn-area m-hide">
+
+                            <a class="login-btn" href="/login"><span>Log in</span></a>
+
+                            <a href="/get-start " class="btn-all"><span>get started</span></a>
+
+                        </div>
+
+                  
+                  
+                </nav>
+
+            </div>
+
+            
+
+        </div>
+
+    </header>
+
+
+
+    <!-- Button trigger modal -->
+
+
+
+
+
+    

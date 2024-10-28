@@ -1,0 +1,852 @@
+@media screen and (min-width: 1900px){
+
+    .hero .shape-img {
+
+        height: 170px !important;
+
+    }
+
+    .hero {
+
+        padding: 50px 0 220px 0 !important;
+
+    }
+    .simple-practice-section:before {
+        height: 120px;
+        top: -89px;
+    }
+    .simple-practice-section:after {
+        height: 110px;
+    }
+
+}
+
+@media screen and (min-width: 1600px){
+
+    .hero .shape-img {
+
+        height: 150px;
+
+    }
+
+    .hero {
+
+        padding: 50px 0 190px 0;
+
+    }
+
+    .testimonial:after {
+
+        height: 120px;
+
+    }
+
+    .testimonial:before {
+
+        background-size: cover;
+
+    }
+
+    .healin-work:after {
+
+        height: 350px;
+
+    }
+
+    .our-therapy:after ,.the-method-wrapper-two:before {
+
+        height: 115px!important;
+
+    }
+
+    .our-therapy {
+
+        padding: 20px 0px 120px 0px;
+
+    }
+    .healin-work:before {
+        height: 170px;
+        top: -150px;
+    }
+
+    section.therapy-topics-section:before {
+        height: 170px;
+        top: -50px;
+    }
+    .layer1:before{
+        height: 150px;
+        top: -40px;
+    }
+section.healinhere-table-section:after {
+    top: -70px;
+    height: 170px;
+}
+section.healinhere-table-section:before {
+    height: 370px;
+}
+}
+
+@media screen and (max-width: 1400px){
+
+    .healin-work:after {
+
+        height: 250px;
+
+    }
+
+    .healin-work {
+
+        padding-bottom: 200px;
+
+    }
+
+    .healin-work .row .mt-5 {
+
+        margin-top: 6rem!important;
+
+    }
+
+    .healin-work .second-row.g-5 {
+
+        --bs-gutter-y: 6rem;
+
+        --bs-gutter-x: 0;
+
+    }  
+
+    section.the-method-wrapper-two:before {
+
+    height: 120px;
+}  
+
+section.the-method-wrapper-one {
+    margin-bottom: 40px;
+}
+
+}
+
+@media (min-width: 1200px) and (max-width: 1399px){
+
+    .healin-work .featured-one figure:nth-child(1) {
+
+        width: 260px;
+
+    }
+
+    .healin-work .featured-one figure {
+
+        width: 130px;
+
+        height: 130px;
+
+    }
+    .healin-work .second-row.g-5 {
+
+        --bs-gutter-y:4rem;
+
+        --bs-gutter-x: 0;
+
+    }  
+    .healin-work .healin-work-content p {
+
+        font-size: 16px;
+
+    }
+
+    .therapy-img #tabs-content .tab-content .therapy-image {
+
+        left: 60px;
+
+        top: 108px;
+
+        height: 225px;
+
+        width: 360px;
+
+    }
+
+    .about-img figure.figure-a {
+
+        width: 300px;
+
+        height: 280px;    
+
+    }
+
+    .about-img figure.figure-b {
+
+        width: 105px;
+
+        height: 105px;
+
+    }
+
+}
+
+@media (min-width: 992px) and (max-width: 1399px){
+
+    header a.nav-link{
+
+        font-size: 16px;
+
+    }
+
+    header ul.navbar-nav {
+
+        gap: 20px;
+
+    }
+
+    .therapy-img #tabs-content .tab-content .therapy-image:before {
+
+        width: 60px;
+
+        height: 60px;
+
+        left: -50px;
+
+    }
+
+    .about-img figure.figure-a{
+
+        margin-left: 0;
+
+    }
+    .section-heading h2 {
+    font-size: 35px;
+}
+
+    .circle {
+        width: 45%;
+
+        height: 45%;
+
+    }
+    .icon-block {
+
+        width: 150px!important;
+
+        max-width: 150px!important;
+
+        max-height: 150px!important;
+    }
+    .main-container .center-logo {
+
+        width: 150px;
+        
+        min-width: 150px;
+
+        min-height: 150px;
+    }
+
+    .support-box figure {
+
+        width: 50px;
+
+        height: 50px;
+
+        margin: 0 auto;
+
+    }
+
+}
+
+@media (min-width: 992px) and (max-width: 1199px){
+
+    .healin-work .featured-one figure:nth-child(1) {
+
+        width: 240px;
+
+    }
+
+    .healin-work .featured-one figure {
+
+        width: 120px;
+
+        height: 120px;
+
+    }
+
+    .therapy-img #tabs-content .tab-content .therapy-image {
+
+        left: 50px;
+
+        top: 130px;
+
+        height: 190px;
+
+        width: 300px;
+
+    } 
+
+    .about-img figure.figure-a {
+
+        width: 210px;
+
+        height: 180px;
+
+        margin-right: 10px;
+
+        margin-left: 0;
+
+    }
+
+    .about-img figure.figure-b {
+
+        transform: translateX(-20px);
+
+        width: 100px;
+
+        height: 100px;
+
+    }
+
+    .about-img figure.figure-c {
+
+        width: 140px;
+
+        height: 140px;
+
+    }
+
+    .about-img figure.figure-d {
+
+        width: 140px;
+
+        height: 140px;
+
+        transform: translateY(-40px);
+
+    }
+
+    .about-img:before {
+
+        width: 220px;
+
+        height: 220px;
+
+        background-size: contain;
+
+        left: 52%;
+
+        transform: translate(-46%, -55%);
+
+    }   
+
+}
+
+@media (max-width: 991px){    
+
+    header{
+
+        padding: 0;
+
+    }
+
+    header .d-hide{
+
+        display: block;
+
+        margin-top: 10px;
+
+    }
+
+    header .m-hide{
+
+        display: none;
+
+    }
+
+    header ul.navbar-nav {
+
+        position: fixed;
+
+        top: 99px;
+
+        background-color: var(--color-white);
+
+        width: 80%;
+
+        height: 100vh;
+
+        z-index: 99;
+
+        left: 0;
+
+        padding: 10px 50px 50px 20px;
+
+        transition: .5s all;
+
+        transform: translateX(-100%);
+
+        gap: 10px;
+
+    }
+
+    header div#collapsibleNavbar.show ul.navbar-nav{
+
+        transform: translateX(0%);
+
+    }
+
+    header a.nav-link {
+
+        font-size: 20px;
+
+    }
+
+    header ul.navbar-nav li .dropdown-toggle::after {
+
+        font-size: 18px;
+
+        transform: translateX(7px);
+
+    }
+
+    .hero {
+
+        padding: 50px 0 100px 0;
+
+    }
+
+    .hero .shape-img {
+
+        height: 90px;
+
+    }
+
+    .hero .shape-img img {
+
+        object-fit: contain;
+
+    }
+
+    .about-img, .testimonial .text-monial-img {
+
+        margin-top: 20px;
+
+    }
+
+    .healin-work:after {
+
+        height: 145px;
+
+        background-size: contain;
+
+    }
+
+    .our-therapy {
+
+        padding: 20px 0px 70px 0px;
+
+    }
+
+    .our-therapy .therapy-content {
+
+        padding-left: 30px;
+
+    }
+
+    .testimonial:before, .testimonial:after,.our-therapy:after ,.the-method-wrapper-two:before {
+
+        height: 65px;
+
+        background-size: contain;
+
+    }
+
+    .testimonial .testimonial-content {
+
+        margin-left: 3.2rem;
+
+    }
+
+    .healin-work .featured-one figure:nth-child(1) {
+
+        width: 210px;
+
+        border-radius: 60px 0;
+
+    }
+
+    .healin-work .featured-one figure {
+
+        width: 105px;
+
+        height: 110px;
+
+    }
+
+    .healin-work .featured-one figure:nth-child(2) {
+
+        border-radius: 0px 20px 0px 60px;
+
+    }
+
+    .healin-work .featured-one figure:nth-child(3) {
+
+        border-radius: 60px 0px 0px 0px;
+
+    }
+
+    .healin-work .featured-one figure:nth-child(5) {
+
+        border-radius: 60px 0px 20px 0px;
+
+    }
+
+    .healin-work .second-row.g-5 .col-12:nth-child(1) {
+
+        --bs-gutter-y: 0rem;
+
+    }
+
+    .hero:before, .get-started:after {
+
+        width: 70px;
+
+        height: 200px;
+
+        top: 2rem;
+
+    }
+
+    .hero:after{
+
+        width: 100px;
+
+        height: 200px;
+
+        bottom: 3rem;
+
+    }
+
+    .get-started:before {
+
+        width: 70px;
+
+        height: 120px;
+
+        bottom: 2rem;
+
+    }
+
+}
+
+@media (min-width: 768px) and (max-width: 991px){
+
+    .sub-heading h3 {
+
+        font-size: 25px;
+
+        margin-bottom: 15px;
+
+    }
+
+    .healin-work {
+
+        padding-bottom: 120px;
+
+    }
+
+    .therapy-img #tabs-content .tab-content .therapy-image {
+
+        left: 70px;
+
+        top: 45px;
+
+        height: 325px;
+
+        width: 530px;
+
+    }
+
+    .therapy-img #tabs-content .tab-content .therapy-image:after{
+
+        display: none;
+
+    }
+
+}
+
+@media (max-width: 767px) {
+
+    h1.main-heading {
+
+        font-size: 35px;
+
+        margin-bottom: 5px;
+
+    }
+
+    .section-heading h2 {
+
+        font-size: 28px;
+
+    }
+
+    P {
+
+        font-size: 16px;
+
+    }
+
+    section,footer{
+
+        padding-left: 10px !important;
+
+        padding-right: 10px !important;
+
+    }
+
+    .healin-work .featured-one {
+
+        justify-content: center;
+
+    }
+
+    .healin-work .featured-three figure {
+
+        margin: 0 auto;
+
+    }
+
+    .get-started .section-heading {
+
+        width: 100%;
+
+    }
+
+    footer{
+
+        padding:50px 0;
+
+    }
+
+    .get-started:after {
+
+        width: 100px;
+
+        height: 120px;
+
+        top: 20px;
+
+    }
+
+    .get-started:before {
+
+        width: 65px;
+
+        height: 120px;
+
+    }
+
+    .get-started .bottom-after {
+
+        width: 100px;
+
+        height: 100px;
+
+        left: 60%;
+
+        transform: translateX(-40%);
+
+    }
+
+    .get-started .section-heading:after {
+
+        width: 50px;
+
+        height: 50px;
+
+        top: -50px;
+
+        left: 70px;
+
+    }
+
+    .testimonial .text-monial-img {
+
+        height: 370px;
+
+    }
+
+    .testimonial {
+
+        padding: 80px 0 50px 0;
+
+    }
+
+    .testimonial:before{
+
+        height: 45px;
+
+    }
+
+    .testimonial-content .section-heading:after {
+
+        width: 30px;
+
+        height: 30px;
+
+        top: -1rem;
+
+        left: -3rem;
+
+    }
+
+    #testimonial_content:before {
+
+        bottom: 5rem;
+
+    }
+
+    .healin-work .healin-work-content .row-img-one {
+
+        top: -5rem;
+
+        right: 50%;
+
+        transform: translateX(50%);
+
+    }
+
+    .healin-work .healin-work-content .row-img {
+
+        left: 50%;
+
+        transform: translateX(-50%);
+
+        top: -6rem;
+
+    }
+
+    .healin-work .healin-work-content {
+
+        margin-top: 0;
+
+    }
+
+    .sub-heading h3 {
+
+        font-size: 20px;
+
+        margin-bottom: 8px;
+
+        line-height: 30px;
+
+    }
+
+    .healin-work .featured-two , .healin-work .featured-three {
+
+        transform: translateY(-6rem);
+
+    }
+
+    .healin-work {
+
+        padding: 20px 0 50px 0;
+
+    }
+
+    .healin-work .section-heading {
+
+        margin-bottom: 25px;
+
+    }
+
+    .therapy-img #tabs-content .tab-content .therapy-image {
+
+        left: 42px;
+
+        top: 145px;
+
+        height: 164px;
+
+        width: 257px;
+
+    }
+
+    .therapy-img #tabs-content .tab-content .therapy-image:before{
+
+        display: none;
+
+    }
+
+    .our-therapy .row.g-4{
+
+       --bs-gutter-y: 0;
+
+       --bs-gutter-x: 0;
+
+    }
+
+    .about-img figure.figure-a {
+
+        width: 210px;
+
+        height: 180px;
+
+        margin-right: 10px;
+
+        margin-left: 0;
+
+    }
+
+    .about-img figure.figure-b {
+
+        transform: translateX(-20px);
+
+        width: 100px;
+
+        height: 100px;
+
+    }
+
+    .about-img figure.figure-c {
+
+        width: 140px;
+
+        height: 140px;
+
+    }
+
+    .about-img figure.figure-d {
+
+        width: 140px;
+
+        height: 140px;
+
+        transform: translateY(-40px);
+
+    }
+
+    .about-img .figureA-after {
+
+        width: 100px;
+
+        height: 81px;
+
+        top: -50px;
+
+        left: 30px;
+
+    }
+
+    .about-img:before {
+
+        width: 220px;
+
+        height: 220px;
+
+        background-size: contain;
+
+        left: 52%;
+
+        transform: translate(-46%, -55%);
+
+    }
+
+
+}
+

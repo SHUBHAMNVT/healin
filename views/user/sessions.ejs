@@ -1,0 +1,324 @@
+<%- include('comman/header') %>
+
+<section class="main">
+    <div class="top-box" style="height: 221px;">
+        
+    </div>
+
+    <%- include('comman/sidebar') %> 
+
+  <!-- Main Wrapper -->
+    <div class="my-container-main">
+
+        <div class="my-container wrapper active-cont">
+
+            <div class="container-fluid p-0">
+
+                <div class="wrapper-inner">
+
+                    <div class="left-part">
+
+                        <div class="row">
+
+                            <!--page-head-->
+
+                            <%- include('comman/profile-header') %>
+
+                            <!--dashboard-->
+
+                           
+                                <div class="mian-dashboard">
+                                    <div class="row ">
+                                           <div class="main-heading">
+                                               <h1>Sessions</h1>
+                                           </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="Sessions-tabs-wrapper">
+                                             <ul class="nav nav-pills" id="pills-tab" role="tablist">
+                                                <li class="nav-item" role="presentation">
+                                                  <button class="nav-link active position-relative" id="pills-1-tab" data-bs-toggle="pill" data-bs-target="#pills-1" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Today sessions</button>
+                                                </li>
+                                                <li class="nav-item" role="presentation">
+                                                  <button class="nav-link position-relative" id="pills-2-tab" data-bs-toggle="pill" data-bs-target="#pills-2" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Upcoming sessions</button>
+                                                </li>
+                                                <li class="nav-item" role="presentation">
+                                                  <button class="nav-link position-relative" id="pills-3-tab" data-bs-toggle="pill" data-bs-target="#pills-3" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">Re-schedule sessions</button>
+                                                </li>
+                                                <li class="nav-item" role="presentation">
+                                                  <button class="nav-link position-relative" id="pills-4-tab" data-bs-toggle="pill" data-bs-target="#pills-4" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">completed sessions</button>
+                                                </li>
+                                              </ul>
+                                              <div class="tab-content " id="pills-tabContent">
+                                                <div class="tab-pane fade mt-4 show active" id="pills-1" role="tabpanel" aria-labelledby="pills-1-tab">
+
+                                                    <div class="row">
+                                                       
+                                                        <div class="outer-today-sessions">
+                                                            <div class="inner-today-sessions p-0">
+                                                                <div class="top-session-wrapper">
+                                                                    <div class="main-heading">
+                                                                        <h2>Today's sessions</h2>
+                                                                    </div>
+                                                                    <a href="#" class="add-session">Renew Membership</a>
+                                                                </div>
+                                                                <div class="out-sessions-details">
+                                                                    
+                                                                    <div class="today-sessions-details">
+                                                                        <div class="left-sessions-img">
+                                                                            <img src="/user-assets/assets/img/sessions-img.png" class="img-fluid">
+                                                                            <h5>Evening 09:30 PM</h5>
+                                                                        </div>
+                                                                        <div class="right-sessions">
+                                                                            <div class="right-top-content">
+                                                                                <div class="main-heading">
+                                                                                    <h4>Session</h4>
+                                                                                    <p>with : George Ainslie</p>
+                                                                                    <div class="rating-box">
+
+                                                                                        <ul>
+                                                                                            <p>Therapist Rating :</p>
+                                                                                            <img src="/user-assets/assets/img/review-star.png">
+                                                                                            <!-- <li><i class="fa-solid fa-star"></i></li>
+                                                                                            <li><i class="fa-solid fa-star"></i></li>
+                                                                                            <li><i class="fa-solid fa-star"></i></li>
+                                                                                            <li><i class="fa-solid fa-star"></i></li>
+                                                                                            <li><i class="fa-solid fa-star"></i></li> -->
+                                                                                            <span>3.5</span>
+                                                                                        </ul>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <h5>Today</h5>
+                                                                            </div>
+                                                                            
+                                                                            <a href="/user/session-details" class="time-btn" >9:30pm Start</a>
+                                                                        </div>
+                                                                    </div>
+                                                                  
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        
+                                                    </div>
+
+                                                </div>
+
+                                                <div class="tab-pane fade mt-4" id="pills-2" role="tabpanel" aria-labelledby="pills-2-tab">
+                                                  
+                                                    <div class="row ">
+                                                         <div class="top-session-wrapper">
+                                                        <div class="main-heading">
+                                                            <h2>Upcoming sessions</h2>
+                                                        </div>
+                                                           <a href="#" class="add-session">Renew Membership</a>
+                                                        </div>
+                                                        <div class="Upcoming-sessions-wrapper">
+                                                            <div class="inner-upcoming-sessions">
+                                                                <div class="Upcoming-sessions-box">
+                                                                    <div class="Upcoming-sessions-img">
+                                                                        <img src="/user-assets/assets/img/Upcoming-sessions-1.png" class="img-fluid">
+                                                                        <a href="#"><p>Upcoming</p></a>
+                                                                    </div>
+
+                                                                    <div class="Upcoming-sessions-content">
+                                                                        <div class="main-heading">
+                                                                            <div class="top-sessions-cnt">
+                                                                                <h4>Anxiety</h4>
+                                                                                <span>3.5 <i class="fa-solid fa-star"></i></span>
+                                                                            </div>
+                                                                            <div class="bottom-sessions-cnt">
+                                                                                <p>With : George Ainslie</p>
+                                                                                <p>25 Dec 2023</p>
+                                                                            </div>
+                                                                        </div>
+                                                                        <a href="#" class="more-details">more details</a>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="Upcoming-sessions-box">
+                                                                    <div class="Upcoming-sessions-img">
+                                                                        <img src="/user-assets/assets/img/Upcoming-sessions-2.png" class="img-fluid">
+                                                                        <a href="#"><p>Upcoming</p></a>
+                                                                    </div>
+
+                                                                    <div class="Upcoming-sessions-content">
+                                                                        <div class="main-heading">
+                                                                            <div class="top-sessions-cnt">
+                                                                                <h4>Bipolar Disorder</h4>
+                                                                                <span>4.5 <i class="fa-solid fa-star"></i></span>
+                                                                            </div>
+                                                                            <div class="bottom-sessions-cnt">
+                                                                                <p>with : Alfer Adler</p>
+                                                                                <p>28 Dec 2023</p>
+                                                                            </div>
+                                                                        </div>
+                                                                        <a href="#" class="more-details">more details</a>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="Upcoming-sessions-box">
+                                                                    <div class="Upcoming-sessions-img">
+                                                                        <img src="/user-assets/assets/img/Upcoming-sessions-3.png" class="img-fluid">
+                                                                        <a href="#"><p>Upcoming</p></a>
+                                                                    </div>
+
+                                                                    <div class="Upcoming-sessions-content">
+                                                                        <div class="main-heading">
+                                                                            <div class="top-sessions-cnt">
+                                                                                <h4>OCD</h4>
+                                                                                <span>3.5 <i class="fa-solid fa-star"></i></span>
+                                                                            </div>
+                                                                            <div class="bottom-sessions-cnt">
+                                                                                <p>With : Susan Aposhyan</p>
+                                                                                <p>1 Jan 2024</p>
+                                                                            </div>
+                                                                        </div>
+                                                                        <a href="#" class="more-details">more details</a>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="Upcoming-sessions-box">
+                                                                    <div class="Upcoming-sessions-img">
+                                                                        <img src="/user-assets/assets/img/Upcoming-sessions-1.png" class="img-fluid">
+                                                                        <a href="#"><p>Upcoming</p></a>
+                                                                    </div>
+
+                                                                    <div class="Upcoming-sessions-content">
+                                                                        <div class="main-heading">
+                                                                            <div class="top-sessions-cnt">
+                                                                                <h4>Addiction</h4>
+                                                                                <span>5.5 <i class="fa-solid fa-star"></i></span>
+                                                                            </div>
+                                                                            <div class="bottom-sessions-cnt">
+                                                                                <p>With : George Ainslie</p>
+                                                                                <p>10 Jan 2024</p>
+                                                                            </div>
+                                                                        </div>
+                                                                        <a href="#" class="more-details">more details</a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+
+                                                <div class="tab-pane fade mt-4" id="pills-3" role="tabpanel" aria-labelledby="pills-3-tab">
+                                                  
+                                                    <div class="row ">
+                                                         <div class="top-session-wrapper">
+                                                        <div class="main-heading">
+                                                            <h2>Re-Schedule Sessions</h2>
+                                                        </div>
+                                                           <a href="#" class="add-session">Renew Membership</a>
+                                                        </div>
+                                                        <div class="Upcoming-sessions-wrapper">
+                                                            <div class="inner-upcoming-sessions">
+
+                                                                <div class="Upcoming-sessions-box">
+                                                                    <div class="Upcoming-sessions-img Re-Schedule">
+                                                                        <img src="/user-assets/assets/img/Upcoming-sessions-1.png" class="img-fluid">
+                                                                        <a href="#"><p>Re-Schedule</p></a>
+                                                                    </div>
+
+                                                                    <div class="Upcoming-sessions-content">
+                                                                        <div class="main-heading">
+                                                                            <div class="top-sessions-cnt">
+                                                                                <h4>Anxiety</h4>
+                                                                                <span>3.5 <i class="fa-solid fa-star"></i></span>
+                                                                            </div>
+                                                                            <div class="bottom-sessions-cnt">
+                                                                                <p>With : George Ainslie</p>
+                                                                                <p>25 Dec 2023</p>
+                                                                            </div>
+                                                                        </div>
+                                                                        <a href="#" class="more-details">more details</a>
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="Upcoming-sessions-box">
+                                                                    <div class="Upcoming-sessions-img Re-Schedule">
+                                                                        <img src="/user-assets/assets/img/Upcoming-sessions-2.png" class="img-fluid">
+                                                                        <a href="#"><p>Re-Schedule</p></a>
+                                                                    </div>
+
+                                                                    <div class="Upcoming-sessions-content">
+                                                                        <div class="main-heading">
+                                                                            <div class="top-sessions-cnt">
+                                                                                <h4>Bipolar Disorder</h4>
+                                                                                <span>4.5 <i class="fa-solid fa-star"></i></span>
+                                                                            </div>
+                                                                            <div class="bottom-sessions-cnt">
+                                                                                <p>with : Alfer Adler</p>
+                                                                                <p>28 Dec 2023</p>
+                                                                            </div>
+                                                                        </div>
+                                                                        <a href="#" class="more-details">more details</a>
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="Upcoming-sessions-box">
+                                                                    <div class="Upcoming-sessions-img Re-Schedule">
+                                                                        <img src="/user-assets/assets/img/Upcoming-sessions-3.png" class="img-fluid">
+                                                                        <a href="#"><p>Re-Schedule</p></a>
+                                                                    </div>
+
+                                                                    <div class="Upcoming-sessions-content">
+                                                                        <div class="main-heading">
+                                                                            <div class="top-sessions-cnt">
+                                                                                <h4>OCD</h4>
+                                                                                <span>3.5 <i class="fa-solid fa-star"></i></span>
+                                                                            </div>
+                                                                            <div class="bottom-sessions-cnt">
+                                                                                <p>With : Susan Aposhyan</p>
+                                                                                <p>1 Jan 2024</p>
+                                                                            </div>
+                                                                        </div>
+                                                                        <a href="#" class="more-details">more details</a>
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="Upcoming-sessions-box">
+                                                                    <div class="Upcoming-sessions-img Re-Schedule">
+                                                                        <img src="/user-assets/assets/img/Upcoming-sessions-1.png" class="img-fluid">
+                                                                        <a href="#"><p>Re-Schedule</p></a>
+                                                                    </div>
+
+                                                                    <div class="Upcoming-sessions-content">
+                                                                        <div class="main-heading">
+                                                                            <div class="top-sessions-cnt">
+                                                                                <h4>Addiction</h4>
+                                                                                <span>5.5 <i class="fa-solid fa-star"></i></span>
+                                                                            </div>
+                                                                            <div class="bottom-sessions-cnt">
+                                                                                <p>With : George Ainslie</p>
+                                                                                <p>10 Jan 2024</p>
+                                                                            </div>
+                                                                        </div>
+                                                                        <a href="#" class="more-details">more details</a>
+                                                                    </div>
+                                                                </div>
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+
+                                                </div>
+
+                                                 <div class="tab-pane fade mt-4" id="pills-4" role="tabpanel" aria-labelledby="pills-4-tab">
+                                                  <h2>4</h2>
+                                                  <p>Please check our more design</p>
+                                                </div>
+                                              </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<%- include('comman/footer') %> 

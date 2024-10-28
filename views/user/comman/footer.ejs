@@ -1,0 +1,154 @@
+
+
+<footer>
+
+
+</footer>
+
+<div class="modal fade" id="change_password" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Change Password</h5>
+          <button type="button" data-bs-dismiss="modal" aria-label="Close" class="cancel">cancel <span class="btn-close"><i class="fa-solid fa-xmark"></i></span></button>
+        </div>
+        <div class="modal-body">
+    
+          <form class="info-profile-form mt-4" id="changePassword">
+              <div class="row">
+                    <div class="mb-3 flex-group col-lg-12">
+                      <label for="" class="form-label">Password</label>
+                      <input type="password" class="form-control" name="password" id="password" aria-describedby="" placeholder="Password">
+                    </div>
+                    
+  
+                     <div class="mb-3 flex-group col-lg-12">
+                      <label for="" class="form-label" >Confirm Password</label>
+                      <input type="password" class="form-control" name="confirm_password" id="" aria-describedby="" placeholder="Confirm Passowrd">
+                    </div>
+
+             </div>
+            <button type="submit" class="btn add-session">UPDATE PASSWORD</button>
+  
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<script src="/user-assets/assets/js/bootstrap.bundle.min.js"></script>
+
+<script src="/user-assets/assets/js/owl.carousel.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.0/jquery-ui.min.js"></script>
+
+<script type="text/javascript" src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+
+<script type="text/javascript" src="https://cdn.datatables.net/1.13.6/js/dataTables.bootstrap5.min.js"></script>
+
+<!-- Jquery Validation -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js"></script>
+<script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
+<!-- Toaster -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+
+<script src="/user-assets/assets/js/custom.js"></script>
+
+<script type="text/javascript">
+
+    $(function () {
+    $('ul.navbar-nav > li > a').each(function () {            
+        if (window.location.pathname.indexOf($(this).attr('href')) > -1) {
+            $(this).closest('li a').addClass('active');
+            return false;
+        }
+    });
+});
+</script>
+
+<script type="text/javascript">
+        
+new DataTable('#example');
+</script>
+
+
+<script type="text/javascript">
+    $('#package-popup-slider').owlCarousel({
+    loop:true,
+    nav:true,
+    dots:true,
+  //  center:true,
+    autoplay:false,
+    margin:20,
+    smartSpeed: 1000,
+    responsive:{
+        0:{
+            items:1
+        },
+        600:{
+            items:1
+        },
+        1000:{
+            items:1
+        }
+    },navText: ["<i class='far fa-arrow-left' aria-hidden='true'></i>","<i class='far fa-arrow-right' aria-hidden='true'></i>"]
+});
+
+</script>
+
+
+<script>
+    $(document).ready(function(){
+            $("#changePassword").validate({
+            rules: {
+                password: {
+                    required: true,
+                },
+                confirm_password: {
+                    required: true,
+                    equalTo: "#password"
+                },  
+            },
+            messages: {
+                password: {
+                    required: "Passowrd filed is required",
+                },
+                confirm_password: {
+                    required: "Confirm password filed is required",
+                },
+            },
+            submitHandler: function(form, event) {
+            event.preventDefault();
+        
+            var data = $(form).serialize();
+            $.ajax({
+                url: "/user/change-password",
+                type: "POST",
+                data: data,
+                dataType:"JSON",
+                success: function( response ) {
+                    if(response.status == true){
+                    $('#change_password').modal('hide');
+                    toastr.success(response.message);
+                 }
+                },
+                error: function (error) {
+                    console.error("Ajax error:", error);
+                }
+            });
+            }
+        });
+    });
+  </script>
+
+
+</body>
+
+</html>
+
+

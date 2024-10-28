@@ -1,0 +1,386 @@
+<%- include('comman/header') %>
+
+  <%- include('comman/sidebar') %>
+
+    <style>
+
+    </style>
+
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper">
+      <!-- Content Header (Page header) -->
+      <div class="content-header">
+        <div class="container-fluid">
+          <div class="row mb-2">
+            <div class="col-sm-6">
+              <h1 class="m-0">Dashboard</h1>
+            </div>
+            <div class="col-sm-6">
+              <ol class="breadcrumb float-sm-right">
+                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                <li class="breadcrumb-item active">Dashboard</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <section class="content">
+
+        <div class="user-data-container container-fluid" id="user-data-table" hidden>
+          <table class="table table-striped" id="user-data-table-inner">
+            <thead>
+              <tr>
+                <th>Sr.no</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Mobile No</th>
+                <th>Address</th>
+                <th>Past Therapist</th>
+                <th>Current Therapist</th>
+                <th>Joining date</th>
+                <th>Hours spent</th>
+                <th>Amount spent ($)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <% if(user) { %>
+                <% user.forEach((ele, index)=> { %>
+                  <tr>
+                    <td>
+                      <%= index + 1 %>
+                    </td>
+                    <td>
+                      <%= ele.name ? ele.name : "No details" %>
+                    </td>
+                    <td>
+                      <%= ele.email ? ele.email : "No details" %>
+                    </td>
+                    <td>
+                      <%= ele.phone ? ele.phone : "No details" %>
+                    </td>
+                    <td>
+                      <%= ele.address ? ele.address : "No details" %>
+                    </td>
+                    <td>
+                      <%= ele.past_therapist ? ele.past_therapist : "Not selected" %>
+                    </td>
+                    <td>
+                      <%= ele.current_therapist ? ele.current_therapist : "Not selected" %>
+                    </td>
+                    <td>
+                      <%= new Date(ele.createdAt).toLocaleDateString() %>
+                    </td>
+                    <td>
+                      <%= ele?.hours_spent ? ele.hours_spent.toFixed(5) + "hr" : "0hr" %>
+                    </td>
+                    <td>0 $</td>
+                  </tr>
+                  <% }) %>
+                    <% } else { %>
+                      <tr>
+                        <td colspan="10">
+                          <h3>404 No Users found</h3>
+                        </td>
+                      </tr>
+                      <% } %>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="therapist-data container-fluid" id="therapist-data-table" hidden>
+          <table class="table table-striped" id="therapist-data-table-inner">
+            <thead>
+              <tr>
+                <th>Sr.no</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Email</th>
+                <th>Mobile No</th>
+                <th>Type of Therapist</th>
+                <th>Other Details</th>
+                <th>Certificates (Malpractice)</th>
+                <th>Certificates (License)</th>
+                <th>Status</th>
+                <th>Date Joined</th>
+                <th>Hours spent</th>
+                <th>No of clients</th>
+              </tr>
+            </thead>
+            <tbody>
+              <% if(data) { %>
+                <% data.forEach((ele, index)=> { %>
+                  <tr>
+                    <td>
+                      <%= index + 1 %>
+                    </td>
+                    <td>
+                      <%= ele?.first_name ? ele.first_name : "No details" %>
+                    </td>
+                    <td>
+                      <%= ele?.last_name ? ele.last_name : "No details" %>
+                    </td>
+                    <td>
+                      <%= ele?.email ? ele.email : "No details" %>
+                    </td>
+                    <td>
+                      <%= ele?.phone ? ele.phone : "No details" %>
+                    </td>
+                    <td>
+                      <%= ele?.type_of_therapist ? ele.type_of_therapist : "No details" %>
+                    </td>
+                    <td data-therapist-email="<%= ele.email %>">
+                      <button style="border: none;" type="button" class="other-details-td"
+                        data-therapist-email="<%= ele.email %>"
+                        data-therapist-name="<%= ele.first_name + '_' + ele.last_name %>">
+                        <i style="color: rgb(0, 132, 255);" class="fa fa-solid fa-file"></i>
+                      </button>
+                    </td>
+                    <td>
+                      <ul style="list-style-type: none;">
+                        <% if(ele.isQDataExists) { %>
+                          <% if(ele?.malpractice_files) { %>
+                            <% ele.malpractice_files.forEach((path, i)=> { %>
+                              <% if(path) { %>
+                                <li><a href="<%= path.replace('public', '') %>"
+                                    download="<%= ele.first_name + '_' + ele.last_name + '_' + 'malpractice_file' + (i + 1) %>"><i
+                                      class="fa fa-solid fa-file"></i></a></li>
+                                <% } else { %>
+                                  <li>
+                                    <svg style="width: 15px;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                      <path fill="#ff0000"
+                                        d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zm0-384c13.3 0 24 10.7 24 24V264c0 13.3-10.7 24-24 24s-24-10.7-24-24V152c0-13.3 10.7-24 24-24zM224 352a32 32 0 1 1 64 0 32 32 0 1 1 -64 0z" />
+                                    </svg>
+                                  </li>
+                                  <% } %>
+                                    <% }) %>
+                                      <% } else { %>
+                                        <li>
+                                          <svg style="width: 15px;" xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 512 512">
+                                            <path fill="#ff0000"
+                                              d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zm0-384c13.3 0 24 10.7 24 24V264c0 13.3-10.7 24-24 24s-24-10.7-24-24V152c0-13.3 10.7-24 24-24zM224 352a32 32 0 1 1 64 0 32 32 0 1 1 -64 0z" />
+                                          </svg>
+                                        </li>
+                                        <% } %>
+                                          <% } else { %>
+                                            No details
+                                            <% } %>
+                      </ul>
+                    </td>
+                    <td>
+                      <ul style="list-style-type: none;">
+                        <% if(ele.isQDataExists) { %>
+                          <% if(ele?.certificate_licence_number) { %>
+                            <% ele.certificate_licence_number.forEach((path, i)=> { %>
+                              <li><a href="<%= path.replace('public', '') %>"
+                                  download="<%= ele.first_name + '_' + ele.last_name + '_' + 'license_file' + (i + 1) %>"><i
+                                    class="fa fa-solid fa-file"></i></a></li>
+                              <% }) %>
+                                <% } else { %>
+                                  <li>
+                                    <svg style="width: 15px;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                      <path fill="#ff0000"
+                                        d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zm0-384c13.3 0 24 10.7 24 24V264c0 13.3-10.7 24-24 24s-24-10.7-24-24V152c0-13.3 10.7-24 24-24zM224 352a32 32 0 1 1 64 0 32 32 0 1 1 -64 0z" />
+                                    </svg>
+                                  </li>
+                                  <% } %>
+                                    <% } else { %>
+                                      No details
+                                      <% } %>
+                      </ul>
+                    </td>
+                    <td id="<%= ele.email %>">
+                      <% if(ele.isQDataExists) { %>
+                        <% if(ele.status==="null" ) { %>
+                          <button type="button" class="approval-buttons btn btn-success btn-sm" id="approve-btn"
+                            value="<%= ele.email %>">&#10004;</button>
+                          <button type="button" class="approval-buttons btn btn-danger btn-sm" id="disapprove-btn"
+                            value="<%= ele.email %>">&#10006;</button>
+                          <% } else { %>
+                            <%= ele.status==="true" ? "Approved" : "Denied" %>
+                              <% } %>
+                                <% } else { %>
+                                  status not available
+                                  <% } %>
+                    </td>
+
+                    <td>
+                      <%= ele.joiningDate %>
+                    </td>
+                    <td>
+                      <%= ele?.hours_spent ? Number(ele.hours_spent).toFixed(5) + "hr" : "0" %>
+                    </td>
+                    <td>
+                      0
+                    </td>
+                  </tr>
+                  <% }) %>
+                    <% } %>
+            </tbody>
+          </table>
+
+        </div>
+
+
+
+
+
+
+
+
+
+        <!-- <div class="container-fluid">
+
+          <div class="row">
+            <div class="col-lg-4 col-6">
+              <div class="small-box bg-info">
+                <div class="inner">
+                  <h3>22</h3>
+                  <p>Users</p>
+                </div>
+                <div class="icon">
+                  <i class="ion ion-person-add"></i>
+                </div>
+                <a href="" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-6">
+              <div class="small-box bg-success">
+                <div class="inner">
+                  <h3>23</h3>
+
+                  <p>Allergies</p>
+                </div>
+                <div class="icon">
+                  <i class="ion ion-stats-bars"></i>
+                </div>
+                <a href="" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-6">
+              <div class="small-box bg-warning">
+                <div class="inner">
+                  <h3>25</h3>
+                  <p>Diet Type </p>
+                </div>
+                <div class="icon">
+                  <i class="ion ion-bag"></i>
+                </div>
+                <a href="" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-6">
+              <div class="small-box bg-danger">
+                <div class="inner">
+                  <h3>28</h3>
+                  <p>Medical Conditions</p>
+                </div>
+                <div class="icon">
+                  <i class="ion ion-pie-graph"></i>
+                </div>
+                <a href="" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-6">
+              <div class="small-box bg-primary">
+                <div class="inner">
+                  <h3>24</h3>
+                  <p>Cuisine Type</p>
+                </div>
+                <div class="icon">
+                  <i class="ion ion-pie-graph"></i>
+                </div>
+                <a href="" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-6">
+              <div class="small-box bg-secondary">
+                <div class="inner">
+                  <h3>30</h3>
+                  <p>Goal</p>
+                </div>
+                <div class="icon">
+                  <i class="ion ion-pie-graph"></i>
+                </div>
+                <a href="" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+              </div>
+            </div>
+
+
+          </div> -->
+      </section>
+
+      <!-- /.content-header -->
+
+
+    </div>
+
+    <%- include('comman/footer') %>
+
+
+      <script>
+        $(document).ready(function () {
+
+          $(".other-details-td").on("click", function (event) {
+            var data = $(event.target.parentElement).data("therapist-email");
+
+            $.ajax({
+              url: "/admin/get-other-details",
+              type: "POST",
+              data: { email: data },
+              dataType: "JSON",
+              success: function (response) {
+                console.log(response);
+
+                // const url = URL.createObjectURL(pdfBlob);
+                const a = document.createElement("a");
+
+                a.href = response.url;
+                a.download = $(event.target.parentElement).data("therapist-name") + "_details.pdf";
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
+                // URL.revokeObjectURL(url);
+              },
+              error: function (xhr, status, error) {
+                console.log(error);
+              }
+            });
+          });
+
+          var approveButton = $(".approval-buttons");
+          console.log(approveButton);
+          approveButton.on("click", function (event) {
+            console.log(event.target.value);
+            $.ajax({
+              url: "/update-therapist-status",
+              type: "POST",
+              data: { email: event.target.value, elementId: event.target.id },
+              dataType: "JSON",
+              success: function (response) {
+                console.log(response);
+                // $("#" + response.email).text(response.status);
+                location.reload();
+              }
+            });
+          });
+
+          $("#therapist-nav-link").on("click", function () {
+            $("#user-data-table").attr("hidden", true);
+            $("#therapist-data-table").removeAttr("hidden");
+            $("#therapist-data-table-inner").toggle();
+          });
+
+          $("#users-nav-link").on("click", function () {
+            $("#therapist-data-table").attr("hidden", true);
+            $("#user-data-table").removeAttr("hidden");
+            $("#user-data-table-inner").toggle();
+          });
+        });
+      </script>

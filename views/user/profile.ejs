@@ -1,0 +1,494 @@
+<%- include('comman/header') %>
+    <section class="main">
+        <div class="top-box" style="height: 221px;">
+
+        </div>
+
+
+        <%- include('comman/sidebar') %>
+            <!-- Main Wrapper -->
+            <div class="my-container-main">
+
+                <div class="my-container wrapper active-cont">
+
+                    <div class="container-fluid p-0">
+
+                        <div class="wrapper-inner">
+
+                            <div class="left-part">
+
+                                <div class="row">
+
+                                    <!--page-head-->
+
+                                    <%- include('comman/profile-header') %>
+
+
+                                        <!--dashboard-->
+
+
+                                        <div class="mian-dashboard">
+                                            <div class="row">
+                                                <div class="col-lg-8">
+                                                    <div class="main-profile-ourview">
+                                                        <div class="out-user-ptofile-wrapper">
+                                                            <div class="user-ptofile-wrapper">
+                                                                <div class="inner-top-profile-box">
+                                                                    <div class="edit-profile-view">
+                                                                        <div class="profile-image">
+                                                                            <% if (user.file) { %>
+                                                                                <img class="profile-pic" src="/uploads/profile-image/<%= user.file %>"/>
+                                                                            <%} else { %>
+                                                                                <img class="profile-pic" src="/user-assets/assets/img/user-profile-img.png">
+                                                                              <% } %>
+                                                                        </div>
+                                                                        <span class="edit-icon upload-button">
+                                                                            <input class="file-upload" id="file-input1"
+                                                                                type="file" accept="">
+                                                                            <svg xmlns="http://www.w3.org/2000/svg"
+                                                                                width="16" height="16"
+                                                                                viewBox="0 0 16 16" fill="none">
+                                                                                <path
+                                                                                    d="M9.88084 2.67133L1.07744 11.4754C1.03311 11.5199 1.00152 11.5754 0.985957 11.6362L0.0101511 15.5528C-0.00420055 15.6109 -0.00332104 15.6717 0.0127047 15.7294C0.0287304 15.7871 0.0593607 15.8397 0.101637 15.8821C0.166573 15.9468 0.254493 15.9832 0.346173 15.9832C0.374455 15.9832 0.402629 15.9797 0.430057 15.9728L4.34663 14.9969C4.40753 14.9816 4.46312 14.95 4.50745 14.9056L13.3117 6.10208L9.88084 2.67133ZM15.4926 1.4709L14.5127 0.490973C13.8577 -0.163983 12.7162 -0.163333 12.062 0.490973L10.8616 1.6914L14.2922 5.12202L15.4926 3.92163C15.8198 3.5946 16 3.1593 16 2.69635C16 2.2334 15.8198 1.79809 15.4926 1.4709Z"
+                                                                                    fill="white" />
+                                                                            </svg>
+                                                                        </span>
+                                                                        <h1 id="profile-user-name"><%= user ? user.name : '' %></h1>
+                                                                    </div>
+
+                                                                    <div class="profile-info-view">
+                                                                        <ul>
+                                                                            <li>
+                                                                                <svg xmlns="http://www.w3.org/2000/svg"
+                                                                                    width="20" height="20"
+                                                                                    viewBox="0 0 20 20" fill="none">
+                                                                                    <circle opacity="0.2" cx="10"
+                                                                                        cy="10" r="10" fill="white" />
+                                                                                    <path
+                                                                                        d="M14.4298 11.1013C13.842 11.1013 13.2649 11.0093 12.7181 10.8286C12.4501 10.7372 12.1207 10.8211 11.9571 10.989L10.8777 11.8039C9.62586 11.1357 8.85476 10.3648 8.19567 9.1224L8.98654 8.0711C9.19201 7.86591 9.26571 7.56616 9.17741 7.28491C8.99591 6.73516 8.90371 6.15833 8.90371 5.57034C8.90374 5.14556 8.55817 4.79999 8.13342 4.79999H6.37042C5.94567 4.79999 5.6001 5.14556 5.6001 5.57031C5.6001 10.439 9.56104 14.4 14.4298 14.4C14.8545 14.4 15.2001 14.0544 15.2001 13.6296V11.8716C15.2001 11.4468 14.8545 11.1013 14.4298 11.1013Z"
+                                                                                        fill="white" />
+                                                                                </svg>
+                                                                                <p id="uer-number">4374250909</p>
+                                                                            </li>
+
+                                                                            <li>
+                                                                                <svg xmlns="http://www.w3.org/2000/svg"
+                                                                                    width="20" height="20"
+                                                                                    viewBox="0 0 20 20" fill="none">
+                                                                                    <circle opacity="0.2" cx="10"
+                                                                                        cy="10" r="10" fill="white" />
+                                                                                    <path
+                                                                                        d="M11.2024 11.0767C10.9636 11.236 10.6861 11.3201 10.4001 11.3201C10.1141 11.3201 9.83666 11.236 9.59782 11.0767L5.66402 8.45412C5.6423 8.4396 5.62099 8.42449 5.6001 8.4088V12.7062C5.6001 13.199 5.99994 13.59 6.48384 13.59H14.3163C14.809 13.59 15.2001 13.1901 15.2001 12.7062V8.40878C15.1792 8.42451 15.1578 8.43966 15.136 8.4542L11.2024 11.0767Z"
+                                                                                        fill="white" />
+                                                                                    <path
+                                                                                        d="M5.97604 7.98609L9.90984 10.6087C10.0588 10.708 10.2294 10.7576 10.4001 10.7576C10.5708 10.7576 10.7414 10.708 10.8904 10.6087L14.8242 7.98609C15.0596 7.82925 15.2001 7.56675 15.2001 7.28344C15.2001 6.79629 14.8038 6.39999 14.3167 6.39999H6.48354C5.99642 6.40001 5.6001 6.79631 5.6001 7.28391C5.59995 7.42288 5.6342 7.55973 5.6998 7.68226C5.7654 7.80478 5.8603 7.90916 5.97604 7.98609Z"
+                                                                                        fill="white" />
+                                                                                </svg>
+                                                                                 <p id="user-email"><%= user ?  user.email : '' %></p>
+                                                                                
+                                                                            </li>
+                                                                        </ul>
+                                                                        <button type="button" class="btn add-session"
+                                                                            data-bs-toggle="modal"
+                                                                            data-bs-target="#profile-edit-Modal">
+                                                                            Update profile
+                                                                        </button>
+                                                                    </div>
+
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="user-ptofile-detail">
+                                                                <div class="main-heading">
+                                                                    <p>
+                                                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                                                            width="14" height="16" viewBox="0 0 14 16"
+                                                                            fill="none">
+                                                                            <path
+                                                                                d="M4.38839 7.93656L4.38829 7.93642C4.38255 7.92744 4.37654 7.91863 4.37028 7.91L4.37025 7.90996C3.8984 7.26083 3.658 6.49153 3.658 5.71809C3.658 3.64038 5.33086 1.95267 7.395 1.95267C9.4548 1.95267 11.132 3.64121 11.132 5.71809C11.132 6.49228 10.8966 7.23474 10.4509 7.86652C10.4487 7.86929 10.4471 7.87126 10.4457 7.87309C10.432 7.89004 10.4281 7.89488 10.1047 8.40204C9.92185 8.6887 9.63666 9.1363 9.1899 9.83749C8.75934 10.5133 8.17871 11.4246 7.395 12.6543L4.38839 7.93656ZM4.79938 10.5402C4.07903 10.6604 3.15494 10.8817 2.38929 11.2433C1.577 11.627 0.9 12.19 0.9 12.9942C0.9 13.2881 0.996763 13.6392 1.31133 13.9927C1.62406 14.3441 2.14845 14.6939 2.99748 14.9972C4.18329 15.4207 5.74506 15.6522 7.395 15.6522C8.93775 15.6522 10.5484 15.4348 11.7771 15.002C12.3911 14.7857 12.9159 14.5134 13.2889 14.1824C13.6631 13.8504 13.89 13.4538 13.89 12.9942C13.89 12.1899 13.2138 11.627 12.4018 11.2434C11.6364 10.8818 10.7121 10.6605 9.99057 10.5402C11.2745 8.52533 11.2842 8.50856 11.2962 8.49363C11.2978 8.49159 11.2995 8.48959 11.3045 8.48255C11.8803 7.67043 12.1847 6.7143 12.1847 5.71809C12.1847 3.0767 10.0414 0.9 7.395 0.9C4.75718 0.9 2.60533 3.07232 2.60533 5.71809C2.60533 6.71281 2.91546 7.69284 3.50905 8.51549L4.79938 10.5402ZM7.395 14.5995C5.72717 14.5995 4.35301 14.3543 3.39909 14.0222C2.92161 13.856 2.55361 13.6695 2.30713 13.4843C2.05529 13.295 1.95267 13.1245 1.95267 12.9942C1.95267 12.9111 2.0025 12.7946 2.13877 12.6555C2.27307 12.5183 2.48138 12.3698 2.7714 12.224C3.34115 11.9375 4.21314 11.6679 5.41905 11.5125L6.95112 13.9166C6.95112 13.9166 6.95113 13.9166 6.95113 13.9166C6.99867 13.9912 7.06427 14.0526 7.14184 14.0952C7.21942 14.1377 7.30648 14.16 7.39497 14.16C7.48346 14.16 7.57052 14.1377 7.6481 14.0952C7.72568 14.0526 7.79127 13.9912 7.83882 13.9166C7.83882 13.9166 7.83882 13.9166 7.83882 13.9166L9.37086 11.5125C10.5768 11.6679 11.4488 11.9375 12.0186 12.224C12.3086 12.3698 12.5169 12.5183 12.6512 12.6555C12.7875 12.7946 12.8373 12.9111 12.8373 12.9942C12.8373 13.1231 12.7358 13.2928 12.4855 13.4818C12.2405 13.6668 11.8744 13.8534 11.3982 14.02C10.4468 14.3528 9.07266 14.5995 7.395 14.5995Z"
+                                                                                fill="#6E7984" stroke="#6E7984"
+                                                                                stroke-width="0.2" />
+                                                                            <path
+                                                                                d="M7.39534 3.48643C6.16471 3.48643 5.16367 4.48746 5.16367 5.71809C5.16367 6.94872 6.16471 7.94976 7.39534 7.94976C8.62597 7.94976 9.62701 6.94872 9.62701 5.71809C9.62701 4.48746 8.62597 3.48643 7.39534 3.48643ZM7.39534 6.89709C6.74533 6.89709 6.21634 6.3681 6.21634 5.71809C6.21634 5.06808 6.74533 4.53909 7.39534 4.53909C8.04535 4.53909 8.57434 5.06808 8.57434 5.71809C8.57434 6.3681 8.04535 6.89709 7.39534 6.89709Z"
+                                                                                fill="#6E7984" stroke="#6E7984"
+                                                                                stroke-width="0.2" />
+                                                                        </svg>
+                                                                        Location
+                                                                    </p>
+                                                                    <div class="profile-user-location">
+                                                                    <h6 id="profile-user-address"><%= user ? user.address : '' %></h6>
+                                                                    <h6 id="profile-user-zipcode"><%= user ? user.zipcode : '' %></h6>
+                                                                    </div>
+                                                                </div>
+
+                                                                <hr>
+
+                                                                <div class="row">
+                                                                    <div class="profile-status-info">
+
+                                                                        <div class="status-info-box">
+                                                                            <div class="status-img">
+                                                                                <img src="/user-assets/assets/img/status-img1.svg"
+                                                                                    class="img-fluid">
+                                                                            </div>
+                                                                            <div class="main-heading">
+                                                                                <p>Relationship status</p>
+                                                                                <h6 id="profile-user-relationship"><%= user ? user.relationship_status : ''%></h6>
+                                                                            </div>
+                                                                        </div>
+
+                                                                        <div class="status-info-box">
+                                                                            <div class="status-img">
+                                                                                <img src="/user-assets/assets/img/status-img2.svg"
+                                                                                    class="img-fluid">
+                                                                            </div>
+                                                                            <div class="main-heading">
+                                                                                <p>Therapist looking</p>
+                                                                                <h6 id="profile-user-looking"><%= user ? user.looking_for_therapy : ''%></h6>
+                                                                            </div>
+                                                                        </div>
+
+                                                                        <div class="status-info-box">
+                                                                            <div class="status-img">
+                                                                                <img src="/user-assets/assets/img/status-img3.svg"
+                                                                                    class="img-fluid">
+                                                                            </div>
+                                                                            <div class="main-heading">
+                                                                                <p>Current physical health</p>
+                                                                                <h6 id="profile-user-physical-health"><%= user ? user.current_physical_health : ''%></h6>
+                                                                            </div>
+                                                                        </div>
+
+                                                                        <div class="status-info-box">
+                                                                            <div class="status-img">
+                                                                                <img src="/user-assets/assets/img/status-img1.svg"
+                                                                                    class="img-fluid">
+                                                                            </div>
+                                                                            <div class="main-heading">
+                                                                                <p>Gender</p>
+                                                                                <h6 id="profile-user-gender"><%= user ? user.gender : '' %></h6>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+
+                                                            </div>
+
+                                                        </div>
+
+                                                        <div class="consider-therapies-wrapper">
+                                                            <div class="main-heading">
+                                                                <h4>Your Consider Therapies</h4>
+                                                            </div>
+
+                                                            <hr>
+
+                                                            <div class="list-therapies-box">
+                                                                <ul>
+                                                                    <li>I’ve been feeling depressed</li>
+                                                                    <li>i feel anxious or overwhelmed</li>
+                                                                    <li>i am experienced trauma</li>
+                                                                    <li>i am grieving</li>
+                                                                    <li>i want to gain self confidence</li>
+                                                                    <li>i want to improve myself</li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="Therapist-List-wrapper">
+                                                            <div class="top-list-heading">
+                                                                <div class="main-heading">
+                                                                    <h2>Recommended Therapist List</h2>
+                                                                </div>
+                                                                <!-- <a href="#" class="view-more">view more</a> -->
+                                                            </div>
+
+                                                            <div
+                                                                class="Therapist-List-slider owl-carousel owl-theme mt-3">
+
+                                                                <div class="item">
+                                                                    <div class="Therapist-list-box">
+                                                                        <div class="Therapist-people-img">
+                                                                            <img src="/user-assets/assets/img/Therapist-list-people-img.png"
+                                                                                class="img-fluid">
+                                                                        </div>
+                                                                        <h6>Richard Bandler</h6>
+                                                                        <p>Anxiety</p>
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="item">
+                                                                    <div class="Therapist-list-box">
+                                                                        <div class="Therapist-people-img">
+                                                                            <img src="/user-assets/assets/img/Therapist-list-people-img-2.png"
+                                                                                class="img-fluid">
+                                                                        </div>
+                                                                        <h6>Lisa Firestone</h6>
+                                                                        <p>Bipolar disorder</p>
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="item">
+                                                                    <div class="Therapist-list-box">
+                                                                        <div class="Therapist-people-img">
+                                                                            <img src="/user-assets/assets/img/Therapist-list-people-img-3.png"
+                                                                                class="img-fluid">
+                                                                        </div>
+                                                                        <h6>Richard Bandler</h6>
+                                                                        <p>OCD</p>
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="item">
+                                                                    <div class="Therapist-list-box">
+                                                                        <div class="Therapist-people-img">
+                                                                            <img src="/user-assets/assets/img/Therapist-list-people-img.png"
+                                                                                class="img-fluid">
+                                                                        </div>
+                                                                        <h6>Richard Bandler</h6>
+                                                                        <p>Anxiety</p>
+                                                                    </div>
+                                                                </div>
+
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-4">
+                                                    <div class="Active-plan" style="top:0;">
+                                                        <div class="inner-plan">
+                                                            
+                                                            <h6>Active Plan</h6>
+                                                            <h4>$100.00</h4>
+                                                            <p>4 session subscription</p>
+                                                            <a href="#" class="upload-btn">upgrade subscription</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+    <!-- Modal -->
+    <div class="modal fade" id="profile-edit-Modal" tabindex="-1" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Update Profile</h5>
+                    <button type="button" data-bs-dismiss="modal" aria-label="Close" class="cancel">cancel <span
+                            class="btn-close"><i class="fa-solid fa-xmark"></i></span></button>
+                </div>
+                <div class="modal-body">
+                    <p>if you want to update your any personal detailed please change below fields data.</p>
+
+                    <form class="info-profile-form mt-4" id="updateProfile">
+
+                        <div class="edit-profile-view">
+                            <div class="profile-image">
+                               
+                                <% if (user.file) { %>
+                                    <img class="profile-pic" src="/uploads/profile-image/<%= user.file %>"/>
+                                <%} else { %>
+                                    <img class="profile-pic" id="fix" src="/user-assets/assets/img/user-profile-img.png">
+                                  <% } %>
+                            </div>
+                            <span class="edit-icon upload-button">
+                                <input class="file-upload" id="file" type="file" name="image" accept="">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
+                                    fill="none">
+                                    <path
+                                        d="M9.88084 2.67133L1.07744 11.4754C1.03311 11.5199 1.00152 11.5754 0.985957 11.6362L0.0101511 15.5528C-0.00420055 15.6109 -0.00332104 15.6717 0.0127047 15.7294C0.0287304 15.7871 0.0593607 15.8397 0.101637 15.8821C0.166573 15.9468 0.254493 15.9832 0.346173 15.9832C0.374455 15.9832 0.402629 15.9797 0.430057 15.9728L4.34663 14.9969C4.40753 14.9816 4.46312 14.95 4.50745 14.9056L13.3117 6.10208L9.88084 2.67133ZM15.4926 1.4709L14.5127 0.490973C13.8577 -0.163983 12.7162 -0.163333 12.062 0.490973L10.8616 1.6914L14.2922 5.12202L15.4926 3.92163C15.8198 3.5946 16 3.1593 16 2.69635C16 2.2334 15.8198 1.79809 15.4926 1.4709Z"
+                                        fill="white"></path>
+                                </svg>
+                            </span>
+                            <!-- <h1>John</h1> -->
+                        </div>
+                        <div class="file_err"></div>
+                        <h1>Update your photo</h1>
+                        <div class="row">
+                            <div class="mb-3 flex-group col-lg-6">
+                                <label for="" class="form-label">Enter your name</label>
+                                <input type="text" class="form-control" name="name" value="<%= user.name %>" id="name" aria-describedby=""
+                                    placeholder="Full name">
+                                <div class="name_err"></div>
+                            </div>
+
+
+                            <div class="mb-3 flex-group col-lg-6">
+                                <label for="" class="form-label">Enter your email</label>
+                                <input type="email" class="form-control" name="email" value="<%= user.email %>" id="email"
+                                    aria-describedby="email" placeholder="Email Address">
+                                <div class="email_err"></div>
+                            </div>
+
+                            <div class="mb-3 flex-group col-lg-6">
+                                <fieldset disabled>
+                                    <label for="disabledTextInput" class="form-label">Relationship status</label>
+                                    <input type="text" class="form-control" id="disabledTextInput" value="<%= user.relationship_status %>" aria-describedby=""
+                                        placeholder="Signal">
+                                </fieldset>
+                            </div>
+
+                            <div class="mb-3 flex-group col-lg-6">
+                                <fieldset disabled>
+                                    <label for="" class="form-label">Current physical health</label>
+                                    <input type="text" class="form-control" id="" value="<%= user.current_physical_health %>" aria-describedby=""
+                                        placeholder="Good">
+                                </fieldset>
+                            </div>
+
+
+                            <div class="mb-3 flex-group col-lg-12">
+                                <fieldset disabled>
+                                    <label for="" class="form-label">Therapist looking</label>
+                                    <input type="text" class="form-control" value="<%= user.looking_for_therapy %>" id="" aria-describedby=""
+                                        placeholder="Live Caach">
+                                </fieldset>
+                            </div>
+
+
+
+                            <div class="mb-3 flex-group col-lg-12">
+                                <label for="" class="form-label" placeholder="">Your Address</label>
+
+                                <div class="two-input">
+                                    <input type="text" class="form-control" name="zipcode" value="<%= user ? user.zipcode : '' %>" id="zipcode"
+                                        aria-describedby="" placeholder="Postal Code">
+                                    <input type="text" class="form-control" name="address" value="<%= user ? user.address : '' %>" id="address"
+                                        aria-describedby="" placeholder="Enter your address">
+                                    <div class="address_err"></div>
+                                </div>
+                                <div class="zipcode_err"></div>
+
+                            </div>
+
+
+
+
+                        </div>
+                        <button type="submit" class="btn add-session">UPDATE YOUR PROFILE</button>
+
+                    </form>
+                </div>
+                <!-- <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">cancel</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div> -->
+            </div>
+        </div>
+    </div>
+
+    <%- include('comman/footer') %>
+
+
+
+        <script>
+            $(document).ready(function () {
+
+                $("#updateProfile").validate({
+                    rules: {
+                        image: {
+                            required: function(element) {
+                                // Check if the src attribute of the image is not set so error throw
+                                return $(".profile-pic").attr("src").trim() === "/user-assets/assets/img/user-profile-img.png";   
+                            },
+                            extension: "png|jpg|jpeg|gif",
+                        },
+                        name: {
+                            required: true,
+                        },
+                        email: {
+                            required: true,
+                        },
+                        zipcode: {
+                            required: true,
+                            digits: true,
+                            minlength: 6,
+                            maxlength: 6
+                        },
+                        address: {
+                            required: true,
+                        },
+                    },
+                    messages: {
+                        image: {
+                            required: "Image is required",
+			                extension: "Please upload a valid image file (png, jpg, jpeg, gif)",
+
+                        },
+                        name: {
+                            required: "Name filed is required",
+                        },
+                        email: {
+                            required: "Email filed is required",
+                        },
+                        zipcode: {
+                            required: "Zipcode filed is required",
+                        },
+                        address: {
+                            required: "Address filed is required",
+                        },
+                    },
+                    errorPlacement: function (error, element) {
+                        var image = $(element).attr("id");
+                        var name = $(element).attr("id");
+                        var email = $(element).attr("id");
+                        var zipcode = $(element).attr("id");
+                        var address = $(element).attr("id");
+                        error.appendTo($("." + image + "_err"));
+                        error.appendTo($("." + name + "_err"));
+                        error.appendTo($("." + zipcode + "_err"));
+                        error.appendTo($("." + address + "_err"));
+                    },
+
+                    submitHandler: function (form, event) {
+                        event.preventDefault();
+                        
+                        var name = $("#name").val();
+                        var email = $("#email").val();//Get username
+                        var gender = $("#gneder").val();
+                        var address = $("#address").val();
+                        var zipcode = $("#zipcode").val();
+                         
+                        $("#user-email").html(email); //Put user name on header
+                        $("#profile-user-name").html(name) //Put user email on profile page
+                        $("#profile-user-address").html(address) //Put user address on profile page
+                        $("#profile-user-zipcode").html(zipcode) //Put user zipcode on profile page
+                        $("#profile-username-header").html(name) //Put username on header
+
+                        var formData = $(form)[0];
+                        var data = new FormData(formData);
+                    
+                        $.ajax({
+                            url: "/user/update-profile",
+                            type: "POST",
+                            enctype: 'multipart/form-data',
+                            data: data,
+                            processData: false,
+                            contentType: false,
+                            cache: false,
+                            success: function (response) { 
+                                $('#profile-edit-Modal').modal('hide');
+                                toastr.success(response.message);
+                            },
+                            error: function (error) {
+                                console.log("Ajax error:", error);
+                            }
+                        });
+                    }
+                });
+
+
+
+
+            });
+        </script>

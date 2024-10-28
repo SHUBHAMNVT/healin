@@ -1,0 +1,3029 @@
+<!-- header-start -->
+
+<%- include('comman/header') %>
+
+<!-- header-end -->
+
+<style type="text/css">
+	.card0 {
+    background-color: #F5F5F5;
+    border-radius: 8px;
+    z-index: 0;
+    padding: 10px
+}
+
+.card00 {
+    z-index: 0;
+    padding: 30px;
+}
+
+.card1 {
+        margin-bottom: 4rem;
+    z-index: 0;
+    border-right: 1px solid #F5F5F5
+}
+#msform {
+    text-align: center;
+    position: relative;
+    margin-top: 20px
+}
+
+#msform fieldset {
+    background: white;
+    border: 0 none;
+    border-radius: 0.5rem;
+    box-sizing: border-box;
+    width: 85%;
+    margin: 0 auto;
+    padding-bottom: 20px;
+    position: relative
+}
+.fieldlabels {
+    color: var(--color-black);
+    text-align: left;
+    font-size: 20px;
+    margin-bottom: 16px;
+    font-family: 'gilroy-sb';
+}
+.form-card {
+    text-align: left;
+    margin: 50px 0px;
+    padding: 30px;
+    background: var(--color-white);
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    text-align: center;
+}
+
+#msform fieldset:not(:first-of-type) {
+    display: none
+}
+
+#msform .option-block input, 
+#msform .option-block textarea,
+#msform .option-block select {
+    padding: 20px 25px 20px 25px;
+    border: 1px solid #ccc;
+    border-radius: 100px;
+    margin-bottom: 25px;
+    margin-top: 2px;
+    width: 80%;
+    margin: 0 auto;
+    box-sizing: border-box;
+    color: var(--color-black);
+    background-color: rgb(70 188 150 / 34%);
+    font-size: 16px;
+    letter-spacing: 1px;
+    font-family: 'gilroy-m';
+    text-transform: capitalize;
+}
+#msform .option-block input::placeholder , #msform textarea::placeholder ,#msform .option-block select::placeholder{
+	color: var(--color-black);
+	font-family: 'gilroy-m';
+	text-transform: capitalize;
+}
+#msform .option-block input:focus,
+#msform .option-block textarea:focus {
+    -moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    border: 1px solid #49b18f;
+    background: #49b18f;
+    color: #fff;
+    outline-width: 0
+}
+
+#msform .action-button {
+    width: 120px;
+    background: #f3ce69;
+    color: var(--color-black);
+    border: 0 none;
+    border-radius: 100px;
+    cursor: pointer;
+    padding: 8px 20px;
+    margin: 10px 0px 10px 5px;
+    font-family: gilroy-sb;
+    font-size: 16px;
+    float: right;
+    text-transform: uppercase;
+    transition: 0.5s all;
+}
+
+#msform .action-button:hover,
+#msform .action-button:focus {
+    background-color: var(--color-black);
+    color: var(--color-white);
+    transition: 0.5s all;
+}
+
+#msform .action-button-previous {
+    width: 120px;
+    background: #616161;
+    font-family: gilroy-sb;
+    font-size: 16px;
+    color: white;
+    border: 0 none;
+    border-radius: 100px;
+    cursor: pointer;
+    padding: 8px 20px;
+    margin: 10px 5px 10px 0px;
+    float: right;
+    text-transform: uppercase;
+    transition: 0.5s all;
+}
+
+#msform .action-button-previous:hover,
+#msform .action-button-previous:focus {
+   background-color: var(--color-black);
+    color: var(--color-white);
+    transition: 0.5s all;
+}
+
+.card {
+    z-index: 0;
+    border: none;
+    position: relative
+}
+
+.fs-title {
+    font-size: 25px;
+    color: #f390b3;
+    margin-bottom: 15px;
+    font-weight: normal;
+    text-align: left
+}
+
+.purple-text {
+    color: #f390b3;
+    font-weight: normal
+}
+
+.steps {
+    font-size: 25px;
+    color: gray;
+    margin-bottom: 10px;
+    font-weight: normal;
+    text-align: right
+}
+
+.fieldlabels {
+    color: var(--color-black);
+    text-align: left;
+    font-size: 20px;
+    margin-bottom: 16px;
+    font-family: 'gilroy-sb';
+}
+
+#progressbar {
+    margin-bottom: 10px;
+    overflow: hidden;
+    color: lightgrey
+}
+
+#progressbar .active {
+    color: #f390b3
+}
+
+#progressbar li {
+    list-style-type: none;
+    font-size: 15px;
+    width: 10%;
+    margin: 0 auto;
+    position: relative;
+    display: inline-block;
+}
+
+#progressbar #step1:before {
+    font-family: FontAwesome;
+    content: ""
+}
+
+#progressbar #step2:before {
+    font-family: FontAwesome;
+    content: ""
+}
+
+#progressbar #step3:before {
+    font-family: FontAwesome;
+    content: ""
+}
+
+#progressbar #step4:before {
+    font-family: FontAwesome;
+    content: ""
+}
+
+#progressbar #step5:before {
+    font-family: FontAwesome;
+    content: ""
+}
+#progressbar #step6:before {
+    font-family: FontAwesome;
+    content: ""
+}
+#progressbar #step7:before {
+    font-family: FontAwesome;
+    content: ""
+}
+#progressbar #step8:before {
+    font-family: FontAwesome;
+    content: ""
+}
+#progressbar #step9:before {
+    font-family: FontAwesome;
+    content: ""
+}
+#progressbar li:before {
+    width: 30px;
+    height: 30px;
+    line-height: 45px;
+    display: block;
+    font-size: 20px;
+    color: #ffffff;
+    background: lightgray;
+    border-radius: 50%;
+    margin: 0 auto 10px auto;
+    padding: 2px
+}
+
+#progressbar li:after {
+    content: '';
+    width: 105%;
+    height: 2px;
+    background: lightgray;
+    position: absolute;
+    left: 0;
+    top: 15px;
+    z-index: -1
+}
+
+#progressbar li.active:before,
+#progressbar li.active:after {
+    background: #f390b3
+}
+
+.progress {
+    height: 20px
+}
+
+.progress-bar {
+    background-color: #f390b3
+}
+
+.fit-image {
+    width: 100%;
+    object-fit: cover
+}
+
+.inner-form {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 0px 15px;
+    
+}
+.main-heading h1 {
+    color: var(--color-black);
+    font-family: gilroy-b;
+    font-size: 25px;
+    font-style: normal;
+    line-height: normal;
+    margin-bottom: 15px;
+    text-transform: capitalize;
+}
+.main-heading h3 {
+    color: var(--color-black);
+    font-family: 'gilroy-m';
+    font-size: 16px;
+    font-style: normal;
+    line-height: 30px;
+    margin-bottom: 20px;
+}
+.main-heading span {
+    display: inline-block;
+    background: #46bc96;
+    padding: 10px 35px;
+    border-radius: 50px;
+}
+.main-heading span p {
+    color: #fff;
+}
+.bottom-form-img {
+    height: 110px;
+    position: relative;
+}
+.pic {
+    width: auto;
+    height: 290px;
+    object-fit: contain;
+    position: absolute;
+    left: -60px;
+    bottom: -8px;
+}
+
+
+/*-----redio-button-----------*/
+.option-block {
+    margin-top: 20px;
+}
+.option-block .radio-input  {
+  display: inline-block;
+  flex-direction: row;
+  font-size: 16px;
+  font-weight: 600;
+  width: 50%;
+}
+
+.option-block .radio-input input[type="radio"] {
+  display: none;
+}
+
+.option-block .radio-input label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 10px;
+    border: 1px solid #ccc;
+    background-color: rgb(70 188 150 / 34%);
+    border-radius: 100px;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+    margin-bottom: 30px;
+    color: var(--color-black);
+    font-family: 'gilroy-sb';
+    text-transform: capitalize;
+}
+
+.option-block .radio-input label:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(-50%, -50%);
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #fff;
+  border: 2px solid #ccc;
+  transition: all 0.3s ease-in-out;
+  opacity: 0;
+}
+
+.option-block .radio-input input[type="radio"]:checked + label:before {
+  background-color: #46bc96;
+  top: 0;
+  opacity: 0;
+}
+
+.option-block .radio-input input[type="radio"]:checked + label {
+  background-color: var(--color-green);
+    color: #fff;
+    border-color: var(--color-green);
+    animation: radio-translate 0.5s ease-in-out;
+}
+
+
+.form-card.Therapys-option .radio-input label {
+    flex: 1 0 45%;
+    margin-bottom:0;
+}
+@keyframes radio-translate {
+  0% {
+    transform: translateX(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+.select-menu {
+    width: 80%;
+    margin: 0 auto;
+    cursor: pointer;
+    position: relative;
+}
+
+.select-menu > .select {
+    border: 1px solid #ccc;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 100px;
+    transition: all 350ms ease-in-out;
+    background:rgb(70 188 150 / 34%);
+    font-family: 'gilroy-sb';
+}
+
+.select-menu > .select:hover {
+    border-color: #46bc96;
+    color: #fff;
+}
+
+.select-menu > .select.active {
+    border-color: #46bc96;
+    color: #fff;
+    background: #46bc96;
+    border-radius: 100px;
+}
+
+.select-menu > .options-list {
+    position: absolute;
+    width: 100%;
+    border: 0;
+    border-radius: 12px;
+    padding: 10px;
+    margin-top: 10px;
+    max-height: 180px;
+    overflow-y: auto;
+    transition: 0.4s linear 0.2s;
+    display: none;
+    background: #f5f5f5;
+    text-align: left;
+}
+.next, .previous {
+    display: none;
+}
+.select-menu > .options-list.active {
+  display: block;
+}
+
+.options-list > .option {
+    padding: 10px;
+    border-bottom: 0;
+    font-size: 14px;
+    font-weight: 600;
+    transition: all 350ms ease-in-out;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+
+.select-menu > .options-list > .option:hover, .select-menu > .options-list > .option.selected {
+    color: var(--color-black);
+    border-bottom: 0;
+    background: #46bc9661;
+}
+
+.select-menu > .options-list::-webkit-scrollbar {
+  background-color: #281e4d;
+  width: 4px;
+  border-top-right-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
+
+.select-menu > .options-list::-webkit-scrollbar-thumb {
+  background-color: #46bc96;
+  border-top-right-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
+
+.next-prev-btn {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+}
+.next-prev-btn #prev{
+    background: #000; 
+     color: #fff;
+}
+.next-prev-btn #next{
+    background: #f3ce69;
+    color: var(--color-black);
+}
+.next-prev-btn #prev , .next-prev-btn #next {
+    width: 120px;
+    display: inline-block;
+    padding: 8px 20px;
+    border-radius: 100px;
+    font-size: 16px;
+    font-family: 'gilroy-sb';
+    text-transform: uppercase;
+    cursor: pointer;
+}
+.alert-success {
+    color: #555;
+    background-color: #46bc964a;
+    border-color: #46bc96b3;
+    margin-top: 25px;
+}
+.note-block p {
+    color: #46bc96;
+}
+
+
+
+
+.main-wrapper {
+  border-radius: 10px;
+  padding: 35px;
+  width: 65%;
+ margin: 30px auto;
+/*  box-shadow: 0 0 5px 5px #00000020;
+  backdrop-filter: blur(5px);
+  background-color: #ffffff85;*/
+}
+@media screen and (max-width: 991px) {
+  .main-wrapper {
+    width: 70%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .main-wrapper {
+    width: 90%;
+  }
+}
+
+ .main-wrapper .form-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 35px;
+}
+ .main-wrapper .form-wrapper .form-card-box {
+  position: relative;
+  width: 100%;
+}
+.main-wrapper .form-wrapper .form-card-box .form-input {
+  padding: 15px 25px 15px;
+  width: 100%;
+  border: 1px solid #000;
+  border-radius: 5px;
+  background: transparent;
+  outline: none;
+  font-size: 20px;
+  line-height: 30px;
+ font-family: 'gilroy-m';
+  box-sizing: border-box;
+}
+ .main-wrapper .form-wrapper .form-card-box .form-input:valid, 
+ .main-wrapper .form-wrapper .form-card-box .form-input:focus {
+  border: 1px solid #515151;
+}
+ .main-wrapper .form-wrapper .form-card-box .form-input:valid ~ .form-label, 
+ .main-wrapper .form-wrapper .form-card-box .form-input:focus ~ .form-label {
+  color: #515151;
+  top: 30%;
+  transform: translateY(-70%);
+  font-size: 13px;
+  line-height: 23px;
+}
+ .main-wrapper .form-wrapper .form-card-box .form-input:-webkit-autofill,  
+ .main-wrapper .form-wrapper .form-card-box .form-input:-webkit-autofill:hover,  
+ .main-wrapper .form-wrapper .form-card-box .form-input:-webkit-autofill:focus,  
+ .main-wrapper .form-wrapper .form-card-box .form-input:-webkit-autofill:active {
+  transition: background-color 9999s ease-in-out 0s;
+}
+ .main-wrapper .form-wrapper .form-card-box .form-input::-webkit-outer-spin-button,  
+ .main-wrapper .form-wrapper .form-card-box .form-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+ .main-wrapper .form-wrapper .form-card-box .form-label {
+  position: absolute;
+  left: 25px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  transition: 0.3s;
+  margin: 0;
+  font-size: 18px;
+  line-height: 28px;
+  font-family: 'gilroy-r';
+}
+/* .main-wrapper .form-wrapper .form-card-box .form-textarea {
+  padding: 15px 25px 15px;
+  width: 100%;
+  border: 1px solid #000;
+  border-radius: 5px;
+  background: transparent;
+  outline: none;
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: 400;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  resize: none;
+  box-sizing: border-box;
+}*/
+ .main-wrapper .form-wrapper .form-card-box .form-textarea:valid,   
+ .main-wrapper .form-wrapper .form-card-box .form-textarea:focus {
+  border: 1px solid #46bc96;
+  font-size: 14px;
+}
+.main-wrapper .form-wrapper .form-card-box .form-textarea:valid ~ .form-textarea-label, 
+.main-wrapper .form-wrapper .form-card-box .form-textarea:focus ~ .form-textarea-label {
+  color: var(--color-black);
+  top: 18%;
+  transform: translateY(-80%);
+  font-size: 12px;
+  line-height: 23px;
+}
+.main-wrapper .form-wrapper .form-card-box .form-textarea:-webkit-autofill, 
+.main-wrapper .form-wrapper .form-card-box .form-textarea:-webkit-autofill:hover,
+.main-wrapper .form-wrapper .form-card-box .form-textarea:-webkit-autofill:focus, 
+.main-wrapper .form-wrapper .form-card-box .form-textarea:-webkit-autofill:active {
+  transition: background-color 9999s ease-in-out 0s;
+}
+/*.main-wrapper .form-wrapper .form-card-box .form-textarea-label {
+  position: absolute;
+  left: 25px;
+  top: 30%;
+  transform: translateY(-80%);
+  pointer-events: none;
+  transition: 0.3s;
+  margin: 0;
+  font-size: 18px;
+  line-height: 28px;
+}*/
+
+.main-wrapper .btn-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 0 0;
+}
+
+.main-wrapper .btn-wrap button {
+  width: 350px;
+    background: #f3ce69;
+    border: 0 none;
+    border-radius: 100px;
+    cursor: pointer;
+    padding: 8px 20px;
+    margin: 10px 0px 10px 5px;
+    font-family: gilroy-sb;
+    font-size: 16px;
+    float: right;
+    text-transform: uppercase;
+    transition: 0.5s all;
+}
+
+/*.main-wrapper .btn-wrap button:hover {
+  border: 1px solid #000;
+  background: transparent;
+}*/
+.main-wrapper .form-check {
+    text-align: left;
+    margin-bottom: 0;
+    padding: 0;
+}
+
+.main-wrapper h4 {
+    font-size: 22px;
+    font-family: 'gilroy-sb';
+    color: var(--color-black);
+}
+.main-wrappe .check-tik-form label {
+    font-size: 16px;
+    font-family: 'gilroy-m';
+    color: var(--color-black);
+    line-height: 24px;
+}
+.main-wrapper .check-tik-form label a {
+    color: var(--color-black);
+    font-family: 'gilroy-sb';
+    font-size: 18px;
+    text-decoration: underline;
+}
+
+.last-text p{
+    color: var(--color-black);
+    font-family: gilroy-m;
+    font-size: 16px;
+    font-style: normal;
+    line-height: 25px;
+    margin-bottom: 0;
+}
+.last-text p a {
+    font-family: 'gilroy-sb';
+    color: var(--color-black);
+    font-size: 18px;
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 1400px){
+    #msform fieldset {
+
+    width: 100%;
+
+    }
+
+    .option-block .radio-input label {
+
+    padding: 16px 10px;
+
+    }
+    .option-block .radio-input label {
+
+    font-size: 14px;
+
+    }
+    .main-wrapper{
+        width: 100%;
+    }
+}
+</style>
+
+
+
+<div class="container-fluid px-1 px-md-4 py-5 mx-auto">
+  <div class="row d-flex justify-content-center">
+    <div class="col-12 col-md-11 col-lg-10 col-xl-9">
+      <div class="card card0 border-0">
+        <div class="row">
+          <div class="multiform-wrapper">
+            <div class="card card00 border-0">
+              
+              <div class="inner-form ">
+
+                <div class="container-fluid">
+				    <div class="row justify-content-center">
+				        <div class="col-11 col-sm-10 col-md-10 col-lg-10 col-xl-10 text-center p-0 mt-3 mb-2">
+				            <div class="card px-0  pb-0  mb-3">
+			                	
+				                <form id="msform" class="main-form-block">
+
+                          <input type="hidden" name="name_hide" id="name_hide" value=""/>
+                          <input type="hidden" name="looking_for_hide" id="looking_for_hide" value=""/>
+                          <input type="hidden" name="gender_hide" id="gender_hide" value=""/>
+                          <input type="hidden" name="age_hide"  id="age_hide" value=""/>
+                          <input type="hidden" name="relationship_status_hide" id="relationship_status_hide" value=""/>
+                          <input type="hidden" name="therapy_before_hide" id="therapy_before_hide" value=""/>
+                          <input type="hidden" name="therapy_today_hide"  id="therapy_today_hide" value=""/>
+                          <input type="hidden" name="therapist_looking_for_hide" id="therapist_looking_for_hide" value=""/>
+                          <input type="hidden" name="expectations_therapist_hide" id="expectations_therapist_hide" value=""/>
+                          <input type="hidden" name="physical_health_hide" id="physical_health_hide" value=""/>
+                          <input type="hidden" name="eating_habits_hide" id="eating_habits_hide" value=""/>
+                          <input type="hidden" name="feelings_of_anxiety_hide" id="feelings_of_anxiety_hide" value=""/>
+                          <input type="hidden" name="little_interest_hide" id="little_interest_hide" value=""/>
+                          <input type="hidden" name="hyper_and_restless_hide" id="hyper_and_restless_hide" value=""/>
+                          <input type="hidden" name="depressed_and_hopeless_hide" id="depressed_and_hopeless_hide" value=""/>
+                          <input type="hidden" name="sleeping_too_much_hide" id="sleeping_too_much_hide" value=""/>
+                          <input type="hidden" name="very_little_energy_hide" id="very_little_energy_hide" value=""/>
+                          <input type="hidden" name="eating_too_much_hide" id="eating_too_much_hide" value=""/>
+                          <input type="hidden" name="letting_people_down_hide" id="letting_people_down_hide" value=""/>
+                          <input type="hidden" name="even_watching_television_hide" id="even_watching_television_hide" value=""/>
+                          <input type="hidden" name="better_off_dead_hide" id="better_off_dead_hide" value=""/>
+                          <input type="hidden" name="daily_life_at_work_hide" id="daily_life_at_work_hide" value=""/>
+                          <input type="hidden" name="currently_employed_hide" id="currently_employed_hide" value=""/>
+                          <input type="hidden" name="you_drink_alcohol_hide" id="you_drink_alcohol_hide" value=""/>
+                          <input type="hidden" name="harming_yourself_hide" id="harming_yourself_hide" value=""/>
+                          <input type="hidden" name="phobias_hide" id="phobias_hide" value=""/>
+                          <input type="hidden" name="medications_hide" id="medications_hide" value=""/>
+                          <input type="hidden" name="chronic_pain_hide" id="chronic_pain_hide" value=""/>
+                          <input type="hidden" name="financial_status_hide" id="financial_status_hide" value=""/>
+                          <input type="hidden" name="sleeping_habits_hide" id="sleeping_habits_hide" value=""/>
+                          <input type="hidden" name="current_support_system_hide" id="current_support_system_hide" value=""/>
+                          <input type="hidden" name="useful_for_you_hide" id="useful_for_you_hide" value=""/>
+                          <input type="hidden" name="your_therapist_hide" id="your_therapist_hide" value=""/>
+                          <input type="hidden" name="therapist_coach_hide" id="therapist_coach_hide" value=""/>
+                          <input type="hidden" name="referred_healinhere_hide" id="referred_healinhere_hide" value=""/>
+                          <input type="hidden" name="country_hide" id="country_hide" value=""/>
+                          <input type="hidden" name="language_hide" id="language_hide" value=""/>
+                          <input type="hidden" name="mark_apply_hide" id="mark_apply_hide" value=""/>
+
+				                    <!-- progressbar -->
+				                    <ul id="progressbar">
+				                        <li class="active" id="step1"><strong></strong></li>
+				                        <li id="step2"><strong></strong></li>
+				                        <li id="step3"><strong></strong></li>
+				                        <li id="step4"><strong></strong></li>
+				                        <li id="step5"><strong></strong></li>
+				                        <li id="step6"><strong></strong></li>
+				                        <li id="step7"><strong></strong></li>
+                                        <li id="step8"><strong></strong></li>
+                                        <li id="step9"><strong></strong></li>
+				                    </ul>
+				                   <!--  <div class="progress">
+				                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuemin="0" aria-valuemax="100">
+				                        </div>
+				                    </div>  -->
+				                    <br> 
+
+				                    <div class="main-heading">
+
+				                		<h1>Lett’s Match You To Right Therapist For You</h1>
+
+				                		<h3>Let’s get to work to help you find a therapist with whom you can establish a personal connection. The following questions are designed to match you to a licensed therapist based on your therapy needs and personal preferences.</h3>
+				                		
+				                		<span><p>The following questions have been designed to identify the most suited therapist for you.</p></span>
+
+			                		</div>
+
+
+                                    <!-- ---fieldset-1----- -->
+
+                                    <fieldset class="fieldset-step-1">
+                                              <div id="page1" data-bs-position="1" class="page ac">
+                                                  <div class="form-card">
+                                                    <label class="fieldlabels">What Is Your Name?</label> 
+                                                    <div class="option-block">
+                                                        <input type="text" class="form-control your-name" name="name" placeholder="Name" /> 
+                                                        
+                                                    </div>
+                                                    <div id="your_name_err" class="error" style="color:black;font-size: 116%;font-weight: bold;display: none;">Required</div>
+                                                  </div>
+                                                  
+                                              </div>
+
+                                              <div id="page2" data-bs-position="2" class="page">
+                                                  <div class="form-card">
+                                                      <label class="fieldlabels">What Type Of Therapy Are You Looking For?</label> 
+                                                  
+                                                      <div class="option-block">
+                                                              <div class="radio-input">
+                                                                <input type="radio" class="looking_for" id="Individual" name="looking_for" value="Individual">
+                                                                <label for="Individual">Individual (For Myself)</label>
+                                                                <input type="radio" class="looking_for" id="Couples" name="looking_for" value="Couples">
+                                                                <label for="Couples">Couples (My Partner And I)</label>
+                                                                <input type="radio" class="looking_for" id="Teen" name="looking_for" value="Teen">
+                                                                <label for="Teen">Teen (My Child)</label>
+                                                              </div>
+                                                      </div>
+                                                      <div id="looking_for_err" class="error" style="color:black;font-size: 116%;font-weight: bold;display: none;">Required</div>
+                                                </div>
+                                              </div>
+
+                                              <div id="page3" data-bs-position="3" class="page">
+                                                <div class="form-card">
+                                                    <label class="fieldlabels">What Is Your Gender?</label> 
+                                                    <div class="option-block">
+                                                      <div class="radio-input">
+                                                        <input type="radio" class="gender" id="Woman" name="gender" value="Woman">
+                                                        <label for="Woman">Woman</label>
+                                                        <input type="radio" class="gender" id="Man" name="gender" value="Man">
+                                                        <label for="Man">Man</label>
+                                                      </div>
+                                                      <div id="gender_err" class="error" style="color:black;font-size: 116%;font-weight: bold;display: none;">Required</div>
+
+                                                  </div>
+                                                </div>
+                                              </div>
+
+                                              <div id="page4" data-bs-position="4" class="page">
+                                                <div class="form-card">
+                                                  
+                                                    <label class="fieldlabels">How Old Are You?</label> 
+                                                    <p>(If you are a minor we need your parents’ consent - please choose the “Teen” section)</p>
+                                                    <div class="option-block">
+                                                          <div class="select-menu" id="select_age">
+                                                            <div class="select age-value">
+                                                              <span>Select your age</span>
+                                                              <em class="fas fa-angle-down"></em>
+                                                            </div>
+                                                            <div class="options-list">
+                                                                <option class="option age">18</option>
+                                                                <option class="option age" value="1">19</option>
+                                                                <option class="option age" value="2">20</option>
+                                                                <option class="option age" value="3">21</option>
+                                                                <option class="option age" value="3">22</option>
+                                                                <option class="option age" value="3">23</option>
+                                                                <option class="option age" value="3">24</option>
+                                                                <option class="option age" value="3">25</option>
+                                                                <option class="option age" value="3">26</option>
+                                                                <option class="option age" value="3">27</option>
+                                                                <option class="option age" value="3">28</option>
+                                                                <option class="option age" value="3">29</option>
+                                                                <option class="option age" value="3">30</option>
+                                                                <option class="option age" value="3">31</option>
+                                                                <option class="option age" value="3">32</option>
+                                                            </div>
+                                                            <div id="age_err" class="error" style="color:black;font-size: 116%;font-weight: bold;display: none;">Required</div>
+                                                          </div>
+                                                        </div>
+                                                        <div class="mt-2">
+                                                        <p>Nice To Have You Here Xxxxxxxx (Name And Surname)</p>
+                                                      </div>
+                                                  </div>
+
+
+                                                
+                                              </div>
+
+                                              <div id="page5" data-bs-position="5" class="page">
+                                                <div class="form-card Therapys-option">
+                                                    <label class="fieldlabels">What Is Your Relationship Status?</label> 
+                                                    <div class="option-block">
+                                                      <div class="radio-input">
+                                                        <input type="radio" id="Single" name="relationship_status" value="Single">
+                                                        <label for="Single">Single</label>
+
+                                                        <input type="radio" class="relationship-status" id="Relationship" name="relationship_status" value="Relationship">
+                                                        <label for="Relationship">In A Relationship</label>
+
+                                                        <input type="radio" class="relationship-status" id="Married" name="relationship_status" value="Married">
+                                                        <label for="Married">Married</label>
+
+                                                        <input type="radio" class="relationship-status" id="Widowed" name="relationship_status" value="Widowed">
+                                                        <label for="Widowed">Widowed</label>
+
+                                                        <input type="radio" class="relationship-status" id="Divorced" name="relationship_status" value="Divorced">
+                                                        <label for="Divorced">Divorced</label>
+
+                                                        <input type="radio" class="relationship-status" id="Other" name="relationship_status" value="Other">
+                                                        <label for="Other">Other</label>
+                                                      </div>
+                                                  </div>
+                                                  <div id="relationship_status_err" class="error" style="color:black;font-size: 116%;font-weight: bold;display: none;">Required</div>
+                                                </div>
+                                              </div>
+                                            
+                                              <div class="next-prev-btn step-1">
+                                                  <div id="prev" data-step="1">Previous</div>
+                                                  <div id="next" data-step="1">next</div>
+                                              </div>
+                          
+                                              <input type="button" name="next" class="next action-button next-step-1" value="Next" />
+                                          
+                                    </fieldset>
+
+
+                                    <!-- ---fieldset-2----- -->
+
+                                    <fieldset class="fieldset-step-2">
+
+                                        <div id="page6" data-bs-position="6" class="page">
+                                            <div class="form-card ">
+                                              <label class="fieldlabels">Have You Ever Been In Therapy Before?</label> 
+                                              <div class="option-block">
+                                                <div class="radio-input">
+                                                  <input type="radio" id="Yes" name="therapy_before" value="yes">
+                                                  <label for="Yes">Yes</label>
+
+                                                  <input type="radio" id="No" name="therapy_before" value="no">
+                                                  <label for="No">No</label>
+                                                </div>
+                                                <div id="therapy_before_err" class="error" style="color:black;font-size: 116%;font-weight: bold;display: none;">Required</div>
+                                             </div>
+                                            </div>
+                                        </div>
+
+                                        <div id="page7" data-bs-position="7" class="page">
+                                            <div class="form-card Therapys-option">
+                                             
+                                              <label class="fieldlabels">What Led You To Consider Therapy Today?</label> 
+                                             
+                                              <div class="option-block">
+
+                                                <div class="checkbox-input">
+                                                  <div class="form-check">
+
+                                                      <input type="checkbox" id="depressed" class="therapy-today" name="therapy_today"  value="depressed">
+                                                      
+                                                      <label for="depressed">I've Been Feeling Depressed</label>
+                                                   
+                                                  </div>
+
+                                                  <div class="form-check">
+
+                                                      <input type="checkbox" id="anxious" class="therapy-today" name="therapy_today"  value="anxious">
+                                                      
+                                                      <label for="anxious">I Feel Anxious Or Overwhelmed</label>
+                                                   
+                                                  </div>
+
+
+                                                  <div class="form-check">
+
+                                                    <input type="checkbox" id="Interfering" class="therapy-today" name="therapy_today" value="Interfering">
+
+                                                    <label for="Interfering">My Mood Is Interfering With My Job/school Performance</label>
+                                                   
+                                                  </div>
+
+                                                   <div class="form-check">
+
+                                                     <input type="checkbox" id="struggle" class="therapy-today" name="therapy_today" value="struggle">
+
+                                                    <label for="struggle">I Struggle With Building Or Maintaining Relationships</label>
+                                                   
+                                                  </div>
+
+                                                   <div class="form-check">
+
+                                                    <input type="checkbox" id="mylife" class="therapy-today" name="therapy_today" value="mylife">
+
+                                                    <label for="mylife">I Can't Find Purpose And Meaning In My Life</label>
+                                                   
+                                                  </div>
+
+                                                  <div class="form-check">
+
+                                                    <input type="checkbox" id="grieving" class="therapy-today" name="therapy_today" value="grieving">
+
+                                                  <label for="grieving">I Am Grieving</label>
+                                                   
+                                                  </div>
+
+                                                  <div class="form-check">
+
+                                                    <input type="checkbox" id="trauma" class="therapy-today" name="therapy_today" value="trauma">
+
+                                                    <label for="trauma">I Have Experienced Trauma</label>
+                                                   
+                                                  </div>
+
+                                                  <div class="form-check">
+
+                                                    <input type="checkbox" id="challenge" class="therapy-today" name="therapy_today" value="challenge">
+
+                                                     <label for="challenge">I Need To Talk Through A Specific Challenge</label>
+
+                                                  </div>
+
+                                                  <div class="form-check">
+
+                                                    <input type="checkbox" id="improvefood" class="therapy-today" name="therapy_today" value="improvefood">
+
+                                                    <label for="improvefood">I Want To Improve My Relationship With Food</label>
+
+                                                  </div>
+
+                                                  <div class="form-check">
+
+                                                    <input type="checkbox" id="confidence" class="therapy-today" name="therapy_today" value="confidence">
+
+                                                    <label for="confidence">I Want To Gain Self Confidence</label>
+                                                  
+                                                  </div>
+
+                                                  <div class="form-check">
+
+                                                   <input type="checkbox" id="start" class="therapy-today" name="therapy_today" value="start">
+
+                                                    <label for="start">I Want To Improve Myself But I Don't Know Where To Start</label>
+                                                  
+                                                  </div>
+
+                                                  <div class="form-check">
+
+                                                   <input type="checkbox" id="recommended" class="therapy-today" name="therapy_today" value="recommended">
+
+                                                    <label for="recommended">Recommended To Me (Friend, Family, Doctor)</label>
+
+                                                  </div>
+
+
+                                                   <div class="form-check">
+
+                                                      <input type="checkbox" id="exploring" class="therapy-today" name="therapy_today" value="exploring">
+
+                                                      <label for="exploring">Just Exploring</label>
+
+                                                  </div>
+
+                                                  <div class="form-check">
+
+                                                    <input type="checkbox" id="therapy_today_other" class="therapy-today" name="therapy_today" value="therapy_today_other">
+
+                                                    <label for="therapy_today_other">Other</label>
+
+                                                  </div>
+
+                                              </div>
+
+
+                                                  <div class="alert alert-success d-flex align-items-center " role="alert">
+                                                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-exclamation-triangle-fill flex-shrink-0 me-2" viewBox="0 0 16 16" role="img" aria-label="Warning:">
+                                                        <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+                                                      </svg>
+                                                      <div>
+                                                       <div class="note-block">
+                                                          <p>*These are preliminary questions which you have a chance to expand on later on</p>
+                                                          </div>
+                                                      </div>
+                                                    </div>
+
+                                                <!-- <div class="radio-input">
+                                                  <input type="radio" id="Depressed" name="" value="Depressed">
+                                                  <label for="Depressed">I've Been Feeling Depressed</label>
+
+                                                  <input type="radio" id="Anxious" name="" value="Anxious">
+                                                  <label for="Anxious">I Feel Anxious Or Overwhelmed</label>
+
+                                                   <input type="radio" id="Interfering" name="" value="Interfering">
+                                                  <label for="Interfering">My Mood Is Interfering With My Job/school Performance</label>
+
+                                                   <input type="radio" id="Struggle" name="" value="Struggle">
+                                                    <label for="Struggle">I Struggle With Building Or Maintaining Relationships</label>
+
+                                                   <input type="radio" id="MyLife" name="" value="MyLife">
+                                                  <label for="MyLife">I Can't Find Purpose And Meaning In My Life</label>
+
+                                                  <input type="radio" id="Grieving" name="" value="Grieving">
+                                                  <label for="Grieving">I Am Grieving</label>
+
+                                                  <input type="radio" id="Trauma" name="" value="Trauma">
+                                                  <label for="Trauma">I Have Experienced Trauma</label>
+
+                                                  <input type="radio" id="Challenge" name="" value="Challenge">
+                                                  <label for="Challenge">I Need To Talk Through A Specific Challenge</label>
+
+                                                  <input type="radio" id="Improvefood" name="" value="Improvefood">
+                                                  <label for="Improvefood">I Want To Improve My Relationship With Food</label>
+
+                                                  <input type="radio" id="Confidence" name="" value="Confidence">
+                                                  <label for="Confidence">I Want To Gain Self Confidence</label>
+                                                  
+                                                  <input type="radio" id="Start" name="" value="Start">
+                                                  <label for="Start">I Want To Improve Myself But I Don't Know Where To Start</label>
+
+                                                  <input type="radio" id="Recommended" name="" value="Recommended">
+                                                  <label for="Recommended">Recommended To Me (Friend, Family, Doctor)</label>
+
+                                                  <input type="radio" id="Exploring" name="" value="Exploring">
+                                                  <label for="Exploring">Just Exploring</label>
+
+                                                  <input type="radio" id="Other" name="" value="Other">
+                                                  <label for="Other">Other</label>
+                                                  
+                                                  
+                                                  <div class="alert alert-success d-flex align-items-center m-auto" role="alert">
+                                                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-exclamation-triangle-fill flex-shrink-0 me-2" viewBox="0 0 16 16" role="img" aria-label="Warning:">
+                                                        <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+                                                      </svg>
+                                                      <div>
+                                                       <div class="note-block">
+                                                          <p>*These are preliminary questions which you have a chance to expand on later on</p>
+                                                          </div>
+                                                      </div>
+                                                    </div>
+                                                </div> -->
+                                             </div>
+                                             <div id="therapy_today_err" class="error" style="color:black;font-size: 116%;font-weight: bold;display: none;">Required</div>
+                                            </div>
+                                        </div>
+
+                                        <div id="page8" data-bs-position="8" class="page">
+                                           <div class="form-card Therapys-option">
+                                              <label class="fieldlabels">What Type Of Therapist Are You Looking For?</label> 
+                                              <div class="option-block">
+                                                <div class="radio-input">
+                                                  <input type="radio" id="counsellor" name="therapist_looking_for" value="counsellor">
+                                                  <label for="counsellor">A Psychotherapist / Counsellor</label>
+
+                                                  <input type="radio" id="hypnotherapist" name="therapist_looking_for" value="hypnotherapist">
+                                                  <label for="hypnotherapist">A Hypnotherapist</label>
+
+                                                  <input type="radio" id="life_coach" name="therapist_looking_for" value="life_coach">
+                                                  <label for="life_coach">A Life Coach</label>
+
+                                                  <input type="radio" id="psychiatrist" name="therapist_looking_for" value="psychiatrist">
+                                                  <label for="psychiatrist">A Psychiatrist</label>
+
+                                                  <input type="radio" id="not_know" name="therapist_looking_for" value="not_know">
+                                                  <label for="not_know">I Do Not Know</label>
+
+                                                </div>
+                                             </div>
+                                             <div id="therapist_looking_for_err" class="error" style="color:black;font-size: 116%;font-weight: bold;display: none;">Required</div>
+                                           </div>
+                                        </div>
+
+                                        <div id="page9" data-bs-position="9" class="page">
+                                           <div class="form-card Therapys-option">
+                                              <label class="fieldlabels">What Are The Expectations From Your Therapist?</label> 
+                                              <div class="option-block">
+                                                <div class="radio-input">
+                                                  <input type="radio" id="listens_well" name="expectations_therapist" value="listens_well">
+                                                  <label for="listens_well">Listens Well</label>
+
+                                                  <input type="radio" id="explore_my_past" name="expectations_therapist" value="explore_my_past">
+                                                  <label for="explore_my_past">Helps Me Explore My Past</label>
+
+                                                  <input type="radio" id="skills_techniques" name="expectations_therapist" value="skills_techniques">
+                                                  <label for="skills_techniques">Teaches Me New Skills And Techniques</label>
+
+                                                  <input type="radio" id="challenges_habits" name="expectations_therapist" value="challenges_habits">
+                                                  <label for="challenges_habits">Challenges My Beliefs And Habits</label>
+
+                                                  <input type="radio" id="homework_tasks" name="expectations_therapist" value="homework_tasks">
+                                                  <label for="homework_tasks">Gives Me Homework And Tasks</label>
+
+                                                  <input type="radio" id="guides_goals" name="expectations_therapist" value="guides_goals">
+                                                  <label for="guides_goals">Guides Me To Set Goals</label>
+
+                                                  <input type="radio" id="proactively" name="expectations_therapist" value="proactively">
+                                                  <label for="proactively">Proactively Checks In With Me</label>
+
+                                                  <input type="radio" id="other" name="expectations_therapist" value="other">
+                                                  <label for="other">Other</label>
+
+                                                  <input type="radio" id="really_know" name="expectations_therapist" value="really_know">
+                                                  <label for="really_know">I Don’t Really Know</label>
+
+                                                </div>
+                                                <div id="expectations_therapist_err" class="error" style="color:black;font-size: 116%;font-weight: bold;display: none;">Required</div>
+                                             </div>
+                                           </div>
+                                        </div>
+
+                                        <div id="page10" data-bs-position="10" class="page">
+                                            <div class="form-card ">
+                                              <label class="fieldlabels">How Would You Rate Your Current Physical Health?</label> 
+                                              <div class="option-block">
+                                                <div class="radio-input">
+                                                  <input type="radio" id="physical_health_good" name="physical_health" value="physical_health_good">
+                                                  <label for="physical_health_good">Good</label>
+
+                                                  <input type="radio" id="physical_health_fair" name="physical_health" value="physical_health_fair">
+                                                  <label for="physical_health_fair">Fair</label>
+
+                                                  <input type="radio" id="physical_health_poor" name="physical_health" value="physical_health_poor">
+                                                  <label for="physical_health_poor">Poor</label>
+
+                                                </div>
+                                                <div id="physical_health_err" class="error" style="color:black;font-size: 116%;font-weight: bold;display: none;">Required</div>
+                                             </div>
+                                            </div>
+                                        </div>
+
+                                       <div class="next-prev-btn step-2">
+                                            <div id="prev" data-step="2">Previous</div>
+                                            <div id="next" data-step="2">next</div>
+                                        </div>
+
+                                           <input type="button" name="next" class="next action-button next-step-2" value="Next" /> 
+                                           <input type="button" name="previous" class="previous action-button-previous" value="Back" />
+                                      
+                                    </fieldset>
+
+                                    <!-- ---fieldset-3----- -->
+
+                                    <fieldset class="fieldset-step-3">
+
+                                        <div id="page11" data-bs-position="11" class="page">
+                                            <div class="form-card ">
+                                              <label class="fieldlabels">How Would You Rate Your Current Eating Habits?</label> 
+                                              <div class="option-block">
+                                                <div class="radio-input">
+                                                  <input type="radio" id="eating_habits_good" name="eating_habits" value="eating_habits_good">
+                                                  <label for="eating_habits_good">Good</label>
+
+                                                  <input type="radio" id="eating_habits_fair" name="eating_habits" value="eating_habits_fair">
+                                                  <label for="eating_habits_fair">Fair</label>
+
+                                                  <input type="radio" id="eating_habits_poor" name="eating_habits" value="eating_habits_poor">
+                                                  <label for="eating_habits_poor">Poor</label>
+
+                                                </div>
+                                                <div id="eating_habits_err" class="error" style="color:black;font-size: 116%;font-weight: bold;display: none;">Required</div>
+                                             </div>
+                                            </div>
+                                        </div>
+
+                                        <div id="page12" data-bs-position="12" class="page">
+                                            <div class="form-card ">
+                                              <label class="fieldlabels">Are You Currently Experiencing Overwhelming Feelings Of Anxiety, Grief, Depression?</label> 
+                                              <div class="option-block">
+                                                <div class="radio-input">
+                                                  <input type="radio" id="feelings_of_anxiety_yes" name="feelings_of_anxiety" value="feelings_of_anxiety_yes">
+                                                  <label for="feelings_of_anxiety_yes">Yes</label>
+
+                                                  <input type="radio" id="feelings_of_anxiety_no" name="feelings_of_anxiety" value="feelings_of_anxiety_no">
+                                                  <label for="feelings_of_anxiety_no">No</label>
+
+                                                </div>
+                                                <div id="feelings_of_anxiety_err" class="error" style="color:black;font-size: 116%;font-weight: bold;display: none;">Required</div>
+                                             </div>
+                                            </div>
+                                        </div>
+
+                                        <div id="page13" data-bs-position="13" class="page">
+                                            <div class="form-card Therapys-option">
+                                              <label class="fieldlabels">In The Last Few Weeks Have You Experienced Being Bothered By The Following Issues:</label> 
+                                              <p>Little Interest In Doing Things</p>
+
+                                              <div class="option-block">
+                                                <div class="radio-input">
+
+                                                  <input type="radio" id="little_interest_not_at_all" name="little_interest" value="little_interest_not_at_all">
+                                                  <label for="little_interest_not_at_all">Not At All</label>
+
+                                                  <input type="radio" id="little_interest_several_days" name="little_interest" value="little_interest_several_days">
+                                                  <label for="little_interest_several_days">Several Days</label>
+
+                                                  <input type="radio" id="little_interest_half_the_days" name="little_interest" value="little_interest_half_the_days">
+                                                  <label for="little_interest_half_the_days">More Than Half The Days</label>
+
+                                                  <input type="radio" id="little_interest_nearly_every_day" name="little_interest" value="little_interest_nearly_every_day">
+                                                  <label for="little_interest_nearly_every_day">Nearly Every Day</label>
+
+                                                </div>
+                                                <div id="little_interest_err" class="error" style="color:black;font-size: 116%;font-weight: bold;display: none;">Required</div>
+                                             </div>
+
+                                            </div>
+                                        </div>
+
+                                        <div id="page14" data-bs-position="14" class="page">
+                                            <div class="form-card Therapys-option">
+                                              <label class="fieldlabels">In The Last Few Weeks Have You Experienced Being Bothered By The Following Issues:</label> 
+                                              <p>Being Extremely Slow And Apathetic Or The Opposite And Being Hyper And Restless</p>
+
+                                              <div class="option-block">
+                                                <div class="radio-input">
+                                                  <input type="radio" id="hyper_and_restless_not_at_all" name="hyper_and_restless" value="hyper_and_restless_not_at_all">
+                                                  <label for="hyper_and_restless_not_at_all">Not At All</label>
+
+                                                  <input type="radio" id="hyper_and_restless_several_days" name="hyper_and_restless" value="hyper_and_restless_several_days">
+                                                  <label for="hyper_and_restless_several_days">Several Days</label>
+
+                                                  <input type="radio" id="hyper_and_restless_half_the_days" name="hyper_and_restless" value="hyper_and_restless_half_the_days">
+                                                  <label for="hyper_and_restless_half_the_days">More Than Half The Days</label>
+
+                                                  <input type="radio" id="hyper_and_restless_nearly_every_day" name="hyper_and_restless" value="hyper_and_restless_nearly_every_day">
+                                                  <label for="hyper_and_restless_nearly_every_day">Nearly Every Day</label>
+
+                                                </div>
+                                                <div id="hyper_and_restless_err" class="error" style="color:black;font-size: 116%;font-weight: bold;display: none;">Required</div>
+                                             </div>
+                                            </div>
+                                        </div>
+
+                                        <div id="page15" data-bs-position="15" class="page">
+                                            <div class="form-card Therapys-option">
+                                              <label class="fieldlabels">In The Last Few Weeks Have You Experienced Being Bothered By The Following Issues:</label> 
+                                              <p>Feeling Down, Depressed And Hopeless</p>
+
+                                              <div class="option-block">
+                                                <div class="radio-input">
+                                                  <input type="radio" id="depressed_and_hopeless_not_at_all" name="depressed_and_hopeless" value="depressed_and_hopeless_not_at_all">
+                                                  <label for="depressed_and_hopeless_not_at_all">Not At All</label>
+
+                                                  <input type="radio" id="depressed_and_hopeless_several_days" name="depressed_and_hopeless" value="depressed_and_hopeless_several_days">
+                                                  <label for="depressed_and_hopeless_several_days">Several Days</label>
+
+                                                  <input type="radio" id="depressed_and_hopeless_half_the_days" name="depressed_and_hopeless" value="depressed_and_hopeless_half_the_days">
+                                                  <label for="depressed_and_hopeless_half_the_days">More Than Half The Days</label>
+
+                                                  <input type="radio" id="depressed_and_hopeless_nearly_every_day" name="depressed_and_hopeless" value="depressed_and_hopeless_nearly_every_day">
+                                                  <label for="depressed_and_hopeless_nearly_every_day">Nearly Every Day</label>
+
+                                                </div>
+                                                <div id="depressed_and_hopeless_err" class="error" style="color:black;font-size: 116%;font-weight: bold;display: none;">Required</div>
+                                             </div>
+                                            </div>
+                                        </div>
+
+
+                                        <div class="next-prev-btn step-3">
+                                            <div id="prev" data-step="3">Previous</div>
+                                            <div id="next" data-step="3">next</div>
+                                        </div>
+
+                                            <input type="button" name="next" class="next action-button next-step-3" value="Next" /> 
+                                            <input type="button" name="previous" class="previous action-button-previous" value="Back" />
+                                       
+                                    </fieldset>
+
+                                    <!-- ---fieldset-4----- -->
+                                    <fieldset class="fieldset-step-4">
+
+                                        <div id="page16" data-bs-position="16" class="page">
+                                            <div class="form-card Therapys-option">
+                                              <label class="fieldlabels">In The Last Few Weeks Have You Experienced Being Bothered By The Following Issues:</label> 
+                                              <p>Troubles Falling Asleep, Staying Asleep Or Sleeping Too Much</p>
+
+                                              <div class="option-block">
+                                                <div class="radio-input">
+                                                  <input type="radio" id="sleeping_too_much_not_at_all" name="sleeping_too_much" value="sleeping_too_much_not_at_all">
+                                                  <label for="sleeping_too_much_not_at_all">Not At All</label>
+
+                                                  <input type="radio" id="sleeping_too_much_several_days" name="sleeping_too_much" value="sleeping_too_much_several_days">
+                                                  <label for="sleeping_too_much_several_days">Several Days</label>
+
+                                                  <input type="radio" id="sleeping_too_much_half_the_days" name="sleeping_too_much" value="sleeping_too_much_half_the_days">
+                                                  <label for="sleeping_too_much_half_the_days">More Than Half The Days</label>
+
+                                                  <input type="radio" id="sleeping_too_much_nearly_every_day" name="sleeping_too_much" value="sleeping_too_much_nearly_every_day">
+                                                  <label for="sleeping_too_much_nearly_every_day">Nearly Every Day</label>
+
+                                                </div>
+                                                <div id="sleeping_too_much_err" class="error" style="color:black;font-size: 116%;font-weight: bold;display: none;">Required</div>
+                                             </div>
+                                            </div>
+                                        </div>
+
+                                        <div id="page17" data-bs-position="17" class="page">
+                                            <div class="form-card Therapys-option">
+                                              <label class="fieldlabels">In The Last Few Weeks Have You Experienced Being Bothered By The Following Issues:</label> 
+                                              <p>Feeling Down Or Having Very Little Energy</p>
+
+                                              <div class="option-block">
+                                                <div class="radio-input">
+                                                  <input type="radio" id="NotAtAll5" name="very_little_energy" value="NotAtAll5">
+                                                  <label for="NotAtAll5">Not At All</label>
+
+                                                  <input type="radio" id="SeveralDays5" name="very_little_energy" value="SeveralDays5">
+                                                  <label for="SeveralDays5">Several Days</label>
+
+                                                  <input type="radio" id="HalfTheDays5" name="very_little_energy" value="HalfTheDays5">
+                                                  <label for="HalfTheDays5">More Than Half The Days</label>
+
+                                                  <input type="radio" id="NearlyEveryDay5" name="very_little_energy" value="NearlyEveryDay5">
+                                                  <label for="NearlyEveryDay5">Nearly Every Day</label>
+
+                                                </div>
+                                                <div id="very_little_energy_err" class="error" style="color:black;font-size: 116%;font-weight: bold;display: none;">Required</div>
+                                             </div>
+                                            </div>
+                                        </div>
+
+                                        <div id="page18" data-bs-position="18" class="page">
+                                            <div class="form-card Therapys-option">
+                                              <label class="fieldlabels">In The Last Few Weeks Have You Experienced Being Bothered By The Following Issues:</label> 
+                                              <p>Having Little To No Appetite Or Eating Too Much</p>
+
+                                              <div class="option-block">
+                                                <div class="radio-input">
+                                                  <input type="radio" id="NotAtAll6" name="eating_too_much" value="NotAtAll6">
+                                                  <label for="NotAtAll6">Not At All</label>
+
+                                                  <input type="radio" id="SeveralDays6" name="eating_too_much" value="SeveralDays6">
+                                                  <label for="SeveralDays6">Several Days</label>
+
+                                                  <input type="radio" id="HalfTheDays6" name="eating_too_much" value="HalfTheDays6">
+                                                  <label for="HalfTheDays6">More Than Half The Days</label>
+
+                                                  <input type="radio" id="NearlyEveryDay6" name="eating_too_much" value="NearlyEveryDay6">
+                                                  <label for="NearlyEveryDay6">Nearly Every Day</label>
+
+                                                </div>
+                                                <div id="eating_too_much_err" class="error" style="color:black;font-size: 116%;font-weight: bold;display: none;">Required</div>
+                                             </div>
+                                            </div>
+                                        </div>
+
+                                        <div id="page19" data-bs-position="19" class="page">
+                                            <div class="form-card Therapys-option">
+                                              <label class="fieldlabels">In The Last Few Weeks Have You Experienced Being Bothered By The Following Issues:</label> 
+                                              <p>Feeling Bad About Yourself And Afraid Of Being A Failure Or / And Letting People Down</p>
+
+                                              <div class="option-block">
+                                                <div class="radio-input">
+                                                  <input type="radio" id="NotAtAll7" name="letting_people_down" value="NotAtAll7">
+                                                  <label for="NotAtAll7">Not At All</label>
+
+                                                  <input type="radio" id="SeveralDays7" name="letting_people_down" value="SeveralDays7">
+                                                  <label for="SeveralDays7">Several Days</label>
+
+                                                  <input type="radio" id="HalfTheDays7" name="letting_people_down" value="HalfTheDays7">
+                                                  <label for="HalfTheDays7">More Than Half The Days</label>
+
+                                                  <input type="radio" id="NearlyEveryDay7" name="letting_people_down" value="NearlyEveryDay7">
+                                                  <label for="NearlyEveryDay7">Nearly Every Day</label>
+
+                                                </div>
+                                                <div id="letting_people_down_err" class="error" style="color:black;font-size: 116%;font-weight: bold;display: none;">Required</div>
+                                             </div>
+                                            </div>
+                                        </div>
+
+                                        <div id="page20" data-bs-position="20" class="page">
+                                            <div class="form-card Therapys-option">
+                                              <label class="fieldlabels">In The Last Few Weeks Have You Experienced Being Bothered By The Following Issues:</label> 
+                                              <p>Trouble Concentrating On Simple Tasks Like Reading A Book Or Even Watching Television</p>
+
+                                              <div class="option-block">
+                                                <div class="radio-input">
+                                                  <input type="radio" id="NotAtAll8" name="even_watching_television" value="NotAtAll8">
+                                                  <label for="NotAtAll8">Not At All</label>
+
+                                                  <input type="radio" id="SeveralDays8" name="even_watching_television" value="SeveralDays8">
+                                                  <label for="SeveralDays8">Several Days</label>
+
+                                                  <input type="radio" id="HalfTheDays8" name="even_watching_television" value="HalfTheDays8">
+                                                  <label for="HalfTheDays8">More Than Half The Days</label>
+
+                                                  <input type="radio" id="NearlyEveryDay8" name="even_watching_television" value="NearlyEveryDay8">
+                                                  <label for="NearlyEveryDay8">Nearly Every Day</label>
+
+                                                </div>
+                                                <div id="even_watching_television_err" class="error" style="color:black;font-size: 116%;font-weight: bold;display: none;">Required</div>
+                                             </div>
+                                            </div>
+                                        </div>
+
+                                        <div id="page21" data-bs-position="21" class="page">
+                                            <div class="form-card Therapys-option">
+                                              <label class="fieldlabels">In The Last Few Weeks Have You Experienced Being Bothered By The Following Issues:</label> 
+                                              <p>Thoughts That You Would Better Off Dead</p>
+
+                                              <div class="option-block">
+                                                <div class="radio-input">
+                                                  <input type="radio" id="NotAtAll10" name="better_off_dead" value="NotAtAll10">
+                                                  <label for="NotAtAll10">Not At All</label>
+
+                                                  <input type="radio" id="SeveralDays10" name="better_off_dead" value="SeveralDays10">
+                                                  <label for="SeveralDays10">Several Days</label>
+
+                                                  <input type="radio" id="HalfTheDays10" name="better_off_dead" value="HalfTheDays10">
+                                                  <label for="HalfTheDays10">More Than Half The Days</label>
+
+                                                  <input type="radio" id="NearlyEveryDay10" name="better_off_dead" value="NearlyEveryDay10">
+                                                  <label for="NearlyEveryDay10">Nearly Every Day</label>
+
+                                                </div>
+                                                <div id="better_off_dead_err" class="error" style="color:black;font-size: 116%;font-weight: bold;display: none;">Required</div>
+                                             </div>
+                                            </div>
+                                        </div>
+
+                                        <div id="page22" data-bs-position="22" class="page">
+                                            <div class="form-card Therapys-option">
+                                              <label class="fieldlabels">How Difficult Are These Thoughts And Feeling Making It For You To Go About Your Daily Life At Work / Home?</label> 
+                                             
+
+                                              <div class="option-block">
+                                                <div class="radio-input">
+                                                  <input type="radio" id="NotDifficult" name="daily_life_at_work" value="NotDifficult">
+                                                  <label for="NotDifficult">Not Difficult At All</label>
+
+                                                  <input type="radio" id="SomewhatDifficult" name="daily_life_at_work" value="SomewhatDifficult">
+                                                  <label for="SomewhatDifficult">Somewhat Difficult</label>
+
+                                                  <input type="radio" id="VeryDifficult" name="daily_life_at_work" value="VeryDifficult">
+                                                  <label for="VeryDifficult">Very Difficult</label>
+
+                                                  <input type="radio" id="ExtremelyDifficult" name="daily_life_at_work" value="ExtremelyDifficult">
+                                                  <label for="ExtremelyDifficult">Extremely Difficult</label>
+
+                                                </div>
+                                                <div id="daily_life_at_work_err" class="error" style="color:black;font-size: 116%;font-weight: bold;display: none;">Required</div>
+                                             </div>
+                                            </div>
+                                        </div>
+
+                                      <div class="next-prev-btn">
+                                            <div id="prev" data-step="4">Previous</div>
+                                            <div id="next" data-step="4">next</div>
+                                        </div>
+
+                                           <input type="button" name="next" class="next action-button next-step-4" value="Next" /> 
+                                           <input type="button" name="previous" class="previous action-button-previous" value="Back" />
+                                     
+                                    </fieldset>
+
+                                    <!-- ---fieldset-5----- -->
+                                    <fieldset class="fieldset-step-5">
+
+                                        <div id="page23" data-bs-position="23" class="page">
+                                            <div class="form-card ">
+                                              <label class="fieldlabels">Are You Currently Employed?</label> 
+                                              <div class="option-block">
+                                                <div class="radio-input">
+                                                  <input type="radio" id="Yes2" name="currently_employed" value="Yes2">
+                                                  <label for="Yes2">Yes</label>
+
+                                                  <input type="radio" id="No2" name="currently_employed" value="No2">
+                                                  <label for="No2">No</label>
+
+                                                </div>
+                                                <div id="currently_employed_err" class="error" style="color:black;font-size: 116%;font-weight: bold;display: none;">Required</div>
+                                             </div>
+                                            </div>
+                                        </div>
+
+                                        <div id="page24" data-bs-position="24" class="page">
+                                            <div class="form-card Therapys-option">
+                                              <label class="fieldlabels">How Often Do You Drink Alcohol?</label> 
+                                              <div class="option-block">
+                                                <div class="radio-input">
+                                                  <input type="radio" id="Never" name="you_drink_alcohol" value="Never">
+                                                  <label for="Never">Never</label>
+
+                                                  <input type="radio" id="Infrequently" name="you_drink_alcohol" value="Infrequently">
+                                                  <label for="Infrequently">Infrequently</label>
+
+                                                  <input type="radio" id="Monthly" name="you_drink_alcohol" value="Monthly">
+                                                  <label for="Monthly">Monthly</label>
+
+                                                  <input type="radio" id="Weekly" name="you_drink_alcohol" value="Weekly">
+                                                  <label for="Weekly">Weekly</label>
+
+                                                  <input type="radio" id="Daily" name="you_drink_alcohol" value="Daily">
+                                                  <label for="Daily">Daily</label>
+
+                                                </div>
+                                                <div id="you_drink_alcohol_err" class="error" style="color:black;font-size: 116%;font-weight: bold;display: none;">Required</div>
+                                             </div>
+                                            </div>
+                                        </div>
+
+                                        <div id="page25" data-bs-position="25" class="page">
+                                            <div class="form-card Therapys-option">
+                                              <label class="fieldlabels">What Was The Last Time You Thought About Suicide Or Harming Yourself?</label> 
+                                              <div class="option-block">
+                                                <div class="radio-input">
+                                                  <input type="radio" id="Never1" name="harming_yourself" value="Never1">
+                                                  <label for="Never1">Never</label>
+
+                                                  <input type="radio" id="1YearAgo" name="harming_yourself" value="1YearAgo">
+                                                  <label for="1YearAgo">More Than A Year Ago</label>
+
+                                                  <input type="radio" id="3MonthsAgo" name="harming_yourself" value="3MonthsAgo">
+                                                  <label for="3MonthsAgo">Over 3 Months Ago</label>
+
+                                                  <input type="radio" id="1MonthAgo" name="harming_yourself" value="1MonthAgo">
+                                                  <label for="1MonthAgo">Over A Month Ago</label>
+
+                                                  <input type="radio" id="2WeeksAgo" name="harming_yourself" value="2WeeksAgo">
+                                                  <label for="2WeeksAgo">Over 2 Weeks Ago</label>
+
+                                                  <input type="radio" id="Last2Weeks" name="harming_yourself" value="Last2Weeks">
+                                                  <label for="Last2Weeks">In The Last 2 Weeks</label>
+
+                                                </div>
+                                                <div id="harming_yourself_err" class="error" style="color:black;font-size: 116%;font-weight: bold;display: none;">Required</div>
+                                             </div>
+                                            </div>
+                                        </div>
+
+                                        <div id="page26" data-bs-position="26" class="page">
+                                            <div class="form-card ">
+                                              <label class="fieldlabels">Are You Currently Experiencing Panic Attacks Or Have Any Phobias?</label> 
+                                              <div class="option-block">
+                                                <div class="radio-input">
+                                                  <input type="radio" id="No3" name="phobias" value="No3">
+                                                  <label for="No3">No</label>
+
+                                                  <input type="radio" id="Yes3" name="phobias" value="Yes3">
+                                                  <label for="Yes3">Yes</label>
+
+                                                </div>
+                                                <div id="phobias_err" class="error" style="color:black;font-size: 116%;font-weight: bold;display: none;">Required</div>
+                                             </div>
+                                            </div>
+                                        </div>
+
+                                        <div id="page27" data-bs-position="27" class="page">
+                                            <div class="form-card ">
+                                              <label class="fieldlabels">Are You Currently Taking Any Medications?</label> 
+                                              <div class="option-block">
+                                                <div class="radio-input">
+                                                  <input type="radio" id="No4" name="medications" value="No4">
+                                                  <label for="No4">No</label>
+
+                                                  <input type="radio" id="Yes4" name="medications" value="Yes4">
+                                                  <label for="Yes4">Yes</label>
+
+                                                </div>
+                                                <div id="medications_err" class="error" style="color:black;font-size: 116%;font-weight: bold;display: none;">Required</div>
+                                             </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="next-prev-btn">
+                                            <div id="prev" data-step="5">Previous</div>
+                                            <div id="next" data-step="5">next</div>
+                                        </div>
+                                       
+                                           <input type="button" name="next" class="next action-button next-step-5" value="Next" /> 
+                                           <input type="button" name="previous" class="previous action-button-previous" value="Back" />
+                                       
+                                    </fieldset>
+
+
+                                    <!-- ---fieldset-6----- -->
+                                    <fieldset class="fieldset-step-6">
+                                       
+                                        <div id="page28" data-bs-position="28" class="page">
+                                            <div class="form-card ">
+                                              <label class="fieldlabels">Are You Currently Experiencing Chronic Pain?</label> 
+                                              <div class="option-block">
+                                                <div class="radio-input">
+                                                  <input type="radio" id="No5" name="chronic_pain" value="No5">
+                                                  <label for="No5">No</label>
+
+                                                  <input type="radio" id="Yes5" name="chronic_pain" value="Yes5">
+                                                  <label for="Yes5">Yes</label>
+
+                                                </div>
+                                                <div id="chronic_pain_err" class="error" style="color:black;font-size: 116%;font-weight: bold;display: none;">Required</div>
+                                             </div>
+                                            </div>
+                                        </div>
+
+                                        <div id="page29" data-bs-position="29" class="page">
+                                            <div class="form-card ">
+                                              <label class="fieldlabels">How Would You Rate Your Current Financial Status?</label> 
+                                              <div class="option-block">
+                                                <div class="radio-input">
+                                                  <input type="radio" id="Good2" name="financial_status" value="Good2">
+                                                  <label for="Good2">Good</label>
+
+                                                  <input type="radio" id="Fair2" name="financial_status" value="Fair2">
+                                                  <label for="Fair2">Fair</label>
+
+                                                  <input type="radio" id="Poor2" name="financial_status" value="Poor2">
+                                                  <label for="Poor2">Poor</label>
+
+                                                </div>
+                                                <div id="financial_status_err" class="error" style="color:black;font-size: 116%;font-weight: bold;display: none;">Required</div>
+                                             </div>
+                                            </div>
+                                        </div>
+
+                                        <div id="page30" data-bs-position="30" class="page">
+                                            <div class="form-card ">
+                                              <label class="fieldlabels">How Would You Rate Your Current Sleeping Habits?</label> 
+                                              <div class="option-block">
+                                                <div class="radio-input">
+                                                  <input type="radio" id="Good3" name="sleeping_habits" value="Good3">
+                                                  <label for="Good3">Good</label>
+
+                                                  <input type="radio" id="Fair3" name="sleeping_habits" value="Fair3">
+                                                  <label for="Fair3">Fair</label>
+
+                                                  <input type="radio" id="Poor3" name="sleeping_habits" value="Poor3">
+                                                  <label for="Poor3">Poor</label>
+
+                                                </div>
+                                                <div id="sleeping_habits_err" class="error" style="color:black;font-size: 116%;font-weight: bold;display: none;">Required</div>
+
+                                             </div>
+                                            </div>
+                                        </div>
+
+                                        <div id="page31" data-bs-position="31" class="page">
+                                            <div class="form-card ">
+                                              <label class="fieldlabels">How Would You Rate Your Current Support System?</label> 
+                                              <div class="option-block">
+                                                <div class="radio-input">
+                                                  <input type="radio" id="Good4" name="current_support_system" value="Good4">
+                                                  <label for="Good4">Good</label>
+
+                                                  <input type="radio" id="Fair4" name="current_support_system" value="Fair4">
+                                                  <label for="Fair4">Fair</label>
+
+                                                  <input type="radio" id="Poor4" name="current_support_system" value="Poor4">
+                                                  <label for="Poor4">Poor</label>
+
+                                                </div>
+                                                <div id="current_support_system_err" class="error" style="color:black;font-size: 116%;font-weight: bold;display: none;">Required</div>
+
+                                             </div>
+                                            </div>
+                                        </div>
+
+
+                                         <div id="page32" data-bs-position="32" class="page">
+                                            <div class="form-card Therapys-option">
+                                              <label class="fieldlabels">Which Of The Following Support Systems Would Be Useful For You?</label> 
+                                              <div class="option-block">
+                                                <div class="radio-input">
+                                                  <input type="radio" id="TherapyJournal" name="useful_for_you" value="TherapyJournal">
+                                                  <label for="TherapyJournal">Therapy Journal</label>
+
+                                                  <input type="radio" id="Worksheer" name="useful_for_you" value="Worksheer">
+                                                  <label for="Worksheer">Worksheer</label>
+
+                                                  <input type="radio" id="Tracking" name="useful_for_you" value="Tracking">
+                                                  <label for="Tracking">Goals/habits Tracking</label>
+
+                                                  <input type="radio" id="Podcasts" name="useful_for_you" value="Podcasts">
+                                                  <label for="Podcasts">Educational Materials Like Webinars And Podcasts</label>
+
+                                                  <input type="radio" id="MessagingSupport" name="useful_for_you" value="MessagingSupport">
+                                                  <label for="MessagingSupport">Messaging Support</label>
+
+                                                   <input type="radio" id="Other1" name="useful_for_you" value="Other1">
+                                                  <label for="Other1">Other</label>
+
+                                                   <input type="radio" id="DontKnow" name="useful_for_you" value="DontKnow">
+                                                  <label for="DontKnow">I Don’t Know</label>
+
+                                                  
+                                                </div>
+                                                <div id="useful_for_you_err" class="error" style="color:black;font-size: 116%;font-weight: bold;display: none;">Required</div>
+
+                                             </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="next-prev-btn">
+                                            <div id="prev" data-step="6">Previous</div>
+                                            <div id="next" data-step="6">next</div>
+                                        </div>
+                                           <input type="button" name="next" class="next action-button next-step-6" value="Next" /> 
+                                            <input type="button" name="previous" class="previous action-button-previous" value="Back" />
+                                       
+                                    </fieldset>
+
+
+                                    <!-- ---fieldset-7----- -->
+                                    <fieldset class="fieldset-step-7">
+                                       
+                                        <div id="page33" data-bs-position="33" class="page">
+                                            <div class="form-card Therapys-option">
+                                              <label class="fieldlabels">How Would You Prefer To Communicate With Your Therapist</label> 
+                                              <div class="option-block">
+
+                                                <div class="checkbox-input sequence">
+                                                  <div class="form-check">
+
+                                                      <input type="checkbox" id="VideoSession" class="your-therapist" name="your_therapist" value="VideoSession">
+
+                                                        <label for="VideoSession"> In The Video Session</label>
+                                                   
+                                                  </div>
+
+                                                  <div class="form-check">
+
+                                                     <input type="checkbox" id="ViaMessaging" class="your-therapist" name="your_therapist" value="ViaMessaging">
+
+                                                    <label for="ViaMessaging">Via Messaging</label>
+
+                                                  </div>
+
+                                                  <div class="form-check">
+
+                                                     <input type="checkbox" id="ViaEmail" class="your-therapist" name="your_therapist" value="ViaEmail">
+
+                                                    <label for="ViaEmail">Via Email</label>
+
+                                                  </div>
+
+
+                                                  <div class="form-check">
+
+                                                      <input type="checkbox" id="NotSureYet" class="your-therapist" name="your_therapist" value="NotSureYet">
+
+                                                        <label for="NotSureYet">Not Sure Yet (I Will Decide Later)</label>
+
+                                                  </div>
+                                                </div>
+                                                <div id="your_therapist_err" class="error" style="color:black;font-size: 116%;font-weight: bold;display: none;">Required</div>
+
+                                               <!--  <div class="radio-input">
+                                                  <input type="radio" id="VideoSession" name="" value="VideoSession">
+                                                  <label for="VideoSession"> In The Video Session</label>
+
+                                                  <input type="radio" id="ViaMessaging" name="" value="ViaMessaging">
+                                                  <label for="ViaMessaging">Via Messaging</label>
+
+                                                  <input type="radio" id="ViaEmail" name="" value="ViaEmail">
+                                                  <label for="ViaEmail">Via Email</label>
+
+                                                  <input type="radio" id="NotSureYet" name="" value="NotSureYet">
+                                                  <label for="NotSureYet">Not Sure Yet (I Will Decide Later)</label>
+
+                                                </div> -->
+                                             </div>
+                                             
+                                            </div>
+                                        </div>
+
+                                        <div id="page34" data-bs-position="34" class="page">
+                                            <div class="form-card Therapys-option">
+                                              <label class="fieldlabels">Do You Have Any Specific Preferences For Your Therapist / Coach?</label> 
+                                              <div class="option-block">
+
+
+                                                 <div class="checkbox-input sequence">
+                                                      <div class="form-check">
+
+                                                         <input type="checkbox" id="MaleTherapist" class="therapist-coach" name="therapist_coach" value="MaleTherapist">
+
+                                                        <label for="MaleTherapist">Male Therapist</label>
+                                                       
+                                                      </div>
+
+                                                      <div class="form-check">
+
+                                                        <input type="checkbox" id="FemaleTherapist" class="therapist-coach" name="therapist_coach" value="FemaleTherapist">
+
+                                                         <label for="FemaleTherapist">Female Therapist</label>
+
+                                                      </div>
+
+                                                       <div class="form-check">
+
+                                                          <input type="checkbox" id="Spiritual" class="therapist-coach" name="therapist_coach" value="Spiritual">
+
+                                                        <label for="Spiritual">Spiritual</label>
+
+                                                      </div>
+
+                                                      <div class="form-check">
+
+                                                          <input type="checkbox" id="Older50yrs" class="therapist-coach" name="therapist_coach" value="Older50yrs">
+
+                                                            <label for="Older50yrs">Older Than 50yrs Old</label>
+
+                                                      </div>
+
+
+                                                      <div class="form-check">
+
+                                                         <input type="checkbox" id="Younger50yrs" class="therapist-coach" name="therapist_coach" value="Younger50yrs">
+
+                                                            <label for="Younger50yrs">Younger Than 50yrs Old</label>
+
+                                                      </div>
+
+                                                   
+
+                                                       <div class="form-check">
+
+                                                         <input type="checkbox" id="InternationalTherapist" class="therapist-coach" name="therapist_coach" value="InternationalTherapist">
+
+                                                        <label for="InternationalTherapist">International Therapist</label>
+
+                                                      </div>
+
+
+                                                      <div class="form-check">
+
+                                                        <input type="checkbox" id="BritishTherapist" class="therapist-coach" name="therapist_coach" value="BritishTherapist">
+
+                                                        <label for="BritishTherapist">British Therapist</label>
+
+                                                      </div>
+                                                      
+                                                 </div>
+                                                <div id="therapist_coach_err" class="error" style="color:black;font-size: 116%;font-weight: bold;display: none;">Required</div>
+
+
+
+
+                                                <!-- <div class="radio-input">
+                                                  <input type="radio" id="MaleTherapist" name="" value="MaleTherapist">
+                                                  <label for="MaleTherapist">Male Therapist</label>
+
+                                                  <input type="radio" id="FemaleTherapist" name="" value="FemaleTherapist">
+                                                  <label for="FemaleTherapist">Female Therapist</label>
+
+                                                  <input type="radio" id="ChristianBased" name="" value="ChristianBased">
+                                                  <label for="ChristianBased">ChristianBased</label>
+
+                                                  <input type="radio" id="Spiritual" name="" value="Spiritual">
+                                                  <label for="Spiritual">Spiritual</label>
+
+                                                  <input type="radio" id="Lgbtq+Community" name="" value="Lgbtq+Community">
+                                                  <label for="Lgbtq+Community">Therapist From The Lgbtq+ Community</label>
+
+                                                  <input type="radio" id="OlderTherapist" name="" value="OlderTherapist">
+                                                  <label for="OlderTherapist">Older Therapist (45+)</label>
+
+                                                  <input type="radio" id="NonReligious" name="" value="NonReligious">
+                                                  <label for="NonReligious">Non-religious Therapist</label>
+
+                                                  <input type="radio" id="BlackTherapist" name="" value="BlackTherapist">
+                                                  <label for="BlackTherapist">Black Therapist</label>
+
+                                                  <input type="radio" id="AsianTherapist" name="" value="AsianTherapist">
+                                                  <label for="AsianTherapist">Asian Therapist</label>
+
+                                                  <input type="radio" id="L/E-CountryTherapist" name="" value="L/E-CountryTherapist">
+                                                  <label for="L/E-CountryTherapist">Latino / European Country Therapist</label>
+
+                                                  <input type="radio" id="BritishTherapist" name="" value="BritishTherapist">
+                                                  <label for="BritishTherapist">British Therapist</label>
+                                                </div> -->
+                                             </div>
+                                            </div>
+                                        </div>
+
+                                        <div id="page35" data-bs-position="35" class="page">
+                                            <div class="form-card Therapys-option">
+                                              <label class="fieldlabels">Who Referred You To healinhere?</label> 
+                                              <div class="option-block">
+                                                <div class="radio-input">
+                                                  <input type="radio" id="Tv" name="referred_healinhere" value="Tv">
+                                                  <label for="Tv">Tv</label>
+
+                                                  <input type="radio" id="SocialMediaPost" name="referred_healinhere" value="SocialMediaPost">
+                                                  <label for="SocialMediaPost">Social Media Post</label>
+
+                                                  <input type="radio" id="Podcast" name="referred_healinhere" value="Podcast">
+                                                  <label for="Podcast">Podcast</label>
+
+                                                  <input type="radio" id="Youtube" name="referred_healinhere" value="Youtube">
+                                                  <label for="Youtube">Youtube</label>
+
+                                                  <input type="radio" id="GoogleSearch" name="referred_healinhere" value="GoogleSearch">
+                                                  <label for="GoogleSearch">Google Search</label>
+
+                                                  <input type="radio" id="Tiktok" name="referred_healinhere" value="Tiktok">
+                                                  <label for="Tiktok">Tiktok</label>
+
+                                                  <input type="radio" id="Magazine" name="referred_healinhere" value="Magazine">
+                                                  <label for="Magazine">Magazine</label>
+
+                                                  <input type="radio" id="Friend-familyMember" name="referred_healinhere" value="Friend-familyMember">
+                                                  <label for="Friend-familyMember">Friend/family Member</label>
+
+                                                  <input type="radio" id="Doctor" name="referred_healinhere" value="Doctor">
+                                                  <label for="Doctor">Doctor</label>
+
+                                                  <input type="radio" id="Other2" name="referred_healinhere" value="Other2">
+                                                  <label for="Other2">Other</label>
+
+                                                </div>
+                                                <div id="referred_healinhere_err" class="error" style="color:black;font-size: 116%;font-weight: bold;display: none;">Required</div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div id="page36" data-bs-position="36" class="page">
+                                           <div class="form-card">
+                                             
+                                              <label class="fieldlabels">Which Country Are You In?</label> 
+                                             
+                                              <div class="option-block">
+                                                    <div class="select-menu" id="select_country">
+
+                                                      <div class="select country">
+                                                        <span>Select your Country</span>
+                                                        <em class="fa fa-angle-down"></em>
+                                                      </div>
+
+                                                      <div class="options-list">
+                                                          <%
+                                                          [
+                                                          "Afghanistan",
+                                                          "Albania",
+                                                          "Algeria",
+                                                          "Andorra",
+                                                          "Angola",
+                                                          "Antigua and Barbuda",
+                                                          "Argentina",
+                                                          "Armenia",
+                                                          "Australia",
+                                                          "Austria",
+                                                          "Azerbaijan",
+                                                          "Bahamas",
+                                                          "Bahrain",
+                                                          "Bangladesh",
+                                                          "Barbados",
+                                                          "Belarus",
+                                                          "Belgium",
+                                                          "Belize",
+                                                          "Benin",
+                                                          "Bhutan",
+                                                          "Bolivia",
+                                                          "Bosnia and Herzegovina",
+                                                          "Botswana",
+                                                          "Brazil",
+                                                          "Brunei",
+                                                          "Bulgaria",
+                                                          "Burkina Faso",
+                                                          "Burundi",
+                                                          "Cabo Verde",
+                                                          "Cambodia",
+                                                          "Cameroon",
+                                                          "Canada",
+                                                          "Central African Republic",
+                                                          "Chad",
+                                                          "Chile",
+                                                          "China",
+                                                          "Colombia",
+                                                          "Comoros",
+                                                          "Congo (Congo-Brazzaville)",
+                                                          "Costa Rica",
+                                                          "Croatia",
+                                                          "Cuba",
+                                                          "Cyprus",
+                                                          "Czechia (Czech Republic)",
+                                                          "Democratic Republic of the Congo",
+                                                          "Denmark",
+                                                          "Djibouti",
+                                                          "Dominica",
+                                                          "Dominican Republic",
+                                                          "Ecuador",
+                                                          "Egypt",
+                                                          "El Salvador",
+                                                          "Equatorial Guinea",
+                                                          "Eritrea",
+                                                          "Estonia",
+                                                          "Eswatini (fmr. \"Swaziland\")",
+                                                          "Ethiopia",
+                                                          "Fiji",
+                                                          "Finland",
+                                                          "France",
+                                                          "Gabon",
+                                                          "Gambia",
+                                                          "Georgia",
+                                                          "Germany",
+                                                          "Ghana",
+                                                          "Greece",
+                                                          "Grenada",
+                                                          "Guatemala",
+                                                          "Guinea",
+                                                          "Guinea-Bissau",
+                                                          "Guyana",
+                                                          "Haiti",
+                                                          "Holy See",
+                                                          "Honduras",
+                                                          "Hungary",
+                                                          "Iceland",
+                                                          "India",
+                                                          "Indonesia",
+                                                          "Iran",
+                                                          "Iraq",
+                                                          "Ireland",
+                                                          "Israel",
+                                                          "Italy",
+                                                          "Jamaica",
+                                                          "Japan",
+                                                          "Jordan",
+                                                          "Kazakhstan",
+                                                          "Kenya",
+                                                          "Kiribati",
+                                                          "Kuwait",
+                                                          "Kyrgyzstan",
+                                                          "Laos",
+                                                          "Latvia",
+                                                          "Lebanon",
+                                                          "Lesotho",
+                                                          "Liberia",
+                                                          "Libya",
+                                                          "Liechtenstein",
+                                                          "Lithuania",
+                                                          "Luxembourg",
+                                                          "Madagascar",
+                                                          "Malawi",
+                                                          "Malaysia",
+                                                          "Maldives",
+                                                          "Mali",
+                                                          "Malta",
+                                                          "Marshall Islands",
+                                                          "Mauritania",
+                                                          "Mauritius",
+                                                          "Mexico",
+                                                          "Micronesia",
+                                                          "Moldova",
+                                                          "Monaco",
+                                                          "Mongolia",
+                                                          "Montenegro",
+                                                          "Morocco",
+                                                          "Mozambique",
+                                                          "Myanmar (formerly Burma)",
+                                                          "Namibia",
+                                                          "Nauru",
+                                                          "Nepal",
+                                                          "Netherlands",
+                                                          "New Zealand",
+                                                          "Nicaragua",
+                                                          "Niger",
+                                                          "Nigeria",
+                                                          "North Korea",
+                                                          "North Macedonia",
+                                                          "Norway",
+                                                          "Oman",
+                                                          "Pakistan",
+                                                          "Palau",
+                                                          "Palestine State",
+                                                          "Panama",
+                                                          "Papua New Guinea",
+                                                          "Paraguay",
+                                                          "Peru",
+                                                          "Philippines",
+                                                          "Poland",
+                                                          "Portugal",
+                                                          "Qatar",
+                                                          "Romania",
+                                                          "Russia",
+                                                          "Rwanda",
+                                                          "Saint Kitts and Nevis",
+                                                          "Saint Lucia",
+                                                          "Saint Vincent and the Grenadines",
+                                                          "Samoa",
+                                                          "San Marino",
+                                                          "Sao Tome and Principe",
+                                                          "Saudi Arabia",
+                                                          "Senegal",
+                                                          "Serbia",
+                                                          "Seychelles",
+                                                          "Sierra Leone",
+                                                          "Singapore",
+                                                          "Slovakia",
+                                                          "Slovenia",
+                                                          "Solomon Islands",
+                                                          "Somalia",
+                                                          "South Africa",
+                                                          "South Korea",
+                                                          "South Sudan",
+                                                          "Spain",
+                                                          "Sri Lanka",
+                                                          "Sudan",
+                                                          "Suriname",
+                                                          "Sweden",
+                                                          "Switzerland",
+                                                          "Syria",
+                                                          "Tajikistan",
+                                                          "Tanzania",
+                                                          "Thailand",
+                                                          "Timor-Leste",
+                                                          "Togo",
+                                                          "Tonga",
+                                                          "Trinidad and Tobago",
+                                                          "Tunisia",
+                                                          "Turkey",
+                                                          "Turkmenistan",
+                                                          "Tuvalu",
+                                                          "Uganda",
+                                                          "Ukraine",
+                                                          "United Arab Emirates",
+                                                          "United Kingdom",
+                                                          "United States of America",
+                                                          "Uruguay",
+                                                          "Uzbekistan",
+                                                          "Vanuatu",
+                                                          "Venezuela",
+                                                          "Vietnam",
+                                                          "Yemen",
+                                                          "Zambia",
+                                                          "Zimbabwe"
+                                                        ].toSorted().forEach(ele => {
+                                                          %>
+                                                          <option class="option country-value" value="<%= ele %>"><%= ele %></option>
+                                                          <% }) %>
+                                                          <option class="option country-value" value="Afghanistan">Afghanistan</option>
+                                                          <option class="option country-value" value="India">India</option>
+                                                          <option class="option country-value" value="Germany">Germany</option>
+                                                          <option class="option country-value" value="Japan">Japan</option>
+                                                          
+                                                      </div>
+                                                      <div id="counrty_err" class="error" style="color:black;font-size: 116%;font-weight: bold;display: none;">Required</div>
+
+
+                                                    </div>
+                                                  </div>
+
+                                            </div>
+                                        </div>
+
+
+                                        <div id="page37" data-bs-position="37" class="page">
+                                           <div class="form-card">
+                                             
+                                              <label class="fieldlabels">What Is Your Preferred Language?</label> 
+                                             
+                                              <div class="option-block">
+                                                    <div class="select-menu" id="select_language">
+                                                      <div class="select language">
+                                                        <span>Select your Language</span>
+                                                        <em class="fas fa-angle-down"></em>
+                                                      </div>
+                                                      <div class="options-list">
+                                                          <%
+                                                          [
+                                                          "English",
+                                                          "Mandarin Chinese",
+                                                          "Spanish",
+                                                          "Hindi",
+                                                          "French",
+                                                          "Standard Arabic",
+                                                          "Bengali",
+                                                          "Russian",
+                                                          "Portuguese",
+                                                          "Urdu",
+                                                          "Indonesian",
+                                                          "German",
+                                                          "Japanese",
+                                                          "Swahili",
+                                                          "Telugu",
+                                                          "Marathi",
+                                                          "Turkish",
+                                                          "Tamil",
+                                                          "Vietnamese",
+                                                          "Korean",
+                                                          "Italian",
+                                                          "Thai",
+                                                          "Gujarati",
+                                                          "Javanese",
+                                                          "Kannada",
+                                                          "Polish",
+                                                          "Ukrainian",
+                                                          "Malayalam",
+                                                          "Oriya",
+                                                          "Panjabi",
+                                                          "Sunda",
+                                                          "Romanian",
+                                                          "Bhojpuri",
+                                                          "Azerbaijani",
+                                                          "Farsi",
+                                                          "Maithili",
+                                                          "Uzbek",
+                                                          "Sindhi",
+                                                          "Amharic",
+                                                          "Yoruba",
+                                                          "Igbo",
+                                                          "Oromo",
+                                                          "Malay",
+                                                          "Sinhala",
+                                                          "Tagalog",
+                                                          "Dutch",
+                                                          "Nepali",
+                                                          "Saraiki",
+                                                          "Cebuano",
+                                                          "Hungarian",
+                                                          "Czech",
+                                                          "Greek",
+                                                          "Swedish",
+                                                          "Haitian Creole",
+                                                          "Bengali",
+                                                          "Tajik",
+                                                          "Slovak",
+                                                          "Kinyarwanda",
+                                                          "Zulu",
+                                                          "Kazakh",
+                                                          "Kurdish",
+                                                          "Filipino",
+                                                          "Bulgarian",
+                                                          "Serbian",
+                                                          "Danish",
+                                                          "Lithuanian",
+                                                          "Tigrinya",
+                                                          "Latvian",
+                                                          "Georgian",
+                                                          "Estonian",
+                                                          "Pashto",
+                                                          "Malagasy",
+                                                          "Irish",
+                                                          "Armenian",
+                                                          "Somali",
+                                                          "Finnish",
+                                                          "Luxembourgish",
+                                                          "Burmese",
+                                                          "Albanian",
+                                                          "Akan",
+                                                          "Uighur",
+                                                          "Sicilian",
+                                                          "Kannada",
+                                                          "Kashmiri",
+                                                          "Khmer",
+                                                          "Corsican",
+                                                          "Kurdish",
+                                                          "Kongo",
+                                                          "Croatian",
+                                                          "Bosnian",
+                                                          "Chichewa",
+                                                          "Kinyarwanda",
+                                                          "Basque",
+                                                          "Lao",
+                                                          "Galician",
+                                                          "Tswana",
+                                                          "Zhuang",
+                                                          "Bambara",
+                                                          "Macedonian",
+                                                          "Dari",
+                                                          "Ewe",
+                                                          "Kikuyu",
+                                                          "Tsonga",
+                                                          "Bashkir",
+                                                          "Gilaki",
+                                                          "Afrikaans",
+                                                          "Sindhi",
+                                                          "Kirghiz",
+                                                          "Tahitian",
+                                                          "Chechen",
+                                                          "Tigrinya",
+                                                          "Wolof",
+                                                          "Ossetian",
+                                                          "Komi",
+                                                          "Odia",
+                                                          "Kabyle",
+                                                          "Pushto",
+                                                          "Tuvan",
+                                                          "Sango",
+                                                          "Chechen",
+                                                          "Zhuang",
+                                                          "Kongo",
+                                                          "Twi",
+                                                          "Greenlandic",
+                                                          "Dzongkha",
+                                                          "Udmurt",
+                                                          "Manx",
+                                                          "Fijian",
+                                                          "Tatar",
+                                                          "Inuktitut",
+                                                          "Maltese",
+                                                          "Yiddish",
+                                                          "Chuvash",
+                                                          "Friulian",
+                                                          "Bislama",
+                                                          "Aymara",
+                                                          "Tongan",
+                                                          "Rusyn",
+                                                          "Kiribati",
+                                                          "Palauan",
+                                                          "Marshallese",
+                                                          "Mari",
+                                                          "Norwegian",
+                                                          "Yakut",
+                                                          "Komi",
+                                                          "Gagauz",
+                                                          "Venda",
+                                                          "Gaelic",
+                                                          "Cornish",
+                                                          "Guarani",
+                                                          "Tumbuka",
+                                                          "Kwanyama",
+                                                          "Sango",
+                                                          "Xhosa",
+                                                          "Icelandic",
+                                                          "Zhuang",
+                                                          "Luxembourgish",
+                                                          "Divehi",
+                                                          "Innu",
+                                                          "Sranan Tongo",
+                                                          "Papiamento",
+                                                          "Tok Pisin",
+                                                          "Seychellois Creole",
+                                                          "Ganda",
+                                                          "Corsican",
+                                                          "Nauruan",
+                                                          "Bislama",
+                                                          "Tokelauan",
+                                                          "Tuvaluan",
+                                                          "Rotuman",
+                                                          "Chamorro",
+                                                          "Wolof",
+                                                          "Comorian",
+                                                          "Hiri Motu",
+                                                          "Māori",
+                                                          "Kanuri",
+                                                          "Gagauz",
+                                                          "Mongolian",
+                                                          "Afar",
+                                                          "Faroese",
+                                                          "Frisian",
+                                                          "Kinyarwanda",
+                                                          "Moldovan",
+                                                          "Tahitian",
+                                                          "Kirundi",
+                                                          "Kashubian",
+                                                          "Northern Sotho",
+                                                          "Kapampangan",
+                                                          "Makhuwa",
+                                                          "Aromanian",
+                                                          "Rundi",
+                                                          "Tetum",
+                                                          "Bemba",
+                                                          "Sango",
+                                                          "Waray",
+                                                          "Kirundi",
+                                                          "Tigrinya",
+                                                          "Sindarin",
+                                                          "Lojban",
+                                                          "Kashubian",
+                                                          "Kurmanji",
+                                                          "Sundanese",
+                                                          "Chavacano",
+                                                          "Banjar",
+                                                          "Pangasinan",
+                                                          "Old Norse",
+                                                          "Mazanderani",
+                                                          "Classical Chinese",
+                                                          "Haitian Creole",
+                                                          "Tetum",
+                                                          "Cornish",
+                                                          "Novial",
+                                                          "Sindarin",
+                                                          "Lingala",
+                                                          "Old Church Slavonic",
+                                                          "Minangkabau",
+                                                          "Bihari",
+                                                          "Cherokee",
+                                                          "Rotuman",
+                                                          "Võro",
+                                                          "Hausa",
+                                                          "Gilbertese",
+                                                          "Māori",
+                                                          "Tahitian",
+                                                          "Drehu",
+                                                          "Livonian",
+                                                          "Dusun",
+                                                          "Lozi",
+                                                          "Acholi",
+                                                          "Nahuatl",
+                                                          "Kikongo",
+                                                          "Pali",
+                                                          "Tumbuka",
+                                                          "Twi",
+                                                          "Pali",
+                                                          "Twi",
+                                                          "Zande",
+                                                          "Kinyarwanda",
+                                                          "Gothic",
+                                                          "Gothic",
+                                                          "Cherokee",
+                                                          "Kinyarwanda",
+                                                          "Pali",
+                                                          "Gothic",
+                                                          "Kinyarwanda",
+                                                          "Twi",
+                                                          "Kashubian",
+                                                          "Old Norse",
+                                                          "Twi",
+                                                          "Gothic",
+                                                          "Twi"
+                                                          ].toSorted().forEach(ele => {
+                                                          %>
+                                                            <option class="option language-value" value="<%= ele %>"><%= ele %></option>    
+                                                          <% }) %>
+                                                          <option class="option language-value" value="Hindi">Hindi</option>
+                                                          <option class="option language-value" value="English">English</option>
+                                                          
+                                                          
+                                                      </div>
+                                                      <div id="language_err" class="error" style="color:black;font-size: 116%;font-weight: bold;display: none;">Required</div>
+
+                                                    </div>
+                                                  </div>
+
+                                            </div>
+                                        </div>
+
+                                         <div id="page38" data-bs-position="38" class="page">
+                                            <div class="form-card Therapys-option">
+                                              <label class="fieldlabels">Please Mark All That Apply</label> 
+                                              <div class="option-block">
+                                                <div class="radio-input">
+                                                  <input type="radio" id="A-Student" name="mark_apply" value="A-Student">
+                                                  <label for="A-Student">I Am A Student</label>
+
+                                                  <input type="radio" id="Am-Disabled" name="mark_apply" value="Am-Disabled">
+                                                  <label for="Am-Disabled">I Am Disabled</label>
+
+                                                  <input type="radio" id="Am-Unemployed" name="mark_apply" value="Am-Unemployed">
+                                                  <label for="Am-Unemployed">I Am Unemployed</label>
+
+                                                  <input type="radio" id="MyIncomeLow" name="mark_apply" value="MyIncomeLow">
+                                                  <label for="MyIncomeLow">I Am Employed But My Income Is Low</label>
+
+                                                  <input type="radio" id="Am-FinanciallyStable" name="mark_apply" value="Am-FinanciallyStable">
+                                                  <label for="Am-FinanciallyStable">I Am Financially Stable</label>
+
+                                                </div>
+                                                <div id="mark_apply_err" class="error" style="color:black;font-size: 116%;font-weight: bold;display: none;">Required</div>
+
+                                             </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="next-prev-btn">
+                                            <div id="prev" data-step="7">Previous</div>
+                                            <div id="next" data-step="7">next</div>
+                                        </div>
+                                           <input type="button" name="next" class="next action-button next-step-7" value="Next" /> 
+                                            <input type="button" name="previous" class="previous action-button-previous" value="Back" />
+                                       
+                                    </fieldset>
+
+
+                                    <!-- ---fieldset-8----- -->
+                                    <fieldset id="page39" class="fieldset-step-8" data-bs-position="39">
+                                       <div class="form-card main-wrapper">
+                                            <h4>You Have Completed The Questionnaire </h4>
+                                            
+                                             <div class="form-wrapper">
+                                            
+                                              <div class="form-card-box">
+                                                <input class="form-input" type="email" name="email" 
+                                                />
+                                                <label class="form-label" for="email">Email</label>
+                                              </div>
+
+                                              <div class="form-card-box">
+                                                <input class="form-input" type="email" name="confirm_email" 
+                                                />
+                                                <label class="form-label" for="Confirm_email">Confirm Email</label>
+                                              </div>
+
+                                              <div class="form-card-box">
+                                                <input class="form-input" type="text" name="phone" 
+                                                />
+                                                <label class="form-label" for="phone">Phone</label>
+                                              </div>
+
+                                              <div class="form-card-box">
+                                                <input class="form-input" type="text" name="address" 
+                                                />
+                                                <label class="form-label" for="Address">Address</label>
+                                              </div>
+
+                                              <div class="form-card-box">
+                                                <input class="form-input" type="Password" name="password"  
+                                                />
+                                                <label class="form-label" for="password">Create Password</label>
+                                              </div>
+
+                                                <div class="form-check Iagree-checkbox">
+                                                    <div class="check-tik-form mb-3">
+                  
+                                                      <input id="terms_conditions_checked" name="terms_conditions" type="checkbox" value="terms_conditions_checked">
+                                                      
+                                                      <label for="terms_conditions_checked">I agree to the <a href="terms-condition">terms and conditions</a> and <a href="privacy">privacy policy</a>
+                                                      </label>
+                                                      
+                                                    </div>
+
+                                                    <div class="check-tik-form">
+                  
+                                                      <input id="agree_checked" name="agree" type="checkbox" value="agree_checked">
+                                                      
+                                                      <label for="agree_checked">I agree to receive helpful content from you via email such as discount and therapy related material. I understand that I can opt out at any time.</label>
+                                                      
+                                                    </div>
+                                                </div>
+
+                                              <div class="btn-wrap">
+                                                <button type="submit" class="completed-registration"> Continue </button>
+                                              </div>
+
+                                              <div class="last-text">
+                                              <p>If you are in a crisis or any other person may be in danger, do not use this site. Use <a href="get-help-now">these resources</a> to identify immediate and best help.</p>
+                                            </div>
+
+                                            </div>
+                                          
+                                       </div>
+                                       <!-- <div class="next-prev-btn">
+                                            <div id="prev" data-step="8">Previous</div>
+                                            <div id="next" data-step="8">submit</div>
+                                        </div>
+                                        <input type="button" name="next" class="next action-button next-step-8" value="submit" /> 
+                                        <input type="button" name="previous" class="previous action-button-previous" value="Back" /> -->
+                                   </fieldset>
+
+
+                                   <!-- ---fieldset-9----- -->
+                                    <fieldset class="fieldset-step-9">
+                                      <div class="form-card">
+                                        
+                                          <br><br>
+                                          <h2 class="purple-text text-center"><strong>SUCCESS !</strong></h2>
+                                          <br>
+                                          <div class="row justify-content-center">
+                                            <div class="col-3"> <img src="/assets/image/right-Tr.png" class="fit-image"> </div>
+                                          </div>
+                                          <br><br>
+                                          <div class="row justify-content-center">
+                                            <div class="col-7 text-center">
+                                                <h5 class="purple-text text-center">You Have Completed The Questionnaire!</h5>
+                                                                  <p>A verification email with a link to activate your account has been sent to your email address.</p>
+                                            </div>
+                                          </div>
+                                      </div>
+                                    </fieldset> 
+				                </form>
+				            </div>
+				        </div>
+				    </div>
+				</div>
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="row px-3">
+              	<div class="bottom-form-img">
+                <img class="pic ml-auto mr-3" src="assets/image/form-img.png">
+            	</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- footer-start -->
+
+<%- include('comman/footer') %>
+
+<!-- footer-end -->
+<script>
+
+
+
+  $(document).ready(function(){
+
+    
+
+
+      $(".your-name").on("input",function(){
+        console.log("Your name");
+        var getData = $(this).val();
+        if(getData !== ''){
+          $("#name_hide").val(getData)
+          $("#your_name_err").css("display","none");
+        }
+      });
+
+      $('input:radio[name="looking_for"]').on('change', function () {
+        var getData = $(this).val();
+        if(getData !== ''){
+          $("#looking_for_hide").val(getData)
+          $("#looking_for_err").css("display","none");
+        }
+     }); 
+
+     $('input:radio[name="gender"]').on('change', function () {
+        var getData = $(this).val();
+        if(getData !== ''){
+          $("#gender_hide").val(getData)
+          $("#gender_err").css("display","none");
+        }
+     }); 
+
+    $(".age").on("click",function(){
+      var age = $(".age-value span").text();
+        if(age === "Select your age"){
+          $("#age_err").css("display","none")
+         }else{
+             $("#age_hide").val(age)
+             $("#age_err").css("display","none")
+         }  
+    });
+
+     $('input:radio[name="relationship_status"]').on('change', function () {
+        var getData = $(this).val();
+        if(getData !== ''){
+          $("#relationship_status_hide").val(getData)
+          $("#relationship_status_err").css("display","none");
+        }
+     }); 
+
+     $('input:radio[name="therapy_before"]').on('change', function () {
+        var getData = $(this).val();
+        if(getData !== ''){
+          $("#therapy_before_hide").val(getData)
+          $("#therapy_before_err").css("display","none");
+        }
+     }); 
+
+      $(".therapy-today").on('click', function () {
+        var getData = $(this).val();
+        if(getData !== ''){
+          $("#therapy_today_hide").val(getData)
+          $("#therapy_today_err").css("display","none");
+        }
+     }); 
+     $('input:radio[name="therapist_looking_for"]').on('change', function () {
+        var getData = $(this).val();
+        if(getData !== ''){
+          $("#therapist_looking_for_hide").val(getData)
+          $("#therapist_looking_for_err").css("display","none");
+        }
+     }); 
+     $('input:radio[name="expectations_therapist"]').on('change', function () {
+        var getData = $(this).val();
+        if(getData !== ''){
+          $("#expectations_therapist_hide").val(getData)
+          $("#expectations_therapist_err").css("display","none");
+        }
+     }); 
+     $('input:radio[name="physical_health"]').on('change', function () {
+        var getData = $(this).val();
+        if(getData !== ''){
+          $("#physical_health_hide").val(getData)
+          $("#physical_health_err").css("display","none");
+        }
+     }); 
+     $('input:radio[name="eating_habits"]').on('change', function () {
+        var getData = $(this).val();
+        if(getData !== ''){
+          $("#eating_habits_hide").val(getData)
+          $("#eating_habits_err").css("display","none");
+        }
+     }); 
+     $('input:radio[name="feelings_of_anxiety"]').on('change', function () {
+        var getData = $(this).val();
+        if(getData !== ''){
+          $("#feelings_of_anxiety_hide").val(getData)
+          $("#feelings_of_anxiety_err").css("display","none");
+        }
+     }); 
+     $('input:radio[name="little_interest"]').on('change', function () {
+        var getData = $(this).val();
+        if(getData !== ''){
+          $("#little_interest_hide").val(getData)
+          $("#little_interest_err").css("display","none");
+        }
+     }); 
+     $('input:radio[name="hyper_and_restless"]').on('change', function () {
+        var getData = $(this).val();
+        if(getData !== ''){
+          $("#hyper_and_restless_hide").val(getData)
+          $("#hyper_and_restless_err").css("display","none");
+        }
+     }); 
+     $('input:radio[name="depressed_and_hopeless"]').on('change', function () {
+        var getData = $(this).val();
+        if(getData !== ''){
+          $("#depressed_and_hopeless_hide").val(getData)
+          $("#depressed_and_hopeless_err").css("display","none");
+        }
+     }); 
+     $('input:radio[name="sleeping_too_much"]').on('change', function () {
+        var getData = $(this).val();
+        if(getData !== ''){
+          $("#sleeping_too_much_hide").val(getData)
+          $("#sleeping_too_much_err").css("display","none");
+        }
+     }); 
+     $('input:radio[name="very_little_energy"]').on('change', function () {
+        var getData = $(this).val();
+        if(getData !== ''){
+          $("#very_little_energy_hide").val(getData)
+          $("#very_little_energy_err").css("display","none");
+        }
+     }); 
+     $('input:radio[name="eating_too_much"]').on('change', function () {
+        var getData = $(this).val();
+        if(getData !== ''){
+          $("#eating_too_much_hide").val(getData)
+          $("#eating_too_much_err").css("display","none");
+        }
+     }); 
+     $('input:radio[name="letting_people_down"]').on('change', function () {
+        var getData = $(this).val();
+        if(getData !== ''){
+          $("#letting_people_down_hide").val(getData)
+          $("#letting_people_down_err").css("display","none");
+        }
+     }); 
+     $('input:radio[name="even_watching_television"]').on('change', function () {
+        var getData = $(this).val();
+        if(getData !== ''){
+          $("#even_watching_television_hide").val(getData)
+          $("#even_watching_television_err").css("display","none");
+        }
+     }); 
+     $('input:radio[name="better_off_dead"]').on('change', function () {
+        var getData = $(this).val();
+        if(getData !== ''){
+          $("#better_off_dead_hide").val(getData)
+          $("#better_off_dead_err").css("display","none");
+        }
+     }); 
+     $('input:radio[name="daily_life_at_work"]').on('change', function () {
+        var getData = $(this).val();
+        if(getData !== ''){
+          $("#daily_life_at_work_hide").val(getData)
+          $("#daily_life_at_work_err").css("display","none");
+        }
+     }); 
+     $('input:radio[name="currently_employed"]').on('change', function () {
+        var getData = $(this).val();
+        if(getData !== ''){
+          $("#currently_employed_hide").val(getData)
+          $("#currently_employed_err").css("display","none");
+        }
+     }); 
+     $('input:radio[name="you_drink_alcohol"]').on('change', function () {
+        var getData = $(this).val();
+        if(getData !== ''){
+          $("#you_drink_alcohol_hide").val(getData)
+          $("#you_drink_alcohol_err").css("display","none");
+        }
+     }); 
+     $('input:radio[name="harming_yourself"]').on('change', function () {
+        var getData = $(this).val();
+        if(getData !== ''){
+          $("#harming_yourself_hide").val(getData)
+          $("#harming_yourself_err").css("display","none");
+        }
+     }); 
+     $('input:radio[name="phobias"]').on('change', function () {
+        var getData = $(this).val();
+        if(getData !== ''){
+          $("#phobias_hide").val(getData)
+          $("#phobias_err").css("display","none");
+        }
+     }); 
+     $('input:radio[name="medications"]').on('change', function () {
+        var getData = $(this).val();
+        if(getData !== ''){
+          $("#medications_hide").val(getData)
+          $("#medications_err").css("display","none");
+        }
+     }); 
+     $('input:radio[name="chronic_pain"]').on('change', function () {
+        var getData = $(this).val();
+        if(getData !== ''){
+          $("#chronic_pain_hide").val(getData)
+          $("#chronic_pain_err").css("display","none");
+        }
+     }); 
+     $('input:radio[name="financial_status"]').on('change', function () {
+        var getData = $(this).val();
+        if(getData !== ''){
+          $("#financial_status_hide").val(getData)
+          $("#financial_status_err").css("display","none");
+        }
+     }); 
+     $('input:radio[name="sleeping_habits"]').on('change', function () {
+        var getData = $(this).val();
+        if(getData !== ''){
+          $("#sleeping_habits_hide").val(getData)
+          $("#sleeping_habits_err").css("display","none");
+        }
+     }); 
+     $('input:radio[name="current_support_system"]').on('change', function () {
+        var getData = $(this).val();
+        if(getData !== ''){
+          $("#current_support_system_hide").val(getData)
+          $("#current_support_system_err").css("display","none");
+        }
+     }); 
+     $('input:radio[name="useful_for_you"]').on('change', function () {
+        var getData = $(this).val();
+        if(getData !== ''){
+          $("#useful_for_you_hide").val(getData)
+          $("#useful_for_you_err").css("display","none");
+        }
+     }); 
+     $('.your-therapist').on('click', function () {
+        var getData = $(this).val();
+        if(getData !== ''){
+          $("#your_therapist_hide").val(getData)
+          $("#your_therapist_err").css("display","none");
+        }
+     }); 
+     $('.therapist-coach').on('click', function () {
+        var getData = $(this).val();
+        if(getData !== ''){
+          $("#therapist_coach_hide").val(getData)
+          $("#therapist_coach_err").css("display","none");
+        }
+     }); 
+     $('input:radio[name="referred_healinhere"]').on('change', function () {
+        var getData = $(this).val();
+        if(getData !== ''){
+          $("#referred_healinhere_hide").val(getData)
+          $("#referred_healinhere_err").css("display","none");
+        }
+     });  
+     $(".country-value").on("click",function(){
+      var getData = $(this).val();
+      if(getData !== ''){
+          $("#country_hide").val(getData)
+          $("#country_err").css("display","none");
+        }
+    });
+    $(".language-value").on("click",function(){
+      var getData = $(this).val();
+      if(getData !== ''){
+          $("#language_hide").val(getData)
+          $("#language_err").css("display","none");
+        }
+    });
+    $('input:radio[name="mark_apply"]').on('change', function () {
+        var getData = $(this).val();
+        if(getData !== ''){
+          $("#mark_apply_hide").val(getData)
+          $("#mark_apply_err").css("display","none");
+        }
+     });  
+
+    
+
+      
+     
+
+  
+
+      $(".completed-registration").on("click",function(event){
+        event.preventDefault()
+       var data =  $("#msform").serialize() // returns all the data in your form
+        $.ajax({
+            type: "POST",
+            url: '/user/sign-up',
+            data: data,
+            dataType: 'JSON',
+            success: function(response) {
+              console.log(response)
+              $(".fieldset-step-8").css("display","none");
+              $(".fieldset-step-9").css("display","block");
+
+            }
+        });
+    })
+ 
+    
+
+
+  })
+</script>
+

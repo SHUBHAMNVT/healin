@@ -1,0 +1,304 @@
+<%- include('comman/header') %>
+
+<section class="main">
+    <div class="top-box">
+        
+    </div>
+
+   <%- include('comman/sidebar') %>
+
+  <!-- Main Wrapper -->
+<div class="my-container-main">
+
+  <div class="my-container wrapper active-cont">
+
+        <div class="container-fluid p-0">
+
+            <div class="wrapper-inner">
+
+                <div class="left-part">
+
+                    <div class="row">
+
+                        <!--page-head-->
+
+                        <%- include('comman/profile-header') %>
+
+
+                        <!--dashboard-->
+
+                       
+                            <div class="mian-dashboard">
+                                <div class="row ">
+                                   <div class="main-heading">
+                                       <h1>Hello <%= user.name %></h1>
+                                   </div>
+                                </div>
+                                <div class="row" style="position: relative;">
+                                    <div class="col-lg-9">
+                                    <div class="dashboard-info grid-change">
+                                        <div class="inner-dashboard-info">
+                                            <div class="left-info">
+                                                <div class="details">
+                                                    <h4>10</h4>
+                                                    <p class="big-p">Upcoming Appointment</p>
+                                                    <p class="small-p">4% (30 days)<img src="/user-assets/assets/img/Vector-img.svg" class="img-fluid" /></p>
+                                                </div>
+                                            </div>
+                                            <div class="right-icon">
+                                                <div class="right-circle-box">
+                                                    <img src="/user-assets/assets/img/Upcoming Appointment-icon.svg" class="img-fluid">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="inner-dashboard-info">
+                                            <div class="left-info">
+                                                <div class="details">
+                                                    <h4>50</h4>
+                                                    <p class="big-p">Session completed</p>
+                                                    <p class="small-p">4% (30 days)<img src="/user-assets/assets/img/Vector-img.svg" class="img-fluid" /></p>
+                                                </div>
+                                            </div>
+                                            <div class="right-icon">
+                                                <div class="right-circle-box">
+                                                    <img src="/user-assets/assets/img/Session-completed-icon.svg" class="img-fluid">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="inner-dashboard-info">
+                                            <div class="left-info">
+                                                <div class="details">
+                                                    <h4>50</h4>
+                                                    <p class="big-p">Total hours</p>
+                                                    <p class="small-p">10% (30 days)<img src="/user-assets/assets/img/Vector-img.svg" class="img-fluid" /></p>
+                                                </div>
+                                            </div>
+                                            <div class="right-icon">
+                                                <div class="right-circle-box">
+                                                    <img src="/user-assets/assets/img/hours.svg" class="img-fluid">
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    </div>
+                                    <div class="col-lg-3">
+                                         <div class="Active-plan">
+                                            <div class="inner-plan">
+                                                <h6>Active Plan</h6>
+                                                <h4>$100.00</h4>
+                                                <p>4 session subscription</p>
+                                                <a href="#" class="upload-btn">upgrade subscription</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row mt-4">
+                                    <div class="col-lg-5">
+                                        <div class="today-sessions-wrapper">
+                                            <div class="inner-today-sessions">
+                                                <div class="main-heading">
+                                                    <h2>Today's sessions</h2>
+                                                </div>
+                                                <div class="today-sessions-details">
+                                                    <div class="left-sessions-img">
+                                                        <img src="/user-assets/assets/img/sessions-img.png" class="img-fluid">
+                                                        <h5>Evening 09:30 PM</h5>
+                                                    </div>
+                                                    <div class="right-sessions">
+                                                        <div class="right-top-content">
+                                                            <div class="main-heading">
+                                                                <h4>Session</h4>
+                                                                <p>with : George Ainslie</p>
+                                                                <div class="rating-box">
+
+                                                                    <ul>
+                                                                        <p>Therapist Rating :</p>
+                                                                        <img src="/user-assets/assets/img/review-star.png">
+                                                                        <!-- <li><i class="fa-solid fa-star"></i></li>
+                                                                        <li><i class="fa-solid fa-star"></i></li>
+                                                                        <li><i class="fa-solid fa-star"></i></li>
+                                                                        <li><i class="fa-solid fa-star"></i></li>
+                                                                        <li><i class="fa-solid fa-star"></i></li> -->
+                                                                        <span>3.5</span>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                            <h5>Today</h5>
+                                                        </div>
+                                                        
+                                                        <a href="#" class="time-btn" >9:30pm Start</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-7">
+                                        <div class="Therapist-List-wrapper">
+                                            <div class="top-list-heading">
+                                                <div class="main-heading">
+                                                    <h2>Therapist List</h2>
+                                                </div>
+                                                <a href="#" class="view-more">view more</a>
+                                            </div>
+
+                                            <div class="Therapist-List-block">
+                                                <div class="Therapist-list-box">
+                                                    <div class="Therapist-people-img">
+                                                        <img src="/user-assets/assets/img/Therapist-list-people-img.png" class="img-fluid">
+                                                    </div>
+                                                    <h6>Richard Bandler</h6>
+                                                    <p>Anxiety</p>
+                                                </div>
+                                                <div class="Therapist-list-box">
+                                                    <div class="Therapist-people-img">
+                                                        <img src="/user-assets/assets/img/Therapist-list-people-img-2.png" class="img-fluid">
+                                                    </div>
+                                                    <h6>Lisa Firestone</h6>
+                                                    <p>Bipolar disorder</p>
+                                                </div>
+                                                <div class="Therapist-list-box">
+                                                    <div class="Therapist-people-img">
+                                                        <img src="/user-assets/assets/img/Therapist-list-people-img-3.png" class="img-fluid">
+                                                    </div>
+                                                    <h6>Richard Bandler</h6>
+                                                    <p>OCD</p>
+                                                </div>
+                                                <div class="Therapist-list-box">
+                                                    <div class="Therapist-people-img">
+                                                        <img src="/user-assets/assets/img/Therapist-list-people-img.png" class="img-fluid">
+                                                    </div>
+                                                    <h6>Richard Bandler</h6>
+                                                    <p>Anxiety</p>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row mt-3">
+                                    <div class="top-list-heading">
+                                    <div class="main-heading">
+                                        <h2>Upcoming sessions</h2>
+                                    </div>
+                                    <a href="#" class="view-more">view more</a>
+                                </div>
+                                    <div class="Upcoming-sessions-wrapper">
+                                        <div class="inner-upcoming-sessions">
+                                            <div class="Upcoming-sessions-box">
+                                                <div class="Upcoming-sessions-img">
+                                                    <img src="/user-assets/assets/img/Upcoming-sessions-1.png" class="img-fluid">
+                                                    <a href="#"><p>Upcoming</p></a>
+                                                </div>
+
+                                                <div class="Upcoming-sessions-content">
+                                                    <div class="main-heading">
+                                                        <div class="top-sessions-cnt">
+                                                            <h4>Anxiety</h4>
+                                                            <span>3.5 <i class="fa-solid fa-star"></i></span>
+                                                        </div>
+                                                        <div class="bottom-sessions-cnt">
+                                                            <p>With : George Ainslie</p>
+                                                            <p>25 Dec 2023</p>
+                                                        </div>
+                                                    </div>
+                                                    <a href="#" class="more-details" >more details</a>
+                                                </div>
+                                            </div>
+                                            <div class="Upcoming-sessions-box">
+                                                <div class="Upcoming-sessions-img">
+                                                    <img src="/user-assets/assets/img/Upcoming-sessions-2.png" class="img-fluid">
+                                                    <a href="#"><p>Upcoming</p></a>
+                                                </div>
+
+                                                <div class="Upcoming-sessions-content">
+                                                    <div class="main-heading">
+                                                        <div class="top-sessions-cnt">
+                                                            <h4>Bipolar Disorder</h4>
+                                                            <span>4.5 <i class="fa-solid fa-star"></i></span>
+                                                        </div>
+                                                        <div class="bottom-sessions-cnt">
+                                                            <p>with : Alfer Adler</p>
+                                                            <p>28 Dec 2023</p>
+                                                        </div>
+                                                    </div>
+                                                    <a href="#" class="more-details" >more details</a>
+                                                </div>
+                                            </div>
+                                            <div class="Upcoming-sessions-box">
+                                                <div class="Upcoming-sessions-img">
+                                                    <img src="/user-assets/assets/img/Upcoming-sessions-3.png" class="img-fluid">
+                                                    <a href="#"><p>Upcoming</p></a>
+                                                </div>
+
+                                                <div class="Upcoming-sessions-content">
+                                                    <div class="main-heading">
+                                                        <div class="top-sessions-cnt">
+                                                            <h4>OCD</h4>
+                                                            <span>3.5 <i class="fa-solid fa-star"></i></span>
+                                                        </div>
+                                                        <div class="bottom-sessions-cnt">
+                                                            <p>With : Susan Aposhyan</p>
+                                                            <p>1 Jan 2024</p>
+                                                        </div>
+                                                    </div>
+                                                    <a href="#" class="more-details" >more details</a>
+                                                </div>
+                                            </div>
+                                            <div class="Upcoming-sessions-box">
+                                                <div class="Upcoming-sessions-img">
+                                                    <img src="/user-assets/assets/img/Upcoming-sessions-1.png" class="img-fluid">
+                                                    <a href="#"><p>Upcoming</p></a>
+                                                </div>
+
+                                                <div class="Upcoming-sessions-content">
+                                                    <div class="main-heading">
+                                                        <div class="top-sessions-cnt">
+                                                            <h4>Addiction</h4>
+                                                            <span>5.5 <i class="fa-solid fa-star"></i></span>
+                                                        </div>
+                                                        <div class="bottom-sessions-cnt">
+                                                            <p>With : George Ainslie</p>
+                                                            <p>10 Jan 2024</p>
+                                                        </div>
+                                                    </div>
+                                                    <a href="#" class="more-details" >more details</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                </div>
+
+
+                              
+                            </div>
+                    
+
+              
+                    </div>
+
+                </div>
+
+            </div>
+              
+        </div>
+
+    </div>
+
+</section>  
+
+
+
+
+
+<%- include('comman/footer') %>
+
+ 
+
+
+
+ 

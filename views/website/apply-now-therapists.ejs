@@ -1,0 +1,594 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Healin</title>
+
+
+
+<!-- font-awesome-link -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
+
+
+
+<!-- bootstrap-5.0.2-link -->
+
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+
+
+
+<!-- AOS-2.3.4-link -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+
+
+
+<!-- owl-carousel2.3.4-link -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css" />
+
+
+
+<!-- fancy-box-css -->
+
+    <link rel="stylesheet" type="text/css"
+
+        href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css">
+
+
+
+<!--slick.css-link-->
+    <!-- <link href="https://assets-global.website-files.com/5c1181093d8f969da005c4a6/css/b2b-page.09397fc21.min.css" rel="stylesheet" type="text/css"/> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css" integrity="sha256-4hqlsNP9KM6+2eA8VUT0kk4RsMRTeS7QGHIM+MZ5sLY=" crossorigin="anonymous" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" integrity="sha256-UK1EiopXIL+KVhfbFa8xrmAWPeBjMVdvYMYkTAEv/HI=" crossorigin="anonymous" />
+<!--style.css-link-->
+
+    <link rel="stylesheet" href="assets/css/style.css">
+
+
+<!--multistep-style.css-link-->
+
+    <link rel="stylesheet" href="assets/css/multistep-style.css">
+
+
+
+
+
+<!-- reponsive.css-link -->
+
+    <link rel="stylesheet" type="text/css" href="assets/css/responsive.css">
+
+
+
+<!-- favicon-link -->
+
+    <link rel="icon" type="image/x-icon" href="">
+
+    <!-- JQuery lib  -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- JQuery validation lib -->
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+
+</head>
+
+<style type="text/css">
+section.apply-wrapper {
+    position: relative;
+    padding: 100px 0px;
+}
+
+.top-header {
+    text-align: center;
+    border-bottom: 2px solid #46bc96;
+    background-color: #f2f3f7;
+    padding: 18px;
+    justify-content: center;
+    height: 100px;
+}
+.apply-page h1 {
+    color: var(--color-black);
+    font-family: gilroy-b;
+    font-size: 35px;
+    font-style: normal;
+    line-height: 41px;
+    margin-bottom: 20px;
+}
+.start-application {
+    color: var(--color-black) !important;
+    font-family: gilroy-sb;
+    font-size: 16px;
+    font-style: normal;
+    line-height: normal;
+    text-transform: uppercase;
+    background-color: var(--color-yellow);
+    border-radius: 99px;
+    height: 50px;
+    width: auto;
+    display: inline-flex;
+    align-items: center;
+    padding: 10px 30px;
+    border: 2px solid var(--color-yellow);
+    transition: .5s all;
+    position: relative;
+}
+.description-box{
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+
+.description-box .accordion-button {
+    background-color: transparent;
+    box-shadow: inset 0 -1px 0 rgba(0,0,0,.125);
+    color: var(--color-black);
+    font-family: gilroy-b;
+    font-size: 25px;
+    font-style: normal;
+    line-height: 24px;
+    padding: 1rem 0;
+}
+.description-box .accordion-button:not(.collapsed)::after {
+    filter: invert(1);
+}
+.description-box .accordion-button:not(.collapsed) {
+    color: #000;
+    background-color: transparent;
+    box-shadow: inset 0 -1px 0 rgba(0,0,0,.125);
+}
+.description-box .accordion-button:focus {
+    z-index: 3;
+    border-color: transparent;
+    outline: 0;
+    box-shadow: none;
+}
+.description-box .accordion-item {
+    background-color: #fff;
+    border: 0;
+}
+.description-box .accordion-body p a {
+    color: #46bc96;
+    font-size: 18px;
+    font-family: 'gilroy-b';
+    text-decoration: underline;
+}
+.description-box .accordion-body p {
+    margin-bottom: 20px;
+}
+.description-box .accordion-body h6 {
+    color: #000;
+    font-family: gilroy-b;
+    font-size: 18px;
+    font-style: normal;
+    line-height: normal;
+    margin-bottom: 0px;
+    margin-bottom: 20px;
+}
+.apply-page .accordion-body {
+    padding: 1rem 0;
+}
+.select-radio-button [type="radio"]:checked,
+.select-radio-button [type="radio"]:not(:checked) {
+    position: absolute;
+    left: -9999px;
+}
+.select-radio-button [type="radio"]:checked + label,
+.select-radio-button [type="radio"]:not(:checked) + label
+{
+    position: relative;
+    padding-left: 28px;
+    cursor: pointer;
+    line-height: 20px;
+    display: inline-block;
+    color: #666;
+}
+.select-radio-button [type="radio"]:checked + label:before,
+.select-radio-button [type="radio"]:not(:checked) + label:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 18px;
+    height: 18px;
+    border: 1px solid #ddd;
+    border-radius: 100%;
+    background: #fff;
+}
+.select-radio-button [type="radio"]:checked + label:after,
+.select-radio-button [type="radio"]:not(:checked) + label:after {
+    content: '';
+    width: 12px;
+    height: 12px;
+    background: #F87DA9;
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    border-radius: 100%;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+.select-radio-button [type="radio"]:not(:checked) + label:after {
+    opacity: 0;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+}
+.select-radio-button [type="radio"]:checked + label:after {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+}
+
+.start-application-form {
+    border: solid 1px #d6d9e4;
+    padding: 24px;
+    border-radius: 5px;
+}
+.start-application-form h2 {
+    font-family: gilroy-b;
+    font-size: 20px;
+    font-style: normal;
+    line-height: 24px;
+        margin-bottom: 25px;
+}
+.colorError {
+    color: #e51f58;
+}
+.colorError {
+    fill: currentColor;
+    width: 1em;
+    height: 1em;
+    display: inline-block;
+    transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    flex-shrink: 0;
+    user-select: none;
+    font-size: 0.5em;
+}
+.licensed-box h5 {
+    font-family: 'gilroy-sb';
+    font-size: 18px;
+    font-style: normal;
+    line-height: 20px;
+   
+}
+
+.start-application-form label {
+    font-family: 'gilroy-m';
+    font-size: 16px;
+}
+.select-radio-button {
+    display: flex;
+}
+.radio-box {
+    padding: 10px;
+}
+.form-check input[type=checkbox] {
+  position: relative;
+    border: 2px solid #000;
+    border-radius: 2px;
+    background: none;
+    cursor: pointer;
+    line-height: 0;
+    margin: 4px .6em 0 0;
+    outline: 0;
+    padding: 0 !important;
+    vertical-align: text-top;
+    height: 20px;
+    width: 27px;
+    -webkit-appearance: none;
+  opacity: .5;
+}
+.start-application-form .form-control:focus {
+    color: #212529;
+    background-color: #fff;
+    border-color: #46bc96;
+    outline: 0;
+    box-shadow: none;
+}
+.form-check input[type=checkbox]:hover {
+  opacity: 1;
+}
+
+.form-check input[type=checkbox]:checked {
+  background-color: #000;
+  opacity: 1;
+}
+
+.form-check input[type=checkbox]:before {
+  content: '';
+  position: absolute;
+  right: 50%;
+  top: 50%;
+  width: 4px;
+  height: 10px;
+  border: solid #FFF;
+  border-width: 0 2px 2px 0;
+  margin: -1px -1px 0 -1px;
+  transform: rotate(45deg) translate(-50%, -50%);
+  z-index: 2;
+}
+
+.check-tik-form {
+    display: flex;
+    gap: 10px;
+}
+.start-application-form .btn-dark, .start-application-form .btn-dark a {
+   color: var(--color-black) !important;
+    font-family: gilroy-sb;
+    font-size: 16px;
+    font-style: normal;
+    line-height: normal;
+    text-transform: uppercase;
+    background-color: var(--color-yellow);
+    border-radius: 99px;
+    height: 50px;
+    width: auto;
+    display: inline-flex;
+    align-items: center;
+    padding: 10px 30px;
+    border: 2px solid var(--color-yellow);
+    transition: .5s all;
+    position: relative;
+    justify-content: center;
+     
+}
+
+</style>
+
+<body>
+
+<!--header-start-->
+
+<header class="top-header">
+	<a href="/">
+        <img src="assets/image/healin-logo.svg" class="img-fluid">
+    </a>
+</header>
+
+<section class="apply-wrapper">
+	<div class="container">
+		<div class="row">
+            <div class="col-lg-7 m-auto">
+    			<div class="apply-page">
+    				<h1>Welcome to healinhere!</h1>
+    				<a href="#application-form" class="btn start-application">Start Application</a>
+
+                        <div class="description-box">
+                            <div class="accordion" id="accordionExample">
+                              <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingOne">
+                                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    Job Description
+                                  </button>
+                                </h2>
+                                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                  <div class="accordion-body">
+                                    <p>We are excited that you would like to join us, and always have clients ready to work with you. You can gain access to our wonderful community of therapists! </p>
+                                        <P>Before applying, please 
+                                        <a href="https://docs.google.com/document/d/1ZJxrNDhhhCDloqvd3YNjGwR1l1EddXRBc_Y2T2VhtDc/edit" target="_blank">check out our Applicant Info Page linked here </a> to learn more about being acProvider at healinhere!</p>
+
+
+                                        <h6>Please note: If you are also a client at healinhere, please be sure to use a separate email address for your therapist application.</h6>
+                                        <h6>Apply to join healinhere today, and help us in our mission to increase access to therapy for all!</h6>
+
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                        </div>
+
+                        <div class="start-application-form" id="application-form">
+                          <div class="row justify-content-center">
+                          
+                             <h2>Start Your Application</h2>
+                              <form id="applyNowTherapiests">
+                                <div class="row g-3">
+                                  <div class="col-md-12">
+                                    <label for="first_name" class="form-label">First Name
+                                        <svg class="colorError" focusable="false" viewBox="0 0 128 128" aria-hidden="true"><path d="M110.1,16.4L75.8,56.8l0.3,1l50.6-10.2v32.2l-50.9-8.9l-0.3,1l34.7,39.1l-28.3,16.5L63.7,78.2L63,78.5   l-18.5,49L17.2,111l34.1-39.8v-0.6l-50,9.2V47.6l49.3,9.9l0.3-0.6L17.2,16.7L45.5,0.5l17.8,48.7H64L82.1,0.5L110.1,16.4z"></path></svg>
+                                    </label>
+                                    <input type="text" class="form-control" id="first_name" name="first_name">
+                                    <div class="first_name_err"></div>
+                                  </div>
+                                 
+                                  <div class="col-md-12">
+                                    <label for="last_name" class="form-label">Last Name
+                                        <svg class="colorError" focusable="false" viewBox="0 0 128 128" aria-hidden="true"><path d="M110.1,16.4L75.8,56.8l0.3,1l50.6-10.2v32.2l-50.9-8.9l-0.3,1l34.7,39.1l-28.3,16.5L63.7,78.2L63,78.5   l-18.5,49L17.2,111l34.1-39.8v-0.6l-50,9.2V47.6l49.3,9.9l0.3-0.6L17.2,16.7L45.5,0.5l17.8,48.7H64L82.1,0.5L110.1,16.4z"></path></svg>
+                                    </label>
+                                    <input type="text" class="form-control" id="last_name" name="last_name">
+                                    <div class="last_name_err"></div>
+                                  </div>
+                                 
+                                  <div class="col-md-12">
+                                    <label for="email" class="form-label">Email
+                                        <svg class="colorError" focusable="false" viewBox="0 0 128 128" aria-hidden="true"><path d="M110.1,16.4L75.8,56.8l0.3,1l50.6-10.2v32.2l-50.9-8.9l-0.3,1l34.7,39.1l-28.3,16.5L63.7,78.2L63,78.5   l-18.5,49L17.2,111l34.1-39.8v-0.6l-50,9.2V47.6l49.3,9.9l0.3-0.6L17.2,16.7L45.5,0.5l17.8,48.7H64L82.1,0.5L110.1,16.4z"></path></svg>
+                                    </label>
+                                    <input type="email" class="form-control" id="email" name="email">
+                                    <div class="email_err"></div>
+                                  </div>
+                                 
+                                  <div class="col-md-12">
+                                    <label for="phone" class="form-label">Phone Number
+                                        <svg class="colorError" focusable="false" viewBox="0 0 128 128" aria-hidden="true"><path d="M110.1,16.4L75.8,56.8l0.3,1l50.6-10.2v32.2l-50.9-8.9l-0.3,1l34.7,39.1l-28.3,16.5L63.7,78.2L63,78.5   l-18.5,49L17.2,111l34.1-39.8v-0.6l-50,9.2V47.6l49.3,9.9l0.3-0.6L17.2,16.7L45.5,0.5l17.8,48.7H64L82.1,0.5L110.1,16.4z"></path></svg>
+                                    </label>
+                                    <input type="tel" class="form-control" name="phone" id="phone" name="your-subject">
+                                    <div class="phone_err"></div>
+                                  </div>
+
+                                  <div class="col-md-12">
+                                    <label for="password" class="form-label">Create Password
+                                        <svg class="colorError" focusable="false" viewBox="0 0 128 128" aria-hidden="true"><path d="M110.1,16.4L75.8,56.8l0.3,1l50.6-10.2v32.2l-50.9-8.9l-0.3,1l34.7,39.1l-28.3,16.5L63.7,78.2L63,78.5   l-18.5,49L17.2,111l34.1-39.8v-0.6l-50,9.2V47.6l49.3,9.9l0.3-0.6L17.2,16.7L45.5,0.5l17.8,48.7H64L82.1,0.5L110.1,16.4z"></path></svg>
+                                    </label>
+                                    <input type="password" class="form-control" name="password" id="password">
+                                    <div class="password_err"></div>
+                                  </div>
+
+                                  <div class="col-md-12">
+                                    <label for="confirm_password" class="form-label">Confirm Password
+                                        <svg class="colorError" focusable="false" viewBox="0 0 128 128" aria-hidden="true"><path d="M110.1,16.4L75.8,56.8l0.3,1l50.6-10.2v32.2l-50.9-8.9l-0.3,1l34.7,39.1l-28.3,16.5L63.7,78.2L63,78.5   l-18.5,49L17.2,111l34.1-39.8v-0.6l-50,9.2V47.6l49.3,9.9l0.3-0.6L17.2,16.7L45.5,0.5l17.8,48.7H64L82.1,0.5L110.1,16.4z"></path></svg>
+                                    </label>
+                                    <input type="password" class="form-control" name="confirm_password" id="confirm_password">
+                                    <div class="confirm_password_err"></div>
+                                  </div>
+                                  
+                                  <div class="col-12">
+                                    <div class="licensed-box">
+                                        <h5>Are you independently licensed as a therapist in your country of practice?</h5>
+
+                                        <div class="select-radio-button">
+                                            <div class="radio-box">
+                                                <input type="radio" id="test1" name="country_of_practice" value="yes" checked>
+                                                <label for="test1">Yes</label>
+                                            </div>
+
+                                            <div class="radio-box">
+                                                <input type="radio" id="test2" name="country_of_practice" value="no">
+                                                <label for="test2">No</label>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                  </div>
+
+                                  <div class="form-check ">
+                                    <div class="check-tik-form">
+                                      <input id="check-tik" name="agree_checkbox" type="checkbox" value="yes">
+                                      <label for="check-tik">I agree to allow my phone number to be used for calls or texts regarding my application. Message &amp; data rates may apply. *
+                                      </label>
+                                    </div>
+                                    <div class="agree_checkbox_err"></div>
+                                  </div>
+
+                                  <div class="col-12">
+                                    <div class="row">
+                                      <div class="col-md-12 ">
+                                      <button type="submit" class="btn btn-dark w-100" >Continue</button>
+
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </form>
+                          </div>
+                        </div>
+    		        	</div>
+             </div>
+		    </div>
+	  </div>
+</section>
+
+<!-- footer-start --> 
+<%- include('comman/footer') %>
+<!-- footer-end -->
+
+<script>
+  $(document).ready(function(){
+     $("#applyNowTherapiests").validate({
+      rules: {
+            first_name: {
+                required: true,
+            },
+            last_name: {
+                required: true,
+            },
+            email: {
+                required: true,
+            },
+            phone: {
+                required: true,
+                digits:true,
+                minlength:10,
+                maxlength:10
+            }, 
+            password : {
+                required : true
+            },
+            confirm_password : {
+                required : true
+            },
+            agree_checkbox :{
+              required: true,
+            }
+           
+        },
+        messages: {
+            first_name: {
+                required: "First name filed is required",
+            },
+            last_name: {
+                required: "Last name filed is required",
+            },
+            email: {
+                required: "Email filed is required",
+            },
+            phone: {
+                required: "Phone filed is required",
+            },
+            password : {
+                required : "Password is required"
+            },
+            confirm_password : {
+                required : "Password is required"
+            },
+            agree_checkbox: {
+                required: "Agree filed is required",
+            },
+           
+        },
+        errorPlacement: function (error, element) {
+            var agree = $(element).attr("name");
+            var firstname = $(element).attr("id");
+            var lastname = $(element).attr("id");
+            var email = $(element).attr("id");
+            var phone = $(element).attr("id");
+            var password = $(element).attr("id");
+            var confirm_password = $(element).attr("id");
+
+            error.appendTo($("." + agree + "_err"));
+            error.appendTo($("." + firstname + "_err"));
+            error.appendTo($("." + lastname + "_err"));
+            error.appendTo($("." + email + "_err"));
+            error.appendTo($("." + phone + "_err"));
+            error.appendTo($("." + password + "_err"));
+            error.appendTo($("." + confirm_password + "_err"));
+        },
+        submitHandler: function(form, event) {
+           event.preventDefault();
+           var data = $(form).serialize();
+           console.log(data);
+          $.ajax({
+               type: "POST",
+               url: "/register-therapists",
+               data: data,
+               dataType:"JSON",
+              success: function( response ) {
+                 $(".email_err").empty();
+                 $(".phone_err").empty();
+                 if(response.status == true){
+                  $("#applyNowTherapiests")[0].reset();
+                   window.location.href=response.url
+                 }
+                 if(response.type == "email"){
+                   $(".email_err").html(response.message).css('color','red')
+                 }
+                 if(response.type == "phone"){
+                  $(".phone_err").html(response.message).css('color','red')
+                }
+              },
+              error: function (error) {
+                 console.error("Ajax error:", error);
+				         $(".error-message-container").text("Invalid email or password");
+              }
+          });
+        }
+     })
+  });
+</script>

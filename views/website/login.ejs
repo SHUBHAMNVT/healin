@@ -1,0 +1,144 @@
+
+
+<!-- header-start -->
+
+<%- include('comman/header') %>
+
+
+
+<!-- header-end -->
+
+
+<!-- login-form-wrapper-start -->
+<section class="login-form-wrapper">
+	<div class="section login-page container-fluid">
+		<div class="row aligh-item-center">
+			<div class="col-lg-6">
+				<div class="login-extra">
+				  <img src="assets/image/Mobile-login.svg" alt="">
+				</div>
+			</div>
+			<div class="col-lg-6 p-0">
+				<div class="outer-login-form">
+					<div class="login-form">
+					<div class="inner-login-form">
+					  <div class="logo">
+					    <a href="index.html" class="">
+					      <img src="assets/image/heal-logo.svg" alt="">
+					    </a>
+					  </div>
+					  <div class="sub-heading page-heading">
+					    <h3>Log in to your account</h3>
+					    <p>Log in to continue your therapy journey towards a happier, healthier you.</p>
+					  </div>
+					  <form id="userLogin">
+						<div class="error-message-container" style="color:red"></div>
+						    <div class="login-form-items">
+						    <div class="field-items">
+						      <label for="" class="form-label">Email Address</label>
+						      <div class="input">
+						        <input type="text" class="form-control" name="email" id="email" placeholder="Email Address">
+						        <i class="fas fa-envelope"></i>
+						      </div>
+						    </div>
+							<div class="email_err"></div>
+						    <div class="field-items">
+						      <label for="" class="form-label">Password</label>
+						      <div class="input">
+						        <input type="password" class="form-control" name="password" id="password" placeholder="Enter your password">
+						        <i class="fas fa-lock"></i>
+						      </div>
+						    </div>
+							<div class="password_err"></div>
+						    <div class="field-items mb-3 form-check">
+							    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+							    <label class="form-check-label" for="exampleCheck1">Remember me</label>
+							 </div>
+						    <div class="text-end forgot-password">
+						      <a href="/user/forget-password-page">Forgot Password?</a>
+						    </div>
+						    <div class="form-signin">
+						    	<button class="btn-all"><i class="fa-regular fa-arrow-right"></i><span>Login Now</span></button>
+						     
+						    </div>
+						    <div class="or-option">
+						      <p>or</p>
+						    </div>
+						    <div class="bottom-link">
+						    	<p><a href="#">Log in with Single Sign-On (SSO)</a></p>
+						    	<p>Don't have an account? <a href="#">Sign up</a></p>
+						    	<p>Talkspace Provider? <a href="#">Log in</a></p>
+						    </div>
+						    <!-- <div class="form-signup">
+						      <button class="btn">Signup Now</button>
+						    </div> -->
+						  </div>
+					  </form>
+					</div>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+	</div>
+</section>
+<!-- login-form-wrapper-end -->
+
+
+<!-- footer-start -->
+
+<%- include('comman/footer') %>
+
+<!-- footer-end -->
+
+<script>
+
+$("#userLogin").validate({
+        rules: {
+            email: {
+                required: true,
+            }, 
+            password: {
+                required: true,
+            }, 
+        },
+        messages: {
+            email: {
+                required: "Email filed is required",
+            },
+            password: {
+                required: "Password filed is required",
+            },
+        },
+		errorPlacement: function (error, element) {
+            var email = $(element).attr("id");
+			var password = $(element).attr("id");
+            error.appendTo($("." + email + "_err"));
+			error.appendTo($("." + password + "_err"));
+        },
+        submitHandler: function(form, event) {
+          event.preventDefault();
+
+           var data = $(form).serialize();
+
+          $.ajax({
+               url: "/user/login",
+               type: "POST",
+               data: data,
+               dataType:"JSON",
+              success: function( response ) {
+                console.log(response);
+                if(response.status == true){
+                  toastr.success(response.message);
+                  window.location.href=response.url;
+                }
+              },
+              error: function (error) {
+                 console.error("Ajax error:", error);
+				 $(".error-message-container").text("Invalid email or password");
+              }
+          });
+        }
+     });
+
+</script>

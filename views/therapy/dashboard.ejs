@@ -1,0 +1,617 @@
+<%- include('comman/header') %>
+
+<section class="main">
+    <div class="top-box">
+        
+    </div>
+
+   <%- include('comman/sidebar') %>
+
+  <!-- Main Wrapper -->
+<div class="my-container-main">
+
+  <div class="my-container wrapper active-cont">
+
+        <div class="container-fluid p-0">
+
+            <div class="wrapper-inner">
+
+                <div class="left-part">
+
+                    <div class="row">
+
+                        <!--page-head-->
+
+                        <div class="col-md-12">
+
+                            <div class="page-head">
+
+                                <nav class="navbar top-navbar">
+                                  <a class="btn menu-btn" id="menu-btn">
+                                    <span class="line-toggle"></span>
+                                    <span class="line-toggle"></span>
+                                    <span class="line-toggle"></span>
+                                    <!-- <i class="fa-sharp fa-light fa-bars"></i> -->
+                                  </a>
+                                </nav>
+
+                                <div class="page-head-title">
+                                   
+                                    <form class="search-box">
+                                        <input class="form-control" type="search" placeholder="Search.." aria-label="Search">
+                                        <button class="search-btn" type="submit"><i class="fal fa-search"></i></button>
+                                    </form>
+
+                                </div>
+
+                                <div class="page-head-notify">
+
+                                    <div class="notify-icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="35" height="33" viewBox="0 0 35 33" fill="none">
+                                            <rect width="35" height="32.9412" rx="5" fill="#48BC97" fill-opacity="0.2"/>
+                                            <path d="M25.9902 21.0602C25.887 19.9857 24.9279 19.1418 23.8108 19.1418C23.7792 19.142 23.748 19.1359 23.7188 19.1239C23.6896 19.1119 23.6631 19.0943 23.6408 19.072C23.6185 19.0497 23.6008 19.0232 23.5888 18.994C23.5768 18.9648 23.5708 18.9335 23.571 18.902V15.3262C23.571 12.6702 21.8711 10.3541 19.5307 9.48905C19.5581 9.35243 19.5732 9.21283 19.5732 9.07317C19.5733 7.92887 18.6445 7 17.5001 7C16.3556 7 15.4268 7.92887 15.4268 9.07323C15.4268 9.20984 15.442 9.3464 15.4663 9.47693C14.6619 9.76227 13.9182 10.2145 13.2838 10.8277C12.0878 11.9812 11.4292 13.5323 11.4292 15.1957V18.902C11.4292 19.0326 11.3229 19.1418 11.1893 19.1418C10.0693 19.1418 9.11307 19.9857 9.00986 21.0603C8.95217 21.6583 9.14951 22.2532 9.55322 22.6964C9.95388 23.1365 10.5276 23.3915 11.1256 23.3915H14.7863C14.9381 24.7544 16.0977 25.8199 17.5001 25.8199C18.9024 25.8199 20.062 24.7544 20.2138 23.3915H23.8745C24.4725 23.3915 25.0462 23.1365 25.4469 22.6964C25.8476 22.2531 26.0479 21.6582 25.9902 21.0602ZM17.5001 8.21416C17.9736 8.21416 18.3591 8.59967 18.3591 9.07317C18.3591 9.11261 18.353 9.14906 18.3469 9.1885C18.1405 9.15813 17.931 9.13689 17.7216 9.13081C17.3603 9.11865 17.0052 9.14298 16.6531 9.19154C16.647 9.1521 16.6409 9.11565 16.6409 9.07622C16.641 8.59967 17.0265 8.21416 17.5001 8.21416ZM17.5001 24.6056C16.7685 24.6056 16.1554 24.0835 16.0127 23.3915H18.9874C18.8448 24.0835 18.2316 24.6056 17.5001 24.6056ZM24.5484 21.8798C24.3723 22.071 24.1356 22.1772 23.8745 22.1772H11.1256C10.8646 22.1772 10.6278 22.071 10.4517 21.8798C10.2757 21.6886 10.1937 21.4366 10.221 21.1756C10.2635 20.7172 10.6915 20.356 11.1924 20.356C11.9938 20.356 12.6464 19.7034 12.6464 18.902V15.1957C12.6464 13.8662 13.1745 12.6247 14.1307 11.7019C15.0413 10.8186 16.2312 10.339 17.5001 10.339C17.5608 10.339 17.6184 10.339 17.6791 10.342C20.2562 10.4331 22.3568 12.6702 22.3568 15.3263V18.902C22.3568 19.7034 23.0094 20.356 23.8108 20.356C24.3116 20.356 24.7396 20.7172 24.7821 21.1756C24.8064 21.4366 24.7244 21.6855 24.5484 21.8798ZM9.63823 14.2851C9.91749 14.2851 10.1694 14.0909 10.2302 13.8086C10.5246 12.476 11.1893 11.2618 12.1607 10.2966C12.3975 10.0598 12.3975 9.67427 12.1607 9.43754C11.9239 9.20077 11.5384 9.20077 11.3017 9.43754C10.1664 10.5666 9.38629 11.9903 9.04331 13.5505C8.97047 13.8783 9.17689 14.2031 9.50471 14.2729C9.55327 14.2821 9.59575 14.2851 9.63823 14.2851ZM25.3619 14.2851C25.4044 14.2851 25.4499 14.279 25.4924 14.27C25.8202 14.1971 26.0266 13.8753 25.9538 13.5475C25.6108 11.9873 24.8307 10.5667 23.6954 9.43445C23.4586 9.19767 23.0731 9.19767 22.8364 9.43445C22.5997 9.67123 22.5996 10.0567 22.8364 10.2935C23.8047 11.2587 24.4725 12.4729 24.7669 13.8055C24.8307 14.0908 25.0826 14.2851 25.3619 14.2851Z" fill="#48BC97"/>
+                                            </svg>
+                                    </div>
+                                    <div class="user-dropdown">
+                                        <div class="dropdown">
+                                          <button class="btn user-btn dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                            <span><img src="/therapy-assets/assets/img/profile-img.png"> </span> <%= data.first_name %>
+                                          </button>
+                                          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                             <li>
+                                                <a class="dropdown-item" href="user-profile.php">
+                                                     <svg xmlns="http://www.w3.org/2000/svg" height="16" width="14" viewBox="0 0 448 512">
+                                                        <path d="M304 128a80 80 0 1 0 -160 0 80 80 0 1 0 160 0zM96 128a128 128 0 1 1 256 0A128 128 0 1 1 96 128zM49.3 464H398.7c-8.9-63.3-63.3-112-129-112H178.3c-65.7 0-120.1 48.7-129 112zM0 482.3C0 383.8 79.8 304 178.3 304h91.4C368.2 304 448 383.8 448 482.3c0 16.4-13.3 29.7-29.7 29.7H29.7C13.3 512 0 498.7 0 482.3z" fill="#46BC96"></path>
+                                                     </svg>
+                                                     profile
+                                                  </a>
+                                               </li>
+                                               <li>
+                                                  <a class="dropdown-item" href="#">
+                                                     <svg xmlns="http://www.w3.org/2000/svg" height="16" width="16" viewBox="0 0 512 512">
+                                                        <path d="M336 352c97.2 0 176-78.8 176-176S433.2 0 336 0S160 78.8 160 176c0 18.7 2.9 36.8 8.3 53.7L7 391c-4.5 4.5-7 10.6-7 17v80c0 13.3 10.7 24 24 24h80c13.3 0 24-10.7 24-24V448h40c13.3 0 24-10.7 24-24V384h40c6.4 0 12.5-2.5 17-7l33.3-33.3c16.9 5.4 35 8.3 53.7 8.3zM376 96a40 40 0 1 1 0 80 40 40 0 1 1 0-80z" fill="#46BC96"></path>
+                                                     </svg>
+                                                     change password
+                                                  </a>
+                                               </li>
+                                               <li>
+                                                  <a class="dropdown-item" href="#">
+                                                     <svg xmlns="http://www.w3.org/2000/svg" height="16" width="16" viewBox="0 0 512 512">
+                                                        <path d="M502.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-128-128c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 224 192 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l210.7 0-73.4 73.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l128-128zM160 96c17.7 0 32-14.3 32-32s-14.3-32-32-32L96 32C43 32 0 75 0 128L0 384c0 53 43 96 96 96l64 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-64 0c-17.7 0-32-14.3-32-32l0-256c0-17.7 14.3-32 32-32l64 0z" fill="#46BC96"></path>
+                                                     </svg>
+                                                     Sign out
+                                                  </a>
+                                               </li>
+                                          </ul>
+                                        </div>
+                                    </div>
+
+
+                                </div> 
+
+                            </div>
+
+                        </div>
+
+
+
+                        <!--dashboard-->
+
+                       
+                            <div class="mian-dashboard">
+                                <div class="row ">
+                                   <div class="main-heading">
+                                       <h1>Therapist <%= data.first_name + " " + data.last_name %></h1>
+                                   </div>
+                                </div>
+                                <div class="row">
+                                    <div class="dashboard-info">
+                                        <div class="inner-dashboard-info">
+                                            <div class="left-info">
+                                                <div class="details">
+                                                    <h4>75</h4>
+                                                    <p class="big-p">Total hours</p>
+                                                    <p class="small-p">4% (30 days)<img src="/therapy-assets/assets/img/Vector-img.svg" class="img-fluid" /></p>
+                                                </div>
+                                            </div>
+                                            <div class="right-icon">
+                                                <div class="right-circle-box">
+                                                    <img src="/therapy-assets/assets/img/hours.svg" class="img-fluid">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="inner-dashboard-info">
+                                            <div class="left-info">
+                                                <div class="details">
+                                                    <h4>$100.00</h4>
+                                                    <p class="big-p">Total Income</p>
+                                                    <p class="small-p">4% (30 days)<img src="/therapy-assets/assets/img/Vector-img.svg" class="img-fluid" /></p>
+                                                </div>
+                                            </div>
+                                            <div class="right-icon">
+                                                <div class="right-circle-box">
+                                                    <img src="/therapy-assets/assets/img/income.svg" class="img-fluid">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="inner-dashboard-info">
+                                            <div class="left-info">
+                                                <div class="details">
+                                                    <h4>100+</h4>
+                                                    <p class="big-p">Total Client</p>
+                                                    <p class="small-p">10% (30 days)<img src="/therapy-assets/assets/img/Vector-img.svg" class="img-fluid" /></p>
+                                                </div>
+                                            </div>
+                                            <div class="right-icon">
+                                                <div class="right-circle-box">
+                                                    <img src="/therapy-assets/assets/img/Client.svg" class="img-fluid">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="inner-dashboard-info">
+                                            <div class="left-info">
+                                                <div class="details">
+                                                    <h4>$100.00</h4>
+                                                    <p class="big-p">Total Income</p>
+                                                    <p class="small-p">4% (30 days)<img src="/therapy-assets/assets/img/Vector-img.svg" class="img-fluid" /></p>
+                                                </div>
+                                            </div>
+                                            <div class="right-icon">
+                                                <div class="right-circle-box">
+                                                    <img src="/therapy-assets/assets/img/hours.svg" class="img-fluid">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="row mt-4">
+                                    <div class="col-lg-6">
+                                        <div id="video-container" class="upload-block" >
+                                            <div class="overlay"></div>
+                                             
+                                                <video id="video" class="myVideo" width="100%" height="100%"  poster="/therapy-assets/assets/img/image-upload.png"></video>
+                                            <div class="inner-upload-box">
+                                                 <div class="file-box">
+                                                    <img src="/therapy-assets/assets/img/upload-icon.svg" class="img-fluid" />
+                                                    <input id="file-input" type="file" accept="video/*">
+                                                </div>
+                                                <div class="main-heading">
+                                                    <h2>upload your <br>1  minute intro video Here</h2>
+                                                    <a href="#" class="upload-btn">upload</a>
+                                                    <button id="playPauseButton"><i class="fas fa-play"></i></button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="circle-chart-box">
+                                            <div class="inner-top-chart">
+                                                <div class="main-heading">
+                                                    <h4>present month</h4>
+                                                </div>
+                                                <div class="check-box-chart">
+                                                    <div class="form">
+                                                        <label><input type="radio" class="input-radio Chart" name="chartType" id= "column" value="bar"> <p>Chart</p></label>
+                                                        <label><input type="radio" class="input-radio ShowValue"  name="chartType" id= "pie" value="pie"  checked> <p>Show Value</p></label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="piechartWrapper">
+
+                                              <div class="out-chart-box">
+                                                <div class="piechart" id="chart1" data-percent="81"><span>81</span>%</div>
+                                                <h5>Total hours</h5>
+                                              </div>
+
+                                              <div class="out-chart-box">
+                                                <div class="piechart" id="chart2" data-percent="22"><span>22</span>%</div>
+                                                <h5>Clients Growth</h5>
+                                              </div>
+
+                                              <div class="out-chart-box">
+                                                <div class="piechart" id="chart3" data-percent="62"><span>62</span>%</div>
+                                                <h5>Total Income</h5>
+                                              </div>
+                                              
+                                            </div>
+                                        </div>
+                                     </div>
+                                </div>
+
+
+                                <div class="row mt-4">
+                                    <div class="col-lg-8">
+                                        <div class="client-list-block">
+                                            <div class="main-heading">
+                                                <h4>client list</h4>
+                                            </div>
+
+                                            <table class="table">
+                                              <thead class="table-dark">
+                                                <tr>
+                                                  <th scope="col">Name</th>
+                                                  <th scope="col">Join date</th>
+                                                  <th scope="col">type</th>
+                                                  <th scope="col">Address</th>
+                                                </tr>
+                                              </thead>
+                                              <tbody>
+                                                <tr>
+                                        
+                                                  <td><div class="people-circle"><img src="/therapy-assets/assets/img/portrait-circle-name-img.png" class="img-fluid" /></div>John</td>
+                                                  <td>4/Dec2023</td>
+                                                  <td><div class="type-view text-color1">Owner</div></td>
+                                                  <td>lorem ipssum dollor...</td>
+                                                </tr>
+                                                <tr>
+                                                 
+                                                  <td><div class="people-circle"><img src="/therapy-assets/assets/img/portrait-circle-name-img2.png" class="img-fluid" /></div>mellisa</td>
+                                                  <td>4/Dec2023</td>
+                                                  <td><div class="type-view text-color2">Couple</div></td>
+                                                  <td>lorem ipssum dollor...</td>
+                                                </tr>
+                                                <tr>
+                                                  <td><div class="people-circle"><img src="/therapy-assets/assets/img/portrait-circle-name-img3.png" class="img-fluid" /></div>dario</td>
+                                                  <td>4/Dec2023</td>
+                                                  <td><div class="type-view text-color3">Older</div></td>
+                                                  <td>lorem ipssum dollor...</td>
+                                                </tr>
+                                                <tr>
+                                                  <td><div class="people-circle"><img src="/therapy-assets/assets/img/portrait-circle-name-img4.png" class="img-fluid" /></div>michael</td>
+                                                  <td>4/Dec2023</td>
+                                                  <td><div class="type-view text-color4">Young</div></td>
+                                                  <td>lorem ipssum dollor...</td>
+                                                </tr>
+
+                                              </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-4">
+                                        <div class="total-customer-box">
+                                            <div class="inner-total-customer">
+                                                <div class="top-bar-chart">
+                                                    <div class="main-heading">
+                                                        <h4>Total Customer</h4>
+                                                    </div>
+
+                                                 <div class="chart-dropdown">
+                                                     <select id="DataType" class="minimal">
+                                                          <option value="dataDaily">Daily</option>
+                                                          <option value="dataWeekly">Weekly</option>
+                                                          <option value="dataMonthly">Monthly</option>
+                                                        </select>
+                                                        <img src="/therapy-assets/assets/img/dots-icon.svg" class="img-fluid" />
+                                                 </div>
+
+                                                </div>
+
+                                                <div class="x_panel">
+                                                  <div class="x_content">
+                                                    <canvas id="mybarChart"></canvas>
+                                                  </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                    
+
+              
+                    </div>
+
+                </div>
+
+            </div>
+              
+        </div>
+
+    </div>
+
+</section>  
+
+
+
+
+
+
+ <%- include('comman/footer') %>
+
+
+
+ <script src="https://rendro.github.io/easy-pie-chart/javascripts/jquery.easy-pie-chart.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+<script type="text/javascript" src="https://code.highcharts.com/highcharts.js"></script>
+<script>
+
+
+    /*---upload-video-----------*/
+  $(document).ready(function() {
+      $('#file-input').on('change', function() {
+        const files = this.files || [];
+
+        if (!files.length) return;
+
+        const reader = new FileReader();
+
+        reader.onload = function(e) {
+          const videoSource = $('<source>').attr('src', e.target.result);
+          $('#video').empty().append(videoSource).get(0).load();
+          $('#video').get(0).play();
+        };
+
+        reader.onprogress = function(e) {
+          console.log('progress: ', Math.round((e.loaded * 100) / e.total));
+        };
+
+        reader.readAsDataURL(files[0]);
+      });
+    });
+
+
+    /*---playbutton-----------*/
+
+     $(document).ready(function() {
+          // Get the video element and play/pause button
+          var video = $('.myVideo')[0]; // Note: [0] is used to get the raw DOM element
+          var playPauseButton = $('#playPauseButton');
+
+          // Add click event listener to the button
+          playPauseButton.on('click', function() {
+            // Check if the video is paused, then play it. If it's playing, then pause it.
+            if (video.paused) {
+              video.play();
+              playPauseButton.html('<i class="fas fa-pause"></i>');
+            } else {
+              video.pause();
+              playPauseButton.html('<i class="fas fa-play"></i>');
+            }
+          });
+        });
+
+
+
+
+
+</script>
+
+<script>
+$(document).ready(function() {
+$(function() {
+
+
+  $('#chart1').easyPieChart({
+    scaleColor: "transparent",
+    lineWidth: 25,
+    lineCap: '', //Can be butt
+    barColor: '#FF6A1B',
+    trackColor: "rgba(255, 91, 91, 0.15)",
+    size: 130,
+    rotate: 0,    
+    animate: 1000,
+
+    onStep: function(value) {
+  this.$el.find('span').text(Math.round(value));
+},
+onStop: function(value, to) {
+  this.$el.find('span').text(Math.round(to));
+}
+    
+  });
+
+    $('#chart2').easyPieChart({
+    scaleColor: "transparent",
+    lineWidth: 25,
+    lineCap: '', //Can be butt
+    barColor: '#00B074',
+    trackColor: "rgba(0, 176, 116, 0.15)",
+    size: 130,
+    rotate: 0,    
+    animate: 1000,
+
+    onStep: function(value) {
+  this.$el.find('span').text(Math.round(value));
+},
+onStop: function(value, to) {
+  this.$el.find('span').text(Math.round(to));
+}
+    
+  });
+
+
+$('#chart3').easyPieChart({
+    scaleColor: "transparent",
+    lineWidth: 25,
+    lineCap: '', //Can be butt
+    barColor: '#2D9CDB',
+    trackColor: "rgba(45, 156, 219, 0.15)",
+    size: 130,
+    rotate: 0,    
+    animate: 1000,
+
+    onStep: function(value) {
+  this.$el.find('span').text(Math.round(value));
+},
+onStop: function(value, to) {
+  this.$el.find('span').text(Math.round(to));
+}
+    
+  });
+});
+
+
+
+function initializeBarCharts() {
+    // Replace the following with your bar chart configurations
+    var ctx1 = document.getElementById('chart1').getContext('2d');
+    var chart1 = new Chart(ctx1, {
+      type: 'bar'
+    });
+
+    var ctx2 = document.getElementById('chart2').getContext('2d');
+    var chart2 = new Chart(ctx2, {
+      type: 'bar'
+
+    });
+
+    var ctx3 = document.getElementById('chart3').getContext('2d');
+    var chart3 = new Chart(ctx3, {
+      type: 'bar'
+    });
+  }
+
+  // Initial setup for bar charts
+  initializeBarCharts();
+
+  // Radio button click event
+  $('input[type="radio"]').on('change', function () {
+    var selectedValue = $('input[name="chartType"]:checked').val();
+
+    // Remove existing chart instances
+    $('#chart1, #chart2, #chart3').data('easyPieChart').destroy();
+
+    // Initialize charts based on the selected value
+    if (selectedValue === 'pie') {
+      // Initialize pie charts
+      initializePieCharts();
+    } else if (selectedValue === 'bar') {
+      // Initialize bar charts
+      initializeBarCharts();
+    }
+  });
+});
+
+
+</script>
+
+
+
+
+<script type="text/javascript">
+$(document).ready(function() {
+
+    var ctx = $("#mybarChart")[0].getContext("2d");
+
+    var mybarChart = new Chart(ctx, {
+      type: 'bar',
+    rows: dataDaily,
+      data: {
+
+        display:false,
+        labels: ['0', '1' ,'2', '3' , '4' ],
+        datasets: [{
+          label: 'Candidate A Votes',
+          backgroundColor: "#FD3939",
+          data: [60,40,60,60],
+          setPercentage: [5, 5, 5, 5], // Here is the magic !!!
+        }, {
+          label: 'Candidate B Votes2',
+          backgroundColor: "#6654D4",
+          data: [80,65, 25 ],
+          setPercentage: [5, 5, 5, 5], // Here is the magic !!!
+        }]
+      },
+
+      options: {
+        legend: {
+          display: false,
+          position: 'top',
+          labels: {
+            fontColor: "#000080",
+          }
+        },
+        
+
+
+     scales: {
+        xAxes: [{
+             categoryPercentage: 1,
+              barPercentage: 0.4,
+            display:false,
+          grid: {
+            display: false,
+            drawBorder: true,
+            color: "#F3F2F7",
+          },
+          ticks: {
+            // barThickness : 5,
+             padding: 0
+          }
+        }],
+        yAxes: [{
+          grid: {
+          display: true,
+          color: "#F3F2F7",
+          drawBorder: false,
+        },
+        gridLines: {
+        color: "#F3F2F7",
+      },
+          ticks: {
+            beginAtZero: true,
+            // maxTicksLimit: 100,
+            barThickness : 5,
+            padding: 0,
+            categoryPercentage: 0.6,
+            fontSize: 12,
+              min: 0,
+              max: 80,
+              stepSize: 20
+          }
+        }]
+      }
+      },
+    });
+
+
+
+
+
+
+var dataDaily = [
+ [60,40,60,60]
+];
+
+var dataWeekly = [
+      [60,40,60,60]
+];
+
+var dataMonthly = [
+       [60,40,60,60]
+];
+
+$(function () {
+    
+    // Initial chart
+    var mybarChart = c3.generate({
+        data: {
+            rows: dataDaily,
+            type: 'bar'
+        }
+    });
+    
+    // Redraw chart depending on which option is selected
+    $("#DataType").change(function (evt) {
+        var timeSelection = eval( $("#DataType").val() );
+        var mybarChart = c3.generate({
+            data: {
+                rows: timeSelection,
+                type: 'bar' 
+            }
+        });
+    });
+
+    
+});
+
+
+    });
+   
+   
+    
+</script>

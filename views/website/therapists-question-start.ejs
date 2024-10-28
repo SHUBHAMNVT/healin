@@ -1,0 +1,2266 @@
+
+<!-- header-start -->
+
+<%- include('comman/header') %>
+
+<!-- header-end -->
+
+
+
+<style type="text/css">
+.card0 {
+    background-color: #F5F5F5;
+    border-radius: 8px;
+    z-index: 0;
+    padding: 10px
+}
+
+.card00 {
+    z-index: 0;
+    padding: 30px;
+}
+
+.card1 {
+        margin-bottom: 4rem;
+    z-index: 0;
+    border-right: 1px solid #F5F5F5
+}
+
+ .card {
+    z-index: 0;
+    border: none;
+    position: relative
+}
+
+#msform2 {
+    text-align: center;
+    position: relative;
+    margin-top: 0px
+}
+
+#msform2 fieldset {
+    background: white;
+    border: 0 none;
+    border-radius: 0.5rem;
+    box-sizing: border-box;
+    width: 85%;
+    margin: 0 auto;
+    margin-top: 50px;
+    padding-bottom: 20px;
+    position: relative
+}
+#msform2 .fieldlabels {
+    color: var(--color-black);
+   text-align: center;
+/*    font-size: 20px;*/
+    font-size: 22px;
+    margin-bottom: 16px;
+/*    font-family: 'gilroy-sb';*/
+ font-family: 'gilroy-b';
+}
+#msform2 .form-card {
+    /*margin: 20px 0px;
+    padding: 30px;
+    background: var(--color-white);
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;*/
+    text-align: center;
+}
+
+#msform2 fieldset:not(:first-of-type) {
+    display: none
+}
+
+#msform2 input, 
+#msform2 textarea,
+#msform2 select {
+    padding: 20px 25px 20px 25px;
+    border: 1px solid #ccc;
+    border-radius: 100px;
+    margin-bottom: 25px;
+    margin-top: 2px;
+    width: 80%;
+    margin: 0 auto;
+    box-sizing: border-box;
+    color: var(--color-black);
+    background-color: rgb(70 188 150 / 34%);
+    font-size: 16px;
+    letter-spacing: 1px;
+    font-family: 'gilroy-m';
+    text-transform: capitalize;
+}
+
+#msform2 .option-block textarea {
+    border-radius: 10px!important;
+}
+#msform2 input::placeholder , #msform2 textarea::placeholder ,#msform2 select::placeholder{
+	color: var(--color-black);
+	font-family: 'gilroy-m';
+	text-transform: capitalize;
+}
+#msform2 input:focus{
+    -moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    border: 1px solid #49b18f;
+    background: #49b18f;
+    color: #fff;
+    outline-width: 0;
+}
+
+#msform2 textarea:focus{
+-moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    border: 1px solid #49b18f;
+    outline-width: 0;
+    color: #000;
+}
+
+#msform2 .action-button {
+    width: 120px;
+    background: #f3ce69;
+    color: var(--color-black);
+    border: 0 none;
+    border-radius: 100px;
+    cursor: pointer;
+    padding: 8px 20px;
+    margin: 10px 0px 10px 5px;
+    font-family: gilroy-sb;
+    font-size: 16px;
+    float: right;
+    text-transform: uppercase;
+    transition: 0.5s all;
+}
+
+#msform2 .action-button:hover,
+#msform2 .action-button:focus {
+    background-color: var(--color-black);
+    color: var(--color-white);
+    transition: 0.5s all;
+}
+
+#msform2 .action-button-previous {
+    width: 120px;
+    background: #000;
+    font-family: gilroy-sb;
+    font-size: 16px;
+    color: white;
+    border: 0 none;
+    border-radius: 100px;
+    cursor: pointer;
+    padding: 8px 20px;
+    margin: 10px 5px 10px 0px;
+    float: right;
+    text-transform: uppercase;
+    transition: 0.5s all;
+}
+
+#msform2 .action-button-previous:hover,
+#msform2 .action-button-previous:focus {
+   background-color: var(--color-black);
+    color: var(--color-white);
+    transition: 0.5s all;
+}
+
+.purple-text {
+    color: #f390b3;
+    font-family: 'gilroy-m';
+}
+#msform2 .steps {
+    font-size: 25px;
+    color: gray;
+    margin-bottom: 10px;
+    font-weight: normal;
+    text-align: right
+}
+
+
+#progressbar2 {
+    margin-bottom: 10px;
+    overflow: hidden;
+    color: lightgrey
+}
+
+#progressbar2 .active {
+    color: #f390b3
+}
+
+#progressbar2 li {
+    list-style-type: none;
+    font-size: 15px;
+    width: 5%;
+    margin: 0 auto;
+    position: relative;
+    display: inline-block;
+}
+
+#progressbar2 #step1:before {
+    font-family: FontAwesome;
+    content: ""
+}
+
+#progressbar2 #step2:before {
+    font-family: FontAwesome;
+    content: ""
+}
+
+#progressbar2 #step3:before {
+    font-family: FontAwesome;
+    content: ""
+}
+
+#progressbar2 #step4:before {
+    font-family: FontAwesome;
+    content: ""
+}
+
+#progressbar2 #step5:before {
+    font-family: FontAwesome;
+    content: ""
+}
+#progressbar2 #step6:before {
+    font-family: FontAwesome;
+    content: ""
+}
+#progressbar2 #step7:before {
+    font-family: FontAwesome;
+    content: ""
+}
+#progressbar2 #step8:before {
+    font-family: FontAwesome;
+    content: ""
+}
+#progressbar2 #step9:before {
+    font-family: FontAwesome;
+    content: ""
+}
+#progressbar2 #step10:before {
+    font-family: FontAwesome;
+    content: ""
+}
+#progressbar2 #step11:before {
+    font-family: FontAwesome;
+    content: ""
+}
+#progressbar2 #step12:before {
+    font-family: FontAwesome;
+    content: ""
+}
+#progressbar2 #step13:before {
+    font-family: FontAwesome;
+    content: ""
+}
+#progressbar2 #step14:before {
+    font-family: FontAwesome;
+    content: ""
+}
+#progressbar2 #step15:before {
+    font-family: FontAwesome;
+    content: ""
+}
+#progressbar2 #step16:before {
+    font-family: FontAwesome;
+    content: ""
+}
+#progressbar2 #step17:before {
+    font-family: FontAwesome;
+    content: ""
+}
+
+#progressbar2 li:before {
+    width: 30px;
+    height: 30px;
+    line-height: 45px;
+    display: block;
+    font-size: 20px;
+    color: #ffffff;
+    background: lightgray;
+    border-radius: 50%;
+    margin: 0 auto 10px auto;
+    padding: 2px
+}
+
+#progressbar2 li:after {
+    content: '';
+    width: 109%;
+    height: 2px;
+    background: lightgray;
+    position: absolute;
+    left: 0px;
+    top: 15px;
+    z-index: -1;
+}
+
+#progressbar2 li.active:before,
+#progressbar2 li.active:after {
+    background: #f390b3
+}
+
+#msform2 .progress {
+    height: 20px
+}
+
+#msform2 .progress-bar {
+    background-color: #f390b3
+}
+
+#msform2 .fit-image {
+    width: 100%;
+    object-fit: cover
+}
+
+#msform2 .inner-form {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 0px 0px;
+    background: #fff;
+    
+}
+.main-heading h1 {
+    color: var(--color-black);
+    font-family: gilroy-b;
+    font-size: 25px;
+    font-style: normal;
+    line-height: normal;
+    margin-bottom: 15px;
+    text-transform: capitalize;
+}
+.main-heading h3 {
+    color: var(--color-black);
+    font-family: 'gilroy-m';
+    font-size: 16px;
+    font-style: normal;
+    line-height: 30px;
+    margin-bottom: 20px;
+}
+.main-heading span {
+    display: inline-block;
+    background: transparent;
+    padding: 10px 35px;
+    border-radius: 50px;
+}
+.main-heading span p {
+    color: #000;
+}
+.bottom-form-img {
+    height: 110px;
+    position: relative;
+}
+.pic {
+    width: auto;
+    height: 290px;
+    object-fit: contain;
+    position: absolute;
+    left: -60px;
+    bottom: -8px;
+}
+
+
+/*-----redio-button-----------*/
+/*.option-block {
+    margin-top: 20px;
+}*/
+#msform2 .form-card .option-block {
+    margin-top: 20px;
+    background: var(--color-white);
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    margin: 20px 0px;
+    padding: 30px;
+}
+.option-block .radio-input {
+  display: inline-block;
+  flex-direction: row;
+  font-size: 16px;
+  font-weight: 600;
+  width: 50%;
+  
+}
+.form-card.Therapys-option .radio-input {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    margin: 0 auto;
+    gap: 30px;
+    width: 100%;
+}
+.option-block .radio-input input[type="radio"] {
+  display: none;
+}
+
+.option-block .radio-input label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 10px;
+    border: 1px solid #ccc;
+    background-color: rgb(70 188 150 / 34%);
+    border-radius: 100px;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+    margin-bottom: 30px;
+    color: var(--color-black);
+    font-family: 'gilroy-sb';
+    text-transform: capitalize;
+}
+
+.option-block .radio-input label:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(-50%, -50%);
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #fff;
+  border: 2px solid #ccc;
+  transition: all 0.3s ease-in-out;
+  opacity: 0;
+}
+
+.option-block .radio-input input[type="radio"]:checked + label:before {
+  background-color: #46bc96;
+  top: 0;
+  opacity: 0;
+}
+
+.option-block .radio-input input[type="radio"]:checked + label {
+  background-color: var(--color-green);
+    color: #fff;
+    border-color: var(--color-green);
+    animation: radio-translate 0.5s ease-in-out;
+}
+
+.form-card.Therapys-option .radio-input label {
+    flex: 1 0 45%;
+    margin-bottom:0;
+}
+@keyframes radio-translate {
+  0% {
+    transform: translateX(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+.select-menu {
+    width: 80%;
+    margin: 0 auto;
+    cursor: pointer;
+    position: relative;
+}
+
+.select-menu > .select {
+    border: 1px solid #ccc;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 100px;
+    transition: all 350ms ease-in-out;
+    background:rgb(70 188 150 / 34%);
+    font-family: 'gilroy-sb';
+}
+
+.select-menu > .select:hover {
+    border-color: #46bc96;
+    color: #fff;
+}
+
+.select-menu > .select.active {
+    border-color: #46bc96;
+    color: #fff;
+    background: #46bc96;
+    border-radius: 100px;
+}
+
+.select-menu > .options-list {
+    position: absolute;
+    width: 100%;
+    border: 0;
+    border-radius: 12px;
+    padding: 10px;
+    margin-top: 10px;
+    min-height: 180px;
+    height: 100%;
+    overflow-y: auto;
+    transition: 0.4s linear 0.2s;
+    display: none;
+    background: #f5f5f5;
+    text-align: left;
+}
+
+.select-menu > .options-list.active {
+  display: block;
+}
+
+.options-list > .option {
+    padding: 10px;
+    border-bottom: 0;
+    font-size: 14px;
+    font-weight: 600;
+    transition: all 350ms ease-in-out;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+
+.select-menu > .options-list > .option:hover, .select-menu > .options-list > .option.selected {
+    color: var(--color-black);
+    border-bottom: 0;
+    background: #46bc9661;
+}
+
+.select-menu > .options-list::-webkit-scrollbar {
+  background-color: #281e4d;
+  width: 4px;
+  border-top-right-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
+
+.select-menu > .options-list::-webkit-scrollbar-thumb {
+  background-color: #46bc96;
+  border-top-right-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
+
+.next-prev-btn {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+}
+.next-prev-btn #prev , .next-prev-btn #next {
+    background: #000;
+    display: inline-block;
+    color: #fff;
+    padding: 5px 20px;
+    border-radius: 100px;
+    font-size: 16px;
+    font-family: 'gilroy-sb';
+    text-transform: capitalize;
+    cursor: pointer;
+}
+.alert-success {
+    color: #555;
+    background-color: #46bc96b3;
+    border-color: #46bc96b3;
+}
+
+
+/*-------file-upload-css-----------*/
+#msform2 .file-wrap {
+    width: 500px;
+    margin: auto;
+    border-radius: 20px;
+    background-color: transparent;
+    padding: 1.25rem;
+    margin-bottom: 1.25rem;
+    border: 2px dashed #46bc96;
+}
+#msform2 .file {
+    position: relative;
+    font-size: 16px;
+    font-family: 'gilroy-sb';
+    margin: 0 auto;
+/*    display: inline-block;*/
+}
+#msform2 .file__input, .file__value {
+  background-color: rgb(70 188 150 / 34%);
+   border-radius: 100px;
+    margin-bottom: 0;
+    /* color: rgba(255, 255, 255, 0.3); */
+   padding: 20px 25px;
+}
+#msform2 .file__input--file {
+    position: absolute;
+    opacity: 0;
+    left: 0;
+    width: 100%!important;
+    top: 0;
+}
+#msform2 .file__input--label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 0;
+  cursor: pointer;
+}
+/*.file__input--label:after {
+  content: attr(data-text-btn);
+    border-radius: 3px;
+    background-color: #46bc96;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.18);
+    padding: 10px 30px;
+    margin: 0;
+    color: white;
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+}*/
+#msform2 .file__value {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #000;
+    margin-top: 12px;
+}
+#msform2 .file__value:hover:after {
+    color: #231f20;
+}
+#msform2 .file__value:after {
+  content: "X";
+  cursor: pointer;
+}
+#msform2 .file__value:after:hover {
+  color: white;
+}
+#msform2 .file__remove {
+  display: block;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #000;
+}
+
+.check-tik-form {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+        margin-bottom: 30px;
+}
+.check-tik-form label {
+    font-family: 'gilroy-sb';
+    font-size: 20px;
+}
+#form-check input[type=checkbox] {
+  position: relative;
+    border: 2px solid #000;
+    border-radius: 2px;
+    background: none;
+    cursor: pointer;
+    line-height: 0;
+    margin: 0 .6em 0 0;
+    outline: 0;
+    padding: 0 !important;
+    vertical-align: text-top;
+    height: 20px;
+    width: 20px;
+    -webkit-appearance: none;
+  opacity: .5;
+}
+
+#form-check input[type=checkbox]:hover {
+  opacity: 1;
+}
+
+#form-check input[type=checkbox]:checked {
+  background-color: #000;
+  opacity: 1;
+}
+
+#form-check input[type=checkbox]:before {
+  content: '';
+  position: absolute;
+  right: 50%;
+  top: 50%;
+  width: 4px;
+  height: 10px;
+  border: solid #FFF;
+  border-width: 0 2px 2px 0;
+  margin: -1px -1px 0 -1px;
+  transform: rotate(45deg) translate(-50%, -50%);
+  z-index: 2;
+}
+.checkbox-input.sequence {
+    width: 70%;
+    margin: 0 auto;
+}
+.main-form-block .form-check {
+    text-align: left;
+    margin-bottom: 25px;
+}
+
+
+@media (min-width: 768px) and (max-width: 991px) {
+    #progressbar2 li:after {
+        top: 8px;
+    }
+    #progressbar2 li:before {
+        width: 18px;
+        height: 18px;
+    }
+    .option-block .radio-input label {
+        padding: 10px 10px;
+    }
+    .option-block .radio-input label:last-child {
+        margin-bottom: 0;
+    }
+    #msform2 fieldset {
+        width: 95%;
+        margin: 0 auto;
+        margin-top: 25px;
+    }
+    #msform2 .file-wrap {
+        width: 100%;
+    }
+    .form-card.Therapys-option .radio-input {
+        grid-template-columns: repeat(1,1fr);
+    }
+    .checkbox-input.sequence {
+        width: 100%;
+        margin: 0 auto;
+    }
+    .form-card.Therapys-option .checkbox-input {
+        grid-template-columns: repeat(1,1fr);
+    }
+}
+
+@media (max-width: 767px) {
+    .card00 {
+        padding: 20px 0px;
+    }
+
+    #msform2 fieldset {
+        width: 100%;
+    }
+    .option-block .radio-input label {
+        padding: 10px 10px;
+    }
+    .option-block .radio-input {
+        width: 80%;
+    }
+    .pic {
+        height: 100%;
+        left: -12px;
+        bottom: 50px;
+    }
+    #progressbar2 li:before {
+        width: 10px;
+        height: 10px;
+    }
+    #progressbar2 li:after {
+        width: 24px;
+        height: 1px;
+        top: 5px;
+    }
+    #progressbar2 li {
+        width: 14px;
+    }
+    #msform2 fieldset {
+        margin-top: 10px;
+    }
+    #msform2 .fieldlabels {
+        font-size: 15px;
+        margin-bottom: 10px;
+    }
+    #msform2 .form-card P {
+        font-size: 14px;
+        line-height: 22px;
+    }
+    .option-block .radio-input label {
+        font-size: 12px;
+        margin-bottom: 15px;
+    }
+    #msform2 .action-button {
+        width: 100px;
+        padding: 6px 20px;
+        font-size: 14px;
+    }
+    #msform2 .file-wrap {
+        width: auto;
+    }
+    #msform2 .file__input, .file__value {
+        padding: 10px 25px;
+    }
+    #msform2 .action-button-previous {
+        width: 110px;
+        font-size: 14px;
+        padding: 6px 20px;
+        line-height: 20px;
+    }
+    #msform2 input, #msform2 textarea, #msform2 select {
+        padding: 10px 25px 10px 25px;
+        width: 100%;
+        font-size: 14px;
+    }
+    .form-card.Therapys-option .radio-input {
+        grid-template-columns: repeat(1,1fr);
+        gap: 15px;
+    }
+    #msform2 .form-card .option-block {
+        padding: 15px;
+    }
+    #msform2 .form-check p {
+        text-align: center;
+    }
+    .checkbox-input.sequence {
+        width: 100%;
+        margin: 0 auto;
+    }
+    .main-form-block .form-check label:before {
+        padding: 6px;
+        border-radius: 3px;
+        top: 5px;
+      }
+    .main-form-block .form-check label {
+        padding-left: 20px;
+        
+    }
+    .main-form-block .form-check .check-tik-form label{
+        display: flex;
+        align-items: center;
+    }
+    .main-form-block .form-check {
+        padding-left: 0px;
+        margin-bottom: 20px;
+    }
+    .main-form-block .checkbox-input {
+        font-size: 10px;
+    }
+    .main-form-block .form-check label:hover::before {
+        border: 1px solid var(--color-black);
+    }
+   /* .main-form-block .sequence .form-check input:checked + label:after {
+        top: 6px;
+        left: 5px;
+        width: 5px;
+        height: 9px;
+    }*/
+    .select-menu {
+        width: 100%;
+    }
+    .select-menu > .select {
+        padding: 10px;
+    }
+    .check-tik-form label {
+        font-size: 16px;
+    }
+    .check-tik-form {
+        margin-bottom: 15px;
+    }
+    
+    .option-block .radio-input label:last-child {
+        margin-bottom: 0;
+    }
+    .select-menu > .select {
+        font-size: 14px;
+    }
+    .main-form-block .form-check input:checked + label:after {
+        top: 6px;
+        left: 5px;
+        width: 5px;
+        height: 10px
+    }
+
+}
+</style>
+
+
+<div class="container-fluid px-1 px-md-4 py-5 mx-auto">
+  <div class="row d-flex justify-content-center">
+    <div class="col-12 col-md-11 col-lg-10 col-xl-9">
+      <div class="card card0 border-0">
+        <div class="row">
+          <div class="multiform-wrapper">
+            <div class="card card00 border-0">
+              
+              <div class="inner-form ">
+
+                       
+                            <div class="row justify-content-center">
+                                <div class="col-11 col-sm-10 col-md-10 col-lg-10 col-xl-10 text-center p-0 mb-2">
+                                    <div class="card px-0  pb-0  mb-3">
+                                        
+                                        <form id="msform2" class="main-form-block">
+                                            <!-- progressbar2 -->
+                                            <ul id="progressbar2">
+                                                    <li class="active" id="step1"><strong></strong></li>
+                                                    <li id="step2"><strong></strong></li>
+                                                    <li id="step3"><strong></strong></li>
+                                                    <li id="step4"><strong></strong></li>
+                                                    <li id="step5"><strong></strong></li>
+                                                    <li id="step6"><strong></strong></li>
+                                                    <li id="step7"><strong></strong></li>
+                                                    <li id="step8"><strong></strong></li>
+                                                    <li id="step9"><strong></strong></li>
+                                                    <li id="step10"><strong></strong></li>
+                                                    <li id="step11"><strong></strong></li>
+                                                    <li id="step12"><strong></strong></li>
+                                                    <li id="step13"><strong></strong></li>
+                                                    <li id="step14"><strong></strong></li>
+                                                    <li id="step15"><strong></strong></li>
+                                                    <li id="step16"><strong></strong></li>
+                                                    <li id="step17"><strong></strong></li>
+
+                                                    
+                                                </ul>
+
+
+                                            <!--    <div class="progress">
+                                                <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar2" aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div>  --> 
+
+                                           
+                                            <!-- 
+                                            <div class="main-heading">
+
+                                                <h1>Let’s Match You To Right User For You</h1>
+
+                                                <h3>The following questions are designed to match to user.</h3>
+                                                
+                                                <span><p>The following questions have been designed to identify the most suited user for you.</p></span>
+
+                                            </div> -->
+
+
+                                             <!-- fieldsets -->
+
+
+                                            <!-- ---fieldset-1------ -->
+                                            <fieldset>
+
+                                                <div class="form-card ">
+                                                  <label class="fieldlabels">Do you have independent Professional Insurance?</label> 
+                                                  <p>If you do not currently have malpractice insurance, it is easy to acquire online! Please return to this form once you've acquired your malpractice insurance.</p>
+
+                                                  <div class="option-block">
+                                                    <div class="radio-input">
+                                                      <input type="radio" id="yes" class="professional-insurance" name="professional_insurance" value="yes">
+                                                      <label for="yes">Yes</label>
+
+                                                      <input type="radio" id="no" class="professional-insurance" name="professional_insurance" value="no">
+                                                      <label for="no">No</label>
+                                                    </div>
+                                                    <div id="professional_insurance_err" class="error" style="color:black;font-size: 116%;font-weight: bold;display: none;">Required</div>
+                                                 </div>
+                                              
+                                                </div> 
+
+                                               <input type="button" name="next" class="next action-button professional-insurance-btn" value="Next" disabled/>
+                                            </fieldset>
+
+                                            
+                                            <!-- ---fieldset-2------ -->
+                                            <fieldset>
+
+                                                <div class="form-card ">
+                                                  <label class="fieldlabels">Does your professional insurance policy meet healinhere minimum coverage amount of $1,000,000 (occurrence)/ $3,000,000 (aggregate)?</label> 
+                                                  
+                                                  <div class="option-block">
+                                                    <div class="radio-input">
+                                                      <input type="radio" id="policy_yes" class="professional-insurance-policy" name="professional_insurance_policy" value="policy_yes">
+                                                      <label for="policy_yes">Yes</label>
+
+                                                      <input type="radio" id="policy_no" class="professional-insurance-policy" name="professional_insurance_policy" value="policy_no">
+                                                      <label for="policy_no">No</label>
+                                                    </div>
+                                                 </div>
+                                                 <!-- <div id="professional_insurance_policy_err" class="error" style="color:red;font-size: 116%;font-weight: bold;">Required</div> -->
+                                                </div> 
+
+
+                                                <input type="button" name="next" class="next action-button professional-insurance-policy-btn" value="Next" disabled/> <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
+                                            </fieldset>
+
+                                            <!-- ---fieldset-3------ -->
+                                            <fieldset>
+                                                <div class="form-card ">
+                                                  <label class="fieldlabels">Please upload your Malpractice coverage sheet</label> 
+                                                  <p>Please upload (as a PDF, JPG, Word doc, or screenshot), a cover sheet of your Malpractice Insurance. It must include the following: your name, a coverage period (beginning and end dates), and the occurrence/aggregate amounts. If the file does not include these, you will be asked to resubmit the file. Thank you!</p>
+                                                  <div class="option-block">
+                                                    <div class="file-wrap">
+                                                        <div class="file">
+                                                          <div class="file__input" id="file__input">
+                                                            <input class="file__input--file file1" id="customFile" type="file" multiple="multiple" name="malpracticefiles"/>
+                                                            <label class="file__input--label" for="customFile" data-text-btn="Upload">Upload File</label>
+                                                          </div>
+                                                        </div>
+                                                        <div id="file1_err" class="error" style="color:red;font-size: 116%;font-weight: bold; display: none;">Required</div>
+                                                    </div>
+                                                 </div>
+                                                </div> 
+                                                <input type="button" name="next" class="next action-button file1-btn" value="Next" disabled/> <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
+                                            </fieldset>
+
+                                            <!-- ---fieldset-4----- -->
+                                            <fieldset>
+
+                                                <div class="form-card ">
+                                                  <label class="fieldlabels">Please provide your address*</label> 
+                                                    
+                                                  <div class="option-block">
+                                                    <textarea id="address" name="address" rows="" placeholder="your address" cols="50"></textarea>
+                                                 </div>
+                                                </div>
+                                                <!-- <div id="address_err" class="error" style="color:red;font-size: 116%;font-weight: bold;">Required</div>  -->
+
+
+                                                <input type="button" name="next" class="next action-button address-btn" value="Next" disabled /> <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
+                                            </fieldset>
+
+                                            <!-- ---fieldset-5----- -->
+                                            <fieldset>
+
+                                                <div class="form-card ">
+
+                                                  <label class="fieldlabels">If Applicable: Please Add your Medicare PTAN Number (If Not Put N/A)</label> 
+                                                  <p>Please enter text here</p>
+                                                  <div class="option-block">
+                                                   
+                                                          <input type="text" class="form-control" id="ptan_number" name="ptan_number" placeholder="PTAN Number"> 
+                                                      
+                                                 </div>
+                                                </div> 
+                                                <!-- <div id="ptan_number_err" class="error" style="color:red;font-size: 116%;font-weight: bold;">Required</div>  -->
+
+
+                                                <input type="button" name="next" class="next action-button ptan-number-btn" value="Next" disabled/> <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
+                                            </fieldset>
+
+
+                                            <!-- ---fieldset-6----- -->
+                                            <fieldset>
+
+                                                <div class="form-card ">
+
+                                                  <label class="fieldlabels">If Applicable: Please Add your State Medicaid ID Number; along with the state (If Not Put N/A)</label> 
+                                                  
+                                                  <div class="option-block">
+                                                   
+                                                          <input type="text" class="form-control" name="medicaid_number" id="medicaid_number" placeholder="ID Number"> 
+                                                   
+                                                 </div>
+                                                </div> 
+                                                <!-- <div id="medicaid_number_err" class="error" style="color:red;font-size: 116%;font-weight: bold;">Required</div>  -->
+
+                                                <input type="button" name="next" class="next action-button medicaid-number-btn" value="Next" disabled /> <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
+                                            </fieldset>
+
+
+
+                                            <!--    <fieldset>
+
+                                                <div class="form-card ">
+
+                                                  <label class="fieldlabels">Do You Have More Than 1 Medicare Id?</label> 
+                                                  
+                                                  <div class="option-block">
+                                                    <div class="radio-input">
+                                                      <input type="radio" id="Yes12" name="value-radio" value="Yes12">
+                                                      <label for="Yes12">Yes</label>
+
+                                                      <input type="radio" id="No12" name="value-radio" value="No12">
+                                                      <label for="No12">No</label>
+                                                    </div>
+                                                 </div>
+                                                </div> 
+
+
+                                                <input type="button" name="next" class="next action-button" value="Next" /> <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
+                                            </fieldset>
+
+                                            <fieldset>
+
+                                                <div class="form-card ">
+
+                                                  <label class="fieldlabels">If Applicable: Please Add your Second Medicare PTAN Number (If Not Put N/A)</label> 
+                                                  
+                                                  <div class="option-block">
+                                                    <div class="option-block">
+                                                          <input type="text" class="form-control" name="" placeholder="PTAN Number"> 
+                                                      </div>
+                                                 </div>
+                                                </div> 
+
+
+                                                <input type="button" name="next" class="next action-button" value="Next" /> <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
+                                            </fieldset> -->
+
+                                            <!-- ---fieldset-7----- -->
+                                            <fieldset>
+                                                <div class="form-card Therapys-option">
+                                                  <label class="fieldlabels">What Type Of Therapist Are You?</label> 
+                                                  <div class="option-block">
+                                                    <div class="radio-input">
+                                                      <input type="radio" id="Counsellor" class="type-of-therapist" name="type_of_therapist" value="Counsellor">
+                                                      <label for="Counsellor">A Psychotherapist / Counsellor</label>
+
+                                                      <input type="radio" id="Hypnotherapist" class="type-of-therapist" name="type_of_therapist" value="Hypnotherapist">
+                                                      <label for="Hypnotherapist">A Hypnotherapist</label>
+
+                                                      <input type="radio" id="LifeCoach" class="type-of-therapist" name="type_of_therapist" value="LifeCoach">
+                                                      <label for="LifeCoach">A Life Coach</label>
+
+                                                      <input type="radio" id="Psychiatrist" class="type-of-therapist" name="type_of_therapist" value="Psychiatrist">
+                                                      <label for="Psychiatrist">A Psychiatrist</label>
+
+                                                      <input type="radio" id="Other_Specify" class="type-of-therapist" name="type_of_therapist" value="Other_Specify">
+                                                      <label for="Other_Specify">Other* (Please Specify)</label>
+
+                                                    </div>
+                                                 </div>
+                                                 <!-- <div id="type_of_therapist_err" class="error" style="color:red;font-size: 116%;font-weight: bold;">Required</div>  -->
+                                               </div>
+                                                <input type="button" name="next" class="next action-button type-of-therapist-btn" value="Next" disabled /> <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
+                                           </fieldset>
+
+                                           <!-- ---fieldset-8----- -->
+                                            <fieldset>
+                                                 <div class="form-card ">
+                                                  <label class="fieldlabels">How Do You Prefer To Communicate With Your Clients?</label> 
+                                                  <div class="option-block">
+
+                                                    <div class="checkbox-input sequence">
+                                                      <div class="form-check">
+
+                                                          <input type="checkbox" id="VideoSession" class="communicate-with-your-clients" name="communicate_with_your_clients" value="VideoSession">
+
+                                                            <label for="VideoSession"> In The Video Session</label>
+                                                       
+                                                      </div>
+
+                                                      <div class="form-check">
+
+                                                         <input type="checkbox" id="ViaMessaging" class="communicate-with-your-clients" name="communicate_with_your_clients" value="ViaMessaging">
+
+                                                        <label for="ViaMessaging">Via Messaging</label>
+
+                                                      </div>
+
+                                                      <div class="form-check">
+
+                                                         <input type="checkbox" id="ViaEmail" class="communicate-with-your-clients" name="communicate_with_your_clients" value="ViaEmail">
+
+                                                        <label for="ViaEmail">Via Email</label>
+
+                                                      </div>
+
+
+                                                      <div class="form-check">
+
+                                                          <input type="checkbox" id="Decide_Late" class="communicate-with-your-clients" name="communicate_with_your_clients" value="Decide_Late">
+
+                                                            <label for="Decide_Later">I Will Decide Later)</label>
+
+                                                      </div>
+                                                        </div>
+                                                        <!-- <div id="communicate_with_your_clients_err" class="error" style="color:red;font-size: 116%;font-weight: bold;">Required</div> -->
+                                                       <!--  <div class="radio-input">
+                                                          <input type="radio" id="VideoSession" name="value-radio" value="VideoSession">
+                                                          <label for="VideoSession"> In The Video Session</label>
+
+                                                          <input type="radio" id="ViaMessaging" name="value-radio" value="ViaMessaging">
+                                                          <label for="ViaMessaging">Via Messaging</label>
+
+                                                          <input type="radio" id="ViaEmail" name="value-radio" value="ViaEmail">
+                                                          <label for="ViaEmail">Via Email</label>
+
+                                                          <input type="radio" id="NotSureYet" name="value-radio" value="NotSureYet">
+                                                          <label for="NotSureYet">Not Sure Yet (I Will Decide Later)</label>
+
+                                                        </div> -->
+                                                     </div>
+                                                    </div>
+                                                <input type="button" name="next" class="next action-button communicate-with-your-clients-btn" value="Next" disabled/> <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
+                                           </fieldset>
+
+
+                                             <!-- ---fieldset-9----- -->
+                                            <fieldset>
+                                                <div class="form-card Therapys-option">
+                                                      <label class="fieldlabels">Which Ones Of The Below Descriptions Apply To You?</label> 
+                                                      <div class="option-block">
+
+
+                                                         <div class="checkbox-input sequence">
+                                                              <div class="form-check">
+
+                                                                 <input type="checkbox" id="MaleTherapist" class="descriptions-apply-to-you" name="descriptions_apply_to_you" value="MaleTherapist">
+
+                                                                <label for="MaleTherapist">Male Therapist</label>
+                                                               
+                                                              </div>
+
+                                                              <div class="form-check">
+
+                                                                <input type="checkbox" id="FemaleTherapist" class="descriptions-apply-to-you" name="descriptions_apply_to_you" value="FemaleTherapist">
+
+                                                                 <label for="FemaleTherapist">Female Therapist</label>
+
+                                                              </div>
+
+                                                               <div class="form-check">
+
+                                                                  <input type="checkbox" id="Spiritual" class="descriptions-apply-to-you" name="descriptions_apply_to_you" value="Spiritual">
+
+                                                                <label for="Spiritual">Spiritual</label>
+
+                                                              </div>
+
+                                                              <div class="form-check">
+
+                                                                  <input type="checkbox" id="Older50yrs" class="descriptions-apply-to-you" name="descriptions_apply_to_you" value="Older 50yrs">
+
+                                                                    <label for="Older50yrs">Older Than 50yrs Old</label>
+
+                                                              </div>
+
+
+                                                              <div class="form-check">
+
+                                                                 <input type="checkbox" id="Younger50yrs" class="descriptions-apply-to-you" name="descriptions_apply_to_you" value="Younger 50yrs">
+
+                                                                    <label for="Younger50yrs">Younger Than 50yrs Old</label>
+
+                                                              </div>
+
+                                                           
+
+                                                               <div class="form-check">
+
+                                                                 <input type="checkbox" id="InternationalTherapist" class="descriptions-apply-to-you" name="descriptions_apply_to_you" value="InternationalTherapist">
+
+                                                                <label for="InternationalTherapist">International Therapist</label>
+
+                                                              </div>
+
+
+                                                              <div class="form-check">
+
+                                                                <input type="checkbox" id="BritishTherapist" class="descriptions-apply-to-you" name="descriptions_apply_to_you" value="BritishTherapist">
+
+                                                                <label for="BritishTherapist">British Therapist</label>
+
+                                                              </div>
+                                                              
+                                                         </div>
+
+
+
+                                                        <!-- <div class="radio-input">
+                                                          <input type="radio" id="MaleTherapist" name="value-radio" value="MaleTherapist">
+                                                          <label for="MaleTherapist">Male Therapist</label>
+
+                                                          <input type="radio" id="FemaleTherapist" name="value-radio" value="FemaleTherapist">
+                                                          <label for="FemaleTherapist">Female Therapist</label>
+
+                                                          <input type="radio" id="ChristianBased" name="value-radio" value="ChristianBased">
+                                                          <label for="ChristianBased">ChristianBased</label>
+
+                                                          <input type="radio" id="Spiritual" name="value-radio" value="Spiritual">
+                                                          <label for="Spiritual">Spiritual</label>
+
+                                                          <input type="radio" id="Lgbtq+Community" name="value-radio" value="Lgbtq+Community">
+                                                          <label for="Lgbtq+Community">Therapist From The Lgbtq+ Community</label>
+
+                                                          <input type="radio" id="OlderTherapist" name="value-radio" value="OlderTherapist">
+                                                          <label for="OlderTherapist">Older Therapist (45+)</label>
+
+                                                          <input type="radio" id="NonReligious" name="value-radio" value="NonReligious">
+                                                          <label for="NonReligious">Non-religious Therapist</label>
+
+                                                          <input type="radio" id="BlackTherapist" name="value-radio" value="BlackTherapist">
+                                                          <label for="BlackTherapist">Black Therapist</label>
+
+                                                          <input type="radio" id="AsianTherapist" name="value-radio" value="AsianTherapist">
+                                                          <label for="AsianTherapist">Asian Therapist</label>
+
+                                                          <input type="radio" id="L/E-CountryTherapist" name="value-radio" value="L/E-CountryTherapist">
+                                                          <label for="L/E-CountryTherapist">Latino / European Country Therapist</label>
+
+                                                          <input type="radio" id="BritishTherapist" name="value-radio" value="BritishTherapist">
+                                                          <label for="BritishTherapist">British Therapist</label>
+                                                        </div> -->
+                                                     </div>
+                                                     <!-- <div id="descriptions_apply_to_you_err" class="error" style="color:red;font-size: 116%;font-weight: bold;">Required</div> -->
+                                                    </div>
+                                                    <input type="button" name="next" class="next action-button descriptions-apply-to-you-btn" value="Next" disabled /> <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
+                                            </fieldset>
+
+                                            <!-- ---fieldset-10----- -->
+                                            <fieldset>
+
+                                                <div class="form-card">
+                                             
+                                                  <label class="fieldlabels">What Is Your Preferred Language?</label> 
+                                                 
+                                                  <div class="option-block">
+                                                        <div class="select-menu" id="select_language_therapy" name="preferred_language">
+                                                          <div class="select">
+                                                            <span>Select your Language</span>
+                                                            <em class="fas fa-angle-down"></em>
+                                                          </div>
+                                                          <div class="options-list" id="preferred_language">
+                                                            <% 
+                                                            [
+                                                            "English",
+                                                            "Mandarin Chinese",
+                                                            "Spanish",
+                                                            "Hindi",
+                                                            "French",
+                                                            "Standard Arabic",
+                                                            "Bengali",
+                                                            "Russian",
+                                                            "Portuguese",
+                                                            "Urdu",
+                                                            "Indonesian",
+                                                            "German",
+                                                            "Japanese",
+                                                            "Swahili",
+                                                            "Telugu",
+                                                            "Marathi",
+                                                            "Turkish",
+                                                            "Tamil",
+                                                            "Vietnamese",
+                                                            "Korean",
+                                                            "Italian",
+                                                            "Thai",
+                                                            "Gujarati",
+                                                            "Javanese",
+                                                            "Kannada",
+                                                            "Polish",
+                                                            "Ukrainian",
+                                                            "Malayalam",
+                                                            "Oriya",
+                                                            "Panjabi",
+                                                            "Sunda",
+                                                            "Romanian",
+                                                            "Bhojpuri",
+                                                            "Azerbaijani",
+                                                            "Farsi",
+                                                            "Maithili",
+                                                            "Uzbek",
+                                                            "Sindhi",
+                                                            "Amharic",
+                                                            "Yoruba",
+                                                            "Igbo",
+                                                            "Oromo",
+                                                            "Malay",
+                                                            "Sinhala",
+                                                            "Tagalog",
+                                                            "Dutch",
+                                                            "Nepali",
+                                                            "Saraiki",
+                                                            "Cebuano",
+                                                            "Hungarian",
+                                                            "Czech",
+                                                            "Greek",
+                                                            "Swedish",
+                                                            "Haitian Creole",
+                                                            "Bengali",
+                                                            "Tajik",
+                                                            "Slovak",
+                                                            "Kinyarwanda",
+                                                            "Zulu",
+                                                            "Kazakh",
+                                                            "Kurdish",
+                                                            "Filipino",
+                                                            "Bulgarian",
+                                                            "Serbian",
+                                                            "Danish",
+                                                            "Lithuanian",
+                                                            "Tigrinya",
+                                                            "Latvian",
+                                                            "Georgian",
+                                                            "Estonian",
+                                                            "Pashto",
+                                                            "Malagasy",
+                                                            "Irish",
+                                                            "Armenian",
+                                                            "Somali",
+                                                            "Finnish",
+                                                            "Luxembourgish",
+                                                            "Burmese",
+                                                            "Albanian",
+                                                            "Akan",
+                                                            "Uighur",
+                                                            "Sicilian",
+                                                            "Kannada",
+                                                            "Kashmiri",
+                                                            "Khmer",
+                                                            "Corsican",
+                                                            "Kurdish",
+                                                            "Kongo",
+                                                            "Croatian",
+                                                            "Bosnian",
+                                                            "Chichewa",
+                                                            "Kinyarwanda",
+                                                            "Basque",
+                                                            "Lao",
+                                                            "Galician",
+                                                            "Tswana",
+                                                            "Zhuang",
+                                                            "Bambara",
+                                                            "Macedonian",
+                                                            "Dari",
+                                                            "Ewe",
+                                                            "Kikuyu",
+                                                            "Tsonga",
+                                                            "Bashkir",
+                                                            "Gilaki",
+                                                            "Afrikaans",
+                                                            "Sindhi",
+                                                            "Kirghiz",
+                                                            "Tahitian",
+                                                            "Chechen",
+                                                            "Tigrinya",
+                                                            "Wolof",
+                                                            "Ossetian",
+                                                            "Komi",
+                                                            "Odia",
+                                                            "Kabyle",
+                                                            "Pushto",
+                                                            "Tuvan",
+                                                            "Sango",
+                                                            "Chechen",
+                                                            "Zhuang",
+                                                            "Kongo",
+                                                            "Twi",
+                                                            "Greenlandic",
+                                                            "Dzongkha",
+                                                            "Udmurt",
+                                                            "Manx",
+                                                            "Fijian",
+                                                            "Tatar",
+                                                            "Inuktitut",
+                                                            "Maltese",
+                                                            "Yiddish",
+                                                            "Chuvash",
+                                                            "Friulian",
+                                                            "Bislama",
+                                                            "Aymara",
+                                                            "Tongan",
+                                                            "Rusyn",
+                                                            "Kiribati",
+                                                            "Palauan",
+                                                            "Marshallese",
+                                                            "Mari",
+                                                            "Norwegian",
+                                                            "Yakut",
+                                                            "Komi",
+                                                            "Gagauz",
+                                                            "Venda",
+                                                            "Gaelic",
+                                                            "Cornish",
+                                                            "Guarani",
+                                                            "Tumbuka",
+                                                            "Kwanyama",
+                                                            "Sango",
+                                                            "Xhosa",
+                                                            "Icelandic",
+                                                            "Zhuang",
+                                                            "Luxembourgish",
+                                                            "Divehi",
+                                                            "Innu",
+                                                            "Sranan Tongo",
+                                                            "Papiamento",
+                                                            "Tok Pisin",
+                                                            "Seychellois Creole",
+                                                            "Ganda",
+                                                            "Corsican",
+                                                            "Nauruan",
+                                                            "Bislama",
+                                                            "Tokelauan",
+                                                            "Tuvaluan",
+                                                            "Rotuman",
+                                                            "Chamorro",
+                                                            "Wolof",
+                                                            "Comorian",
+                                                            "Hiri Motu",
+                                                            "Māori",
+                                                            "Kanuri",
+                                                            "Gagauz",
+                                                            "Mongolian",
+                                                            "Afar",
+                                                            "Faroese",
+                                                            "Frisian",
+                                                            "Kinyarwanda",
+                                                            "Moldovan",
+                                                            "Tahitian",
+                                                            "Kirundi",
+                                                            "Kashubian",
+                                                            "Northern Sotho",
+                                                            "Kapampangan",
+                                                            "Makhuwa",
+                                                            "Aromanian",
+                                                            "Rundi",
+                                                            "Tetum",
+                                                            "Bemba",
+                                                            "Sango",
+                                                            "Waray",
+                                                            "Kirundi",
+                                                            "Tigrinya",
+                                                            "Sindarin",
+                                                            "Lojban",
+                                                            "Kashubian",
+                                                            "Kurmanji",
+                                                            "Sundanese",
+                                                            "Chavacano",
+                                                            "Banjar",
+                                                            "Pangasinan",
+                                                            "Old Norse",
+                                                            "Mazanderani",
+                                                            "Classical Chinese",
+                                                            "Haitian Creole",
+                                                            "Tetum",
+                                                            "Cornish",
+                                                            "Novial",
+                                                            "Sindarin",
+                                                            "Lingala",
+                                                            "Old Church Slavonic",
+                                                            "Minangkabau",
+                                                            "Bihari",
+                                                            "Cherokee",
+                                                            "Rotuman",
+                                                            "Võro",
+                                                            "Hausa",
+                                                            "Gilbertese",
+                                                            "Māori",
+                                                            "Tahitian",
+                                                            "Drehu",
+                                                            "Livonian",
+                                                            "Dusun",
+                                                            "Lozi",
+                                                            "Acholi",
+                                                            "Nahuatl",
+                                                            "Kikongo",
+                                                            "Pali",
+                                                            "Tumbuka",
+                                                            "Twi",
+                                                            "Pali",
+                                                            "Twi",
+                                                            "Zande",
+                                                            "Kinyarwanda",
+                                                            "Gothic",
+                                                            "Gothic",
+                                                            "Cherokee",
+                                                            "Kinyarwanda",
+                                                            "Pali",
+                                                            "Gothic",
+                                                            "Kinyarwanda",
+                                                            "Twi",
+                                                            "Kashubian",
+                                                            "Old Norse",
+                                                            "Twi",
+                                                            "Gothic",
+                                                            "Twi"
+                                                            ].toSorted().forEach(ele => {                                                          
+                                                            %>
+                                                              <option class="option preferred_language" value="<%= ele %>"><%= ele %></option>
+                                                            <% }) %>
+                                                              
+                                                              
+                                                          </div>
+                                                          <!-- <div id="preferred_language_err" class="error" style="color:red;font-size: 116%;font-weight: bold;">Required</div> -->
+                                                        </div>
+                                                      </div>
+
+                                                </div>
+
+                                                <input type="button" name="next" class="next action-button preferred-language-btn" value="Next" disabled /> <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
+                                            </fieldset>
+
+
+                                           <!-- ---fieldset-11----- -->
+                                            <fieldset>
+
+                                                <div class="form-card ">
+
+                                                  <label class="fieldlabels">Please confirm you have computer equipment and Wifi to access the healinhere provider platform.</label> 
+                                                  
+                                                  <div class="option-block">
+                                                    <div class="radio-input">
+                                                      <input type="radio" id="confirm" class="healinhere-provider-platform" name="healinhere_provider_platform" value="confirm">
+                                                      <label for="confirm">I do confirm that</label>
+
+                                                      <input type="radio" id="not-confirm" class="healinhere-provider-platform" name="healinhere_provider_platform" value="not-confirm">
+                                                      <label for="not-confirm">I do not confirm that</label>
+                                                    </div>
+                                                    <!-- <div id="healinhere_provider_platform_err" class="error" style="color:red;font-size: 116%;font-weight: bold;">Required</div> -->
+                                                 </div>
+                                                </div> 
+
+
+                                                <input type="button" name="next" class="next action-button healinhere-provider-platform-btn" value="Next" disabled/> <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
+                                            </fieldset>
+
+                                             <!-- ---fieldset-12------ -->
+                                            <fieldset>
+
+                                                <div class="form-card ">
+                                                  <label class="fieldlabels">Do you have experience working on a telehealth platform?</label> 
+                                                  
+                                                  <div class="option-block">
+                                                    <div class="radio-input">
+                                                      <input type="radio" id="telehealth-yes" class="telehealth-platform" name="telehealth_platform" value="telehealth-yes">
+                                                      <label for="telehealth-yes">Yes</label>
+
+                                                      <input type="radio" id="telehealth-no" class="telehealth-platform" name="telehealth_platform" value="telehealth-no">
+                                                      <label for="telehealth-no">No, but I learn easily</label>
+                                                    </div>
+                                                    <!-- <div id="telehealth_platform_err" class="error" style="color:red;font-size: 116%;font-weight: bold;">Required</div> -->
+                                                 </div>
+                                                </div> 
+
+
+                                                <input type="button" name="next" class="next action-button telehealth-platform-btn" value="Next" disabled /> <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
+                                            </fieldset>
+
+                                            <!-- ---fieldset-13----- -->
+                                             <fieldset>
+
+                                                <div class="form-card ">
+
+                                                  <label class="fieldlabels">I agree to allow my phone number to be used for calls or texts regarding my application and account. ?</label> 
+                                                  <p>Message & data rates may apply. </p>
+                                                  
+                                                  <div class="option-block">
+                                                     <div class="form-check" id="form-check">
+                                                        <div class="check-tik-form">
+              
+                                                          <input id="check-tik" class="agree" name="agree" type="checkbox" value="agree-yes">
+                                                          
+                                                          <label for="check-tik">I agree
+                                                          </label>
+
+                                                        </div>
+
+                                                        <p>Thank you for your interest in joining the healinhere Network. You can now proceed with your healinhere application!</p>
+                                                    </div>
+                                                    <!-- <div id="agree_err" class="error" style="color:red;font-size: 116%;font-weight: bold;">Required</div> -->
+
+                                                 </div>
+
+                                                </div> 
+
+
+                                                <input type="button" name="next" class="next action-button agree-btn" value="Next" disabled /> <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
+                                            </fieldset>
+
+                                            <!-- ---fieldset-14----- -->
+                                             <fieldset>
+
+                                                <div class="form-card ">
+
+                                                  <label class="fieldlabels">Licence Number*</label> 
+                                                  
+                                                  <div class="option-block">
+                                                  
+                                                    <input type="text" class="form-control licence-number" name="licence_number" placeholder="Licence Number"> 
+                                                     
+                                                 </div>
+                                                 <!-- <div id="licence_number_err" class="error" style="color:red;font-size: 116%;font-weight: bold;">Required</div> -->
+                                                </div> 
+
+
+                                                <input type="button" name="next" class="next action-button licence-number-btn" value="Next" disabled /> <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
+                                            </fieldset>
+
+                                            <!-- ---fieldset-15---- -->
+                                             <fieldset>
+
+                                                <div class="form-card ">
+
+                                                  <label class="fieldlabels">Country Of Qualification</label> 
+                                                  
+                                                  <div class="option-block">
+                                                   
+                                                        <div class="select-menu" id="select_country_qualification" name="select_country_qualification">
+
+                                                              <div class="select ">
+                                                                <span>Select your Country Qualification</span>
+                                                                <em class="fa fa-angle-down"></em>
+                                                              </div>
+
+                                                              <div class="options-list ">
+                                                                <% 
+                                                                [
+                                                                "Afghanistan",
+                                                                "Albania",
+                                                                "Algeria",
+                                                                "Andorra",
+                                                                "Angola",
+                                                                "Antigua and Barbuda",
+                                                                "Argentina",
+                                                                "Armenia",
+                                                                "Australia",
+                                                                "Austria",
+                                                                "Azerbaijan",
+                                                                "Bahamas",
+                                                                "Bahrain",
+                                                                "Bangladesh",
+                                                                "Barbados",
+                                                                "Belarus",
+                                                                "Belgium",
+                                                                "Belize",
+                                                                "Benin",
+                                                                "Bhutan",
+                                                                "Bolivia",
+                                                                "Bosnia and Herzegovina",
+                                                                "Botswana",
+                                                                "Brazil",
+                                                                "Brunei",
+                                                                "Bulgaria",
+                                                                "Burkina Faso",
+                                                                "Burundi",
+                                                                "Cabo Verde",
+                                                                "Cambodia",
+                                                                "Cameroon",
+                                                                "Canada",
+                                                                "Central African Republic",
+                                                                "Chad",
+                                                                "Chile",
+                                                                "China",
+                                                                "Colombia",
+                                                                "Comoros",
+                                                                "Congo (Congo-Brazzaville)",
+                                                                "Costa Rica",
+                                                                "Croatia",
+                                                                "Cuba",
+                                                                "Cyprus",
+                                                                "Czechia (Czech Republic)",
+                                                                "Democratic Republic of the Congo",
+                                                                "Denmark",
+                                                                "Djibouti",
+                                                                "Dominica",
+                                                                "Dominican Republic",
+                                                                "Ecuador",
+                                                                "Egypt",
+                                                                "El Salvador",
+                                                                "Equatorial Guinea",
+                                                                "Eritrea",
+                                                                "Estonia",
+                                                                "Eswatini (fmr. \"Swaziland\")",
+                                                                "Ethiopia",
+                                                                "Fiji",
+                                                                "Finland",
+                                                                "France",
+                                                                "Gabon",
+                                                                "Gambia",
+                                                                "Georgia",
+                                                                "Germany",
+                                                                "Ghana",
+                                                                "Greece",
+                                                                "Grenada",
+                                                                "Guatemala",
+                                                                "Guinea",
+                                                                "Guinea-Bissau",
+                                                                "Guyana",
+                                                                "Haiti",
+                                                                "Holy See",
+                                                                "Honduras",
+                                                                "Hungary",
+                                                                "Iceland",
+                                                                "India",
+                                                                "Indonesia",
+                                                                "Iran",
+                                                                "Iraq",
+                                                                "Ireland",
+                                                                "Israel",
+                                                                "Italy",
+                                                                "Jamaica",
+                                                                "Japan",
+                                                                "Jordan",
+                                                                "Kazakhstan",
+                                                                "Kenya",
+                                                                "Kiribati",
+                                                                "Kuwait",
+                                                                "Kyrgyzstan",
+                                                                "Laos",
+                                                                "Latvia",
+                                                                "Lebanon",
+                                                                "Lesotho",
+                                                                "Liberia",
+                                                                "Libya",
+                                                                "Liechtenstein",
+                                                                "Lithuania",
+                                                                "Luxembourg",
+                                                                "Madagascar",
+                                                                "Malawi",
+                                                                "Malaysia",
+                                                                "Maldives",
+                                                                "Mali",
+                                                                "Malta",
+                                                                "Marshall Islands",
+                                                                "Mauritania",
+                                                                "Mauritius",
+                                                                "Mexico",
+                                                                "Micronesia",
+                                                                "Moldova",
+                                                                "Monaco",
+                                                                "Mongolia",
+                                                                "Montenegro",
+                                                                "Morocco",
+                                                                "Mozambique",
+                                                                "Myanmar (formerly Burma)",
+                                                                "Namibia",
+                                                                "Nauru",
+                                                                "Nepal",
+                                                                "Netherlands",
+                                                                "New Zealand",
+                                                                "Nicaragua",
+                                                                "Niger",
+                                                                "Nigeria",
+                                                                "North Korea",
+                                                                "North Macedonia",
+                                                                "Norway",
+                                                                "Oman",
+                                                                "Pakistan",
+                                                                "Palau",
+                                                                "Palestine State",
+                                                                "Panama",
+                                                                "Papua New Guinea",
+                                                                "Paraguay",
+                                                                "Peru",
+                                                                "Philippines",
+                                                                "Poland",
+                                                                "Portugal",
+                                                                "Qatar",
+                                                                "Romania",
+                                                                "Russia",
+                                                                "Rwanda",
+                                                                "Saint Kitts and Nevis",
+                                                                "Saint Lucia",
+                                                                "Saint Vincent and the Grenadines",
+                                                                "Samoa",
+                                                                "San Marino",
+                                                                "Sao Tome and Principe",
+                                                                "Saudi Arabia",
+                                                                "Senegal",
+                                                                "Serbia",
+                                                                "Seychelles",
+                                                                "Sierra Leone",
+                                                                "Singapore",
+                                                                "Slovakia",
+                                                                "Slovenia",
+                                                                "Solomon Islands",
+                                                                "Somalia",
+                                                                "South Africa",
+                                                                "South Korea",
+                                                                "South Sudan",
+                                                                "Spain",
+                                                                "Sri Lanka",
+                                                                "Sudan",
+                                                                "Suriname",
+                                                                "Sweden",
+                                                                "Switzerland",
+                                                                "Syria",
+                                                                "Tajikistan",
+                                                                "Tanzania",
+                                                                "Thailand",
+                                                                "Timor-Leste",
+                                                                "Togo",
+                                                                "Tonga",
+                                                                "Trinidad and Tobago",
+                                                                "Tunisia",
+                                                                "Turkey",
+                                                                "Turkmenistan",
+                                                                "Tuvalu",
+                                                                "Uganda",
+                                                                "Ukraine",
+                                                                "United Arab Emirates",
+                                                                "United Kingdom",
+                                                                "United States of America",
+                                                                "Uruguay",
+                                                                "Uzbekistan",
+                                                                "Vanuatu",
+                                                                "Venezuela",
+                                                                "Vietnam",
+                                                                "Yemen",
+                                                                "Zambia",
+                                                                "Zimbabwe"
+                                                              ].toSorted().forEach(ele => {
+                                                                %>
+                                                                <option class="option country" value="<%= ele %>"><%= ele %></option>
+                                                                <% }) %>
+                                                                  <option class="option country" value="Afghanistan">Afghanistan</option>
+                                                                  <option class="option country" value="India">India</option>
+                                                                  <option class="option country" value="Germany">Germany</option>
+                                                                  <option class="option country" value="Japan">Japan</option>
+                                                                  
+                                                              </div>
+                                                              <!-- <div id="country_err" class="error" style="color:red;font-size: 116%;font-weight: bold;">Required</div> -->
+
+                                                            </div>
+                                                     
+                                                 </div>
+                                                </div> 
+
+
+                                                <input type="button" name="next" class="next action-button country-btn" value="Next" disabled/> <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
+                                            </fieldset>
+
+                                            <!-- ---fieldset-16---- -->
+                                            <fieldset>
+
+                                                <div class="form-card ">
+                                                    <label class="fieldlabels">Upload The Certificate Or Licence Number</label>
+                                                     <div class="option-block">
+                                                    <div class="file-wrap">
+                                                        <div class="file">
+                                                          <div class="file__input" id="file__input1">
+                                                            <input class="file__input--file file2" id="customFile1" type="file" multiple="multiple" name="certificatefiles"/>
+                                                            <label class="file__input--label" for="customFile1" data-text-btn="Upload">Upload File</label>
+                                                          </div>
+                                                        </div>
+                                                        <!-- <div id="certificatefiles_err" class="error" style="color:red;font-size: 116%;font-weight: bold;">Required</div> -->
+                                                    </div>
+                                                 </div>
+                                          
+                                                </div> 
+
+
+                                                <input type="button" name="next" class="next action-button certificatefiles-btn" value="Submit" disabled/> <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
+                                            </fieldset>
+
+
+                                            <fieldset>
+                                                <div class="form-card">
+                                                   
+                                                    <h2 class="purple-text text-center"><strong>SUCCESS !</strong></h2> <br>
+                                                    <div class="row justify-content-center">
+                                                        <div class="col-3"> <img src="assets/image/right-Tr.png" class="fit-image"> </div>
+                                                    </div> <br><br>
+                                                    <div class="row justify-content-center">
+                                                        <div class="col-7 text-center">
+                                                            <h5 class="purple-text text-center">You Have Completed The Questionnaire </h5>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </fieldset>
+                                        </form>
+                        
+                                    </div>
+                                </div>
+                            </div>
+                      
+
+              </div>
+              
+            </div>
+            <div class="col-12">
+              <div class="row px-3">
+                <div class="bottom-form-img">
+                <img class="pic ml-auto mr-3" src="assets/image/form-img.png">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+<!-- footer-start -->
+
+<%- include('comman/footer') %>
+
+<!-- footer-end -->
+
+
+
+<script type="text/javascript">
+	$(document).ready(function(){
+
+    var current_fs, next_fs, previous_fs; //fieldsets
+    var opacity;
+    var current = 1;
+    var steps = $("fieldset").length;
+
+    setprogressbar2(current);
+
+    $(".next").click(function(){
+    
+
+    current_fs = $(this).parent();
+    next_fs = $(this).parent().next();
+
+    //Add Class Active
+    $("#progressbar2 li").eq($("fieldset").index(next_fs)).addClass("active");
+
+    //show the next fieldset
+    next_fs.show();
+    //hide the current fieldset with style
+    current_fs.animate({opacity: 0}, {
+    step: function(now) {
+    // for making fielset appear animation
+    opacity = 1 - now;
+
+    current_fs.css({
+    'display': 'none',
+    'position': 'relative'
+    });
+    next_fs.css({'opacity': opacity});
+    },
+    duration: 500
+    });
+    setprogressbar2(++current);
+    });
+
+    $(".previous").click(function(){
+
+    current_fs = $(this).parent();
+    previous_fs = $(this).parent().prev();
+
+    //Remove class active
+    $("#progressbar2 li").eq($("fieldset").index(current_fs)).removeClass("active");
+
+    //show the previous fieldset
+    previous_fs.show();
+
+    //hide the current fieldset with style
+    current_fs.animate({opacity: 0}, {
+    step: function(now) {
+    // for making fielset appear animation
+    opacity = 1 - now;
+
+    current_fs.css({
+    'display': 'none',
+    'position': 'relative'
+    });
+    previous_fs.css({'opacity': opacity});
+    },
+    duration: 500
+    });
+    setprogressbar2(--current);
+    });
+
+    function setprogressbar2(curStep){
+    var percent = parseFloat(100 / steps) * curStep;
+    percent = percent.toFixed();
+    $(".progress-bar")
+    .css("width",percent+"%")
+    }
+
+    $(".submit").click(function(){
+    return false;
+    })
+
+});
+
+
+
+
+$(document).ready(function() {
+
+     
+    // ------------  File upload BEGIN ------------
+    $('.file1').on('change',function(event){
+        var files = event.target.files;
+        console.log(files);
+
+        if(files) {
+        for (var i = 0; i < files.length; i++) {
+            var file = files[i];
+            $("<div class='file__value'><div class='file__value--text'>" + file.name + "</div><div class='file__value--remove' data-id='" + file.name + "' ></div></div>").insertAfter('#file__input');
+        }
+      } 
+      
+      if(!files) $("#file1_err").css("display","block");
+      if(files) $(".file1-btn").removeAttr("disabled");
+    });
+    
+    //Click to remove item
+    $('body').on('click', '.file__value', function() {
+        $(this).remove();
+    });
+
+
+     $('.file2 ').on('change',function(event){
+        var files = event.target.files;
+        console.log(files);
+        for (var i = 0; i < files.length; i++) {
+            var file = files[i];
+            $("<div class='file__value'><div class='file__value--text'>" + file.name + "</div><div class='file__value--remove' data-id='" + file.name + "' ></div></div>").insertAfter('#file__input1');
+           
+        }   
+    });
+    
+    //Click to remove item
+    $('body').on('click', '.file__value', function() {
+        $(this).remove();
+    });
+    // ------------ File upload END ------------ 
+
+
+
+    //Therapists validation
+
+
+
+
+
+    //==============Therapists Question and answers=========================//
+
+    $(".professional-insurance-btn").on("click",function(){
+      const getData = $(".professional-insurance").val();
+      console.log(getData);
+      if(!getData) $("#professional_insurance_err").css("display","block")
+    });
+    
+    $(".professional-insurance").on("change",function(){
+      const getData = $(".professional-insurance").val();
+      console.log(getData);
+      if(!getData) $("#professional_insurance_err").css("display","none");
+      if(getData) $(".professional-insurance-btn").removeAttr("disabled");
+    });
+
+    $(".professional-insurance-policy-btn").on("click",function(){
+      const getData = $(".professional-insurance-policy").val();
+      console.log(getData);
+      if(!getData) $("#professional_insurance_policy_err").css("display","block")
+    });
+
+    $(".professional-insurance-policy").on("change",function(){
+      const getData = $(".professional-insurance-policy").val(); 
+      if(!getData) $("#professional_insurance_policy_err").css("display","none");
+      if(getData) $(".professional-insurance-policy-btn").removeAttr("disabled");
+    });
+
+    $(".file1").on("click",function(event){
+      var files = event.target.files;
+      if(!files) $("#file1_err").css("display","none")
+         if(files) $(".file1-btn").removeAttr("disabled");
+       
+    }); 
+    $("#address").on("input",function(){
+       var getAdsress = $(this).val();
+       if(getAdsress !== ''){
+         $("#address_err").css("display","none")
+         $(".address-btn").removeAttr("disabled");
+       }else{
+         $("#address_err").css("display","block")
+         $(".address-btn").attr("disabled",'true');
+       } 
+    });
+    $("#ptan_number").on("input",function(){
+       var getPtanNumber = $(this).val();
+       if(getPtanNumber !== ''){
+         $("#ptan_number_err").css("display","none")
+         $(".ptan-number-btn").removeAttr("disabled");
+       }else{
+         $("#ptan_number_err").css("display","block")
+         $(".ptan-number-btn").attr("disabled",'true');
+       } 
+    });
+    $("#medicaid_number").on("input",function(){
+       var getMedicaidNumber = $(this).val();
+       if(getMedicaidNumber !== ''){
+         $("#medicaid_number_err").css("display","none")
+         $(".medicaid-number-btn").removeAttr("disabled");
+       }else{
+         $("#medicaid_number_err").css("display","block")
+         $(".medicaid-number-btn").attr("disabled",'true');
+       } 
+    }); 
+    $(".type-of-therapist").on("change",function(){
+         $("#type_of_therapist_err").css("display","none")
+         $(".type-of-therapist-btn").removeAttr("disabled");
+    });
+    $(".communicate-with-your-clients").on("change",function(){
+         $("#communicate_with_your_clients_err").css("display","none")
+         $(".communicate-with-your-clients-btn").removeAttr("disabled");
+    });
+    $(".descriptions-apply-to-you").on("change",function(){
+         $("#descriptions_apply_to_you_err").css("display","none")
+         $(".descriptions-apply-to-you-btn").removeAttr("disabled");
+    });
+    $(".preferred_language").on('click', function () {   
+         $("#preferred_language_err").css("display","none")
+         $(".preferred-language-btn").removeAttr("disabled");
+     }); 
+     $(".healinhere-provider-platform").on("change",function(){
+         $("#healinhere_provider_platform_err").css("display","none")
+         $(".healinhere-provider-platform-btn").removeAttr("disabled");
+    });  
+    $(".telehealth-platform").on("change",function(){
+         $("#telehealth_platform_err").css("display","none")
+         $(".telehealth-platform-btn").removeAttr("disabled");
+    });
+
+    $(".agree-btn").on("click", function () {
+        const getData = $(".agree").val();
+        if(getData === "") $(".agree-btn").attr("disabled", true);
+    });
+
+    $(".agree").on("change",function(event){
+          const getData = event.target.value;
+          console.log(getData);
+          if(getData === "") $(".agree-btn").attr("disabled", true);
+         $("#agree_err").css("display","none")
+         if(getData) $(".agree-btn").removeAttr("disabled");
+    });
+    
+    $(".licence-number").on("input",function(){
+       var getNumber = $(this).val();
+       if(getNumber !== ''){
+         $("#licence_number_err").css("display","none")
+         $(".licence-number-btn").removeAttr("disabled");
+       }else{
+         $("#licence_number_err").css("display","block")
+         $(".licence-number-btn").attr("disabled",'true');
+       } 
+    });
+    $(".country").on('click', function () {   
+         $("#country_err").css("display","none")
+         $(".country-btn").removeAttr("disabled");
+     }); 
+     $(".file2").on("change",function(){
+         $("#certificatefiles_err").css("display","none")
+         $(".certificatefiles-btn").removeAttr("disabled");
+    }); 
+
+    // $(".preferred_language").on("click", function (event) {
+    //   console.log(event.target.value);
+    //   console.log(event.target);
+    //   fd.append("preferred_language", event.target.value);
+    //   event.preventDefault();
+    //   $(".preferred_language").attr("disabled", true);
+    // });
+
+    $(".certificatefiles-btn").on("click",function(){
+    
+    var data =  $("#msform2").serialize() // returns all the data in your form
+    
+    var malpracticeFiles = Array.from(document.getElementById("customFile").files);
+    var certificateFiles = Array.from(document.getElementById("customFile1").files);
+    var fd = new FormData(document.getElementById("msform2"));
+    console.log(fd);
+    const language = $("#select_language_therapy .select span").text();
+    const countryQualification = $("#select_country_qualification .select span").text();
+
+    fd.append("language", language);
+    fd.append("countryOfQualification", countryQualification);
+
+      $.ajax({
+          type: "POST",
+          url: '/save-therapists-question-Start',
+          enctype : "multipart/form-data",
+          data: fd,
+          dataType : "JSON",
+          processData : false,
+          contentType : false,
+          success: function(response) {
+            toastr.success(response.message);
+          }
+      });
+  })
+     
+}); 
+
+
+</script>

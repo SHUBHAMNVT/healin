@@ -1,0 +1,2046 @@
+
+<!-- header-start -->
+
+<%- include('comman/header'); %>
+
+<!-- header-end -->
+<style type="text/css">
+    * {
+    margin: 0;
+    padding: 0
+}
+
+html {
+    height: 100%
+}
+
+p {
+    color: grey
+}
+
+#heading {
+    text-transform: uppercase;
+    color: #673AB7;
+    font-weight: normal
+}
+
+#msform {
+    text-align: center;
+    position: relative;
+    margin-top: 20px
+}
+
+#msform fieldset {
+    background: white;
+    border: 0 none;
+    border-radius: 0.5rem;
+    box-sizing: border-box;
+    width: 100%;
+    margin: 0;
+    padding-bottom: 20px;
+    position: relative
+}
+
+.form-card {
+    text-align: left
+}
+
+#msform fieldset:not(:first-of-type) {
+    display: none
+}
+
+#msform input,
+#msform textarea {
+    padding: 8px 15px 8px 15px;
+    border: 1px solid #ccc;
+    border-radius: 0px;
+    margin-bottom: 25px;
+    margin-top: 2px;
+    width: 100%;
+    box-sizing: border-box;
+    font-family: montserrat;
+    color: #2C3E50;
+    background-color: #ECEFF1;
+    font-size: 16px;
+    letter-spacing: 1px
+}
+
+#msform input:focus,
+#msform textarea:focus {
+    -moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    border: 1px solid #673AB7;
+    outline-width: 0
+}
+
+#msform .action-button {
+    width: 100px;
+    background: #673AB7;
+    font-weight: bold;
+    color: white;
+    border: 0 none;
+    border-radius: 0px;
+    cursor: pointer;
+    padding: 10px 5px;
+    margin: 10px 0px 10px 5px;
+    float: right
+}
+
+#msform .action-button:hover,
+#msform .action-button:focus {
+    background-color: #311B92
+}
+
+#msform .action-button-previous {
+    width: 100px;
+    background: #616161;
+    font-weight: bold;
+    color: white;
+    border: 0 none;
+    border-radius: 0px;
+    cursor: pointer;
+    padding: 10px 5px;
+    margin: 10px 5px 10px 0px;
+    float: right
+}
+
+#msform .action-button-previous:hover,
+#msform .action-button-previous:focus {
+    background-color: #000000
+}
+
+.card {
+    z-index: 0;
+    border: none;
+    position: relative
+}
+
+.fs-title {
+    font-size: 25px;
+    color: #673AB7;
+    margin-bottom: 15px;
+    font-weight: normal;
+    text-align: left
+}
+
+.purple-text {
+    color: #673AB7;
+    font-weight: normal
+}
+
+.steps {
+    font-size: 25px;
+    color: gray;
+    margin-bottom: 10px;
+    font-weight: normal;
+    text-align: right
+}
+
+.fieldlabels {
+    color: gray;
+    text-align: left
+}
+
+#progressbar {
+    margin-bottom: 30px;
+    overflow: hidden;
+    color: lightgrey
+}
+
+#progressbar .active {
+    color: #673AB7
+}
+
+#progressbar li {
+    list-style-type: none;
+    font-size: 15px;
+    width: 25%;
+    float: left;
+    position: relative;
+    font-weight: 400
+}
+
+#progressbar #account:before {
+    font-family: FontAwesome;
+    content: "\f13e"
+}
+
+#progressbar #personal:before {
+    font-family: FontAwesome;
+    content: "\f007"
+}
+
+#progressbar #payment:before {
+    font-family: FontAwesome;
+    content: "\f030"
+}
+
+#progressbar #confirm:before {
+    font-family: FontAwesome;
+    content: "\f00c"
+}
+
+#progressbar li:before {
+    width: 50px;
+    height: 50px;
+    line-height: 45px;
+    display: block;
+    font-size: 20px;
+    color: #ffffff;
+    background: lightgray;
+    border-radius: 50%;
+    margin: 0 auto 10px auto;
+    padding: 2px
+}
+
+#progressbar li:after {
+    content: '';
+    width: 100%;
+    height: 2px;
+    background: lightgray;
+    position: absolute;
+    left: 0;
+    top: 25px;
+    z-index: -1
+}
+
+#progressbar li.active:before,
+#progressbar li.active:after {
+    background: #673AB7
+}
+
+.progress {
+    height: 20px
+}
+
+.progress-bar {
+    background-color: #673AB7
+}
+
+.fit-image {
+    width: 100%;
+    object-fit: cover
+}
+
+
+.c-tabs__right-2 {
+    height: 100%;
+    flex: 1;
+    padding-bottom: 40px
+}
+
+.c-heading3__reviews {
+    color: #222f2d;
+    letter-spacing: -.4px;
+    margin-top: 0;
+    margin-bottom: 26px;
+    padding-left: 10px;
+    font-size: 31px;
+    font-weight: 700;
+    line-height: 53px
+}
+
+.c-tabs__link {
+    color: #454a5e;
+    letter-spacing: 0;
+    border-radius: 16px;
+    padding: 5px 13px 9px;
+    font-weight: 700;
+    line-height: 19px;
+    transition: all .2s ease-in-out;
+    display: inline-block
+}
+
+.c-tabs__link:hover {
+    color: #009b8d;
+    text-decoration: none
+}
+
+.c-tabs__link:active,.c-tabs__link:focus,.c-tabs__link:visited {
+    text-decoration: none
+}
+
+.c-tabs__link.active-tab {
+    color: #009b8d;
+    background-color: #f4f6fa;
+    border-radius: 16px
+}
+
+.c-tabs__box {
+    width: 100%;
+    max-width: 779px;
+    border: 1px solid #e4e5f0;
+    border-radius: 10px;
+    margin-top: 20px;
+    padding: 45px 55px 45px 49px
+}
+
+.c-tabs__mobile {
+    padding-top: 20px
+}
+
+.c-reviews__collection {
+    flex-flow: column wrap;
+    align-content: flex-start;
+    align-items: flex-start
+}
+
+.c-section-2 {
+    padding: 20px 42px 83px 35px
+}
+
+.c-tabs__content {
+    height: 100%;
+    margin-left: 50px;
+    padding-top: 20px
+}
+
+.c-tabs {
+    width: 100%;
+    max-width: 1055px;
+    justify-content: center;
+    margin-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex
+}
+
+.c-tabs__left {
+    width: 248px;
+    height: 1750px;
+    margin-left: -13px;
+    padding-top: 20px;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 60px
+}
+
+.c-tabs__left.counseling {
+    width: 270px
+}
+
+.c-articles__text {
+    font-size: 18px;
+    line-height: 28px;
+    display: inline-block
+}
+
+.c-articles__text a,.c-articles__text a:hover,.c-articles__text a:active,.c-articles__text a:focus,.c-articles__text a:visited {
+    color: #09b198;
+    text-decoration: none
+}
+
+.c-articles__text p {
+    margin-bottom: 10px
+}
+
+.c-articles__text h3 {
+    color: #333;
+    margin-top: 20px;
+    margin-bottom: 2px;
+    font-family: Roboto,sans-serif;
+    font-size: 20px;
+    font-weight: 700
+}
+
+.c-articles__text strong {
+    color: #333
+}
+
+.c-articles__link {
+    display: inline-block
+}
+
+.c-articles__author {
+    letter-spacing: 0;
+    margin-bottom: 15px;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 28px;
+    display: flex
+}
+
+.c-articles__avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    overflow: hidden
+}
+
+.c-articles__avatar.josh {
+    background-image: url(https://assets-global.website-files.com/5deaa99ba6578d2abda03191/5f5be084de84b4213702b50e_5df412e5a58b627677c67234_joshwolff.jpg)
+}
+
+.c-articles__autorname {
+    color: #314d5c;
+    align-self: center;
+    padding-left: 13px;
+    display: flex
+}
+
+.c-autorname__by {
+    padding-right: 5px;
+    font-weight: 400
+}
+</style>
+<div class="container-fluid">
+    <div class="row justify-content-center">
+        <div class="col-11 col-sm-10 col-md-10 col-lg-6 col-xl-5 text-center p-0 mt-3 mb-2">
+            <div class="card px-0 pt-4 pb-0 mt-3 mb-3">
+                <h2 id="heading">Sign Up Your User Account</h2>
+                <p>Fill all form field to go to next step</p>
+                <form id="msform">
+                    <!-- progressbar -->
+                    <ul id="progressbar">
+                        <li class="active" id="account"><strong>Account</strong></li>
+                        <li id="personal"><strong>Personal</strong></li>
+                        <li id="payment"><strong>Image</strong></li>
+                        <li id="confirm"><strong>Finish</strong></li>
+                    </ul>
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div> <br> <!-- fieldsets -->
+                    <fieldset>
+                      <div id="page1" data-position="1" class="page">
+                        <div class="form-card">
+                            <div class="row">
+                                <div class="col-7">
+                                    <h2 class="fs-title">Account Information:</h2>
+                                </div>
+                                <div class="col-5">
+                                    <h2 class="steps">Step 1 - 4</h2>
+                                </div>
+                            </div> <label class="fieldlabels">Email: *</label>
+                          <input type="email" name="email" placeholder="Email Id" /> 
+                          <label class="fieldlabels">Username: *</label> 
+                          <input type="text" name="uname" placeholder="UserName" /> 
+                          <label class="fieldlabels">Password: *</label>
+                          <input type="password" name="pwd" placeholder="Password" /> 
+                          <label class="fieldlabels">Confirm Password: *</label> 
+                          <input type="password" name="cpwd" placeholder="Confirm Password" />
+                        </div>
+                      </div>
+                       <div id="page2" data-position="2" class="page">
+                          <div class="form-card">
+                                <div class="row">
+                                    <div class="col-7">
+                                        <h2 class="fs-title">Account Information:</h2>
+                                    </div>
+                                    <div class="col-5">
+                                        <h2 class="steps">Step 1 - 4</h2>
+                                    </div>
+                                </div> 
+                              <label class="fieldlabels">Email: *</label>
+                              <input type="email" name="email" placeholder="Email Id" /> 
+
+                            </div>
+                      </div>
+                      
+                      <div id="prev">prev</div>
+                      <div id="next">next</div>
+                      <input type="button" name="next" class="next action-button" value="Next" />
+                    </fieldset>
+                    <fieldset>
+                        <div class="form-card">
+                            <div class="row">
+                                <div class="col-7">
+                                    <h2 class="fs-title">Personal Information:</h2>
+                                </div>
+                                <div class="col-5">
+                                    <h2 class="steps">Step 2 - 4</h2>
+                                </div>
+                            </div> <label class="fieldlabels">First Name: *</label> <input type="text" name="fname" placeholder="First Name" /> <label class="fieldlabels">Last Name: *</label> <input type="text" name="lname" placeholder="Last Name" /> <label class="fieldlabels">Contact No.: *</label> <input type="text" name="phno" placeholder="Contact No." /> <label class="fieldlabels">Alternate Contact No.: *</label> <input type="text" name="phno_2" placeholder="Alternate Contact No." />
+                        </div> <input type="button" name="next" class="next action-button" value="Next" /> <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
+                    </fieldset>
+                    <fieldset>
+                        <div class="form-card">
+                            <div class="row">
+                                <div class="col-7">
+                                    <h2 class="fs-title">Image Upload:</h2>
+                                </div>
+                                <div class="col-5">
+                                    <h2 class="steps">Step 3 - 4</h2>
+                                </div>
+                            </div> <label class="fieldlabels">Upload Your Photo:</label> <input type="file" name="pic" accept="image/*"> <label class="fieldlabels">Upload Signature Photo:</label> <input type="file" name="pic" accept="image/*">
+                        </div> <input type="button" name="next" class="next action-button" value="Submit" /> <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
+                    </fieldset>
+                    <fieldset>
+                        <div class="form-card">
+                            <div class="row">
+                                <div class="col-7">
+                                    <h2 class="fs-title">Finish:</h2>
+                                </div>
+                                <div class="col-5">
+                                    <h2 class="steps">Step 4 - 4</h2>
+                                </div>
+                            </div> <br><br>
+                            <h2 class="purple-text text-center"><strong>SUCCESS !</strong></h2> <br>
+                            <div class="row justify-content-center">
+                                <div class="col-3"> <img src="https://i.imgur.com/GwStPmg.png" class="fit-image"> </div>
+                            </div> <br><br>
+                            <div class="row justify-content-center">
+                                <div class="col-7 text-center">
+                                    <h5 class="purple-text text-center">You Have Successfully Signed Up</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<section class="">
+    <div class="container">
+        <div data-w-id="ed932de4-d2a3-8ccc-c6eb-9f5115836ae8" class="c-tabs">
+           <div data-w-id="ed932de4-d2a3-8ccc-c6eb-9f5115836ae9" class="c-tabs__left">
+              <div class="c-tabs__mobile">
+                 <h2 class="c-heading2 roboto topics">Topics</h2>
+                 <div class="c-tabs__linkcontainer"><a href="#tab_a" class="c-tabs__link w--current">Does insurance cover online therapy?</a></div>
+                 <div class="c-tabs__linkcontainer"><a href="#tab_b" class="c-tabs__link">Does Talkspace accept insurance?</a></div>
+                 <div class="c-tabs__linkcontainer"><a href="#tab_c" class="c-tabs__link">Is online therapy effective?</a></div>
+                 <div class="c-tabs__linkcontainer"><a href="#tab_d" class="c-tabs__link">What to expect during online therapy sessions</a></div>
+                 <div class="c-tabs__linkcontainer"><a href="#tab_e" class="c-tabs__link">How to find the best online therapy for your needs</a></div>
+                 <div class="c-tabs__linkcontainer"><a href="#tab_1" class="c-tabs__link">Why online therapy is more popular</a></div>
+                 <div class="c-tabs__linkcontainer"><a href="#tab_2" class="c-tabs__link">Conveniences of online therapy</a></div>
+                 <div class="c-tabs__linkcontainer"><a href="#tab_3" class="c-tabs__link">Online therapy reviews</a></div>
+                 <div class="c-tabs__linkcontainer"><a href="#tab_4" class="c-tabs__link">Switching therapists</a></div>
+                 <div class="c-tabs__linkcontainer"><a href="#tab_6" class="c-tabs__link">Benefits of sticking with therapy</a></div>
+                 <div class="c-tabs__linkcontainer"><a href="#tab_7" class="c-tabs__link">How to pause therapy</a></div>
+                 <div class="c-tabs__linkcontainer"><a href="#tab_8" class="c-tabs__link">How long does therapy take?</a></div>
+                 <div class="c-tabs__linkcontainer"><a href="#tab_9" class="c-tabs__link">What if I don’t like my therapist</a></div>
+                 <div class="c-tabs__linkcontainer"><a href="#tab_10" class="c-tabs__link">Finding the right online therapist</a></div>
+                 <div class="c-tabs__linkcontainer"><a href="#tab_11" class="c-tabs__link">Returning to online therapy</a></div>
+                 <div class="c-tabs__linkcontainer"><a href="#tab_12" class="c-tabs__link">Quitting online therapy</a></div>
+                 <div class="c-tabs__linkcontainer"><a href="#tab_13" class="c-tabs__link">Defining therapy</a></div>
+                 <div class="c-tabs__linkcontainer"><a href="#tab_14" class="c-tabs__link">Common types of therapy</a></div>
+                 <div class="c-tabs__linkcontainer"><a href="#tab_15" class="c-tabs__link">Benefits of therapy</a></div>
+                 <div class="c-tabs__linkcontainer"><a href="#tab_16" class="c-tabs__link">What does a therapist do?</a></div>
+                 <div class="c-tabs__linkcontainer"><a href="#tab_17" class="c-tabs__link">Finding the right therapist</a></div>
+                 <div class="c-tabs__linkcontainer"><a href="#tab_18" class="c-tabs__link">How much does therapy cost?</a></div>
+                 <div class="c-tabs__linkcontainer"><a href="#tab_19" class="c-tabs__link">How long does therapy take?</a></div>
+                 <div class="c-tabs__linkcontainer"><a href="#tab_20" class="c-tabs__link">How to tell if therapy is working</a></div>
+                 <div class="c-tabs__linkcontainer"><a href="#tab_21" class="c-tabs__link">How therapists define therapy</a></div>
+                 <div class="c-tabs__linkcontainer"><a href="#tab_22" class="c-tabs__link">The history of therapy</a></div>
+                 <div class="c-tabs__linkcontainer"><a href="#tab_23" class="c-tabs__link">Why online counseling is more popular</a></div>
+                 <div class="c-tabs__linkcontainer"><a href="#tab_24" class="c-tabs__link">Conveniences of online counseling</a></div>
+                 <div class="c-tabs__linkcontainer"><a href="#tab_25" class="c-tabs__link">Online counseling reviews</a></div>
+                 <div class="c-tabs__linkcontainer"><a href="#tab_26" class="c-tabs__link">Switching counselors</a></div>
+                 <div class="c-tabs__linkcontainer"><a href="#tab_27" class="c-tabs__link">What to expect from counseling</a></div>
+                 <div class="c-tabs__linkcontainer"><a href="#tab_28" class="c-tabs__link">Benefits of sticking with counseling</a></div>
+                 <div class="c-tabs__linkcontainer"><a href="#tab_29" class="c-tabs__link">How to pause counseling</a></div>
+                 <div class="c-tabs__linkcontainer"><a href="#tab_30" class="c-tabs__link">How long does counseling take?</a></div>
+                 <div class="c-tabs__linkcontainer"><a href="#tab_31" class="c-tabs__link">What if I don’t like my counselor</a></div>
+                 <div class="c-tabs__linkcontainer"><a href="#tab_32" class="c-tabs__link">Finding the right online counseling</a></div>
+                 <div class="c-tabs__linkcontainer"><a href="#tab_33" class="c-tabs__link">Returning to online counseling</a></div>
+                 <div class="c-tabs__linkcontainer"><a href="#tab_34" class="c-tabs__link">Quitting online counseling</a></div>
+              </div>
+           </div>
+           <div class="c-tabs__right-2">
+              <div id="tab_a" class="c-tabs__content">
+                 <div class="c-tabs__box">
+                    <div>
+                       <h2 class="c-heading2 roboto article">Does insurance cover online therapy?</h2>
+                       <div class="c-articles__text w-richtext">
+                          <p>Typically, yes. Many people are able to get therapy covered by insurance through an employer’s healthcare plan or medical assistance programs such as Medicare &amp; Medicaid. Learn more about <a href="https://www.talkspace.com/blog/does-insurance-cover-therapy/">insurance coverage for therapy</a>.&nbsp;<br></p>
+                       </div>
+                    </div>
+                 </div>
+              </div>
+              <div id="tab_b" class="c-tabs__content">
+                 <div class="c-tabs__box">
+                    <div>
+                       <h2 class="c-heading2 roboto article">Does Talkspace accept insurance?</h2>
+                       <div class="c-articles__text w-richtext">
+                          <p>Yes, Talkspace accepts insurance for mental health care and therapy services. We’re in-network with most major insurers and make it easy for out-of-network members to get reimbursed, making therapy more affordable than ever. On average, in-network insured members pay a $20 copay or less. You can view our full partner list <a href="https://www.talkspace.com/partners">here</a>.<br></p>
+                       </div>
+                    </div>
+                 </div>
+              </div>
+              <div id="tab_c" class="c-tabs__content">
+                 <div class="c-tabs__box">
+                    <div>
+                       <h2 class="c-heading2 roboto article">Is online therapy effective?</h2>
+                       <div class="c-articles__text w-richtext">
+                          <p>Online therapy is proven to be <a href="https://www.ncbi.nlm.nih.gov/pubmed/23886401/">as effective, if not more effective</a> than face-to-face therapy. A study conducted by Talkspace &amp; the <a href="https://www.liebertpub.com/doi/abs/10.1089/tmj.2016.0114?journalCode=tmj/">Journal of Telemedicine and e-Health</a> showed that text-based therapy through Talkspace was highly effective and comparable to traditional therapy. When compared with traditional therapy, Talkspace also generated greater satisfaction in terms of its delivery, accessibility, and affordability. Learn more from <a href="https://www.talkspace.com/research">studies on how Talkspace improves mental health</a>.</p>
+                       </div>
+                    </div>
+                 </div>
+              </div>
+              <div id="tab_d" class="c-tabs__content">
+                 <div class="c-tabs__box">
+                    <div>
+                       <div class="c-articles__author">
+                          <div class="c-articles__avatar ts"><img src="https://assets-global.website-files.com/5deaa99ba6578d2abda03191/5f5be38592cedb569b4c716a_5df41a6f6a31d504a533bd6c_ts-avatar12.png" loading="lazy" alt=""></div>
+                          <div class="c-articles__autorname">
+                             <div class="c-autorname__by">by</div>
+                             <div>Talkspace</div>
+                          </div>
+                       </div>
+                       <h2 class="c-heading2 roboto article">What to expect during online therapy sessions</h2>
+                       <div class="c-articles__text w-richtext">
+                          <p>Unlike traditional therapy, online therapy sessions can take place in a few different ways: via text, audio, or video. Video therapy sessions are the most similar to in-person therapy in that you’ll meet face-to-face with your therapist. Text &amp; audio methods are asynchronous; you’ll be able to send text messages, audio and video clips to your therapist any time and your therapist will respond daily, 5 days/week. There’s no limit to how many messages you send, and you can review old messages to track your progress and reflect on your insights and discoveries.</p>
+                          <p>You can expect to spend some time in your initial online therapy session discussing your goals for therapy, along with any concerns or issues you’re hoping to address. The therapist will guide the discussion by asking questions that help them gain a better understanding of your situation. The therapist may tell you about their professional background and approaches to mental health care. This is a great time to ask the therapist questions to help determine if they’re the right fit for you. The initial therapy session is a chance for the therapist and the client to get to know one another and build a rapport.</p>
+                          <p>In ongoing sessions, the structure will vary depending on your goals, preferences, and progress. Your therapist will provide helpful guidance and exercises to help you work toward your goals. Often, they’ll ask deeper questions to help you see a problem in a new light. Throughout your treatment, they’ll check in to make sure there’s room for anything new that you’d like to work on… <a href="https://www.talkspace.com/blog/starting-online-therapy-first-time/" target="_blank"><strong>read more</strong></a></p>
+                       </div>
+                    </div>
+                 </div>
+              </div>
+              <div id="tab_e" class="c-tabs__content">
+                 <div class="c-tabs__box">
+                    <div>
+                       <h2 class="c-heading2 roboto article">How to find the best online therapy for your needs</h2>
+                       <div class="c-articles__text w-richtext">
+                          <p>The best online therapy services provide convenient, affordable ways to receive mental health support. They offer clients an opportunity to connect with reputable, licensed therapists in a flexible and accessible scheduling environment, as well as offering up varied options for communication.&nbsp;</p>
+                          <p>While the best online therapy option may vary from person to person, Talkspace’s mental health platform offers a few standout features that make effective treatment and better overall mental health outcomes accessible to all:</p>
+                          <ul role="list">
+                             <li><strong>Insurance:</strong> Talkspace is one of the only <a href="https://www.talkspace.com/insurance">online therapy platforms that accepts insurance</a>. We currently accept insurance from Cigna, Optum, Gatorcare, Aetna, and more. You can view our full partner list <a href="https://www.talkspace.com/partners">here</a>.</li>
+                             <li><strong>Holistic treatment</strong>: In addition to providing affordable online therapy, Talkspace offers telehealth psychiatry &amp; medication management services. This means that we’re able to provide more personalized treatment plans, as psychiatric evaluations and medication management can be integrated with therapy sessions.<strong>‍</strong></li>
+                             <li><strong>Unlimited messaging:</strong> Our Unlimited Messaging Therapy™ means you can message your therapist via text, video or voice at any time, from anywhere.</li>
+                          </ul>
+                       </div>
+                    </div>
+                 </div>
+              </div>
+              <div id="tab_1" class="c-tabs__content">
+                 <div class="c-tabs__box">
+                    <div>
+                       <div class="c-articles__author">
+                          <div class="c-articles__avatar ts"><img src="https://assets-global.website-files.com/5deaa99ba6578d2abda03191/5f5be38592cedb569b4c716a_5df41a6f6a31d504a533bd6c_ts-avatar12.png" loading="lazy" alt=""></div>
+                          <div class="c-articles__autorname">
+                             <div class="c-autorname__by">by</div>
+                             <div>Talkspace</div>
+                          </div>
+                       </div>
+                       <h2 class="c-heading2 roboto article">Why online therapy is more popular than traditional therapy</h2>
+                       <div class="c-articles__text w-richtext">
+                          <p>Your relationship with your therapist is very different from other relationships, but one thing is the same: sometimes you need a change. How can you tell when it’s time to switch therapists? Sometimes you just don’t click with a person. Maybe your styles are different, or maybe you sense criticism or judgment. If that person is your therapist, it’s hard to share your innermost thoughts and feelings… <a href="https://www.talkspace.com/blog/reasons-online-therapy-right-for-you/" target="_blank"><strong>read more</strong></a></p>
+                       </div>
+                    </div>
+                 </div>
+              </div>
+              <div id="tab_2" class="c-tabs__content">
+                 <div class="c-tabs__box">
+                    <div>
+                       <div class="c-articles__author">
+                          <div class="c-articles__avatar ts"><img src="https://assets-global.website-files.com/5deaa99ba6578d2abda03191/5f5be38592cedb569b4c716a_5df41a6f6a31d504a533bd6c_ts-avatar12.png" loading="lazy" alt=""></div>
+                          <div class="c-articles__autorname">
+                             <div class="c-autorname__by">by</div>
+                             <div>Talkspace</div>
+                          </div>
+                       </div>
+                       <h2 class="c-heading2 roboto article">Most convenient features of online therapy</h2>
+                       <div class="c-articles__text w-richtext">
+                          <p>Talkspace represents a major breakthrough in modern psychology: using technology to improve individual and couples therapy. This use of technology is also known as “telemedicine,” and is part of a growing shift in the healthcare industry, with technology enabling more convenient, affordable, and on-demand benefits.<br></p>
+                          <p>We’d like to give you a brief tour of the cool benefits Talkspace offers as part of the online therapy experience… <a href="https://www.talkspace.com/blog/talkspace-coolest-features-brief-walkthrough/" target="_blank"><strong>read more</strong></a></p>
+                       </div>
+                    </div>
+                 </div>
+              </div>
+              <div id="tab_3" class="c-tabs__content">
+                 <div class="c-tabs__box">
+                    <div>
+                       <h2 class="c-heading2 roboto article">Online therapy reviews</h2>
+                       <div class="c-articles__text w-richtext">
+                          <p>Talkspace has helped thousands of people live happier lives and bypass barriers to therapy. Lucky for us, some of those people went out of their way to document their experiences by writing in-depth reviews of our brand of online therapy.</p>
+                          <p>We highlighted a few of them below. Browse through them to see if they help you decide whether Talkspace is right for you… <a href="https://www.talkspace.com/blog/talkspace-reviews-experiences-help-decide-right/" target="_blank"><strong>read more</strong></a></p>
+                       </div>
+                    </div>
+                 </div>
+              </div>
+              <div id="tab_4" class="c-tabs__content">
+                 <div class="c-tabs__box">
+                    <div>
+                       <div class="c-articles__author">
+                          <div class="c-articles__avatar tamara"><img src="https://assets-global.website-files.com/5deaa99ba6578d2abda03191/5f5be18aa2ba0a3d070eeedd_5df41723a58b623e20c69993_tamarastevens.jpeg" loading="lazy" alt=""></div>
+                          <div class="c-articles__autorname">
+                             <div class="c-autorname__by">by</div>
+                             <div>Tamara Stevens</div>
+                          </div>
+                       </div>
+                       <h2 class="c-heading2 roboto article">Switching therapists</h2>
+                       <div class="c-articles__text w-richtext">
+                          <p>Your relationship with your therapist is very different from other relationships, but one thing is the same: sometimes you need a change. How can you tell when it’s time to switch therapists?<br></p>
+                          <p>Sometimes you just don’t click with a person. Maybe your styles are different, or maybe you sense criticism or judgment. If that person is your therapist, it’s hard to share your innermost thoughts and feelings… <a href="https://www.talkspace.com/blog/switch-therapists-how-to/" target="_blank"><strong>read more</strong></a></p>
+                       </div>
+                    </div>
+                 </div>
+              </div>
+              <div id="tab_6" class="c-tabs__content">
+                 <div class="c-tabs__box">
+                    <div>
+                       <div class="c-articles__author">
+                          <div class="c-articles__avatar jamie"><img src="https://assets-global.website-files.com/5deaa99ba6578d2abda03191/5f5be20fa768b858397be482_5df417d035688c2ca7050c98_jamiewiebe.jpg" loading="lazy" alt=""></div>
+                          <div class="c-articles__autorname">
+                             <div class="c-autorname__by">by</div>
+                             <div>Jamie Wiebe</div>
+                          </div>
+                       </div>
+                       <h2 class="c-heading2 roboto article">Benefits of sticking with therapy</h2>
+                       <div class="c-articles__text w-richtext">
+                          <p>No matter how eager you are to change your ways, there will come a point in therapy when you think, “This sucks. Dante forgot to include ‘Therapy’ as the tenth layer of hell.”<br></p>
+                          <p>It’s hard work. Maybe you had a panic attack during a session, or realized some difficult truths about your personality. Sometimes therapy is boring, or you’re convinced your poor therapist is bored. You talk about the same things week after week, over and over again, and nothing in you is changing… <a href="https://www.talkspace.com/blog/benefits-of-staying-in-therapy/" target="_blank"><strong>read more</strong></a></p>
+                       </div>
+                    </div>
+                 </div>
+              </div>
+              <div id="tab_7" class="c-tabs__content">
+                 <div class="c-tabs__box">
+                    <div>
+                       <div class="c-articles__author">
+                          <div class="c-articles__avatar tamara"><img src="https://assets-global.website-files.com/5deaa99ba6578d2abda03191/5f5be18aa2ba0a3d070eeedd_5df41723a58b623e20c69993_tamarastevens.jpeg" loading="lazy" alt=""></div>
+                          <div class="c-articles__autorname">
+                             <div class="c-autorname__by">by</div>
+                             <div>Tamara Stevens</div>
+                          </div>
+                       </div>
+                       <h2 class="c-heading2 roboto article">How to pause therapy</h2>
+                       <div class="c-articles__text w-richtext">
+                          <p>Therapy is hard work — sometimes the hardest part is just getting started. Therefore, it can be tough to stop before you’re ready, but sometimes life happens that way. Your therapist understands that you’re busy and things come up when least expected. Fortunately, if you have to stop or pause therapy, there are ways to make the process less painful… <a href="https://www.talkspace.com/blog/pause-stop-therapy-guide/" target="_blank"><strong>read more</strong></a></p>
+                       </div>
+                    </div>
+                 </div>
+              </div>
+              <div id="tab_8" class="c-tabs__content">
+                 <div class="c-tabs__box">
+                    <div>
+                       <div class="c-articles__author">
+                          <div class="c-articles__avatar elizabeth"><img src="https://assets-global.website-files.com/5deaa99ba6578d2abda03191/5f5be2779d335b2f629afe49_5df4184eb0ebe73f9b3a43c8_elisbethsu.jpg" loading="lazy" alt=""></div>
+                          <div class="c-articles__autorname">
+                             <div class="c-autorname__by">by</div>
+                             <div>Elizabeth Su</div>
+                          </div>
+                       </div>
+                       <h2 class="c-heading2 roboto article">How long does therapy take?</h2>
+                       <div class="c-articles__text w-richtext">
+                          <p>Finding a therapist was one of the best decisions of my life. At the time, I had been struggling with symptoms of post-traumatic stress disorder (although I didn’t know that’s what I was experiencing), an eating disorder (I didn’t want to admit), and high anxiety levels (so high that my relationship and performance at work were taking a nosedive). I felt like my life was falling apart and I didn’t know what to do… <a href="https://www.talkspace.com/blog/how-long-does-therapy-take-science/" target="_blank"><strong>read more</strong></a></p>
+                       </div>
+                    </div>
+                 </div>
+              </div>
+              <div id="tab_9" class="c-tabs__content">
+                 <div class="c-tabs__box">
+                    <div>
+                       <div class="c-articles__author">
+                          <div class="c-articles__avatar tamara"><img src="https://assets-global.website-files.com/5deaa99ba6578d2abda03191/5f5be18aa2ba0a3d070eeedd_5df41723a58b623e20c69993_tamarastevens.jpeg" loading="lazy" alt=""></div>
+                          <div class="c-articles__autorname">
+                             <div class="c-autorname__by">by</div>
+                             <div>Tamara Stevens</div>
+                          </div>
+                       </div>
+                       <h2 class="c-heading2 roboto article">What if I don’t like my therapist</h2>
+                       <div class="c-articles__text w-richtext">
+                          <p>The beginning of therapy brings up complicated emotions. You might feel relieved that you’ve been able to unburden yourself, or even awe at the way your therapist “gets” you. Like every relationship, there is usually a honeymoon period, in which you admire and respect your therapist, confident in their ability to heal you.<br></p>
+                          <p>Over time, however, the newness fades and the work gets harder. People often put their therapist on a pedestal at first, but the therapist is bound to fall eventually. For some people, adjusting to a more realistic view of the therapist is easy, but for others, resentment or lack of respect creep in... <a href="https://www.talkspace.com/blog/i-dont-respect-my-therapist/" target="_blank"><strong>read more</strong></a></p>
+                       </div>
+                    </div>
+                 </div>
+              </div>
+              <div id="tab_10" class="c-tabs__content">
+                 <div class="c-tabs__box">
+                    <div>
+                       <div class="c-articles__author">
+                          <div class="c-articles__avatar jorel"><img src="https://assets-global.website-files.com/5deaa99ba6578d2abda03191/5f5be2de5792558ab6357bb7_5df419160730a5eacb1d4e7b_jorellcarabllo.jpg" loading="lazy" alt=""></div>
+                          <div class="c-articles__autorname">
+                             <div class="c-autorname__by">by</div>
+                             <div>Jor-El Caraballo</div>
+                          </div>
+                       </div>
+                       <h2 class="c-heading2 roboto article">Finding the right online therapist</h2>
+                       <div class="c-articles__text w-richtext">
+                          <p>These days, there are more ways to find a therapist than ever before. But, some might feel it’s important and more helpful to work with a therapist of a particular background, which can make the search more difficult. It can even be tough to make this request. If you’re in this situation, what should you do?</p>
+                          <p>With my own new clients, one of the things I often come across is that they’ve tried therapy before, often with a therapist of a different cultural background than themselves. For many, that experience wasn’t particularly comfortable and they found themselves educating their therapist on what they would consider the fundamental parts of their lived experience… <a href="https://www.talkspace.com/blog/find-therapist-same-cultural-background-community/" target="_blank"><strong>read more</strong></a></p>
+                       </div>
+                    </div>
+                 </div>
+              </div>
+              <div id="tab_11" class="c-tabs__content">
+                 <div class="c-tabs__box">
+                    <div>
+                       <div class="c-articles__author">
+                          <div class="c-articles__avatar joseph"><img src="https://assets-global.website-files.com/5deaa99ba6578d2abda03191/5f5be340fd25a96873f3da92_5df419ba0730a51ffd1d5233_josephrauch.png" loading="lazy" alt=""></div>
+                          <div class="c-articles__autorname">
+                             <div class="c-autorname__by">by</div>
+                             <div>Joseph Rauch</div>
+                          </div>
+                       </div>
+                       <h2 class="c-heading2 roboto article">Coming back to online therapy</h2>
+                       <div class="c-articles__text w-richtext">
+                          <p>Like any journey, your therapeutic journey may have starts and stops, highs and lows, departures and returns. Sometimes unexpected changes in life force you to pause the investment in your mental health. Or maybe you wanted a break to focus on another part of your life.<br></p>
+                          <p>Once you are ready to return to therapy, you might wonder how you should go about it. What should you say to your therapist? Perhaps something to the effect of “I’m back” doesn’t seem like enough… <a href="https://www.talkspace.com/blog/returning-therapy-break/" target="_blank"><strong>read more</strong></a></p>
+                       </div>
+                    </div>
+                 </div>
+              </div>
+              <div id="tab_12" class="c-tabs__content">
+                 <div class="c-tabs__box">
+                    <div>
+                       <div class="c-articles__author">
+                          <div class="c-articles__avatar ts"><img src="https://assets-global.website-files.com/5deaa99ba6578d2abda03191/5f5be38592cedb569b4c716a_5df41a6f6a31d504a533bd6c_ts-avatar12.png" loading="lazy" alt=""></div>
+                          <div class="c-articles__autorname">
+                             <div class="c-autorname__by">by</div>
+                             <div>Nicole Amesbury</div>
+                          </div>
+                       </div>
+                       <h2 class="c-heading2 roboto article">Quitting online therapy</h2>
+                       <div class="c-articles__text w-richtext">
+                          <p>When someone enters therapy and begins a relationship with their therapist, whether it’s online or offline, the last thing on that person’s mind is leaving. <br></p>
+                          <p>But, just like with all relationships, there will come a time to say goodbye and it’s how they choose to go about it that really matters. Lets face it, many endings to relationships tend to be negative; think break-ups, death, and divorce. They may even be the reasons someone comes to therapy in the first place. But the good news is, ending therapy on a positive note is absolutely possible and it will enrich the time you spent receiving it... <a href="https://www.talkspace.com/blog/how-to-say-goodbye-5-tips-for-ending-therapy/"><strong>read more</strong></a></p>
+                       </div>
+                    </div>
+                 </div>
+              </div>
+              <div id="tab_13" class="c-tabs__content">
+                 <div class="c-tabs__box">
+                    <div>
+                       <h2 class="c-heading2 roboto article">Defining therapy</h2>
+                       <div class="c-articles__text w-richtext">
+                          <p>Therapy (or psychotherapy, sometimes called talk therapy) is the process of working with a licensed therapist or counselor to develop positive thinking and coping skills to treat specific mental health conditions like depression or anxiety, trauma, or simply the daily human challenges we all face.</p>
+                          <p>Therapy can be administered by an assortment of licensed professionals including psychologists, social workers, psychiatrists, and counselors. These professionals have completed rigorous training in the form of at least a master’s degree in their respective course of study as well as at least 3,000 supervised clinical hours.</p>
+                          <p>Most forms of widely practiced counseling have been <a href="https://research.talkspace.com/">researched extensively</a> and found to be extremely effective in dealing with a range of issues — from the everyday stresses of modern life to issues like past abuse in childhood.</p>
+                          <p>There are also different ways to connect with a therapist — online or in-person — and modes of doing so — whether by text message, phone, or live video — to meet client needs and lifestyle. The best therapy for you will be that which most closely aligns with your reasons for considering counseling.<br></p>
+                       </div>
+                    </div>
+                 </div>
+              </div>
+              <div id="tab_14" class="c-tabs__content">
+                 <div class="c-tabs__box">
+                    <div>
+                       <h2 class="c-heading2 roboto article">Common types of therapy</h2>
+                       <div class="c-articles__text w-richtext">
+                          <p>All forms of psychotherapy exist to improve clients’ mental health, but there are styles of therapy specific to issues clients face, as well as different therapeutic approaches, represented by different schools of thought around treating mental health and the nature of the mind. Some schools hew more closely to the older styles of counseling developed by early psychoanalysts like Sigmund Freud, while others are more contemporary and reflect newer research by theorists.</p>
+                          <p>A few of the most popular popular types of therapy include:</p>
+                          <h3><a href="https://www.talkspace.com/blog/cognitive-behavioral-therapy-what-to-expect/">Cognitive Behavioral Therapy (CBT)</a></h3>
+                          <p>Challenges negative client-thought patterns about themself and the world to alter unwanted behaviors or treat disorders such as depression. CBT provides relatively short-term treatment for a range of conditions, phobias, disorders and is backed by a great deal of research on its effectiveness.</p>
+                          <h3>Client-Centered Therapy</h3>
+                          <p>Focuses on the client, who helps determine the course of the session; the therapist offers a high-degree of empathy, helps build self-esteem and problem-solving abilities, but does not overtly guide the session.</p>
+                          <h3><a href="https://www.talkspace.com/blog/dialectical-behavioral-therapy-dbt-behavior/">Dialectical Behavior Therapy (DBT)</a></h3>
+                          <p>Stresses acceptance and change while teaching behavioral skills (mindfulness, distress tolerance, interpersonal effectiveness, emotion regulation) that help clients enhance motivation. DBT is often used to treat more severe mental health issues including PTSD, borderline personality disorder, self-harming, and eating disorders.</p>
+                          <h3>Existential Therapy</h3>
+                          <p>Derived from existential philosophy, this modality emphasizes self-actualization in the face of the realities of the human experience, including our isolation from one another and mortality. Existential therapy helps clients face these difficult and overwhelming truths.</p>
+                          <h3>Gestalt Therapy</h3>
+                          <p>Stresses the client-therapist relationship and their therapeutic alliance to highlight personal responsibility and a focus on the present. Often gestalt therapy invokes role playing to resolve conflicts from the client’s past.</p>
+                          <h3>Psychodynamic Therapy</h3>
+                          <p>Explores a client’s unconscious feelings/thoughts and how the present is impacted by the past. Psychodynamic therapy is the oldest form of psychotherapy and is, in fact, an outgrowth of psychoanalytic therapy developed by Freud where clients are encouraged to speak extemporaneously on whatever comes to mind, whether it be fears, dreams, or desires.<br></p>
+                       </div>
+                    </div>
+                 </div>
+              </div>
+              <div id="tab_15" class="c-tabs__content">
+                 <div class="c-tabs__box">
+                    <div>
+                       <h2 class="c-heading2 roboto article">Benefits of therapy</h2>
+                       <div class="c-articles__text w-richtext">
+                          <p>Therapy can benefit everyone, but it isn’t solely beneficial after a traumatic experience, abuse, anxiety, or a major life change — it can help in everyday life, too! Many highly successful people use therapy to be more productive in goal setting and self-acceptance.</p>
+                          <h3>Ways therapy can help&nbsp;</h3>
+                          <p>Nearly all aspects of life can be impacted and improved with psychotherapy. A therapist may provide new techniques for problem solving, help challenge irrational habits and incorrect assumptions, help reframe long-held views, or or assign homework to help you grow and change. A therapist can also help overcome mental health conditions like depression, anxiety, body image issues, and even addiction.<br></p>
+                          <p>Primarily a therapist will help to:<br></p>
+                          <ul role="list">
+                             <li><strong>Understand your feelings<br></strong>Learn what emotions are common for a condition or circumstances.</li>
+                             <li><strong>Get immediate support<br></strong>While deep-seated issues can be addressed down the line, counseling can benefit you in situations where you need help urgently.</li>
+                             <li><strong>Plan your future<br></strong>Therapists can help create a game plan and set goals for the future in a safe environment and keep you accountable.</li>
+                             <li><strong>Relieve the pressure with a</strong> <strong>therapeutic relationship<br></strong>Often, simply getting things off your chest in a safe space can be healing. If serious problems arise again, the on-going therapeutic relationship will keep you strong.<br></li>
+                          </ul>
+                          <p>The most important thing is that a therapist is always there for you. They’re an impartial ally who will support you without judgment. While your friends might not text you back, your therapist is always willing to listen.<br></p>
+                       </div>
+                    </div>
+                 </div>
+              </div>
+              <div id="tab_16" class="c-tabs__content">
+                 <div class="c-tabs__box">
+                    <div>
+                       <h2 class="c-heading2 roboto article">What does a therapist do?</h2>
+                       <div class="c-articles__text w-richtext">
+                          <p>A therapist, or psychotherapist, is a licensed mental health professional who helps clients improve the lives of their clients, helping them develop better cognitive and emotional skills, reduce the symptoms of mental illness and cope with various day-to-day challenges. Therapists primarily help clients, whether via in-person or <a href="https://lp.talkspace.com/try">online therapy</a>, improve their mental health. Some therapists work in a research capacity or in an academic setting.<br></p>
+                          <p>Therapists work in a range of modes and capacities. They help their clients cope with whatever they’re struggling with and assist in modifying behaviors that may be unhealthy, maladaptive, or harmful. Therapists also teach better coping skills.<br></p>
+                          <p>Whatever type of counseling you engage in you can be sure that your therapist will:<br></p>
+                          <ul role="list">
+                             <li>Listen with empathy and understanding</li>
+                             <li>Analyze past and present events to help clients better understand behaviors</li>
+                             <li>Comfort clients when they undergo misfortune</li>
+                             <li>Provide a third-party unbiased opinion</li>
+                             <li>Teach emotional, cognitive, and communication skills</li>
+                             <li>Guide clients through stressors and anxieties</li>
+                             <li>Provide non-directive advice</li>
+                             <li>Help provide assessment and diagnosis of mental health conditions<br></li>
+                          </ul>
+                          <p>Therapists themselves do not prescribe medication, but they refer clients to psychiatrists, mental health facilities, or other medical professionals as needed. <br></p>
+                       </div>
+                    </div>
+                 </div>
+              </div>
+              <div id="tab_17" class="c-tabs__content">
+                 <div class="c-tabs__box">
+                    <div>
+                       <h2 class="c-heading2 roboto article">Finding the right therapist</h2>
+                       <div class="c-articles__text w-richtext">
+                          <p>As a prospective client, it’s great to share what your preferences are and what you’re looking to get out of therapy. In fact, it’s critical to success in therapy! The intake process — where you answer some questions about what’s brought you to counseling or what challenges you’re dealing with — is a great opportunity for clients to be up front about what they need from a therapist.</p>
+                          <h3>What to look for in a therapist</h3>
+                          <p>While by definition therapists are unbiased advocates, forming a real and trusting bond with your therapist is the most important element of selecting the right fit. Here are some aspects to consider when deciding on a therapist:</p>
+                          <ul role="list">
+                             <li><strong>Age</strong><br>Do you prefer a therapist who is younger or older than you? Someone who has the experience of many years as a therapist or someone younger who can perhaps relate to your lifestyle in a more authentic way.</li>
+                             <li><strong>Race/Ethnicity</strong><br>Would you prefer having a therapist of the same ethnicity, who makes you feel more comfortable and understood — having a shared understanding and not having to explain your experience of the world, including microaggressions and more direct racism, prejudice, and oppression?</li>
+                             <li><strong>Gender/sexuality</strong><br>Do you prefer a therapist of the same gender or sexuality, who can better relate to your experience in relationships, career, and your experience with your family?</li>
+                             <li><strong>Specialty</strong><br>Would you prefer a therapist who has expertise in a specific area or specializes in specific challenges like trauma or eating disorders? Or would you prefer a generalist who deals with all kinds of issues?</li>
+                             <li><strong>Religion</strong><br>Do you prefer a therapist who shares your religious beliefs or is a shared faith less important for the issues you’re working on.</li>
+                          </ul>
+                          <p>On a platform like Talkspace, you can find a therapist that fits your precise needs.&nbsp; And if you don’t connect with your therapist, it’s easy to switch to another with no-hassle, and at no additional cost. Finding the right therapist is essential and, with Talkspace, you don’t have to spend time searching, making appointments, and auditioning therapists — the perfect fit is just a click away.<br></p>
+                       </div>
+                    </div>
+                 </div>
+              </div>
+              <div id="tab_18" class="c-tabs__content">
+                 <div class="c-tabs__box">
+                    <div>
+                       <h2 class="c-heading2 roboto article">How much does therapy cost?</h2>
+                       <div class="c-articles__text w-richtext">
+                          <p>As you can imagine, because counseling can be so impactful and therapists can do so much to improve the specific challenges clients struggle with, the service is not without costs. Therapists are highly trained professionals — licensed in the state they practice in, each with a master’s degree and an additional 3,000 hours of supervised work. They deserved to be justly compensated! Talkspace also requires six-weeks of training and onboarding for the platform.</p>
+                          <p>The relatively high costs of therapy and healthcare more generally do make it prohibitively expensive for many. That’s why, at Talkspace, we aim to make counseling more accessible by keeping costs low — we believe in therapy for all. Often costs vary by region, but in-person <a href="https://www.talkspace.com/blog/how-much-does-therapy-cost-and-why-is-it-crazy-expensive/">therapy costs on average</a> $75-150 per hour (in places like New York it is generally between $200-300 per hour) and the majority of therapists do not take health insurance.</p>
+                          <p>Online therapy, however, is a most cost effective and affordable option for those who need access to care, but don’t have the means to access brick-and-mortar counseling.</p>
+                          <h3>How much does online therapy cost?</h3>
+                          <p>Online therapy has been proven to have <a href="https://research.talkspace.com/">the same efficacy</a> as in-office therapy and is typically much more affordable (often less than half the cost of traditional therapy). This is mostly due to the fact that online counseling requires less overhead than therapists who work in an office.</p>
+                          <p>You can use an online therapy network, like Talkspace, to find a therapist or check if a therapist you know will provide online service.</p>
+                          <h3>Cost-saving options</h3>
+                          <p>Therapy can be lifesaving for those who struggle with mental health challenges — everyone should have access to it. But for those whom counseling proves too cost prohibitive, there are a few options that can help defray the expense.<br></p>
+                          <p>Below are some affordable examples of ways to find the mental healthcare you need:</p>
+                          <ul role="list">
+                             <li><strong>Ask the Therapist for a Discount or Seek Therapists With Sliding Scales<br></strong>Most therapists are not in it for the money. Though therapists need to be able to make a living, if you tell them you can only afford a discounted rate, they may oblige. There are also therapists who use sliding scales for all payments. Before sessions begin, check for this information on their website, therapy network, or profile.</li>
+                             <li><strong>Schools or universities<br></strong>If you’re a student and want free or discounted therapy, ask your student health center for more information. Student health centers can often provide low-cost or free mental health services on a short-term basis (a semester or quarter) — a good temporary solution until you find a long-term therapist you can afford.</li>
+                             <li><strong>Therapy practices<br></strong>Therapy practices — sometimes called agencies or firms — are often more affordable because more than one person is chipping in for the cost of rent and other overhead. These practices often have interns — those who are working on their supervised clinical hours — who charge less. If you prefer in-office counseling, practices are often a more affordable option.</li>
+                             <li><strong>Not using insurance<br></strong>Many assume that using insurance for therapy will lower the overall cost. However, circumventing insurance providers is sometimes the cheaper option. Many therapists choose not to accept insurance coverage because payments are often lower and there is a great deal of paperwork for reimbursements.</li>
+                             <li><strong>Federally-funded health centers<br></strong>Federally qualified health centers (FQHCs) usually have mental health resources and the law requires they offer a sliding payment scale. You can search for one in your area.</li>
+                          </ul>
+                          <p>While therapy can be expensive, it’s important to remember that your mental health touches every aspect of your life — your relationships, career, and happiness. Gambling with your mental health is not something that will pay off long-term. It’s important to prioritize your well-being!<br></p>
+                       </div>
+                    </div>
+                 </div>
+              </div>
+              <div id="tab_19" class="c-tabs__content">
+                 <div class="c-tabs__box">
+                    <div>
+                       <h2 class="c-heading2 roboto article">How long does therapy take?</h2>
+                       <div class="c-articles__text w-richtext">
+                          <p>The length of the therapeutic process is dependent upon your individual needs, goals, and challenges. The number of recommended sessions varies by condition and treatment type, which is something you can discuss in an initial consultation with a therapist. Many clients with depression and anxiety report feeling better <a href="https://research.talkspace.com/">after three months</a>.<br></p>
+                          <p>Those who are treated via cognitive behavioral therapy report feeling better around 10-20 sessions, Talkspace therapist Cynthia Catchings explains. She reports that she’s had “many successful stories with clients who had situational issues that only needed brief therapy services” in order to start feelings better. She adds, “it is important to mention that therapy is not only a way to solve a problem, but also a way of living. In the same way that we go to the gym and exercise or tone our body, therapy is like exercise for our mind, heart, and soul.”<br></p>
+                          <p>Whatever your therapeutic process may look like, remember to trust your gut and express any concerns to your therapist. Honesty and transparency will ensure you’re on the right path to feeling better as soon as possible.<br></p>
+                       </div>
+                    </div>
+                 </div>
+              </div>
+              <div id="tab_20" class="c-tabs__content">
+                 <div class="c-tabs__box">
+                    <div>
+                       <h2 class="c-heading2 roboto article">How to know if therapy is working</h2>
+                       <div class="c-articles__text w-richtext">
+                          <p>While everyone’s therapeutic process is different, there are some common signs you’re making progress in therapy.<br></p>
+                          <p>If you sought counseling for a mental health condition, symptom improvement is a main indicator that therapy is working for you. Other indicators of improvement include progress toward long-term goals — you’ve moved past venting and have started working toward change — or recognizing the development of new skills, coping mechanisms, or better habits and ways of thinking.<br></p>
+                          <p>And remember, if you’re concerned about the progress you’re making in counseling, express these worries to your therapist.<br></p>
+                       </div>
+                    </div>
+                 </div>
+              </div>
+              <div id="tab_21" class="c-tabs__content">
+                 <div class="c-tabs__box">
+                    <div>
+                       <h2 class="c-heading2 roboto article">How do therapists define therapy?</h2>
+                       <div class="c-articles__text w-richtext">
+                          <p>And, while we’ve established a common psychotherapy definition, every therapist does define therapy in slightly different ways. By looking at the aspects they stress, you can see a more detailed picture of counseling and whether the therapist’s approach aligns with your goals.</p>
+                          <p>Here are some therapy definitions we gathered by surveying Talkspace therapists and reaching outside our network:</p>
+                          <ul role="list">
+                             <li>“A commitment to yourself and to opening yourself up to someone else; being willing to trust someone enough to let them into your life and learn from each other.” <br>—<a href="https://www.talkspace.com/blog/meet-our-therapists-alaina-brubaker/"> Alaina Brubaker</a>, Talkspace Therapist<br>‍</li>
+                             <li>“A way of changing your perspective on how to handle a situation.” <br>— Noor Pinna, Talkspace Therapist<br>‍</li>
+                             <li>“A communication process of increasing clarification and understanding pertinent to specific experiences related to such terms as discomfort, dissatisfaction, disappointment, discontent, disenchantment, and other dispositions that are perceived as problematic.” <br>—<a href="https://www.talkspace.com/blog/meet-our-therapists-ken-fields/"> Ken Fields</a>, Talkspace Therapist<br>‍</li>
+                             <li>“A dynamic process that occurs in a safe and contained relational frame wherein destructive patterns of being are identified and replaced with healthy and productive ones.”<br>—<a href="http://www.drhokemeyer.com/"> Paul Hokemeyer</a>, Marriage and Family Therapist<br>‍</li>
+                             <li>“Empathy, a nonjudgmental attitude and the creation of a safe space in which nothing the client wants to explore is off-limits and everything is on the metaphorical table.” <br>—<a href="http://pacificnorthwell.com/kristen/"> Kristen Martinez</a>, LGBT Therapist<br>‍</li>
+                             <li>“Learning how to overcome your personal or relational struggles by developing long-term tools.”<br>—<a href="http://estestherapy.com/"> Jennine Estes</a>, Marriage and Family Therapist<br>‍</li>
+                             <li>“The art and science of engineering self-improvement and growth in clients via a strong therapeutic relationship and evidenced-based therapies.” <br>—<a href="http://www.michaeldzitophd.com/"> Michael Zito</a>, Therapist, Ph.D.<br>‍</li>
+                          </ul>
+                          <ul role="list">
+                             <li>“Helping clients break free of old ideas, patterns and wounds that are restricting their happiness and contentment; coaching them through life passages, teaching skills and techniques for self-awareness, relationships and success.” <br>—<a href="http://www.tinatessina.com/"> Tina B. Tessina</a>, Therapist, Ph.D.<br></li>
+                          </ul>
+                       </div>
+                    </div>
+                 </div>
+              </div>
+              <div id="tab_22" class="c-tabs__content">
+                 <div class="c-tabs__box">
+                    <div>
+                       <h2 class="c-heading2 roboto article">The history of therapy</h2>
+                       <div class="c-articles__text w-richtext">
+                          <p>To fully understand psychotherapy and counseling, it can be helpful to explore its past, present, and future. This timeline will give you a richer understanding of what counseling is and how it evolved.</p>
+                          <p>Before Freud and other early psychologists such as Wilhelm Wundt, philosophy was the closest relative to therapy. It was the only field that explored human behavior and mental health.</p>
+                          <p>“Psychology is an offshoot of philosophy,” psychologist Bart Rossi told Talkspace.</p>
+                          <p>Rossi cited schools of philosophy such as rationalism and empiricism. He also said philosophers including Immanuel Kant contributed to the development of therapy.</p>
+                          <p>One of the best examples of philosophy informing psychotherapy is existential therapy, which is derived from existential philosophy. Existential psychotherapist<a href="https://www.talkspace.com/blog/the-evolution-of-therapy-through-the-eyes-of-renowned-therapist-irvin-yalom/" target="_blank"> Irvin Yalom</a>, who shaped the field, said existential philosophers such as Nietzsche inspired his work.</p>
+                          <h3>Therapy during Freud’s time and the 20th century</h3>
+                          <p>Because Freud was a psychiatrist, and invented psychoanalysis, early psychotherapy was mostly about reducing symptoms. It followed a medical model rather than the wellness model we more frequently see today. Therapy was for “patients” with diagnosable mental illnesses, not clients who see a therapist for a multitude of reasons.</p>
+                          <p>“I think in the past, therapy was centered around ‘fixing’ what was ‘wrong’ with people,” said therapist Kristen Martinez. “[The medical establishment] thought they were the healthy ones, and psychotherapy focused on getting ‘unhealthy’ people to be healthy like them.”</p>
+                          <h3>Progress of therapy</h3>
+                          <p>Modern psychotherapy tends to balance the wellness and medical model. Therapists want to reduce symptoms in people dealing with mental illness, but they’re squarely centered on the needs and direction of the client.</p>
+                          <p>Cognitive behavioral therapy (CBT) changed the definition of counseling, according to Rossi. It is now more behavior-focused and psychodynamic approaches have become less common.</p>
+                          <p>The advent of<a href="https://www.talkspace.com/online-therapy/"> online therapy</a> has also appended what therapy is and how it is delivered. Although prior definitions of therapy did not explicitly describe it as occurring solely in-person, therapy required in-office visits because distance counseling was not easily facilitated before the development of the internet.</p>
+                          <p>Earlier therapy definitions also implied counseling could only take place only via “sessions,” where the therapist and client scheduled a meeting or phone call at a specific time. Because of technology and approaches such as the<a href="https://www.talkspace.com/online-therapy/unlimited-messaging-therapy/"> text therapy Talkspace offers</a>, counseling no longer requires set sessions.</p>
+                          <h3>The future of therapy</h3>
+                          <p>While psychotherapy isn’t going anywhere there are some trends that will expand the definition of what is possible in therapy.<br></p>
+                          <p>Here are some trends that might contribute to the evolution of psychotherapy and counseling in the future:</p>
+                          <ul role="list">
+                             <li>Additional technological advances in online counseling</li>
+                             <li>Virtual reality</li>
+                             <li>Integration of medical care</li>
+                             <li>More focus on the therapeutic relationship</li>
+                             <li>Increased cultural consideration</li>
+                             <li>New CBT approaches</li>
+                          </ul>
+                          <p>Now that we’ve discussed what therapy is and is not and have established a common definition for psychotherapy, take a moment to think about what it might be able to do for you.<br></p>
+                       </div>
+                    </div>
+                 </div>
+              </div>
+              <div id="tab_23" class="c-tabs__content">
+                 <div class="w-dyn-list">
+                    <div role="list" class="c-reviews__collection w-dyn-items">
+                       <div role="listitem" class="c-tabs__box w-dyn-item">
+                          <div>
+                             <div class="c-articles__author">
+                                <div class="c-articles__avatar"><img src="https://assets-global.website-files.com/5dee88cb54c6bb1933f47172/5df412e5a58b627677c67234_joshwolff.jpg" loading="lazy" alt="" sizes="(max-width: 479px) 100vw, 48px" srcset="https://assets-global.website-files.com/5dee88cb54c6bb1933f47172/5df412e5a58b627677c67234_joshwolff-p-500.jpeg 500w, https://assets-global.website-files.com/5dee88cb54c6bb1933f47172/5df412e5a58b627677c67234_joshwolff.jpg 675w"></div>
+                                <div class="c-articles__autorname">
+                                   <div class="c-autorname__by">by</div>
+                                   <div>Josh Wolff</div>
+                                </div>
+                             </div>
+                             <h2 class="c-heading2 roboto article">Why Online Counseling is More Popular than Traditional Counseling</h2>
+                             <div class="c-articles__text w-richtext">
+                                <p>Online counseling is proven to be as effective, if not more effective than face-to-face counseling, with important benefits that bring the experience into the modern era. For some, traditional counseling is their choice because they haven’t yet experienced the freedom that online counseling offers.</p>
+                                <p>If you’re on the fence about whether online counseling is right for you, consider these positive benefits… <a href="https://www.talkspace.com/blog/reasons-online-therapy-right-for-you/" target="_blank"><strong>read more</strong></a></p>
+                             </div>
+                          </div>
+                       </div>
+                    </div>
+                 </div>
+              </div>
+              <div id="tab_24" class="c-tabs__content">
+                 <div class="w-dyn-list">
+                    <div role="list" class="c-reviews__collection w-dyn-items">
+                       <div role="listitem" class="c-tabs__box w-dyn-item">
+                          <div>
+                             <div class="c-articles__author">
+                                <div class="c-articles__avatar"><img src="https://assets-global.website-files.com/5dee88cb54c6bb1933f47172/5df412e5a58b627677c67234_joshwolff.jpg" loading="lazy" alt="" sizes="(max-width: 479px) 100vw, 48px" srcset="https://assets-global.website-files.com/5dee88cb54c6bb1933f47172/5df412e5a58b627677c67234_joshwolff-p-500.jpeg 500w, https://assets-global.website-files.com/5dee88cb54c6bb1933f47172/5df412e5a58b627677c67234_joshwolff.jpg 675w"></div>
+                                <div class="c-articles__autorname">
+                                   <div class="c-autorname__by">by</div>
+                                   <div>Josh Wolff</div>
+                                </div>
+                             </div>
+                             <h2 class="c-heading2 roboto article">Most Convenient Features of Online Counseling</h2>
+                             <div class="c-articles__text w-richtext">
+                                <p>Talkspace represents a major breakthrough in modern psychology: using technology to improve individual and couples counseling. This use of technology is also known as “telemedicine,” and is part of a growing shift in the healthcare industry, with technology enabling more convenient, affordable, and on-demand benefits.</p>
+                                <p>We’d like to give you a brief tour of the cool benefits Talkspace offers as part of the online counseling experience… <a href="https://www.talkspace.com/blog/talkspace-coolest-features-brief-walkthrough/" target="_blank"><strong>read more</strong></a></p>
+                             </div>
+                          </div>
+                       </div>
+                    </div>
+                 </div>
+              </div>
+              <div id="tab_25" class="c-tabs__content">
+                 <div class="w-dyn-list">
+                    <div role="list" class="c-reviews__collection w-dyn-items">
+                       <div role="listitem" class="c-tabs__box w-dyn-item">
+                          <div>
+                             <div class="c-articles__author w-condition-invisible">
+                                <div style="background-image:none" class="c-articles__avatar"></div>
+                                <div class="c-articles__autorname">
+                                   <div class="c-autorname__by">by</div>
+                                   <div class="w-dyn-bind-empty"></div>
+                                </div>
+                             </div>
+                             <h2 class="c-heading2 roboto article">Online Counseling Reviews</h2>
+                             <div class="c-articles__text w-richtext">
+                                <p>Talkspace has helped thousands of people live happier lives and bypass barriers to counseling. Lucky for us, some of those people went out of their way to document their experiences by writing in-depth reviews of our brand of online counseling.</p>
+                                <p>We highlighted a few of them below. Browse through them to see if they help you decide whether Talkspace is right for you… <a href="https://www.talkspace.com/blog/talkspace-reviews-experiences-help-decide-right/" target="_blank"><strong>read more</strong></a></p>
+                             </div>
+                          </div>
+                       </div>
+                    </div>
+                 </div>
+              </div>
+              <div id="tab_26" class="c-tabs__content">
+                 <div class="w-dyn-list">
+                    <div role="list" class="c-reviews__collection w-dyn-items">
+                       <div role="listitem" class="c-tabs__box w-dyn-item">
+                          <div>
+                             <div class="c-articles__author">
+                                <div class="c-articles__avatar"><img src="https://assets-global.website-files.com/5dee88cb54c6bb1933f47172/5df41723a58b623e20c69993_tamarastevens.jpeg" loading="lazy" alt=""></div>
+                                <div class="c-articles__autorname">
+                                   <div class="c-autorname__by">by</div>
+                                   <div>Tamara Stevens</div>
+                                </div>
+                             </div>
+                             <h2 class="c-heading2 roboto article">Switching Counselors</h2>
+                             <div class="c-articles__text w-richtext">
+                                <p>Your relationship with your counselor is very different from other relationships, but one thing is the same: sometimes you need a change. How can you tell when it’s time to switch counselors?<br></p>
+                                <p>Sometimes you just don’t jibe with a person. Maybe your personalities are too different, or maybe you sense a small bit of judgment or criticism. If that person is your counselor, it’s hard to share your innermost thoughts and feelings… <a href="https://www.talkspace.com/blog/switch-therapists-how-to/" target="_blank"><strong>read more</strong></a><br></p>
+                             </div>
+                          </div>
+                       </div>
+                    </div>
+                 </div>
+              </div>
+              <div id="tab_27" class="c-tabs__content">
+                 <div class="w-dyn-list">
+                    <div role="list" class="c-reviews__collection w-dyn-items">
+                       <div role="listitem" class="c-tabs__box w-dyn-item">
+                          <div>
+                             <div class="c-articles__author">
+                                <div class="c-articles__avatar"><img src="https://assets-global.website-files.com/5dee88cb54c6bb1933f47172/5df412e5a58b627677c67234_joshwolff.jpg" loading="lazy" alt="Josh Wolff" sizes="(max-width: 479px) 100vw, 48px" srcset="https://assets-global.website-files.com/5dee88cb54c6bb1933f47172/5df412e5a58b627677c67234_joshwolff-p-500.jpeg 500w, https://assets-global.website-files.com/5dee88cb54c6bb1933f47172/5df412e5a58b627677c67234_joshwolff.jpg 675w"></div>
+                                <div class="c-articles__autorname">
+                                   <div class="c-autorname__by">by</div>
+                                   <div>Josh Wolff</div>
+                                </div>
+                             </div>
+                             <h2 class="c-heading2 roboto article">What to Expect from Counseling</h2>
+                             <div class="c-articles__text w-richtext">
+                                <p>At its core, online counseling’s objective is similar to that of brick-and-mortar counseling: provide tools, solutions, and ways to reframe your current issues, allowing you to overcome challenges in many areas of your life.</p>
+                                <p>Online counseling differs, however, in that it puts counseling in the palm of your hand and enables you to share your thoughts and challenges anytime you wish. This makes counseling more convenient and affordable for those who are new to the experience. Additionally, online or text-based counseling (like Talkspace) is known to be as effective, if not more, than brick-and-mortar counseling. Here’s what to expect when beginning your online therapy experience, and how to set expectations for positive outcomes along the way... <a href="https://www.talkspace.com/blog/starting-online-therapy-first-time/" target="_blank"><strong>read more</strong></a></p>
+                             </div>
+                          </div>
+                       </div>
+                    </div>
+                 </div>
+              </div>
+              <div id="tab_28" class="c-tabs__content">
+                 <div class="w-dyn-list">
+                    <div role="list" class="c-reviews__collection w-dyn-items">
+                       <div role="listitem" class="c-tabs__box w-dyn-item">
+                          <div>
+                             <div class="c-articles__author">
+                                <div class="c-articles__avatar"><img height="" loading="lazy" alt="Jamie Wiebe" src="https://assets-global.website-files.com/5dee88cb54c6bb1933f47172/5df417d035688c2ca7050c98_jamiewiebe.jpg"></div>
+                                <div class="c-articles__autorname">
+                                   <div class="c-autorname__by">by</div>
+                                   <div>Jamie Wiebe</div>
+                                </div>
+                             </div>
+                             <h2 class="c-heading2 roboto article">Benefits of Sticking with Counseling</h2>
+                             <div class="c-articles__text w-richtext">
+                                <p>Counseling is difficult work. Maybe you had an anxiety attack during a session, or realized some difficult truths about your personality. Sometimes counseling is boring, or you’re convinced your poor counselor is bored. You talk about similar things week after week, over and over, and nothing huge seems to be changing.&nbsp;</p>
+                                <p>But then, one week, it clicks. You start feeling better each session. A few months later, you look back and realize how life-changing that breakthrough was. Therapy takes a bit of patience, but the rewards are numerous. Here are just some of those benefits... <a href="https://www.talkspace.com/blog/benefits-of-staying-in-therapy/" target="_blank"><strong>read more</strong></a><br></p>
+                             </div>
+                          </div>
+                       </div>
+                    </div>
+                 </div>
+              </div>
+              <div id="tab_29" class="c-tabs__content">
+                 <div class="w-dyn-list">
+                    <div role="list" class="c-reviews__collection w-dyn-items">
+                       <div role="listitem" class="c-tabs__box w-dyn-item">
+                          <div>
+                             <div class="c-articles__author">
+                                <div class="c-articles__avatar"><img src="https://assets-global.website-files.com/5dee88cb54c6bb1933f47172/5df41723a58b623e20c69993_tamarastevens.jpeg" loading="lazy" alt="Tamara Stevens"></div>
+                                <div class="c-articles__autorname">
+                                   <div class="c-autorname__by">by</div>
+                                   <div>Tamara Stevens</div>
+                                </div>
+                             </div>
+                             <h2 class="c-heading2 roboto article">How to Pause Counseling</h2>
+                             <div class="c-articles__text w-richtext">
+                                <p>Counseling is hard work — sometimes the hardest part is just getting started. Therefore, it can be tough to stop before you’re ready, but sometimes life happens that way. Your counselor understands that you’re busy and things come up when least expected. Fortunately, if you have to stop or pause counseling, there are ways to make the process less painful… <a href="https://www.talkspace.com/blog/pause-stop-therapy-guide/" target="_blank"><strong>read more</strong></a></p>
+                             </div>
+                          </div>
+                       </div>
+                    </div>
+                 </div>
+              </div>
+              <div id="tab_30" class="c-tabs__content">
+                 <div class="w-dyn-list">
+                    <div role="list" class="c-reviews__collection w-dyn-items">
+                       <div role="listitem" class="c-tabs__box w-dyn-item">
+                          <div>
+                             <div class="c-articles__author">
+                                <div class="c-articles__avatar"><img src="https://assets-global.website-files.com/5dee88cb54c6bb1933f47172/5df4184eb0ebe73f9b3a43c8_elisbethsu.jpg" loading="lazy" alt="Elizabeth Su"></div>
+                                <div class="c-articles__autorname">
+                                   <div class="c-autorname__by">by</div>
+                                   <div>Elizabeth Su</div>
+                                </div>
+                             </div>
+                             <h2 class="c-heading2 roboto article">How Long Does Counseling Take?</h2>
+                             <div class="c-articles__text w-richtext">
+                                <p>The number of recommended sessions varies by condition and treatment type, however, the majority of counseling clients report feeling better after 3 months; those with depression and anxiety experience significant improvement after short and longer time frames, 1-2 months &amp; 3-4.&nbsp;<br></p>
+                                <p>Conditions such as post-traumatic stress disorder typically take around 15-20 sessions for 50% of patients to feel improvement. It’s been found that those treated with cognitive behavioral therapy report feeling better after around 10-20 sessions. The important point is it takes time, but the benefits are many… <a href="https://www.talkspace.com/blog/how-long-does-therapy-take-science/"><strong>read more</strong></a><br></p>
+                             </div>
+                          </div>
+                       </div>
+                    </div>
+                 </div>
+              </div>
+              <div id="tab_31" class="c-tabs__content">
+                 <div class="w-dyn-list">
+                    <div role="list" class="c-reviews__collection w-dyn-items">
+                       <div role="listitem" class="c-tabs__box w-dyn-item">
+                          <div>
+                             <div class="c-articles__author">
+                                <div class="c-articles__avatar"><img src="https://assets-global.website-files.com/5dee88cb54c6bb1933f47172/5df41723a58b623e20c69993_tamarastevens.jpeg" loading="lazy" alt="Tamara Stevens"></div>
+                                <div class="c-articles__autorname">
+                                   <div class="c-autorname__by">by</div>
+                                   <div>Tamara Stevens</div>
+                                </div>
+                             </div>
+                             <h2 class="c-heading2 roboto article">What if I Don’t Like My Counselor</h2>
+                             <div class="c-articles__text w-richtext">
+                                <p>The beginning of counseling brings up complicated emotions. You might feel relieved that you’ve been able to unburden yourself, or even awe at the way your counselor “gets” you. Like every relationship, there is usually a honeymoon period, in which you admire and respect your counselor, confident in their ability to heal you.</p>
+                                <p>Over a long time period, however, the newness fades and the work gets harder. People often put their counselor on a pedestal at first, but the counselor is bound to fall eventually. For some people, adjusting to a more realistic view of the counselor is easy, but for others, resentment or lack of respect creep in… <a href="https://www.talkspace.com/blog/i-dont-respect-my-therapist/"><strong>read more</strong></a></p>
+                             </div>
+                          </div>
+                       </div>
+                    </div>
+                 </div>
+              </div>
+              <div id="tab_32" class="c-tabs__content">
+                 <div class="w-dyn-list">
+                    <div role="list" class="c-reviews__collection w-dyn-items">
+                       <div role="listitem" class="c-tabs__box w-dyn-item">
+                          <div>
+                             <div class="c-articles__author">
+                                <div class="c-articles__avatar"><img src="https://assets-global.website-files.com/5dee88cb54c6bb1933f47172/5df419160730a5eacb1d4e7b_jorellcarabllo.jpg" loading="lazy" alt="Jor-El Caraballo"></div>
+                                <div class="c-articles__autorname">
+                                   <div class="c-autorname__by">by</div>
+                                   <div>Jor-El Caraballo</div>
+                                </div>
+                             </div>
+                             <h2 class="c-heading2 roboto article">Finding the Right Online Counseling</h2>
+                             <div class="c-articles__text w-richtext">
+                                <p>These days, there are more ways to find a counselor than ever before. But, some might feel it’s important and more helpful to work with a counselor of a particular background, which can make the search more difficult. It can even be tough to make this request.&nbsp;If this is the situation you find yourself in, what should you consider doing?<a href="https://www.talkspace.com/blog/find-therapist-same-cultural-background-community/"> <strong>read more</strong></a><br></p>
+                                <p><br></p>
+                                <p><br></p>
+                             </div>
+                          </div>
+                       </div>
+                    </div>
+                 </div>
+              </div>
+              <div id="tab_33" class="c-tabs__content">
+                 <div class="w-dyn-list">
+                    <div role="list" class="c-reviews__collection w-dyn-items">
+                       <div role="listitem" class="c-tabs__box w-dyn-item">
+                          <div>
+                             <div class="c-articles__author">
+                                <div class="c-articles__avatar"><img src="https://assets-global.website-files.com/5dee88cb54c6bb1933f47172/5df419ba0730a51ffd1d5233_josephrauch.png" loading="lazy" alt="Joseph Rauch"></div>
+                                <div class="c-articles__autorname">
+                                   <div class="c-autorname__by">by</div>
+                                   <div>Joseph Rauch</div>
+                                </div>
+                             </div>
+                             <h2 class="c-heading2 roboto article">Coming Back to Online Counseling</h2>
+                             <div class="c-articles__text w-richtext">
+                                <p>Like any journey, your counseling journey may have starts and stops, highs and lows, departures and returns. Sometimes unforeseen transitions or disruptions in life force you to pause your investment in mental health. Sometimes you just need a break to focus on another aspect of your life.</p>
+                                <p>Once you are ready to return to counseling, however, you might wonder how you should go about it. What should you say to your counselor? … <a href="https://www.talkspace.com/blog/returning-therapy-break/"><strong>read more</strong></a></p>
+                             </div>
+                          </div>
+                       </div>
+                    </div>
+                 </div>
+              </div>
+              <div id="tab_34" class="c-tabs__content">
+                 <div class="w-dyn-list">
+                    <div role="list" class="c-reviews__collection w-dyn-items">
+                       <div role="listitem" class="c-tabs__box w-dyn-item">
+                          <div>
+                             <div class="c-articles__author">
+                                <div class="c-articles__avatar"><img src="https://assets-global.website-files.com/5dee88cb54c6bb1933f47172/5df41a6f6a31d504a533bd6c_ts-avatar12.png" loading="lazy" alt="Nicole Amesbury"></div>
+                                <div class="c-articles__autorname">
+                                   <div class="c-autorname__by">by</div>
+                                   <div>Nicole Amesbury</div>
+                                </div>
+                             </div>
+                             <h2 class="c-heading2 roboto article">Quitting Online Counseling</h2>
+                             <div class="c-articles__text w-richtext">
+                                <p>When someone enters counseling and begins a relationship with their counselor, whether it’s online or offline, the last thing on that person’s mind is leaving. <br></p>
+                                <p>But, just like with all relationships, there will come a time to say goodbye and it’s how they choose to go about it that really matters. Lets face it, many endings to relationships tend to be negative; think break-ups, death, and divorce. They may even be the reasons someone comes to counseling in the first place. But the good news is, ending counseling on a positive note is absolutely possible and it will enrich the time you spent receiving it... <a href="https://www.talkspace.com/blog/how-to-say-goodbye-5-tips-for-ending-therapy/" target="_blank"><strong>read more</strong></a></p>
+                             </div>
+                          </div>
+                       </div>
+                    </div>
+                 </div>
+              </div>
+           </div>
+        </div>
+    </div>
+</section>
+<div data-w-id="ed932de4-d2a3-8ccc-c6eb-9f5115836ae8" class="c-tabs">
+   <div data-w-id="ed932de4-d2a3-8ccc-c6eb-9f5115836ae9" class="c-tabs__left">
+      <div class="c-tabs__mobile">
+         <h2 class="c-heading2 roboto topics">Topics</h2>
+         <div class="c-tabs__linkcontainer"><a href="#tab_a" class="c-tabs__link w--current">Does insurance cover online therapy?</a></div>
+         <div class="c-tabs__linkcontainer"><a href="#tab_b" class="c-tabs__link">Does Talkspace accept insurance?</a></div>
+         <div class="c-tabs__linkcontainer"><a href="#tab_c" class="c-tabs__link">Is online therapy effective?</a></div>
+         <div class="c-tabs__linkcontainer"><a href="#tab_d" class="c-tabs__link">What to expect during online therapy sessions</a></div>
+         <div class="c-tabs__linkcontainer"><a href="#tab_e" class="c-tabs__link">How to find the best online therapy for your needs</a></div>
+         <div class="c-tabs__linkcontainer"><a href="#tab_1" class="c-tabs__link">Why online therapy is more popular</a></div>
+         <div class="c-tabs__linkcontainer"><a href="#tab_2" class="c-tabs__link">Conveniences of online therapy</a></div>
+         <div class="c-tabs__linkcontainer"><a href="#tab_3" class="c-tabs__link">Online therapy reviews</a></div>
+         <div class="c-tabs__linkcontainer"><a href="#tab_4" class="c-tabs__link">Switching therapists</a></div>
+         <div class="c-tabs__linkcontainer"><a href="#tab_6" class="c-tabs__link">Benefits of sticking with therapy</a></div>
+         <div class="c-tabs__linkcontainer"><a href="#tab_7" class="c-tabs__link">How to pause therapy</a></div>
+         <div class="c-tabs__linkcontainer"><a href="#tab_8" class="c-tabs__link">How long does therapy take?</a></div>
+         <div class="c-tabs__linkcontainer"><a href="#tab_9" class="c-tabs__link">What if I don’t like my therapist</a></div>
+         <div class="c-tabs__linkcontainer"><a href="#tab_10" class="c-tabs__link">Finding the right online therapist</a></div>
+         <div class="c-tabs__linkcontainer"><a href="#tab_11" class="c-tabs__link">Returning to online therapy</a></div>
+         <div class="c-tabs__linkcontainer"><a href="#tab_12" class="c-tabs__link">Quitting online therapy</a></div>
+         <div class="c-tabs__linkcontainer"><a href="#tab_13" class="c-tabs__link">Defining therapy</a></div>
+         <div class="c-tabs__linkcontainer"><a href="#tab_14" class="c-tabs__link">Common types of therapy</a></div>
+         <div class="c-tabs__linkcontainer"><a href="#tab_15" class="c-tabs__link">Benefits of therapy</a></div>
+         <div class="c-tabs__linkcontainer"><a href="#tab_16" class="c-tabs__link">What does a therapist do?</a></div>
+         <div class="c-tabs__linkcontainer"><a href="#tab_17" class="c-tabs__link">Finding the right therapist</a></div>
+         <div class="c-tabs__linkcontainer"><a href="#tab_18" class="c-tabs__link">How much does therapy cost?</a></div>
+         <div class="c-tabs__linkcontainer"><a href="#tab_19" class="c-tabs__link">How long does therapy take?</a></div>
+         <div class="c-tabs__linkcontainer"><a href="#tab_20" class="c-tabs__link">How to tell if therapy is working</a></div>
+         <div class="c-tabs__linkcontainer"><a href="#tab_21" class="c-tabs__link">How therapists define therapy</a></div>
+         <div class="c-tabs__linkcontainer"><a href="#tab_22" class="c-tabs__link">The history of therapy</a></div>
+         <div class="c-tabs__linkcontainer"><a href="#tab_23" class="c-tabs__link">Why online counseling is more popular</a></div>
+         <div class="c-tabs__linkcontainer"><a href="#tab_24" class="c-tabs__link">Conveniences of online counseling</a></div>
+         <div class="c-tabs__linkcontainer"><a href="#tab_25" class="c-tabs__link">Online counseling reviews</a></div>
+         <div class="c-tabs__linkcontainer"><a href="#tab_26" class="c-tabs__link">Switching counselors</a></div>
+         <div class="c-tabs__linkcontainer"><a href="#tab_27" class="c-tabs__link">What to expect from counseling</a></div>
+         <div class="c-tabs__linkcontainer"><a href="#tab_28" class="c-tabs__link">Benefits of sticking with counseling</a></div>
+         <div class="c-tabs__linkcontainer"><a href="#tab_29" class="c-tabs__link">How to pause counseling</a></div>
+         <div class="c-tabs__linkcontainer"><a href="#tab_30" class="c-tabs__link">How long does counseling take?</a></div>
+         <div class="c-tabs__linkcontainer"><a href="#tab_31" class="c-tabs__link">What if I don’t like my counselor</a></div>
+         <div class="c-tabs__linkcontainer"><a href="#tab_32" class="c-tabs__link">Finding the right online counseling</a></div>
+         <div class="c-tabs__linkcontainer"><a href="#tab_33" class="c-tabs__link">Returning to online counseling</a></div>
+         <div class="c-tabs__linkcontainer"><a href="#tab_34" class="c-tabs__link">Quitting online counseling</a></div>
+      </div>
+   </div>
+   <div class="c-tabs__right-2">
+      <div id="tab_a" class="c-tabs__content">
+         <div class="c-tabs__box">
+            <div>
+               <h2 class="c-heading2 roboto article">Does insurance cover online therapy?</h2>
+               <div class="c-articles__text w-richtext">
+                  <p>Typically, yes. Many people are able to get therapy covered by insurance through an employer’s healthcare plan or medical assistance programs such as Medicare &amp; Medicaid. Learn more about <a href="https://www.talkspace.com/blog/does-insurance-cover-therapy/">insurance coverage for therapy</a>.&nbsp;<br></p>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div id="tab_b" class="c-tabs__content">
+         <div class="c-tabs__box">
+            <div>
+               <h2 class="c-heading2 roboto article">Does Talkspace accept insurance?</h2>
+               <div class="c-articles__text w-richtext">
+                  <p>Yes, Talkspace accepts insurance for mental health care and therapy services. We’re in-network with most major insurers and make it easy for out-of-network members to get reimbursed, making therapy more affordable than ever. On average, in-network insured members pay a $20 copay or less. You can view our full partner list <a href="https://www.talkspace.com/partners">here</a>.<br></p>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div id="tab_c" class="c-tabs__content">
+         <div class="c-tabs__box">
+            <div>
+               <h2 class="c-heading2 roboto article">Is online therapy effective?</h2>
+               <div class="c-articles__text w-richtext">
+                  <p>Online therapy is proven to be <a href="https://www.ncbi.nlm.nih.gov/pubmed/23886401/">as effective, if not more effective</a> than face-to-face therapy. A study conducted by Talkspace &amp; the <a href="https://www.liebertpub.com/doi/abs/10.1089/tmj.2016.0114?journalCode=tmj/">Journal of Telemedicine and e-Health</a> showed that text-based therapy through Talkspace was highly effective and comparable to traditional therapy. When compared with traditional therapy, Talkspace also generated greater satisfaction in terms of its delivery, accessibility, and affordability. Learn more from <a href="https://www.talkspace.com/research">studies on how Talkspace improves mental health</a>.</p>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div id="tab_d" class="c-tabs__content">
+         <div class="c-tabs__box">
+            <div>
+               <div class="c-articles__author">
+                  <div class="c-articles__avatar ts"><img src="https://assets-global.website-files.com/5deaa99ba6578d2abda03191/5f5be38592cedb569b4c716a_5df41a6f6a31d504a533bd6c_ts-avatar12.png" loading="lazy" alt=""></div>
+                  <div class="c-articles__autorname">
+                     <div class="c-autorname__by">by</div>
+                     <div>Talkspace</div>
+                  </div>
+               </div>
+               <h2 class="c-heading2 roboto article">What to expect during online therapy sessions</h2>
+               <div class="c-articles__text w-richtext">
+                  <p>Unlike traditional therapy, online therapy sessions can take place in a few different ways: via text, audio, or video. Video therapy sessions are the most similar to in-person therapy in that you’ll meet face-to-face with your therapist. Text &amp; audio methods are asynchronous; you’ll be able to send text messages, audio and video clips to your therapist any time and your therapist will respond daily, 5 days/week. There’s no limit to how many messages you send, and you can review old messages to track your progress and reflect on your insights and discoveries.</p>
+                  <p>You can expect to spend some time in your initial online therapy session discussing your goals for therapy, along with any concerns or issues you’re hoping to address. The therapist will guide the discussion by asking questions that help them gain a better understanding of your situation. The therapist may tell you about their professional background and approaches to mental health care. This is a great time to ask the therapist questions to help determine if they’re the right fit for you. The initial therapy session is a chance for the therapist and the client to get to know one another and build a rapport.</p>
+                  <p>In ongoing sessions, the structure will vary depending on your goals, preferences, and progress. Your therapist will provide helpful guidance and exercises to help you work toward your goals. Often, they’ll ask deeper questions to help you see a problem in a new light. Throughout your treatment, they’ll check in to make sure there’s room for anything new that you’d like to work on… <a href="https://www.talkspace.com/blog/starting-online-therapy-first-time/" target="_blank"><strong>read more</strong></a></p>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div id="tab_e" class="c-tabs__content">
+         <div class="c-tabs__box">
+            <div>
+               <h2 class="c-heading2 roboto article">How to find the best online therapy for your needs</h2>
+               <div class="c-articles__text w-richtext">
+                  <p>The best online therapy services provide convenient, affordable ways to receive mental health support. They offer clients an opportunity to connect with reputable, licensed therapists in a flexible and accessible scheduling environment, as well as offering up varied options for communication.&nbsp;</p>
+                  <p>While the best online therapy option may vary from person to person, Talkspace’s mental health platform offers a few standout features that make effective treatment and better overall mental health outcomes accessible to all:</p>
+                  <ul role="list">
+                     <li><strong>Insurance:</strong> Talkspace is one of the only <a href="https://www.talkspace.com/insurance">online therapy platforms that accepts insurance</a>. We currently accept insurance from Cigna, Optum, Gatorcare, Aetna, and more. You can view our full partner list <a href="https://www.talkspace.com/partners">here</a>.</li>
+                     <li><strong>Holistic treatment</strong>: In addition to providing affordable online therapy, Talkspace offers telehealth psychiatry &amp; medication management services. This means that we’re able to provide more personalized treatment plans, as psychiatric evaluations and medication management can be integrated with therapy sessions.<strong>‍</strong></li>
+                     <li><strong>Unlimited messaging:</strong> Our Unlimited Messaging Therapy™ means you can message your therapist via text, video or voice at any time, from anywhere.</li>
+                  </ul>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div id="tab_1" class="c-tabs__content">
+         <div class="c-tabs__box">
+            <div>
+               <div class="c-articles__author">
+                  <div class="c-articles__avatar ts"><img src="https://assets-global.website-files.com/5deaa99ba6578d2abda03191/5f5be38592cedb569b4c716a_5df41a6f6a31d504a533bd6c_ts-avatar12.png" loading="lazy" alt=""></div>
+                  <div class="c-articles__autorname">
+                     <div class="c-autorname__by">by</div>
+                     <div>Talkspace</div>
+                  </div>
+               </div>
+               <h2 class="c-heading2 roboto article">Why online therapy is more popular than traditional therapy</h2>
+               <div class="c-articles__text w-richtext">
+                  <p>Your relationship with your therapist is very different from other relationships, but one thing is the same: sometimes you need a change. How can you tell when it’s time to switch therapists? Sometimes you just don’t click with a person. Maybe your styles are different, or maybe you sense criticism or judgment. If that person is your therapist, it’s hard to share your innermost thoughts and feelings… <a href="https://www.talkspace.com/blog/reasons-online-therapy-right-for-you/" target="_blank"><strong>read more</strong></a></p>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div id="tab_2" class="c-tabs__content">
+         <div class="c-tabs__box">
+            <div>
+               <div class="c-articles__author">
+                  <div class="c-articles__avatar ts"><img src="https://assets-global.website-files.com/5deaa99ba6578d2abda03191/5f5be38592cedb569b4c716a_5df41a6f6a31d504a533bd6c_ts-avatar12.png" loading="lazy" alt=""></div>
+                  <div class="c-articles__autorname">
+                     <div class="c-autorname__by">by</div>
+                     <div>Talkspace</div>
+                  </div>
+               </div>
+               <h2 class="c-heading2 roboto article">Most convenient features of online therapy</h2>
+               <div class="c-articles__text w-richtext">
+                  <p>Talkspace represents a major breakthrough in modern psychology: using technology to improve individual and couples therapy. This use of technology is also known as “telemedicine,” and is part of a growing shift in the healthcare industry, with technology enabling more convenient, affordable, and on-demand benefits.<br></p>
+                  <p>We’d like to give you a brief tour of the cool benefits Talkspace offers as part of the online therapy experience… <a href="https://www.talkspace.com/blog/talkspace-coolest-features-brief-walkthrough/" target="_blank"><strong>read more</strong></a></p>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div id="tab_3" class="c-tabs__content">
+         <div class="c-tabs__box">
+            <div>
+               <h2 class="c-heading2 roboto article">Online therapy reviews</h2>
+               <div class="c-articles__text w-richtext">
+                  <p>Talkspace has helped thousands of people live happier lives and bypass barriers to therapy. Lucky for us, some of those people went out of their way to document their experiences by writing in-depth reviews of our brand of online therapy.</p>
+                  <p>We highlighted a few of them below. Browse through them to see if they help you decide whether Talkspace is right for you… <a href="https://www.talkspace.com/blog/talkspace-reviews-experiences-help-decide-right/" target="_blank"><strong>read more</strong></a></p>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div id="tab_4" class="c-tabs__content">
+         <div class="c-tabs__box">
+            <div>
+               <div class="c-articles__author">
+                  <div class="c-articles__avatar tamara"><img src="https://assets-global.website-files.com/5deaa99ba6578d2abda03191/5f5be18aa2ba0a3d070eeedd_5df41723a58b623e20c69993_tamarastevens.jpeg" loading="lazy" alt=""></div>
+                  <div class="c-articles__autorname">
+                     <div class="c-autorname__by">by</div>
+                     <div>Tamara Stevens</div>
+                  </div>
+               </div>
+               <h2 class="c-heading2 roboto article">Switching therapists</h2>
+               <div class="c-articles__text w-richtext">
+                  <p>Your relationship with your therapist is very different from other relationships, but one thing is the same: sometimes you need a change. How can you tell when it’s time to switch therapists?<br></p>
+                  <p>Sometimes you just don’t click with a person. Maybe your styles are different, or maybe you sense criticism or judgment. If that person is your therapist, it’s hard to share your innermost thoughts and feelings… <a href="https://www.talkspace.com/blog/switch-therapists-how-to/" target="_blank"><strong>read more</strong></a></p>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div id="tab_6" class="c-tabs__content">
+         <div class="c-tabs__box">
+            <div>
+               <div class="c-articles__author">
+                  <div class="c-articles__avatar jamie"><img src="https://assets-global.website-files.com/5deaa99ba6578d2abda03191/5f5be20fa768b858397be482_5df417d035688c2ca7050c98_jamiewiebe.jpg" loading="lazy" alt=""></div>
+                  <div class="c-articles__autorname">
+                     <div class="c-autorname__by">by</div>
+                     <div>Jamie Wiebe</div>
+                  </div>
+               </div>
+               <h2 class="c-heading2 roboto article">Benefits of sticking with therapy</h2>
+               <div class="c-articles__text w-richtext">
+                  <p>No matter how eager you are to change your ways, there will come a point in therapy when you think, “This sucks. Dante forgot to include ‘Therapy’ as the tenth layer of hell.”<br></p>
+                  <p>It’s hard work. Maybe you had a panic attack during a session, or realized some difficult truths about your personality. Sometimes therapy is boring, or you’re convinced your poor therapist is bored. You talk about the same things week after week, over and over again, and nothing in you is changing… <a href="https://www.talkspace.com/blog/benefits-of-staying-in-therapy/" target="_blank"><strong>read more</strong></a></p>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div id="tab_7" class="c-tabs__content">
+         <div class="c-tabs__box">
+            <div>
+               <div class="c-articles__author">
+                  <div class="c-articles__avatar tamara"><img src="https://assets-global.website-files.com/5deaa99ba6578d2abda03191/5f5be18aa2ba0a3d070eeedd_5df41723a58b623e20c69993_tamarastevens.jpeg" loading="lazy" alt=""></div>
+                  <div class="c-articles__autorname">
+                     <div class="c-autorname__by">by</div>
+                     <div>Tamara Stevens</div>
+                  </div>
+               </div>
+               <h2 class="c-heading2 roboto article">How to pause therapy</h2>
+               <div class="c-articles__text w-richtext">
+                  <p>Therapy is hard work — sometimes the hardest part is just getting started. Therefore, it can be tough to stop before you’re ready, but sometimes life happens that way. Your therapist understands that you’re busy and things come up when least expected. Fortunately, if you have to stop or pause therapy, there are ways to make the process less painful… <a href="https://www.talkspace.com/blog/pause-stop-therapy-guide/" target="_blank"><strong>read more</strong></a></p>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div id="tab_8" class="c-tabs__content">
+         <div class="c-tabs__box">
+            <div>
+               <div class="c-articles__author">
+                  <div class="c-articles__avatar elizabeth"><img src="https://assets-global.website-files.com/5deaa99ba6578d2abda03191/5f5be2779d335b2f629afe49_5df4184eb0ebe73f9b3a43c8_elisbethsu.jpg" loading="lazy" alt=""></div>
+                  <div class="c-articles__autorname">
+                     <div class="c-autorname__by">by</div>
+                     <div>Elizabeth Su</div>
+                  </div>
+               </div>
+               <h2 class="c-heading2 roboto article">How long does therapy take?</h2>
+               <div class="c-articles__text w-richtext">
+                  <p>Finding a therapist was one of the best decisions of my life. At the time, I had been struggling with symptoms of post-traumatic stress disorder (although I didn’t know that’s what I was experiencing), an eating disorder (I didn’t want to admit), and high anxiety levels (so high that my relationship and performance at work were taking a nosedive). I felt like my life was falling apart and I didn’t know what to do… <a href="https://www.talkspace.com/blog/how-long-does-therapy-take-science/" target="_blank"><strong>read more</strong></a></p>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div id="tab_9" class="c-tabs__content">
+         <div class="c-tabs__box">
+            <div>
+               <div class="c-articles__author">
+                  <div class="c-articles__avatar tamara"><img src="https://assets-global.website-files.com/5deaa99ba6578d2abda03191/5f5be18aa2ba0a3d070eeedd_5df41723a58b623e20c69993_tamarastevens.jpeg" loading="lazy" alt=""></div>
+                  <div class="c-articles__autorname">
+                     <div class="c-autorname__by">by</div>
+                     <div>Tamara Stevens</div>
+                  </div>
+               </div>
+               <h2 class="c-heading2 roboto article">What if I don’t like my therapist</h2>
+               <div class="c-articles__text w-richtext">
+                  <p>The beginning of therapy brings up complicated emotions. You might feel relieved that you’ve been able to unburden yourself, or even awe at the way your therapist “gets” you. Like every relationship, there is usually a honeymoon period, in which you admire and respect your therapist, confident in their ability to heal you.<br></p>
+                  <p>Over time, however, the newness fades and the work gets harder. People often put their therapist on a pedestal at first, but the therapist is bound to fall eventually. For some people, adjusting to a more realistic view of the therapist is easy, but for others, resentment or lack of respect creep in... <a href="https://www.talkspace.com/blog/i-dont-respect-my-therapist/" target="_blank"><strong>read more</strong></a></p>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div id="tab_10" class="c-tabs__content">
+         <div class="c-tabs__box">
+            <div>
+               <div class="c-articles__author">
+                  <div class="c-articles__avatar jorel"><img src="https://assets-global.website-files.com/5deaa99ba6578d2abda03191/5f5be2de5792558ab6357bb7_5df419160730a5eacb1d4e7b_jorellcarabllo.jpg" loading="lazy" alt=""></div>
+                  <div class="c-articles__autorname">
+                     <div class="c-autorname__by">by</div>
+                     <div>Jor-El Caraballo</div>
+                  </div>
+               </div>
+               <h2 class="c-heading2 roboto article">Finding the right online therapist</h2>
+               <div class="c-articles__text w-richtext">
+                  <p>These days, there are more ways to find a therapist than ever before. But, some might feel it’s important and more helpful to work with a therapist of a particular background, which can make the search more difficult. It can even be tough to make this request. If you’re in this situation, what should you do?</p>
+                  <p>With my own new clients, one of the things I often come across is that they’ve tried therapy before, often with a therapist of a different cultural background than themselves. For many, that experience wasn’t particularly comfortable and they found themselves educating their therapist on what they would consider the fundamental parts of their lived experience… <a href="https://www.talkspace.com/blog/find-therapist-same-cultural-background-community/" target="_blank"><strong>read more</strong></a></p>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div id="tab_11" class="c-tabs__content">
+         <div class="c-tabs__box">
+            <div>
+               <div class="c-articles__author">
+                  <div class="c-articles__avatar joseph"><img src="https://assets-global.website-files.com/5deaa99ba6578d2abda03191/5f5be340fd25a96873f3da92_5df419ba0730a51ffd1d5233_josephrauch.png" loading="lazy" alt=""></div>
+                  <div class="c-articles__autorname">
+                     <div class="c-autorname__by">by</div>
+                     <div>Joseph Rauch</div>
+                  </div>
+               </div>
+               <h2 class="c-heading2 roboto article">Coming back to online therapy</h2>
+               <div class="c-articles__text w-richtext">
+                  <p>Like any journey, your therapeutic journey may have starts and stops, highs and lows, departures and returns. Sometimes unexpected changes in life force you to pause the investment in your mental health. Or maybe you wanted a break to focus on another part of your life.<br></p>
+                  <p>Once you are ready to return to therapy, you might wonder how you should go about it. What should you say to your therapist? Perhaps something to the effect of “I’m back” doesn’t seem like enough… <a href="https://www.talkspace.com/blog/returning-therapy-break/" target="_blank"><strong>read more</strong></a></p>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div id="tab_12" class="c-tabs__content">
+         <div class="c-tabs__box">
+            <div>
+               <div class="c-articles__author">
+                  <div class="c-articles__avatar ts"><img src="https://assets-global.website-files.com/5deaa99ba6578d2abda03191/5f5be38592cedb569b4c716a_5df41a6f6a31d504a533bd6c_ts-avatar12.png" loading="lazy" alt=""></div>
+                  <div class="c-articles__autorname">
+                     <div class="c-autorname__by">by</div>
+                     <div>Nicole Amesbury</div>
+                  </div>
+               </div>
+               <h2 class="c-heading2 roboto article">Quitting online therapy</h2>
+               <div class="c-articles__text w-richtext">
+                  <p>When someone enters therapy and begins a relationship with their therapist, whether it’s online or offline, the last thing on that person’s mind is leaving. <br></p>
+                  <p>But, just like with all relationships, there will come a time to say goodbye and it’s how they choose to go about it that really matters. Lets face it, many endings to relationships tend to be negative; think break-ups, death, and divorce. They may even be the reasons someone comes to therapy in the first place. But the good news is, ending therapy on a positive note is absolutely possible and it will enrich the time you spent receiving it... <a href="https://www.talkspace.com/blog/how-to-say-goodbye-5-tips-for-ending-therapy/"><strong>read more</strong></a></p>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div id="tab_13" class="c-tabs__content">
+         <div class="c-tabs__box">
+            <div>
+               <h2 class="c-heading2 roboto article">Defining therapy</h2>
+               <div class="c-articles__text w-richtext">
+                  <p>Therapy (or psychotherapy, sometimes called talk therapy) is the process of working with a licensed therapist or counselor to develop positive thinking and coping skills to treat specific mental health conditions like depression or anxiety, trauma, or simply the daily human challenges we all face.</p>
+                  <p>Therapy can be administered by an assortment of licensed professionals including psychologists, social workers, psychiatrists, and counselors. These professionals have completed rigorous training in the form of at least a master’s degree in their respective course of study as well as at least 3,000 supervised clinical hours.</p>
+                  <p>Most forms of widely practiced counseling have been <a href="https://research.talkspace.com/">researched extensively</a> and found to be extremely effective in dealing with a range of issues — from the everyday stresses of modern life to issues like past abuse in childhood.</p>
+                  <p>There are also different ways to connect with a therapist — online or in-person — and modes of doing so — whether by text message, phone, or live video — to meet client needs and lifestyle. The best therapy for you will be that which most closely aligns with your reasons for considering counseling.<br></p>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div id="tab_14" class="c-tabs__content">
+         <div class="c-tabs__box">
+            <div>
+               <h2 class="c-heading2 roboto article">Common types of therapy</h2>
+               <div class="c-articles__text w-richtext">
+                  <p>All forms of psychotherapy exist to improve clients’ mental health, but there are styles of therapy specific to issues clients face, as well as different therapeutic approaches, represented by different schools of thought around treating mental health and the nature of the mind. Some schools hew more closely to the older styles of counseling developed by early psychoanalysts like Sigmund Freud, while others are more contemporary and reflect newer research by theorists.</p>
+                  <p>A few of the most popular popular types of therapy include:</p>
+                  <h3><a href="https://www.talkspace.com/blog/cognitive-behavioral-therapy-what-to-expect/">Cognitive Behavioral Therapy (CBT)</a></h3>
+                  <p>Challenges negative client-thought patterns about themself and the world to alter unwanted behaviors or treat disorders such as depression. CBT provides relatively short-term treatment for a range of conditions, phobias, disorders and is backed by a great deal of research on its effectiveness.</p>
+                  <h3>Client-Centered Therapy</h3>
+                  <p>Focuses on the client, who helps determine the course of the session; the therapist offers a high-degree of empathy, helps build self-esteem and problem-solving abilities, but does not overtly guide the session.</p>
+                  <h3><a href="https://www.talkspace.com/blog/dialectical-behavioral-therapy-dbt-behavior/">Dialectical Behavior Therapy (DBT)</a></h3>
+                  <p>Stresses acceptance and change while teaching behavioral skills (mindfulness, distress tolerance, interpersonal effectiveness, emotion regulation) that help clients enhance motivation. DBT is often used to treat more severe mental health issues including PTSD, borderline personality disorder, self-harming, and eating disorders.</p>
+                  <h3>Existential Therapy</h3>
+                  <p>Derived from existential philosophy, this modality emphasizes self-actualization in the face of the realities of the human experience, including our isolation from one another and mortality. Existential therapy helps clients face these difficult and overwhelming truths.</p>
+                  <h3>Gestalt Therapy</h3>
+                  <p>Stresses the client-therapist relationship and their therapeutic alliance to highlight personal responsibility and a focus on the present. Often gestalt therapy invokes role playing to resolve conflicts from the client’s past.</p>
+                  <h3>Psychodynamic Therapy</h3>
+                  <p>Explores a client’s unconscious feelings/thoughts and how the present is impacted by the past. Psychodynamic therapy is the oldest form of psychotherapy and is, in fact, an outgrowth of psychoanalytic therapy developed by Freud where clients are encouraged to speak extemporaneously on whatever comes to mind, whether it be fears, dreams, or desires.<br></p>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div id="tab_15" class="c-tabs__content">
+         <div class="c-tabs__box">
+            <div>
+               <h2 class="c-heading2 roboto article">Benefits of therapy</h2>
+               <div class="c-articles__text w-richtext">
+                  <p>Therapy can benefit everyone, but it isn’t solely beneficial after a traumatic experience, abuse, anxiety, or a major life change — it can help in everyday life, too! Many highly successful people use therapy to be more productive in goal setting and self-acceptance.</p>
+                  <h3>Ways therapy can help&nbsp;</h3>
+                  <p>Nearly all aspects of life can be impacted and improved with psychotherapy. A therapist may provide new techniques for problem solving, help challenge irrational habits and incorrect assumptions, help reframe long-held views, or or assign homework to help you grow and change. A therapist can also help overcome mental health conditions like depression, anxiety, body image issues, and even addiction.<br></p>
+                  <p>Primarily a therapist will help to:<br></p>
+                  <ul role="list">
+                     <li><strong>Understand your feelings<br></strong>Learn what emotions are common for a condition or circumstances.</li>
+                     <li><strong>Get immediate support<br></strong>While deep-seated issues can be addressed down the line, counseling can benefit you in situations where you need help urgently.</li>
+                     <li><strong>Plan your future<br></strong>Therapists can help create a game plan and set goals for the future in a safe environment and keep you accountable.</li>
+                     <li><strong>Relieve the pressure with a</strong> <strong>therapeutic relationship<br></strong>Often, simply getting things off your chest in a safe space can be healing. If serious problems arise again, the on-going therapeutic relationship will keep you strong.<br></li>
+                  </ul>
+                  <p>The most important thing is that a therapist is always there for you. They’re an impartial ally who will support you without judgment. While your friends might not text you back, your therapist is always willing to listen.<br></p>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div id="tab_16" class="c-tabs__content">
+         <div class="c-tabs__box">
+            <div>
+               <h2 class="c-heading2 roboto article">What does a therapist do?</h2>
+               <div class="c-articles__text w-richtext">
+                  <p>A therapist, or psychotherapist, is a licensed mental health professional who helps clients improve the lives of their clients, helping them develop better cognitive and emotional skills, reduce the symptoms of mental illness and cope with various day-to-day challenges. Therapists primarily help clients, whether via in-person or <a href="https://lp.talkspace.com/try">online therapy</a>, improve their mental health. Some therapists work in a research capacity or in an academic setting.<br></p>
+                  <p>Therapists work in a range of modes and capacities. They help their clients cope with whatever they’re struggling with and assist in modifying behaviors that may be unhealthy, maladaptive, or harmful. Therapists also teach better coping skills.<br></p>
+                  <p>Whatever type of counseling you engage in you can be sure that your therapist will:<br></p>
+                  <ul role="list">
+                     <li>Listen with empathy and understanding</li>
+                     <li>Analyze past and present events to help clients better understand behaviors</li>
+                     <li>Comfort clients when they undergo misfortune</li>
+                     <li>Provide a third-party unbiased opinion</li>
+                     <li>Teach emotional, cognitive, and communication skills</li>
+                     <li>Guide clients through stressors and anxieties</li>
+                     <li>Provide non-directive advice</li>
+                     <li>Help provide assessment and diagnosis of mental health conditions<br></li>
+                  </ul>
+                  <p>Therapists themselves do not prescribe medication, but they refer clients to psychiatrists, mental health facilities, or other medical professionals as needed. <br></p>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div id="tab_17" class="c-tabs__content">
+         <div class="c-tabs__box">
+            <div>
+               <h2 class="c-heading2 roboto article">Finding the right therapist</h2>
+               <div class="c-articles__text w-richtext">
+                  <p>As a prospective client, it’s great to share what your preferences are and what you’re looking to get out of therapy. In fact, it’s critical to success in therapy! The intake process — where you answer some questions about what’s brought you to counseling or what challenges you’re dealing with — is a great opportunity for clients to be up front about what they need from a therapist.</p>
+                  <h3>What to look for in a therapist</h3>
+                  <p>While by definition therapists are unbiased advocates, forming a real and trusting bond with your therapist is the most important element of selecting the right fit. Here are some aspects to consider when deciding on a therapist:</p>
+                  <ul role="list">
+                     <li><strong>Age</strong><br>Do you prefer a therapist who is younger or older than you? Someone who has the experience of many years as a therapist or someone younger who can perhaps relate to your lifestyle in a more authentic way.</li>
+                     <li><strong>Race/Ethnicity</strong><br>Would you prefer having a therapist of the same ethnicity, who makes you feel more comfortable and understood — having a shared understanding and not having to explain your experience of the world, including microaggressions and more direct racism, prejudice, and oppression?</li>
+                     <li><strong>Gender/sexuality</strong><br>Do you prefer a therapist of the same gender or sexuality, who can better relate to your experience in relationships, career, and your experience with your family?</li>
+                     <li><strong>Specialty</strong><br>Would you prefer a therapist who has expertise in a specific area or specializes in specific challenges like trauma or eating disorders? Or would you prefer a generalist who deals with all kinds of issues?</li>
+                     <li><strong>Religion</strong><br>Do you prefer a therapist who shares your religious beliefs or is a shared faith less important for the issues you’re working on.</li>
+                  </ul>
+                  <p>On a platform like Talkspace, you can find a therapist that fits your precise needs.&nbsp; And if you don’t connect with your therapist, it’s easy to switch to another with no-hassle, and at no additional cost. Finding the right therapist is essential and, with Talkspace, you don’t have to spend time searching, making appointments, and auditioning therapists — the perfect fit is just a click away.<br></p>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div id="tab_18" class="c-tabs__content">
+         <div class="c-tabs__box">
+            <div>
+               <h2 class="c-heading2 roboto article">How much does therapy cost?</h2>
+               <div class="c-articles__text w-richtext">
+                  <p>As you can imagine, because counseling can be so impactful and therapists can do so much to improve the specific challenges clients struggle with, the service is not without costs. Therapists are highly trained professionals — licensed in the state they practice in, each with a master’s degree and an additional 3,000 hours of supervised work. They deserved to be justly compensated! Talkspace also requires six-weeks of training and onboarding for the platform.</p>
+                  <p>The relatively high costs of therapy and healthcare more generally do make it prohibitively expensive for many. That’s why, at Talkspace, we aim to make counseling more accessible by keeping costs low — we believe in therapy for all. Often costs vary by region, but in-person <a href="https://www.talkspace.com/blog/how-much-does-therapy-cost-and-why-is-it-crazy-expensive/">therapy costs on average</a> $75-150 per hour (in places like New York it is generally between $200-300 per hour) and the majority of therapists do not take health insurance.</p>
+                  <p>Online therapy, however, is a most cost effective and affordable option for those who need access to care, but don’t have the means to access brick-and-mortar counseling.</p>
+                  <h3>How much does online therapy cost?</h3>
+                  <p>Online therapy has been proven to have <a href="https://research.talkspace.com/">the same efficacy</a> as in-office therapy and is typically much more affordable (often less than half the cost of traditional therapy). This is mostly due to the fact that online counseling requires less overhead than therapists who work in an office.</p>
+                  <p>You can use an online therapy network, like Talkspace, to find a therapist or check if a therapist you know will provide online service.</p>
+                  <h3>Cost-saving options</h3>
+                  <p>Therapy can be lifesaving for those who struggle with mental health challenges — everyone should have access to it. But for those whom counseling proves too cost prohibitive, there are a few options that can help defray the expense.<br></p>
+                  <p>Below are some affordable examples of ways to find the mental healthcare you need:</p>
+                  <ul role="list">
+                     <li><strong>Ask the Therapist for a Discount or Seek Therapists With Sliding Scales<br></strong>Most therapists are not in it for the money. Though therapists need to be able to make a living, if you tell them you can only afford a discounted rate, they may oblige. There are also therapists who use sliding scales for all payments. Before sessions begin, check for this information on their website, therapy network, or profile.</li>
+                     <li><strong>Schools or universities<br></strong>If you’re a student and want free or discounted therapy, ask your student health center for more information. Student health centers can often provide low-cost or free mental health services on a short-term basis (a semester or quarter) — a good temporary solution until you find a long-term therapist you can afford.</li>
+                     <li><strong>Therapy practices<br></strong>Therapy practices — sometimes called agencies or firms — are often more affordable because more than one person is chipping in for the cost of rent and other overhead. These practices often have interns — those who are working on their supervised clinical hours — who charge less. If you prefer in-office counseling, practices are often a more affordable option.</li>
+                     <li><strong>Not using insurance<br></strong>Many assume that using insurance for therapy will lower the overall cost. However, circumventing insurance providers is sometimes the cheaper option. Many therapists choose not to accept insurance coverage because payments are often lower and there is a great deal of paperwork for reimbursements.</li>
+                     <li><strong>Federally-funded health centers<br></strong>Federally qualified health centers (FQHCs) usually have mental health resources and the law requires they offer a sliding payment scale. You can search for one in your area.</li>
+                  </ul>
+                  <p>While therapy can be expensive, it’s important to remember that your mental health touches every aspect of your life — your relationships, career, and happiness. Gambling with your mental health is not something that will pay off long-term. It’s important to prioritize your well-being!<br></p>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div id="tab_19" class="c-tabs__content">
+         <div class="c-tabs__box">
+            <div>
+               <h2 class="c-heading2 roboto article">How long does therapy take?</h2>
+               <div class="c-articles__text w-richtext">
+                  <p>The length of the therapeutic process is dependent upon your individual needs, goals, and challenges. The number of recommended sessions varies by condition and treatment type, which is something you can discuss in an initial consultation with a therapist. Many clients with depression and anxiety report feeling better <a href="https://research.talkspace.com/">after three months</a>.<br></p>
+                  <p>Those who are treated via cognitive behavioral therapy report feeling better around 10-20 sessions, Talkspace therapist Cynthia Catchings explains. She reports that she’s had “many successful stories with clients who had situational issues that only needed brief therapy services” in order to start feelings better. She adds, “it is important to mention that therapy is not only a way to solve a problem, but also a way of living. In the same way that we go to the gym and exercise or tone our body, therapy is like exercise for our mind, heart, and soul.”<br></p>
+                  <p>Whatever your therapeutic process may look like, remember to trust your gut and express any concerns to your therapist. Honesty and transparency will ensure you’re on the right path to feeling better as soon as possible.<br></p>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div id="tab_20" class="c-tabs__content">
+         <div class="c-tabs__box">
+            <div>
+               <h2 class="c-heading2 roboto article">How to know if therapy is working</h2>
+               <div class="c-articles__text w-richtext">
+                  <p>While everyone’s therapeutic process is different, there are some common signs you’re making progress in therapy.<br></p>
+                  <p>If you sought counseling for a mental health condition, symptom improvement is a main indicator that therapy is working for you. Other indicators of improvement include progress toward long-term goals — you’ve moved past venting and have started working toward change — or recognizing the development of new skills, coping mechanisms, or better habits and ways of thinking.<br></p>
+                  <p>And remember, if you’re concerned about the progress you’re making in counseling, express these worries to your therapist.<br></p>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div id="tab_21" class="c-tabs__content">
+         <div class="c-tabs__box">
+            <div>
+               <h2 class="c-heading2 roboto article">How do therapists define therapy?</h2>
+               <div class="c-articles__text w-richtext">
+                  <p>And, while we’ve established a common psychotherapy definition, every therapist does define therapy in slightly different ways. By looking at the aspects they stress, you can see a more detailed picture of counseling and whether the therapist’s approach aligns with your goals.</p>
+                  <p>Here are some therapy definitions we gathered by surveying Talkspace therapists and reaching outside our network:</p>
+                  <ul role="list">
+                     <li>“A commitment to yourself and to opening yourself up to someone else; being willing to trust someone enough to let them into your life and learn from each other.” <br>—<a href="https://www.talkspace.com/blog/meet-our-therapists-alaina-brubaker/"> Alaina Brubaker</a>, Talkspace Therapist<br>‍</li>
+                     <li>“A way of changing your perspective on how to handle a situation.” <br>— Noor Pinna, Talkspace Therapist<br>‍</li>
+                     <li>“A communication process of increasing clarification and understanding pertinent to specific experiences related to such terms as discomfort, dissatisfaction, disappointment, discontent, disenchantment, and other dispositions that are perceived as problematic.” <br>—<a href="https://www.talkspace.com/blog/meet-our-therapists-ken-fields/"> Ken Fields</a>, Talkspace Therapist<br>‍</li>
+                     <li>“A dynamic process that occurs in a safe and contained relational frame wherein destructive patterns of being are identified and replaced with healthy and productive ones.”<br>—<a href="http://www.drhokemeyer.com/"> Paul Hokemeyer</a>, Marriage and Family Therapist<br>‍</li>
+                     <li>“Empathy, a nonjudgmental attitude and the creation of a safe space in which nothing the client wants to explore is off-limits and everything is on the metaphorical table.” <br>—<a href="http://pacificnorthwell.com/kristen/"> Kristen Martinez</a>, LGBT Therapist<br>‍</li>
+                     <li>“Learning how to overcome your personal or relational struggles by developing long-term tools.”<br>—<a href="http://estestherapy.com/"> Jennine Estes</a>, Marriage and Family Therapist<br>‍</li>
+                     <li>“The art and science of engineering self-improvement and growth in clients via a strong therapeutic relationship and evidenced-based therapies.” <br>—<a href="http://www.michaeldzitophd.com/"> Michael Zito</a>, Therapist, Ph.D.<br>‍</li>
+                  </ul>
+                  <ul role="list">
+                     <li>“Helping clients break free of old ideas, patterns and wounds that are restricting their happiness and contentment; coaching them through life passages, teaching skills and techniques for self-awareness, relationships and success.” <br>—<a href="http://www.tinatessina.com/"> Tina B. Tessina</a>, Therapist, Ph.D.<br></li>
+                  </ul>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div id="tab_22" class="c-tabs__content">
+         <div class="c-tabs__box">
+            <div>
+               <h2 class="c-heading2 roboto article">The history of therapy</h2>
+               <div class="c-articles__text w-richtext">
+                  <p>To fully understand psychotherapy and counseling, it can be helpful to explore its past, present, and future. This timeline will give you a richer understanding of what counseling is and how it evolved.</p>
+                  <p>Before Freud and other early psychologists such as Wilhelm Wundt, philosophy was the closest relative to therapy. It was the only field that explored human behavior and mental health.</p>
+                  <p>“Psychology is an offshoot of philosophy,” psychologist Bart Rossi told Talkspace.</p>
+                  <p>Rossi cited schools of philosophy such as rationalism and empiricism. He also said philosophers including Immanuel Kant contributed to the development of therapy.</p>
+                  <p>One of the best examples of philosophy informing psychotherapy is existential therapy, which is derived from existential philosophy. Existential psychotherapist<a href="https://www.talkspace.com/blog/the-evolution-of-therapy-through-the-eyes-of-renowned-therapist-irvin-yalom/" target="_blank"> Irvin Yalom</a>, who shaped the field, said existential philosophers such as Nietzsche inspired his work.</p>
+                  <h3>Therapy during Freud’s time and the 20th century</h3>
+                  <p>Because Freud was a psychiatrist, and invented psychoanalysis, early psychotherapy was mostly about reducing symptoms. It followed a medical model rather than the wellness model we more frequently see today. Therapy was for “patients” with diagnosable mental illnesses, not clients who see a therapist for a multitude of reasons.</p>
+                  <p>“I think in the past, therapy was centered around ‘fixing’ what was ‘wrong’ with people,” said therapist Kristen Martinez. “[The medical establishment] thought they were the healthy ones, and psychotherapy focused on getting ‘unhealthy’ people to be healthy like them.”</p>
+                  <h3>Progress of therapy</h3>
+                  <p>Modern psychotherapy tends to balance the wellness and medical model. Therapists want to reduce symptoms in people dealing with mental illness, but they’re squarely centered on the needs and direction of the client.</p>
+                  <p>Cognitive behavioral therapy (CBT) changed the definition of counseling, according to Rossi. It is now more behavior-focused and psychodynamic approaches have become less common.</p>
+                  <p>The advent of<a href="https://www.talkspace.com/online-therapy/"> online therapy</a> has also appended what therapy is and how it is delivered. Although prior definitions of therapy did not explicitly describe it as occurring solely in-person, therapy required in-office visits because distance counseling was not easily facilitated before the development of the internet.</p>
+                  <p>Earlier therapy definitions also implied counseling could only take place only via “sessions,” where the therapist and client scheduled a meeting or phone call at a specific time. Because of technology and approaches such as the<a href="https://www.talkspace.com/online-therapy/unlimited-messaging-therapy/"> text therapy Talkspace offers</a>, counseling no longer requires set sessions.</p>
+                  <h3>The future of therapy</h3>
+                  <p>While psychotherapy isn’t going anywhere there are some trends that will expand the definition of what is possible in therapy.<br></p>
+                  <p>Here are some trends that might contribute to the evolution of psychotherapy and counseling in the future:</p>
+                  <ul role="list">
+                     <li>Additional technological advances in online counseling</li>
+                     <li>Virtual reality</li>
+                     <li>Integration of medical care</li>
+                     <li>More focus on the therapeutic relationship</li>
+                     <li>Increased cultural consideration</li>
+                     <li>New CBT approaches</li>
+                  </ul>
+                  <p>Now that we’ve discussed what therapy is and is not and have established a common definition for psychotherapy, take a moment to think about what it might be able to do for you.<br></p>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div id="tab_23" class="c-tabs__content">
+         <div class="w-dyn-list">
+            <div role="list" class="c-reviews__collection w-dyn-items">
+               <div role="listitem" class="c-tabs__box w-dyn-item">
+                  <div>
+                     <div class="c-articles__author">
+                        <div class="c-articles__avatar"><img src="https://assets-global.website-files.com/5dee88cb54c6bb1933f47172/5df412e5a58b627677c67234_joshwolff.jpg" loading="lazy" alt="" sizes="(max-width: 479px) 100vw, 48px" srcset="https://assets-global.website-files.com/5dee88cb54c6bb1933f47172/5df412e5a58b627677c67234_joshwolff-p-500.jpeg 500w, https://assets-global.website-files.com/5dee88cb54c6bb1933f47172/5df412e5a58b627677c67234_joshwolff.jpg 675w"></div>
+                        <div class="c-articles__autorname">
+                           <div class="c-autorname__by">by</div>
+                           <div>Josh Wolff</div>
+                        </div>
+                     </div>
+                     <h2 class="c-heading2 roboto article">Why Online Counseling is More Popular than Traditional Counseling</h2>
+                     <div class="c-articles__text w-richtext">
+                        <p>Online counseling is proven to be as effective, if not more effective than face-to-face counseling, with important benefits that bring the experience into the modern era. For some, traditional counseling is their choice because they haven’t yet experienced the freedom that online counseling offers.</p>
+                        <p>If you’re on the fence about whether online counseling is right for you, consider these positive benefits… <a href="https://www.talkspace.com/blog/reasons-online-therapy-right-for-you/" target="_blank"><strong>read more</strong></a></p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div id="tab_24" class="c-tabs__content">
+         <div class="w-dyn-list">
+            <div role="list" class="c-reviews__collection w-dyn-items">
+               <div role="listitem" class="c-tabs__box w-dyn-item">
+                  <div>
+                     <div class="c-articles__author">
+                        <div class="c-articles__avatar"><img src="https://assets-global.website-files.com/5dee88cb54c6bb1933f47172/5df412e5a58b627677c67234_joshwolff.jpg" loading="lazy" alt="" sizes="(max-width: 479px) 100vw, 48px" srcset="https://assets-global.website-files.com/5dee88cb54c6bb1933f47172/5df412e5a58b627677c67234_joshwolff-p-500.jpeg 500w, https://assets-global.website-files.com/5dee88cb54c6bb1933f47172/5df412e5a58b627677c67234_joshwolff.jpg 675w"></div>
+                        <div class="c-articles__autorname">
+                           <div class="c-autorname__by">by</div>
+                           <div>Josh Wolff</div>
+                        </div>
+                     </div>
+                     <h2 class="c-heading2 roboto article">Most Convenient Features of Online Counseling</h2>
+                     <div class="c-articles__text w-richtext">
+                        <p>Talkspace represents a major breakthrough in modern psychology: using technology to improve individual and couples counseling. This use of technology is also known as “telemedicine,” and is part of a growing shift in the healthcare industry, with technology enabling more convenient, affordable, and on-demand benefits.</p>
+                        <p>We’d like to give you a brief tour of the cool benefits Talkspace offers as part of the online counseling experience… <a href="https://www.talkspace.com/blog/talkspace-coolest-features-brief-walkthrough/" target="_blank"><strong>read more</strong></a></p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div id="tab_25" class="c-tabs__content">
+         <div class="w-dyn-list">
+            <div role="list" class="c-reviews__collection w-dyn-items">
+               <div role="listitem" class="c-tabs__box w-dyn-item">
+                  <div>
+                     <div class="c-articles__author w-condition-invisible">
+                        <div style="background-image:none" class="c-articles__avatar"></div>
+                        <div class="c-articles__autorname">
+                           <div class="c-autorname__by">by</div>
+                           <div class="w-dyn-bind-empty"></div>
+                        </div>
+                     </div>
+                     <h2 class="c-heading2 roboto article">Online Counseling Reviews</h2>
+                     <div class="c-articles__text w-richtext">
+                        <p>Talkspace has helped thousands of people live happier lives and bypass barriers to counseling. Lucky for us, some of those people went out of their way to document their experiences by writing in-depth reviews of our brand of online counseling.</p>
+                        <p>We highlighted a few of them below. Browse through them to see if they help you decide whether Talkspace is right for you… <a href="https://www.talkspace.com/blog/talkspace-reviews-experiences-help-decide-right/" target="_blank"><strong>read more</strong></a></p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div id="tab_26" class="c-tabs__content">
+         <div class="w-dyn-list">
+            <div role="list" class="c-reviews__collection w-dyn-items">
+               <div role="listitem" class="c-tabs__box w-dyn-item">
+                  <div>
+                     <div class="c-articles__author">
+                        <div class="c-articles__avatar"><img src="https://assets-global.website-files.com/5dee88cb54c6bb1933f47172/5df41723a58b623e20c69993_tamarastevens.jpeg" loading="lazy" alt=""></div>
+                        <div class="c-articles__autorname">
+                           <div class="c-autorname__by">by</div>
+                           <div>Tamara Stevens</div>
+                        </div>
+                     </div>
+                     <h2 class="c-heading2 roboto article">Switching Counselors</h2>
+                     <div class="c-articles__text w-richtext">
+                        <p>Your relationship with your counselor is very different from other relationships, but one thing is the same: sometimes you need a change. How can you tell when it’s time to switch counselors?<br></p>
+                        <p>Sometimes you just don’t jibe with a person. Maybe your personalities are too different, or maybe you sense a small bit of judgment or criticism. If that person is your counselor, it’s hard to share your innermost thoughts and feelings… <a href="https://www.talkspace.com/blog/switch-therapists-how-to/" target="_blank"><strong>read more</strong></a><br></p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div id="tab_27" class="c-tabs__content">
+         <div class="w-dyn-list">
+            <div role="list" class="c-reviews__collection w-dyn-items">
+               <div role="listitem" class="c-tabs__box w-dyn-item">
+                  <div>
+                     <div class="c-articles__author">
+                        <div class="c-articles__avatar"><img src="https://assets-global.website-files.com/5dee88cb54c6bb1933f47172/5df412e5a58b627677c67234_joshwolff.jpg" loading="lazy" alt="Josh Wolff" sizes="(max-width: 479px) 100vw, 48px" srcset="https://assets-global.website-files.com/5dee88cb54c6bb1933f47172/5df412e5a58b627677c67234_joshwolff-p-500.jpeg 500w, https://assets-global.website-files.com/5dee88cb54c6bb1933f47172/5df412e5a58b627677c67234_joshwolff.jpg 675w"></div>
+                        <div class="c-articles__autorname">
+                           <div class="c-autorname__by">by</div>
+                           <div>Josh Wolff</div>
+                        </div>
+                     </div>
+                     <h2 class="c-heading2 roboto article">What to Expect from Counseling</h2>
+                     <div class="c-articles__text w-richtext">
+                        <p>At its core, online counseling’s objective is similar to that of brick-and-mortar counseling: provide tools, solutions, and ways to reframe your current issues, allowing you to overcome challenges in many areas of your life.</p>
+                        <p>Online counseling differs, however, in that it puts counseling in the palm of your hand and enables you to share your thoughts and challenges anytime you wish. This makes counseling more convenient and affordable for those who are new to the experience. Additionally, online or text-based counseling (like Talkspace) is known to be as effective, if not more, than brick-and-mortar counseling. Here’s what to expect when beginning your online therapy experience, and how to set expectations for positive outcomes along the way... <a href="https://www.talkspace.com/blog/starting-online-therapy-first-time/" target="_blank"><strong>read more</strong></a></p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div id="tab_28" class="c-tabs__content">
+         <div class="w-dyn-list">
+            <div role="list" class="c-reviews__collection w-dyn-items">
+               <div role="listitem" class="c-tabs__box w-dyn-item">
+                  <div>
+                     <div class="c-articles__author">
+                        <div class="c-articles__avatar"><img height="" loading="lazy" alt="Jamie Wiebe" src="https://assets-global.website-files.com/5dee88cb54c6bb1933f47172/5df417d035688c2ca7050c98_jamiewiebe.jpg"></div>
+                        <div class="c-articles__autorname">
+                           <div class="c-autorname__by">by</div>
+                           <div>Jamie Wiebe</div>
+                        </div>
+                     </div>
+                     <h2 class="c-heading2 roboto article">Benefits of Sticking with Counseling</h2>
+                     <div class="c-articles__text w-richtext">
+                        <p>Counseling is difficult work. Maybe you had an anxiety attack during a session, or realized some difficult truths about your personality. Sometimes counseling is boring, or you’re convinced your poor counselor is bored. You talk about similar things week after week, over and over, and nothing huge seems to be changing.&nbsp;</p>
+                        <p>But then, one week, it clicks. You start feeling better each session. A few months later, you look back and realize how life-changing that breakthrough was. Therapy takes a bit of patience, but the rewards are numerous. Here are just some of those benefits... <a href="https://www.talkspace.com/blog/benefits-of-staying-in-therapy/" target="_blank"><strong>read more</strong></a><br></p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div id="tab_29" class="c-tabs__content">
+         <div class="w-dyn-list">
+            <div role="list" class="c-reviews__collection w-dyn-items">
+               <div role="listitem" class="c-tabs__box w-dyn-item">
+                  <div>
+                     <div class="c-articles__author">
+                        <div class="c-articles__avatar"><img src="https://assets-global.website-files.com/5dee88cb54c6bb1933f47172/5df41723a58b623e20c69993_tamarastevens.jpeg" loading="lazy" alt="Tamara Stevens"></div>
+                        <div class="c-articles__autorname">
+                           <div class="c-autorname__by">by</div>
+                           <div>Tamara Stevens</div>
+                        </div>
+                     </div>
+                     <h2 class="c-heading2 roboto article">How to Pause Counseling</h2>
+                     <div class="c-articles__text w-richtext">
+                        <p>Counseling is hard work — sometimes the hardest part is just getting started. Therefore, it can be tough to stop before you’re ready, but sometimes life happens that way. Your counselor understands that you’re busy and things come up when least expected. Fortunately, if you have to stop or pause counseling, there are ways to make the process less painful… <a href="https://www.talkspace.com/blog/pause-stop-therapy-guide/" target="_blank"><strong>read more</strong></a></p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div id="tab_30" class="c-tabs__content">
+         <div class="w-dyn-list">
+            <div role="list" class="c-reviews__collection w-dyn-items">
+               <div role="listitem" class="c-tabs__box w-dyn-item">
+                  <div>
+                     <div class="c-articles__author">
+                        <div class="c-articles__avatar"><img src="https://assets-global.website-files.com/5dee88cb54c6bb1933f47172/5df4184eb0ebe73f9b3a43c8_elisbethsu.jpg" loading="lazy" alt="Elizabeth Su"></div>
+                        <div class="c-articles__autorname">
+                           <div class="c-autorname__by">by</div>
+                           <div>Elizabeth Su</div>
+                        </div>
+                     </div>
+                     <h2 class="c-heading2 roboto article">How Long Does Counseling Take?</h2>
+                     <div class="c-articles__text w-richtext">
+                        <p>The number of recommended sessions varies by condition and treatment type, however, the majority of counseling clients report feeling better after 3 months; those with depression and anxiety experience significant improvement after short and longer time frames, 1-2 months &amp; 3-4.&nbsp;<br></p>
+                        <p>Conditions such as post-traumatic stress disorder typically take around 15-20 sessions for 50% of patients to feel improvement. It’s been found that those treated with cognitive behavioral therapy report feeling better after around 10-20 sessions. The important point is it takes time, but the benefits are many… <a href="https://www.talkspace.com/blog/how-long-does-therapy-take-science/"><strong>read more</strong></a><br></p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div id="tab_31" class="c-tabs__content">
+         <div class="w-dyn-list">
+            <div role="list" class="c-reviews__collection w-dyn-items">
+               <div role="listitem" class="c-tabs__box w-dyn-item">
+                  <div>
+                     <div class="c-articles__author">
+                        <div class="c-articles__avatar"><img src="https://assets-global.website-files.com/5dee88cb54c6bb1933f47172/5df41723a58b623e20c69993_tamarastevens.jpeg" loading="lazy" alt="Tamara Stevens"></div>
+                        <div class="c-articles__autorname">
+                           <div class="c-autorname__by">by</div>
+                           <div>Tamara Stevens</div>
+                        </div>
+                     </div>
+                     <h2 class="c-heading2 roboto article">What if I Don’t Like My Counselor</h2>
+                     <div class="c-articles__text w-richtext">
+                        <p>The beginning of counseling brings up complicated emotions. You might feel relieved that you’ve been able to unburden yourself, or even awe at the way your counselor “gets” you. Like every relationship, there is usually a honeymoon period, in which you admire and respect your counselor, confident in their ability to heal you.</p>
+                        <p>Over a long time period, however, the newness fades and the work gets harder. People often put their counselor on a pedestal at first, but the counselor is bound to fall eventually. For some people, adjusting to a more realistic view of the counselor is easy, but for others, resentment or lack of respect creep in… <a href="https://www.talkspace.com/blog/i-dont-respect-my-therapist/"><strong>read more</strong></a></p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div id="tab_32" class="c-tabs__content">
+         <div class="w-dyn-list">
+            <div role="list" class="c-reviews__collection w-dyn-items">
+               <div role="listitem" class="c-tabs__box w-dyn-item">
+                  <div>
+                     <div class="c-articles__author">
+                        <div class="c-articles__avatar"><img src="https://assets-global.website-files.com/5dee88cb54c6bb1933f47172/5df419160730a5eacb1d4e7b_jorellcarabllo.jpg" loading="lazy" alt="Jor-El Caraballo"></div>
+                        <div class="c-articles__autorname">
+                           <div class="c-autorname__by">by</div>
+                           <div>Jor-El Caraballo</div>
+                        </div>
+                     </div>
+                     <h2 class="c-heading2 roboto article">Finding the Right Online Counseling</h2>
+                     <div class="c-articles__text w-richtext">
+                        <p>These days, there are more ways to find a counselor than ever before. But, some might feel it’s important and more helpful to work with a counselor of a particular background, which can make the search more difficult. It can even be tough to make this request.&nbsp;If this is the situation you find yourself in, what should you consider doing?<a href="https://www.talkspace.com/blog/find-therapist-same-cultural-background-community/"> <strong>read more</strong></a><br></p>
+                        <p><br></p>
+                        <p><br></p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div id="tab_33" class="c-tabs__content">
+         <div class="w-dyn-list">
+            <div role="list" class="c-reviews__collection w-dyn-items">
+               <div role="listitem" class="c-tabs__box w-dyn-item">
+                  <div>
+                     <div class="c-articles__author">
+                        <div class="c-articles__avatar"><img src="https://assets-global.website-files.com/5dee88cb54c6bb1933f47172/5df419ba0730a51ffd1d5233_josephrauch.png" loading="lazy" alt="Joseph Rauch"></div>
+                        <div class="c-articles__autorname">
+                           <div class="c-autorname__by">by</div>
+                           <div>Joseph Rauch</div>
+                        </div>
+                     </div>
+                     <h2 class="c-heading2 roboto article">Coming Back to Online Counseling</h2>
+                     <div class="c-articles__text w-richtext">
+                        <p>Like any journey, your counseling journey may have starts and stops, highs and lows, departures and returns. Sometimes unforeseen transitions or disruptions in life force you to pause your investment in mental health. Sometimes you just need a break to focus on another aspect of your life.</p>
+                        <p>Once you are ready to return to counseling, however, you might wonder how you should go about it. What should you say to your counselor? … <a href="https://www.talkspace.com/blog/returning-therapy-break/"><strong>read more</strong></a></p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div id="tab_34" class="c-tabs__content">
+         <div class="w-dyn-list">
+            <div role="list" class="c-reviews__collection w-dyn-items">
+               <div role="listitem" class="c-tabs__box w-dyn-item">
+                  <div>
+                     <div class="c-articles__author">
+                        <div class="c-articles__avatar"><img src="https://assets-global.website-files.com/5dee88cb54c6bb1933f47172/5df41a6f6a31d504a533bd6c_ts-avatar12.png" loading="lazy" alt="Nicole Amesbury"></div>
+                        <div class="c-articles__autorname">
+                           <div class="c-autorname__by">by</div>
+                           <div>Nicole Amesbury</div>
+                        </div>
+                     </div>
+                     <h2 class="c-heading2 roboto article">Quitting Online Counseling</h2>
+                     <div class="c-articles__text w-richtext">
+                        <p>When someone enters counseling and begins a relationship with their counselor, whether it’s online or offline, the last thing on that person’s mind is leaving. <br></p>
+                        <p>But, just like with all relationships, there will come a time to say goodbye and it’s how they choose to go about it that really matters. Lets face it, many endings to relationships tend to be negative; think break-ups, death, and divorce. They may even be the reasons someone comes to counseling in the first place. But the good news is, ending counseling on a positive note is absolutely possible and it will enrich the time you spent receiving it... <a href="https://www.talkspace.com/blog/how-to-say-goodbye-5-tips-for-ending-therapy/" target="_blank"><strong>read more</strong></a></p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+
+
+<!-- footer-start -->
+<%- include('comman/footer'); %>
+
+<!-- footer-end -->

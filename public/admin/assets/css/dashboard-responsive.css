@@ -1,0 +1,87 @@
+
+@media screen and (min-width: 1900px){
+
+}
+@media screen and (min-width: 1600px){
+
+}
+@media screen and (max-width: 1400px){
+	.side-bar {
+		width: 250px;
+		padding: 15px;
+	}
+	header, section{
+		width: calc(100% - 250px);
+		padding-left: 10px !important;
+		padding-right: 10px !important;
+	}
+	.personal-detail .personal-info-deatil {
+		grid-template-columns: repeat(2, 1fr);
+	}
+	.profile-head ul.user-info {
+		gap: 10px;
+	}
+	
+}
+@media (min-width: 1200px) and (max-width: 1399px){
+
+}
+@media (min-width: 992px) and (max-width: 1399px){
+	.group-box .group-name img {
+		width: 48px;
+		height: 48px;
+	}
+	.group-box .group-name .group-heading h5 {
+		font-size: 16px;
+	}
+	.group-box .group-name .group-heading h5 span, .group-box .group-name .group-heading p,.group-box .table-content table thead th, .group-box .table-content table td.week-heading {
+		font-size: 12px;
+	}
+	.group-box .table-content table th, .group-box .table-content table td {
+		padding: 0px 8px 0px 8px;
+		width: 40px;
+	}
+    
+}
+@media screen and (max-width: 1300px){
+	.profile-head ul.user-info .user-img {
+		width: 100px;
+		height: 100px;
+	}
+}
+
+@media (min-width: 992px) and (max-width: 1199px){
+	.change-btn {
+		font-size: 12px;
+		padding: 8px 15px;
+	}
+}
+@media (max-width: 991px){
+	 html.myClass {
+        overflow: hidden;      
+    }
+	.side-bar {
+	    transform: translateX(-100%);
+	}
+	header, section{
+		width: 100%;
+	}
+	.hide-sidebar {
+	    transform: translateX(0px);
+	}
+	button.navbar-closed {
+	    order: 3;
+	    transition: .5s all;
+	}
+	.update-right-content {
+	    transform: translateY(0px);
+	}
+	.personal-detail .personal-info-deatil {
+	    grid-template-columns: repeat(2, 1fr);
+	}
+}
+@media (max-width: 767px){
+	.personal-detail .personal-info-deatil {
+	    grid-template-columns: repeat(1, 1fr);
+	}
+}
